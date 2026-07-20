@@ -1,6 +1,6 @@
 {
   "$schema": "https://getcomposer.org/schema.json",
-  "name": "vms/box-platform-cctv",
+  "name": "vms/box-platform-showers",
   "type": "project",
   "description": "The skeleton application for the Laravel framework.",
   "keywords": [
@@ -29,7 +29,7 @@
     "spatie/laravel-medialibrary": "^11.0",
     "spatie/laravel-translatable": "^6.14",
     "tightenco/ziggy": "^2.6",
-    "valerie/box-industry-cctv": "@dev",
+    "valerie/box-industry-showers": "@dev",
     "ext-fileinfo": "*"
   },
   "require-dev": {
@@ -127,7 +127,7 @@
     },
     {
       "type": "path",
-      "url": "packages/box/valerie/industry-cctv",
+      "url": "packages/box/valerie/industry-showers",
       "options": {
         "symlink": true
       }
