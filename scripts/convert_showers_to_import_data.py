@@ -81,6 +81,13 @@ def to_float(val):
 def to_bool(val):
     return str(val).lower() in ["+", "true", "yes", "1", "да"]
 
+def get_preview_picture(row):
+    img = row.get("pathImg")
+    if img:
+        img_val = img.strip()
+        return img_val if img_val else None
+    return None
+
 def run_conversion(base_dir=None, out_file=None):
     if not base_dir:
         base_dir = find_project_root()
@@ -157,16 +164,61 @@ def run_conversion(base_dir=None, out_file=None):
             "param": mid
         })
 
+    en_forms = load_csv_list(base_dir, "config/form.csv")
+    form_options = []
+    for row in en_forms:
+        fid = row["id"]
+        form_options.append({
+            "external_code": f"opt_form_type_{fid}",
+            "slug": fid,
+            "value": {
+                "ru": row["name"]
+            },
+            "meta": {
+                "hex": None,
+                "image": None
+            },
+            "param": fid
+        })
+
+    en_crossbar_types = load_csv_list(base_dir, "config/crossbar.csv")
+    crossbar_type_options = []
+    for row in en_crossbar_types:
+        cid = row["id"]
+        crossbar_type_options.append({
+            "external_code": f"opt_crossbar_type_{cid}",
+            "slug": cid,
+            "value": {
+                "ru": row["name"]
+            },
+            "meta": {
+                "hex": None,
+                "image": None
+            },
+            "param": cid
+        })
+
+    en_srv_limits = load_csv_list(base_dir, "limits/services.csv")
+    service_limit_options = []
+    for row in en_srv_limits:
+        sid = row["id"]
+        service_limit_options.append({
+            "external_code": f"opt_srv_limit_{sid}",
+            "slug": sid,
+            "value": {
+                "ru": sid
+            },
+            "meta": {
+                "hex": None,
+                "image": None
+            },
+            "param": to_float(row["value_max"])
+        })
+
     thickness_options = [
         {"external_code": "opt_thickness_6mm", "slug": "6mm", "value": {"ru": "6 мм"}, "meta": {"hex": None, "image": None}, "param": 6.0},
         {"external_code": "opt_thickness_8mm", "slug": "8mm", "value": {"ru": "8 мм"}, "meta": {"hex": None, "image": None}, "param": 8.0},
         {"external_code": "opt_thickness_10mm", "slug": "10mm", "value": {"ru": "10 мм"}, "meta": {"hex": None, "image": None}, "param": 10.0}
-    ]
-
-    crossbar_type_options = [
-        {"external_code": "opt_cb_type_rect", "slug": "rect", "value": {"ru": "Прямоугольная"}, "meta": {"hex": None, "image": None}, "param": "rect"},
-        {"external_code": "opt_cb_type_round", "slug": "round", "value": {"ru": "Круглая"}, "meta": {"hex": None, "image": None}, "param": "round"},
-        {"external_code": "opt_cb_type_corner", "slug": "corner", "value": {"ru": "Угловая штанга"}, "meta": {"hex": None, "image": None}, "param": "corner"}
     ]
 
     type_options = [
@@ -186,6 +238,21 @@ def run_conversion(base_dir=None, out_file=None):
         {"external_code": "opt_sh_type_lift", "slug": "lift", "value": {"ru": "Подъем"}, "meta": {"hex": None, "image": None}, "param": "lift"},
         {"external_code": "opt_sh_type_montage", "slug": "montage", "value": {"ru": "Монтаж"}, "meta": {"hex": None, "image": None}, "param": "montage"}
     ]
+
+    attr_chan_settings = {
+        "channels": {
+            "widget": {
+                "is_public": True,
+                "is_filterable": True,
+                "sort_order": 10
+            },
+            "catalog": {
+                "is_public": True,
+                "is_filterable": True,
+                "sort_order": 10
+            }
+        }
+    }
 
     import_data = {
         "currencies": [
@@ -233,7 +300,7 @@ def run_conversion(base_dir=None, out_file=None):
         "families": [
             {
                 "external_code": "fam_showers",
-                "code": "showers",
+                "code": "shower",
                 "name": {"ru": "Душевые ограждения"}
             }
         ],
@@ -243,56 +310,88 @@ def run_conversion(base_dir=None, out_file=None):
                 "family_external_code": "fam_showers",
                 "code": "shower_glass",
                 "name": {"ru": "Стекло душевое"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "glass_thickness", "is_variant_only": True},
+                    {"code": "color", "is_variant_only": False},
+                    {"code": "autoImg", "is_variant_only": False},
+                    {"code": "roughness", "is_variant_only": False},
+                    {"code": "fluted", "is_variant_only": False}
+                ]
             },
             {
                 "external_code": "type_shower_profile",
                 "family_external_code": "fam_showers",
                 "code": "shower_profile",
                 "name": {"ru": "Профиль душевой"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "furniture_type_id", "is_variant_only": True},
+                    {"code": "glass_thickness", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_handle",
                 "family_external_code": "fam_showers",
                 "code": "shower_handle",
                 "name": {"ru": "Ручка душевая"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "furniture_type_id", "is_variant_only": True},
+                    {"code": "door_type_ids", "is_variant_only": True},
+                    {"code": "interface_name", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_open_system",
                 "family_external_code": "fam_showers",
                 "code": "shower_open_system",
                 "name": {"ru": "Система открывания"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "material_type_id", "is_variant_only": True},
+                    {"code": "furniture_type_id", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_crossbar",
                 "family_external_code": "fam_showers",
                 "code": "shower_crossbar",
                 "name": {"ru": "Штанга стабилизационная"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "crossbar_type_id", "is_variant_only": True},
+                    {"code": "furniture_type_id", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_sealant",
                 "family_external_code": "fam_showers",
                 "code": "shower_sealant",
                 "name": {"ru": "Уплотнитель душевой"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "glass_thickness", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_doorstep",
                 "family_external_code": "fam_showers",
                 "code": "shower_doorstep",
                 "name": {"ru": "Порог душевой"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "furniture_type_id", "is_variant_only": True}
+                ]
             },
             {
                 "external_code": "type_shower_service",
                 "family_external_code": "fam_showers",
                 "code": "shower_service",
                 "name": {"ru": "Услуга душевой"},
-                "attached_attributes": []
+                "attached_attributes": [
+                    {"code": "type", "is_variant_only": False},
+                    {"code": "form_type", "is_variant_only": True},
+                    {"code": "door_type_ids", "is_variant_only": True}
+                ]
             }
         ],
         "categories": [
@@ -312,15 +411,17 @@ def run_conversion(base_dir=None, out_file=None):
                 "name": {"ru": "Толщина стекла"},
                 "type": "dictionary",
                 "option_param_type": "numeric",
-                "options": thickness_options
+                "options": thickness_options,
+                "settings": attr_chan_settings
             },
             {
                 "external_code": "attr_sh_color",
                 "code": "color",
-                "name": {"ru": "Цвет"},
+                "name": {"ru": "Цвет стекла"},
                 "type": "dictionary",
                 "option_param_type": "string",
-                "options": glass_color_options
+                "options": glass_color_options,
+                "settings": attr_chan_settings
             },
             {"external_code": "attr_sh_auto_img", "code": "autoImg", "name": {"ru": "Авто-изображение"}, "type": "boolean"},
             {"external_code": "attr_sh_roughness", "code": "roughness", "name": {"ru": "Шероховатость"}, "type": "numeric"},
@@ -328,10 +429,11 @@ def run_conversion(base_dir=None, out_file=None):
             {
                 "external_code": "attr_sh_type",
                 "code": "type",
-                "name": {"ru": "Тип"},
+                "name": {"ru": "Тип компонента"},
                 "type": "dictionary",
                 "option_param_type": "string",
-                "options": type_options
+                "options": type_options,
+                "settings": attr_chan_settings
             },
             {
                 "external_code": "attr_sh_furniture_type_id",
@@ -339,7 +441,8 @@ def run_conversion(base_dir=None, out_file=None):
                 "name": {"ru": "Цвет фурнитуры"},
                 "type": "dictionary",
                 "option_param_type": "string",
-                "options": furniture_options
+                "options": furniture_options,
+                "settings": attr_chan_settings
             },
             {
                 "external_code": "attr_sh_crossbar_type_id",
@@ -347,7 +450,8 @@ def run_conversion(base_dir=None, out_file=None):
                 "name": {"ru": "Тип штанги"},
                 "type": "dictionary",
                 "option_param_type": "string",
-                "options": crossbar_type_options
+                "options": crossbar_type_options,
+                "settings": attr_chan_settings
             },
             {
                 "external_code": "attr_sh_material_type_id",
@@ -355,7 +459,8 @@ def run_conversion(base_dir=None, out_file=None):
                 "name": {"ru": "Материал"},
                 "type": "dictionary",
                 "option_param_type": "string",
-                "options": material_options
+                "options": material_options,
+                "settings": attr_chan_settings
             },
             {
                 "external_code": "attr_sh_door_type_ids",
@@ -364,66 +469,34 @@ def run_conversion(base_dir=None, out_file=None):
                 "type": "dictionary",
                 "is_multiple": True,
                 "option_param_type": "string",
-                "options": door_options
+                "options": door_options,
+                "settings": attr_chan_settings
             },
-            {"external_code": "attr_sh_interface_name", "code": "interface_name", "name": {"ru": "Имя интерфейса"}, "type": "string"}
+            {"external_code": "attr_sh_interface_name", "code": "interface_name", "name": {"ru": "Имя интерфейса"}, "type": "string"},
+            {
+                "external_code": "attr_sh_form_type",
+                "code": "form_type",
+                "name": {"ru": "Форма кабины"},
+                "type": "dictionary",
+                "option_param_type": "string",
+                "options": form_options,
+                "settings": attr_chan_settings
+            },
+            {
+                "external_code": "attr_sh_service_limit",
+                "code": "shower_service_limits",
+                "name": {"ru": "Лимиты параметров услуг"},
+                "type": "dictionary",
+                "option_param_type": "numeric",
+                "options": service_limit_options,
+                "settings": attr_chan_settings
+            }
         ],
         "products": [],
         "complex_dictionaries": [],
         "pipelines": [],
         "binding_rules": []
     }
-
-    en_forms = load_csv_map(base_dir, "config/form.csv")
-    form_records = []
-    for fid, row in en_forms.items():
-        form_records.append({
-            "external_code": f"rec_config_form_{fid}",
-            "slug": fid,
-            "name": {"ru": row["name"]},
-            "meta": {}
-        })
-    import_data["complex_dictionaries"].append({
-        "external_code": "dict_shower_forms",
-        "code": "shower_forms",
-        "name": {"ru": "Формы кабин"},
-        "meta_schema": [],
-        "records": form_records
-    })
-
-    en_doors = load_csv_map(base_dir, "config/doors.csv")
-    door_records = []
-    for did, row in en_doors.items():
-        door_records.append({
-            "external_code": f"rec_config_door_{did}",
-            "slug": did,
-            "name": {"ru": row["name"]},
-            "meta": {}
-        })
-    import_data["complex_dictionaries"].append({
-        "external_code": "dict_shower_doors",
-        "code": "shower_doors",
-        "name": {"ru": "Типы дверей"},
-        "meta_schema": [],
-        "records": door_records
-    })
-
-    en_materials = load_csv_map(base_dir, "config/material.csv")
-    material_records = []
-    for mid, row in en_materials.items():
-        material_records.append({
-            "external_code": f"rec_config_material_{mid}",
-            "slug": mid,
-            "name": {"ru": row["name"]},
-            "meta": {}
-        })
-    import_data["complex_dictionaries"].append({
-        "external_code": "dict_shower_materials",
-        "code": "shower_materials",
-        "name": {"ru": "Материалы фурнитуры"},
-        "meta_schema": [],
-        "records": material_records
-    })
 
     en_furniture = load_csv_map(base_dir, "config/furniture.csv")
     furniture_records = []
@@ -475,27 +548,6 @@ def run_conversion(base_dir=None, out_file=None):
             {"key": "length_max", "type": "number", "label": {"ru": "Макс. длина"}}
         ],
         "records": measure_records
-    })
-
-    en_srv_limits = load_csv_map(base_dir, "limits/services.csv")
-    service_limit_records = []
-    for srv_id, row in en_srv_limits.items():
-        service_limit_records.append({
-            "external_code": f"rec_limit_service_{srv_id}",
-            "slug": srv_id,
-            "name": {"ru": f"Лимиты услуг для {srv_id}"},
-            "meta": {
-                "value_max": int(row["value_max"])
-            }
-        })
-    import_data["complex_dictionaries"].append({
-        "external_code": "dict_shower_service_limits",
-        "code": "shower_service_limits",
-        "name": {"ru": "Лимиты параметров услуг"},
-        "meta_schema": [
-            {"key": "value_max", "type": "number", "label": {"ru": "Макс. значение"}}
-        ],
-        "records": service_limit_records
     })
 
     en_interface = load_interface_csv(base_dir, "interface.csv")
@@ -628,8 +680,9 @@ def run_conversion(base_dir=None, out_file=None):
             "catalog_type": "product",
             "unit_code": "m2",
             "slug": f"shower-glass-{glass_id}",
+            "preview_picture": get_preview_picture(row),
             "name": {"ru": row["name"]},
-            "code": glass_id,
+            "code": f"glass_{glass_id}",
             "is_active": True,
             "eav": {
                 "color": glass_id,
@@ -683,7 +736,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-profile-{ptype}",
             "name": {"ru": base_name},
-            "code": ptype,
+            "code": f"profile_{ptype}",
             "is_active": True,
             "eav": {
                 "type": ptype
@@ -735,7 +788,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-handle-{htype}",
             "name": {"ru": base_name},
-            "code": htype,
+            "code": f"handle_{htype}",
             "is_active": True,
             "eav": {
                 "type": htype
@@ -751,6 +804,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "cost_price": round(to_float(row["price"]) * 0.7, 2),
                 "currency": "USD",
                 "price": to_float(row["price"]),
+                "preview_picture": get_preview_picture(row),
                 "is_default": True,
                 "is_active": True,
                 "eav": {
@@ -785,7 +839,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-crossbar-{ctype}",
             "name": {"ru": base_name},
-            "code": ctype,
+            "code": f"crossbar_{ctype}",
             "is_active": True,
             "eav": {
                 "type": ctype
@@ -836,7 +890,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-opensys-{otype}",
             "name": {"ru": base_name},
-            "code": otype,
+            "code": f"opensys_{otype}",
             "is_active": True,
             "eav": {
                 "type": otype
@@ -872,7 +926,7 @@ def run_conversion(base_dir=None, out_file=None):
 
     sealant_name_map = {
         "slide": "Уплотнитель для раздвижных дверей, 3м",
-        "hinge": "Уплонтитель для распашных дверей, 3м",
+        "hinge": "Уплотнитель для распашных дверей, 3м",
         "magnetic": "Магнитный уплотнитель, 3м"
     }
 
@@ -886,7 +940,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-sealant-{stype}",
             "name": {"ru": base_name},
-            "code": stype,
+            "code": f"sealant_{stype}",
             "is_active": True,
             "eav": {
                 "type": stype
@@ -967,7 +1021,7 @@ def run_conversion(base_dir=None, out_file=None):
             "unit_code": "pcs",
             "slug": f"shower-service-{stype}",
             "name": {"ru": base_name},
-            "code": stype,
+            "code": f"service_{stype}",
             "is_active": True,
             "eav": {
                 "type": stype

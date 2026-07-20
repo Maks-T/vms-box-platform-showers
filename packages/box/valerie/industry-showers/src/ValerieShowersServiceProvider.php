@@ -6,7 +6,7 @@ namespace Valerie\Box\IndustryShowers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Valerie\Box\IndustryShowers\Importers\ShowersRoomImporter;
+
 
 class ValerieShowersServiceProvider extends ServiceProvider
 {
@@ -33,10 +33,10 @@ class ValerieShowersServiceProvider extends ServiceProvider
     $this->registerApiRoutes();
     $this->registerWebRoutes();
     // Динамически дописываем наш импортер в конец массива ядра
-    $modules = config('nicole.import_modules', []);
+    /*$modules = config('nicole.import_modules', []);
     $modules[] = ShowersRoomImporter::class;
 
-    config(['nicole.import_modules' => array_unique($modules)]);
+    config(['nicole.import_modules' => array_unique($modules)]);*/
   }
 
   protected function registerApiRoutes(): void

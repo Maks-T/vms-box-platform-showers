@@ -25,8 +25,7 @@ class ShowersCalculatorBridgeController extends Controller
         'prices' => $this->loadPrices(),
         'limits' => $this->loadLimits(),
         'interface' => $this->loadInterfaceSettings(),
-        'rates' => $this->loadExchangeRates(),
-        'status' => true,
+        'rates' => $this->loadExchangeRates()
       ];
     });
 
@@ -40,6 +39,15 @@ class ShowersCalculatorBridgeController extends Controller
       return '';
     }
     return $val->value_option_id ? ($val->option?->slug ?? '') : ($val->value_string ?? (string)$val->value_numeric);
+  }
+
+  protected function getEavOptionParam($model, string $code): ?string
+  {
+    $val = $model->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
+    if (!$val || !$val->option) {
+      return null;
+    }
+    return $val->option->param;
   }
 
   protected function loadConfigurations(): array
@@ -128,7 +136,7 @@ class ShowersCalculatorBridgeController extends Controller
           'price1' => $p6,
           'price2' => $p8,
           'price3' => $p10,
-          'hexColor' => $this->getEavValue($product, 'color') ?: '#D6E4E5',
+          'hexColor' => $this->getEavOptionParam($product, 'color') ?: '#D6E4E5',
           'roughness' => (float)$this->getEavValue($product, 'roughness'),
           'fluted' => (bool)$this->getEavValue($product, 'fluted'),
           'pathImg' => $product->getPreviewUrl() ?? ''
@@ -164,7 +172,7 @@ class ShowersCalculatorBridgeController extends Controller
           $type = $this->getEavValue($v, 'type');
           $color = $this->getEavValue($v, 'furniture_type_id');
           $skuParts = explode('-', $v->sku);
-          $rawId = strtolower(end($skuParts));
+          $rawId = strtolower(end($skuParts)) . '_' . $type;
           $prices['handle'][$rawId] = [
             'id' => $rawId,
             'type' => $type,
@@ -270,7 +278,7 @@ class ShowersCalculatorBridgeController extends Controller
             'unit' => 'service',
             'currency' => 'USD',
             'price1' => (float)$v->price,
-            'price2' => 0.0
+            'price2' => (float)$v->cost_price
           ];
         }
       }

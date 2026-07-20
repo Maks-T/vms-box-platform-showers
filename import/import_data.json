@@ -62,7 +62,7 @@
   "families": [
     {
       "external_code": "fam_showers",
-      "code": "showers",
+      "code": "shower",
       "name": {
         "ru": "Душевые ограждения"
       }
@@ -76,7 +76,28 @@
       "name": {
         "ru": "Стекло душевое"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "glass_thickness",
+          "is_variant_only": true
+        },
+        {
+          "code": "color",
+          "is_variant_only": false
+        },
+        {
+          "code": "autoImg",
+          "is_variant_only": false
+        },
+        {
+          "code": "roughness",
+          "is_variant_only": false
+        },
+        {
+          "code": "fluted",
+          "is_variant_only": false
+        }
+      ]
     },
     {
       "external_code": "type_shower_profile",
@@ -85,7 +106,20 @@
       "name": {
         "ru": "Профиль душевой"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "furniture_type_id",
+          "is_variant_only": true
+        },
+        {
+          "code": "glass_thickness",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_handle",
@@ -94,7 +128,24 @@
       "name": {
         "ru": "Ручка душевая"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "furniture_type_id",
+          "is_variant_only": true
+        },
+        {
+          "code": "door_type_ids",
+          "is_variant_only": true
+        },
+        {
+          "code": "interface_name",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_open_system",
@@ -103,7 +154,20 @@
       "name": {
         "ru": "Система открывания"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "material_type_id",
+          "is_variant_only": true
+        },
+        {
+          "code": "furniture_type_id",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_crossbar",
@@ -112,7 +176,20 @@
       "name": {
         "ru": "Штанга стабилизационная"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "crossbar_type_id",
+          "is_variant_only": true
+        },
+        {
+          "code": "furniture_type_id",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_sealant",
@@ -121,7 +198,16 @@
       "name": {
         "ru": "Уплотнитель душевой"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "glass_thickness",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_doorstep",
@@ -130,7 +216,12 @@
       "name": {
         "ru": "Порог душевой"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "furniture_type_id",
+          "is_variant_only": true
+        }
+      ]
     },
     {
       "external_code": "type_shower_service",
@@ -139,7 +230,20 @@
       "name": {
         "ru": "Услуга душевой"
       },
-      "attached_attributes": []
+      "attached_attributes": [
+        {
+          "code": "type",
+          "is_variant_only": false
+        },
+        {
+          "code": "form_type",
+          "is_variant_only": true
+        },
+        {
+          "code": "door_type_ids",
+          "is_variant_only": true
+        }
+      ]
     }
   ],
   "categories": [
@@ -254,13 +358,27 @@
           },
           "param": 10.0
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_color",
       "code": "color",
       "name": {
-        "ru": "Цвет"
+        "ru": "Цвет стекла"
       },
       "type": "dictionary",
       "option_param_type": "string",
@@ -373,7 +491,21 @@
           },
           "param": "#C0C0C0"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_auto_img",
@@ -403,7 +535,7 @@
       "external_code": "attr_sh_type",
       "code": "type",
       "name": {
-        "ru": "Тип"
+        "ru": "Тип компонента"
       },
       "type": "dictionary",
       "option_param_type": "string",
@@ -588,7 +720,21 @@
           },
           "param": "montage"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_furniture_type_id",
@@ -683,7 +829,21 @@
           },
           "param": "#FFFFFF"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_crossbar_type_id",
@@ -695,7 +855,7 @@
       "option_param_type": "string",
       "options": [
         {
-          "external_code": "opt_cb_type_rect",
+          "external_code": "opt_crossbar_type_rect",
           "slug": "rect",
           "value": {
             "ru": "Прямоугольная"
@@ -707,7 +867,7 @@
           "param": "rect"
         },
         {
-          "external_code": "opt_cb_type_round",
+          "external_code": "opt_crossbar_type_round",
           "slug": "round",
           "value": {
             "ru": "Круглая"
@@ -719,18 +879,44 @@
           "param": "round"
         },
         {
-          "external_code": "opt_cb_type_corner",
+          "external_code": "opt_crossbar_type_corner",
           "slug": "corner",
           "value": {
-            "ru": "Угловая штанга"
+            "ru": "Угловой стабилизатор"
           },
           "meta": {
             "hex": null,
             "image": null
           },
           "param": "corner"
+        },
+        {
+          "external_code": "opt_crossbar_type_none",
+          "slug": "none",
+          "value": {
+            "ru": "Без штанги (при креплении к потолку)"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "none"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_material_type_id",
@@ -777,7 +963,21 @@
           },
           "param": "brass"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_door_type_ids",
@@ -885,7 +1085,21 @@
           },
           "param": "one_swing_with_partition"
         }
-      ]
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     },
     {
       "external_code": "attr_sh_interface_name",
@@ -894,6 +1108,164 @@
         "ru": "Имя интерфейса"
       },
       "type": "string"
+    },
+    {
+      "external_code": "attr_sh_form_type",
+      "code": "form_type",
+      "name": {
+        "ru": "Форма кабины"
+      },
+      "type": "dictionary",
+      "option_param_type": "string",
+      "options": [
+        {
+          "external_code": "opt_form_type_line",
+          "slug": "line",
+          "value": {
+            "ru": "Линейная"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "line"
+        },
+        {
+          "external_code": "opt_form_type_corner",
+          "slug": "corner",
+          "value": {
+            "ru": "Угловая"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "corner"
+        },
+        {
+          "external_code": "opt_form_type_free",
+          "slug": "free",
+          "value": {
+            "ru": "Свободный вход"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "free"
+        },
+        {
+          "external_code": "opt_form_type_trapezoid",
+          "slug": "trapezoid",
+          "value": {
+            "ru": "Трапецевидная"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "trapezoid"
+        },
+        {
+          "external_code": "opt_form_type_ushaped",
+          "slug": "ushaped",
+          "value": {
+            "ru": "П-образная"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "ushaped"
+        },
+        {
+          "external_code": "opt_form_type_door",
+          "slug": "door",
+          "value": {
+            "ru": "Дверь в нишу"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "door"
+        },
+        {
+          "external_code": "opt_form_type_curtain",
+          "slug": "curtain",
+          "value": {
+            "ru": "Шторка в ванную"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": "curtain"
+        }
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
+    },
+    {
+      "external_code": "attr_sh_service_limit",
+      "code": "shower_service_limits",
+      "name": {
+        "ru": "Лимиты параметров услуг"
+      },
+      "type": "dictionary",
+      "option_param_type": "numeric",
+      "options": [
+        {
+          "external_code": "opt_srv_limit_distance",
+          "slug": "distance",
+          "value": {
+            "ru": "distance"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": 1000.0
+        },
+        {
+          "external_code": "opt_srv_limit_level",
+          "slug": "level",
+          "value": {
+            "ru": "level"
+          },
+          "meta": {
+            "hex": null,
+            "image": null
+          },
+          "param": 100.0
+        }
+      ],
+      "settings": {
+        "channels": {
+          "widget": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          },
+          "catalog": {
+            "is_public": true,
+            "is_filterable": true,
+            "sort_order": 10
+          }
+        }
+      }
     }
   ],
   "products": [
@@ -904,10 +1276,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_1",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное прозрачное универсальное\t\t\t"
       },
-      "code": "id_1",
+      "code": "glass_id_1",
       "is_active": true,
       "eav": {
         "color": "id_1",
@@ -961,10 +1334,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_2",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное матовое универсальное\t\t\t"
       },
-      "code": "id_2",
+      "code": "glass_id_2",
       "is_active": true,
       "eav": {
         "color": "id_2",
@@ -1018,10 +1392,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_3",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное прозрачное осветленное\t\t\t"
       },
-      "code": "id_3",
+      "code": "glass_id_3",
       "is_active": true,
       "eav": {
         "color": "id_3",
@@ -1075,10 +1450,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_4",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное матовое осветленное\t\t\t"
       },
-      "code": "id_4",
+      "code": "glass_id_4",
       "is_active": true,
       "eav": {
         "color": "id_4",
@@ -1132,10 +1508,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_5",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное тонированное полупрозрачное графит\t\t\t"
       },
-      "code": "id_5",
+      "code": "glass_id_5",
       "is_active": true,
       "eav": {
         "color": "id_5",
@@ -1189,10 +1566,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_6",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное тонированное полупрозрачное бронза\t\t\t"
       },
-      "code": "id_6",
+      "code": "glass_id_6",
       "is_active": true,
       "eav": {
         "color": "id_6",
@@ -1246,10 +1624,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_7",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное матовое графит\t\t\t"
       },
-      "code": "id_7",
+      "code": "glass_id_7",
       "is_active": true,
       "eav": {
         "color": "id_7",
@@ -1303,10 +1682,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_8",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное матовое бронза\t\t\t"
       },
-      "code": "id_8",
+      "code": "glass_id_8",
       "is_active": true,
       "eav": {
         "color": "id_8",
@@ -1360,10 +1740,11 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_9",
+      "preview_picture": null,
       "name": {
         "ru": "Стекло закаленное рифленое\t\t\t"
       },
-      "code": "id_9",
+      "code": "glass_id_9",
       "is_active": true,
       "eav": {
         "color": "id_9",
@@ -1420,7 +1801,7 @@
       "name": {
         "ru": "Профиль П-образный из алюминия в полимерном покрытии"
       },
-      "code": "profile",
+      "code": "profile_profile",
       "is_active": true,
       "eav": {
         "type": "profile"
@@ -1711,7 +2092,7 @@
       "name": {
         "ru": "Профиль угловой 90 градусов для стекла, мм"
       },
-      "code": "corner",
+      "code": "profile_corner",
       "is_active": true,
       "eav": {
         "type": "corner"
@@ -2002,7 +2383,7 @@
       "name": {
         "ru": "Заглушка П-профиля"
       },
-      "code": "cap",
+      "code": "profile_cap",
       "is_active": true,
       "eav": {
         "type": "cap"
@@ -2293,7 +2674,7 @@
       "name": {
         "ru": "Ручка-кноб душевая"
       },
-      "code": "knob",
+      "code": "handle_knob",
       "is_active": true,
       "eav": {
         "type": "knob"
@@ -2305,6 +2686,7 @@
           "cost_price": 45.5,
           "currency": "USD",
           "price": 65.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2322,6 +2704,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2339,6 +2722,7 @@
           "cost_price": 49.0,
           "currency": "USD",
           "price": 70.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2356,6 +2740,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2373,6 +2758,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2390,6 +2776,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2407,6 +2794,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2424,6 +2812,7 @@
           "cost_price": 45.5,
           "currency": "USD",
           "price": 65.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2441,6 +2830,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2458,6 +2848,7 @@
           "cost_price": 49.0,
           "currency": "USD",
           "price": 70.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2475,6 +2866,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2492,6 +2884,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2509,6 +2902,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2526,6 +2920,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2549,7 +2944,7 @@
       "name": {
         "ru": "Ручка-скоба душевая"
       },
-      "code": "bracket",
+      "code": "handle_bracket",
       "is_active": true,
       "eav": {
         "type": "bracket"
@@ -2561,6 +2956,7 @@
           "cost_price": 98.0,
           "currency": "USD",
           "price": 140.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2578,6 +2974,7 @@
           "cost_price": 117.6,
           "currency": "USD",
           "price": 168.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2595,6 +2992,7 @@
           "cost_price": 105.0,
           "currency": "USD",
           "price": 150.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2612,6 +3010,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2629,6 +3028,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2646,6 +3046,7 @@
           "cost_price": 117.6,
           "currency": "USD",
           "price": 168.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2663,6 +3064,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2680,6 +3082,7 @@
           "cost_price": 98.0,
           "currency": "USD",
           "price": 140.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2697,6 +3100,7 @@
           "cost_price": 117.6,
           "currency": "USD",
           "price": 168.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2714,6 +3118,7 @@
           "cost_price": 105.0,
           "currency": "USD",
           "price": 150.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2731,6 +3136,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2748,6 +3154,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2765,6 +3172,7 @@
           "cost_price": 117.6,
           "currency": "USD",
           "price": 168.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2782,6 +3190,7 @@
           "cost_price": 108.5,
           "currency": "USD",
           "price": 155.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2805,7 +3214,7 @@
       "name": {
         "ru": "Ручка-полотенцедержатель душевая"
       },
-      "code": "holder",
+      "code": "handle_holder",
       "is_active": true,
       "eav": {
         "type": "holder"
@@ -2817,6 +3226,7 @@
           "cost_price": 66.5,
           "currency": "USD",
           "price": 95.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2834,6 +3244,7 @@
           "cost_price": 77.0,
           "currency": "USD",
           "price": 110.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2851,6 +3262,7 @@
           "cost_price": 70.0,
           "currency": "USD",
           "price": 100.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2868,6 +3280,7 @@
           "cost_price": 77.0,
           "currency": "USD",
           "price": 110.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2885,6 +3298,7 @@
           "cost_price": 77.0,
           "currency": "USD",
           "price": 110.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2902,6 +3316,7 @@
           "cost_price": 77.0,
           "currency": "USD",
           "price": 110.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2919,6 +3334,7 @@
           "cost_price": 70.0,
           "currency": "USD",
           "price": 100.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2942,7 +3358,7 @@
       "name": {
         "ru": "Ручка утопленная для раздвижных дверей"
       },
-      "code": "sliding",
+      "code": "handle_sliding",
       "is_active": true,
       "eav": {
         "type": "sliding"
@@ -2954,6 +3370,7 @@
           "cost_price": 45.5,
           "currency": "USD",
           "price": 65.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2971,6 +3388,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -2988,6 +3406,7 @@
           "cost_price": 49.0,
           "currency": "USD",
           "price": 70.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3005,6 +3424,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3022,6 +3442,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3039,6 +3460,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3056,6 +3478,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3073,6 +3496,7 @@
           "cost_price": 45.5,
           "currency": "USD",
           "price": 65.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3090,6 +3514,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3107,6 +3532,7 @@
           "cost_price": 49.0,
           "currency": "USD",
           "price": 70.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3124,6 +3550,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3141,6 +3568,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3158,6 +3586,7 @@
           "cost_price": 56.0,
           "currency": "USD",
           "price": 80.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3175,6 +3604,7 @@
           "cost_price": 52.5,
           "currency": "USD",
           "price": 75.0,
+          "preview_picture": null,
           "is_default": true,
           "is_active": true,
           "eav": {
@@ -3198,7 +3628,7 @@
       "name": {
         "ru": "Стабилизирующая штанга"
       },
-      "code": "crossbar",
+      "code": "crossbar_crossbar",
       "is_active": true,
       "eav": {
         "type": "crossbar"
@@ -3489,7 +3919,7 @@
       "name": {
         "ru": "Крепление штанги к стене"
       },
-      "code": "fix",
+      "code": "crossbar_fix",
       "is_active": true,
       "eav": {
         "type": "fix"
@@ -3689,7 +4119,7 @@
       "name": {
         "ru": "Держатель стекла для штанги"
       },
-      "code": "fix_glass",
+      "code": "crossbar_fix_glass",
       "is_active": true,
       "eav": {
         "type": "fix_glass"
@@ -3889,7 +4319,7 @@
       "name": {
         "ru": "Петли душевые"
       },
-      "code": "hinge",
+      "code": "opensys_hinge",
       "is_active": true,
       "eav": {
         "type": "hinge"
@@ -4115,7 +4545,7 @@
       "name": {
         "ru": "Трек направляющий"
       },
-      "code": "track",
+      "code": "opensys_track",
       "is_active": true,
       "eav": {
         "type": "track"
@@ -4224,7 +4654,7 @@
       "name": {
         "ru": "Раздвижная система для стеклянных дверей"
       },
-      "code": "slide",
+      "code": "opensys_slide",
       "is_active": true,
       "eav": {
         "type": "slide"
@@ -4333,7 +4763,7 @@
       "name": {
         "ru": "Коннектор трека угловой"
       },
-      "code": "connector",
+      "code": "opensys_connector",
       "is_active": true,
       "eav": {
         "type": "connector"
@@ -4442,7 +4872,7 @@
       "name": {
         "ru": "Уплотнитель для раздвижных дверей, 3м"
       },
-      "code": "slide",
+      "code": "sealant_slide",
       "is_active": true,
       "eav": {
         "type": "slide"
@@ -4494,9 +4924,9 @@
       "unit_code": "pcs",
       "slug": "shower-sealant-hinge",
       "name": {
-        "ru": "Уплонтитель для распашных дверей, 3м"
+        "ru": "Уплотнитель для распашных дверей, 3м"
       },
-      "code": "hinge",
+      "code": "sealant_hinge",
       "is_active": true,
       "eav": {
         "type": "hinge"
@@ -4550,7 +4980,7 @@
       "name": {
         "ru": "Магнитный уплотнитель, 3м"
       },
-      "code": "magnetic",
+      "code": "sealant_magnetic",
       "is_active": true,
       "eav": {
         "type": "magnetic"
@@ -4704,7 +5134,7 @@
       "name": {
         "ru": ""
       },
-      "code": "",
+      "code": "service_",
       "is_active": true,
       "eav": {
         "type": ""
@@ -4748,7 +5178,7 @@
       "name": {
         "ru": "Услуга замера"
       },
-      "code": "measure",
+      "code": "service_measure",
       "is_active": true,
       "eav": {
         "type": "measure"
@@ -4779,7 +5209,7 @@
       "name": {
         "ru": "Услуга доставки"
       },
-      "code": "delivery",
+      "code": "service_delivery",
       "is_active": true,
       "eav": {
         "type": "delivery"
@@ -4810,7 +5240,7 @@
       "name": {
         "ru": "Подъем на этаж"
       },
-      "code": "lift",
+      "code": "service_lift",
       "is_active": true,
       "eav": {
         "type": "lift"
@@ -4841,7 +5271,7 @@
       "name": {
         "ru": "Монтажные работы"
       },
-      "code": "montage",
+      "code": "service_montage",
       "is_active": true,
       "eav": {
         "type": "montage"
@@ -5031,180 +5461,6 @@
     }
   ],
   "complex_dictionaries": [
-    {
-      "external_code": "dict_shower_forms",
-      "code": "shower_forms",
-      "name": {
-        "ru": "Формы кабин"
-      },
-      "meta_schema": [],
-      "records": [
-        {
-          "external_code": "rec_config_form_line",
-          "slug": "line",
-          "name": {
-            "ru": "Линейная"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_corner",
-          "slug": "corner",
-          "name": {
-            "ru": "Угловая"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_free",
-          "slug": "free",
-          "name": {
-            "ru": "Свободный вход"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_trapezoid",
-          "slug": "trapezoid",
-          "name": {
-            "ru": "Трапецевидная"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_ushaped",
-          "slug": "ushaped",
-          "name": {
-            "ru": "П-образная"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_door",
-          "slug": "door",
-          "name": {
-            "ru": "Дверь в нишу"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_form_curtain",
-          "slug": "curtain",
-          "name": {
-            "ru": "Шторка в ванную"
-          },
-          "meta": {}
-        }
-      ]
-    },
-    {
-      "external_code": "dict_shower_doors",
-      "code": "shower_doors",
-      "name": {
-        "ru": "Типы дверей"
-      },
-      "meta_schema": [],
-      "records": [
-        {
-          "external_code": "rec_config_door_one_swing",
-          "slug": "one_swing",
-          "name": {
-            "ru": "Одна распашная дверь"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_two_swing",
-          "slug": "two_swing",
-          "name": {
-            "ru": "Две распашные двери"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_one_slide",
-          "slug": "one_slide",
-          "name": {
-            "ru": "Одна раздвижная дверь"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_two_slide",
-          "slug": "two_slide",
-          "name": {
-            "ru": "Две раздвижные двери"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_accordion_2glass",
-          "slug": "accordion_2glass",
-          "name": {
-            "ru": "Гармошка, 2 стекла"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_accordion_3glass",
-          "slug": "accordion_3glass",
-          "name": {
-            "ru": "Гармошка, 3 стекла"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_static",
-          "slug": "static",
-          "name": {
-            "ru": "Стационарная"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_door_one_swing_with_partition",
-          "slug": "one_swing_with_partition",
-          "name": {
-            "ru": "Распашная с перегородкой"
-          },
-          "meta": {}
-        }
-      ]
-    },
-    {
-      "external_code": "dict_shower_materials",
-      "code": "shower_materials",
-      "name": {
-        "ru": "Материалы фурнитуры"
-      },
-      "meta_schema": [],
-      "records": [
-        {
-          "external_code": "rec_config_material_zn",
-          "slug": "zn",
-          "name": {
-            "ru": "Цинковый сплав"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_material_stainless",
-          "slug": "stainless",
-          "name": {
-            "ru": "Нержавеющая сталь"
-          },
-          "meta": {}
-        },
-        {
-          "external_code": "rec_config_material_brass",
-          "slug": "brass",
-          "name": {
-            "ru": "Латунь"
-          },
-          "meta": {}
-        }
-      ]
-    },
     {
       "external_code": "dict_shower_furniture",
       "code": "shower_furniture",
@@ -5452,44 +5708,6 @@
       ]
     },
     {
-      "external_code": "dict_shower_service_limits",
-      "code": "shower_service_limits",
-      "name": {
-        "ru": "Лимиты параметров услуг"
-      },
-      "meta_schema": [
-        {
-          "key": "value_max",
-          "type": "number",
-          "label": {
-            "ru": "Макс. значение"
-          }
-        }
-      ],
-      "records": [
-        {
-          "external_code": "rec_limit_service_distance",
-          "slug": "distance",
-          "name": {
-            "ru": "Лимиты услуг для distance"
-          },
-          "meta": {
-            "value_max": 1000
-          }
-        },
-        {
-          "external_code": "rec_limit_service_level",
-          "slug": "level",
-          "name": {
-            "ru": "Лимиты услуг для level"
-          },
-          "meta": {
-            "value_max": 100
-          }
-        }
-      ]
-    },
-    {
       "external_code": "dict_shower_interface_settings",
       "code": "shower_interface_settings",
       "name": {
@@ -5704,272 +5922,5 @@
       }
     }
   ],
-  "binding_rules": [
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_chrome_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_chrome_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 2
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_black_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_black_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 3
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_bronze_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_bronze_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 4
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_gold_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_gold_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 5
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_gold_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_gold_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 6
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_profile_white_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-profile (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_profile_white_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 7
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_chrome_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_chrome_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 8
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_chrome_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_chrome_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 9
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_black_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_black_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 10
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_bronze_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_bronze_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 11
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_gold_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_gold_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 12
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_gold_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_gold_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 13
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_corner_white_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-corner (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_corner_white_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 14
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_chrome_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_chrome_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 15
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_chrome_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_chrome_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 16
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_black_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_black_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 17
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_bronze_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_bronze_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 18
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_gold_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_gold_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 19
-    },
-    {
-      "external_code": "rule_g_id_1_6mm_p_var_shower_profile_cap_gold_matte_6mm",
-      "pipeline_external_code": "pl_showers",
-      "name": "Match Profile shower-profile-cap (6mm) to Glass id_1 (6mm)",
-      "role": "profile",
-      "parent_type_key": "variant",
-      "parent_external_code": "var_shower_glass_id_1_6mm",
-      "child_type_key": "variant",
-      "child_external_code": "var_shower_profile_cap_gold_matte_6mm",
-      "conditions": null,
-      "quantity_formula": "1",
-      "is_required": true,
-      "sort_order": 20
-    }
-  ]
+  "binding_rules": []
 }
