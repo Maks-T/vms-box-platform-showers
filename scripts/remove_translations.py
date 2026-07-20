@@ -27,8 +27,8 @@ def filter_languages(node):
 
 def main():
     # Пути к вашим файлам
-    input_file = r'\\wsl.localhost\Ubuntu-24.04\home\maks-t\vms-box-platform-cctv\import\import_data_multilingual.json'
-    output_file = r'\\wsl.localhost\Ubuntu-24.04\home\maks-t\vms-box-platform-cctv\import\import_data.json'
+    input_file = r'\\wsl.localhost\Ubuntu-24.04\home\maks-t\vms-box-platform-showers\import\import_data_multilingual.json'
+    output_file = r'\\wsl.localhost\Ubuntu-24.04\home\maks-t\vms-box-platform-showers\import\import_data.json'
 
     print("Загрузка файла...")
     try:

@@ -7,6 +7,7 @@ namespace Valerie\Box\IndustryShowers\Http\Controllers\Api\V1;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Cache;
 use Nicole\Box\Core\Models\Product;
 use Nicole\Box\Core\Models\ComplexDictionary;
 use Nicole\Box\Core\Models\Currency;
@@ -15,22 +16,41 @@ class ShowersCalculatorBridgeController extends Controller
 {
   public function appData(Request $request): JsonResponse
   {
-    $data = [];
+    $version = Cache::get('catalog_version', 1);
+    $cacheKey = 'showers_calc_bridge_v' . $version . '_' . app()->getLocale();
 
-    $data['config'] = $this->loadConfigurations();
-    $data['prices'] = $this->loadPrices();
-    $data['limits'] = $this->loadLimits();
-    $data['interface'] = $this->loadInterfaceSettings();
-    $data['rates'] = $this->loadExchangeRates();
-    $data['status'] = true;
+    $responsePayload = Cache::remember($cacheKey, 86400, function () {
+      return [
+        'config' => $this->loadConfigurations(),
+        'prices' => $this->loadPrices(),
+        'limits' => $this->loadLimits(),
+        'interface' => $this->loadInterfaceSettings(),
+        'rates' => $this->loadExchangeRates(),
+        'status' => true,
+      ];
+    });
 
-    return response()->json($data);
+    return response()->json($responsePayload);
+  }
+
+  protected function getEavValue($model, string $code): string
+  {
+    $val = $model->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
+    if (!$val) {
+      return '';
+    }
+    return $val->value_option_id ? ($val->option?->slug ?? '') : ($val->value_string ?? (string)$val->value_numeric);
   }
 
   protected function loadConfigurations(): array
   {
     $config = [];
-    $dicts = ['shower_forms' => 'form', 'shower_doors' => 'doors', 'shower_materials' => 'material', 'shower_furniture' => 'furniture'];
+    $dicts = [
+      'shower_forms' => 'form',
+      'shower_doors' => 'doors',
+      'shower_materials' => 'material',
+      'shower_furniture' => 'furniture'
+    ];
 
     foreach ($dicts as $dbCode => $frontKey) {
       $dict = ComplexDictionary::where('code', $dbCode)->with('records')->first();
@@ -57,35 +77,203 @@ class ShowersCalculatorBridgeController extends Controller
 
   protected function loadPrices(): array
   {
-    $prices = [];
+    $prices = [
+      'crossbar' => [],
+      'doorstep' => [],
+      'glasses' => [],
+      'handle' => [],
+      'openSystem' => [],
+      'profile' => [],
+      'sealant' => [],
+      'services' => []
+    ];
 
-    $glassesProducts = Product::where('category_external_code', 'cat_showers_glass')
-      ->with('variants.attributeValues.option')
-      ->get();
+    $colorToId = [
+      'chrome' => 'id_1',
+      'chrome_matte' => 'id_2',
+      'black' => 'id_3',
+      'bronze' => 'id_4',
+      'gold' => 'id_5',
+      'gold_matte' => 'id_6',
+      'white' => 'id_7',
+      'gunmetal_grey' => 'id_8'
+    ];
 
-    foreach ($glassesProducts as $product) {
-      $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
-      foreach ($product->variants as $variant) {
-        $thick = $variant->attributeValues->firstWhere('attribute.code', 'glass_thickness')?->option?->slug;
-        $price = (float)$variant->price;
-        if ($thick === '6') $p6 = $price;
-        if ($thick === '8') $p8 = $price;
-        if ($thick === '10') $p10 = $price;
+    $allProducts = Product::with([
+      'variants.attributeValues.attribute',
+      'variants.attributeValues.option',
+      'attributeValues.attribute',
+      'attributeValues.option'
+    ])->get();
+
+    foreach ($allProducts as $product) {
+      $catCode = $product->category?->external_code ?? '';
+
+      if ($catCode === 'cat_showers_glass') {
+        $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
+        foreach ($product->variants as $variant) {
+          if (str_ends_with($variant->sku, '6MM')) {
+            $p6 = (float)$variant->price;
+          } elseif (str_ends_with($variant->sku, '8MM')) {
+            $p8 = (float)$variant->price;
+          } elseif (str_ends_with($variant->sku, '10MM')) {
+            $p10 = (float)$variant->price;
+          }
+        }
+        $prices['glasses'][$product->code] = [
+          'id' => $product->code,
+          'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
+          'unit' => 'm²',
+          'currency' => 'USD',
+          'price1' => $p6,
+          'price2' => $p8,
+          'price3' => $p10,
+          'hexColor' => $this->getEavValue($product, 'color') ?: '#D6E4E5',
+          'roughness' => (float)$this->getEavValue($product, 'roughness'),
+          'fluted' => (bool)$this->getEavValue($product, 'fluted'),
+          'pathImg' => $product->getPreviewUrl() ?? ''
+        ];
       }
 
-      $prices['glasses'][$product->code] = [
-        'id' => $product->code,
-        'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
-        'unit' => 'm²',
-        'currency' => 'USD',
-        'price1' => $p6,
-        'price2' => $p8,
-        'price3' => $p10,
-        'hexColor' => '#D6E4E5',
-        'roughness' => 0.0,
-        'fluted' => false,
-        'pathImg' => ''
-      ];
+      if ($catCode === 'cat_showers_profiles') {
+        $type = $this->getEavValue($product, 'type');
+        $groupedByColor = [];
+        foreach ($product->variants as $v) {
+          $color = $this->getEavValue($v, 'furniture_type_id');
+          $thick = $this->getEavValue($v, 'glass_thickness');
+          $groupedByColor[$color][$thick] = (float)$v->price;
+          $groupedByColor[$color]['name'] = $product->getTranslation('name', app()->getLocale()) ?? $product->name;
+        }
+        foreach ($groupedByColor as $color => $thickPrices) {
+          $id = $colorToId[$color] ?? $color;
+          $prices['profile'][$type][$id] = [
+            'id' => $id,
+            'furnitureTypeId' => $color,
+            'name' => $thickPrices['name'] ?? '',
+            'unit' => 'pcs.',
+            'currency' => 'USD',
+            'price1' => $thickPrices['6mm'] ?? 0.0,
+            'price2' => $thickPrices['8mm'] ?? 0.0,
+            'price3' => $thickPrices['10mm'] ?? 0.0
+          ];
+        }
+      }
+
+      if ($catCode === 'cat_showers_handles') {
+        foreach ($product->variants as $v) {
+          $type = $this->getEavValue($v, 'type');
+          $color = $this->getEavValue($v, 'furniture_type_id');
+          $skuParts = explode('-', $v->sku);
+          $rawId = strtolower(end($skuParts));
+          $prices['handle'][$rawId] = [
+            'id' => $rawId,
+            'type' => $type,
+            'furnitureTypeId' => $color,
+            'doorTypeIds' => explode(',', $this->getEavValue($v, 'door_type_ids')),
+            'interfaceName' => $this->getEavValue($v, 'interface_name'),
+            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'unit' => 'pcs.',
+            'currency' => 'USD',
+            'price' => (float)$v->price,
+            'pathImg' => $v->getPreviewUrl() ?? ''
+          ];
+        }
+      }
+
+      if ($catCode === 'cat_showers_crossbars') {
+        $type = $this->getEavValue($product, 'type');
+        foreach ($product->variants as $v) {
+          $cbType = $this->getEavValue($v, 'crossbar_type_id');
+          $color = $this->getEavValue($v, 'furniture_type_id');
+          $skuParts = explode('-', $v->sku);
+          $rawId = strtolower(end($skuParts));
+          $prices['crossbar'][$type][$rawId] = [
+            'id' => $rawId,
+            'crossbarTypeId' => $cbType,
+            'furnitureTypeId' => $color,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'unit' => $product->unit?->symbol ?? 'pcs.',
+            'currency' => 'USD',
+            'price' => (float)$v->price
+          ];
+        }
+      }
+
+      if ($catCode === 'cat_showers_open_systems') {
+        $type = $this->getEavValue($product, 'type');
+        foreach ($product->variants as $v) {
+          $mat = $this->getEavValue($v, 'material_type_id');
+          $color = $this->getEavValue($v, 'furniture_type_id');
+          $skuParts = explode('-', $v->sku);
+          $rawId = strtolower(end($skuParts));
+          $prices['openSystem'][$type][$rawId] = [
+            'id' => $rawId,
+            'materialTypeId' => $mat,
+            'furnitureTypeId' => $color,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'unit' => 'psc.',
+            'currency' => 'USD',
+            'price' => (float)$v->price
+          ];
+        }
+      }
+
+      if ($catCode === 'cat_showers_sealants') {
+        $type = $this->getEavValue($product, 'type');
+        $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
+        foreach ($product->variants as $v) {
+          if (str_ends_with($v->sku, '6MM')) {
+            $p6 = (float)$v->price;
+          } elseif (str_ends_with($v->sku, '8MM')) {
+            $p8 = (float)$v->price;
+          } elseif (str_ends_with($v->sku, '10MM')) {
+            $p10 = (float)$v->price;
+          }
+        }
+        $prices['sealant'][$type]['id_1'] = [
+          'id' => 'id_1',
+          'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
+          'unit' => 'psc.',
+          'currency' => 'USD',
+          'price1' => $p6,
+          'price2' => $p8,
+          'price3' => $p10
+        ];
+      }
+
+      if ($catCode === 'cat_showers_doorsteps') {
+        foreach ($product->variants as $v) {
+          $color = $this->getEavValue($v, 'furniture_type_id');
+          $skuParts = explode('-', $v->sku);
+          $rawId = strtolower(end($skuParts));
+          $prices['doorstep'][$rawId] = [
+            'id' => $rawId,
+            'furnitureTypeId' => $color,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'unit' => 'lm.',
+            'currency' => 'USD',
+            'price' => (float)$v->price
+          ];
+        }
+      }
+
+      if ($catCode === 'cat_showers_services') {
+        $type = $this->getEavValue($product, 'type');
+        foreach ($product->variants as $v) {
+          $skuParts = explode('-', $v->sku);
+          $rawId = strtolower(end($skuParts));
+          $prices['services'][$type][$rawId] = [
+            'id' => $rawId,
+            'formTypeId' => $this->getEavValue($v, 'form_type'),
+            'doorTypeIds' => explode(',', $this->getEavValue($v, 'door_type_ids')),
+            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'unit' => 'service',
+            'currency' => 'USD',
+            'price1' => (float)$v->price,
+            'price2' => 0.0
+          ];
+        }
+      }
     }
 
     return $prices;
