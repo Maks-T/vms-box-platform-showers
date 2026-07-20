@@ -1,0 +1,319 @@
+[
+  {
+    "id": "commissioning_work",
+    "code": null,
+    "name": {
+      "ru": "Технический надзор",
+      "en": "Technical supervision",
+      "es": "Supervisión técnica",
+      "de": "Technische Aufsicht"
+    },
+    "description": {
+      "ru": "Контроль соответствия монтажных и пусконаладочных работ и техническим требованиям, проверку качества установки оборудования, соблюдение сроков и стандартов безопасности, а также приемку выполненных работ.",
+      "en": "Monitoring compliance of installation and commissioning works with technical requirements, checking the quality of equipment installation, compliance with deadlines and safety standards, as well as acceptance of completed work.",
+      "es": "Seguimiento del cumplimiento de los trabajos de instalación y puesta en servicio de los requisitos técnicos, comprobando la calidad de la instalación de los equipos, el cumplimiento de los plazos y normas de seguridad, así como la aceptación de los trabajos terminados.",
+      "de": "Überwachung der Übereinstimmung der Installations- und Inbetriebnahmearbeiten mit den technischen Anforderungen, Überprüfung der Qualität der Geräteinstallation, Einhaltung von Fristen und Sicherheitsstandards sowie Abnahme der abgeschlossenen Arbeiten."
+    },
+    "value": 10
+  },
+  {
+    "id": "tooltips",
+    "code": null,
+    "name": {
+      "ru": "Подсказки",
+      "en": "Hints",
+      "es": "Consejos",
+      "de": "Hinweise"
+    },
+    "description": {
+      "ru": "",
+      "en": "",
+      "es": "",
+      "de": ""
+    },
+    "value": 0,
+    "items": {
+      "type": {
+        "id": "type",
+        "name": {
+          "ru": "Тип системы",
+          "en": "System type",
+          "es": "Tipo de sistema",
+          "de": "Systemtyp"
+        },
+        "description": {
+          "ru": "Цифровая IP-платформа нового поколения. Поддерживает масштабирование без ограничений, аналитику и интеграцию с другими системами безопасности. ТЕСТ ",
+          "en": "Next generation digital IP platform. Supports unlimited scaling, analytics and integration with other security systems. TEST",
+          "es": "Plataforma IP digital de próxima generación. Admite escalabilidad, análisis e integración ilimitados con otros sistemas de seguridad. PRUEBA",
+          "de": "Digitale IP-Plattform der nächsten Generation. Unterstützt unbegrenzte Skalierung, Analyse und Integration mit anderen Sicherheitssystemen. PRÜFEN"
+        },
+        "value": "",
+        "items": {}
+      },
+      "groups": {
+        "id": "groups",
+        "name": {
+          "ru": "Уровень системы",
+          "en": "System level",
+          "es": "Nivel del sistema",
+          "de": "Systemebene"
+        },
+        "description": {
+          "ru": "\n\nЛайт — оптимальное решение, если вам нужна простая и надёжная система видеонаблюдения без сложных аналитических функций. Эта серия идеально подойдёт для частных домов, небольших магазинов, офисов и других объектов, где требуется базовый контроль территории без необходимости в продвинутой видеоаналитике.\n\n\nСтандарт — лучший выбор, если для вас важно современное качество изображения, интеллектуальная детекция движения и стабильная работа в любых условиях освещения. Камеры этой серии оснащены гибридной Smart-подсветкой и технологией BrightVu (в отдельных моделях), что делает их отличным решением для объектов недвижимости, малого бизнеса, офисов, парковок, детских садов, школ и медицинских учреждений.\n\n\nПремиум — идеальный вариант для тех, кто ищет максимальное качество, надёжность и функциональность. Камеры этой серии используют AI-аналитику и передовые технологии, обеспечивая не просто видеонаблюдение, а интеллектуальный контроль событий, защиту периметра и распознавание лиц. Они подходят для крупных коммерческих и промышленных объектов с повышенными требованиями к безопасности.\n\n",
+          "en": "Light is the optimal solution if you need a simple and reliable video surveillance system without complex analytical functions. This series is ideal for private homes, small shops, offices and other facilities where basic territory control is required without the need for advanced video analytics. \n\n\nStandard is the best choice if you value state-of-the-art image quality, intelligent motion detection, and stable performance in all lighting conditions. The cameras in this series are equipped with hybrid Smart backlight and BrightVu technology (in select models), which makes them an excellent solution for real estate, small businesses, offices, parking lots, kindergartens, schools and medical institutions. \n\n\nPremium is an ideal option for those who are looking for maximum quality, reliability and functionality. The cameras in this series use AI analytics and advanced technologies, providing not just video surveillance, but intelligent event control, perimeter protection and facial recognition. They are suitable for large commercial and industrial facilities with increased safety requirements.",
+          "es": "Light es la solución óptima si necesita un sistema de videovigilancia sencillo y fiable sin funciones analíticas complejas. Esta serie es ideal para hogares privados, pequeñas tiendas, oficinas y otras instalaciones donde se requiere un control territorial básico sin necesidad de análisis de vídeo avanzados. \n\n\nEstándar es la mejor opción si valora la calidad de imagen de última generación, la detección de movimiento inteligente y el rendimiento estable en todas las condiciones de iluminación. Las cámaras de esta serie están equipadas con retroiluminación inteligente híbrida y tecnología BrightVu (en modelos seleccionados), lo que las convierte en una excelente solución para bienes raíces, pequeñas empresas, oficinas, estacionamientos, jardines de infantes, escuelas e instituciones médicas. \n\n\nPremium es una opción ideal para quienes buscan la máxima calidad, fiabilidad y funcionalidad. Las cámaras de esta serie utilizan análisis de inteligencia artificial y tecnologías avanzadas, lo que brinda no solo videovigilancia, sino también control inteligente de eventos, protección perimetral y reconocimiento facial. Son adecuados para grandes instalaciones comerciales e industriales con mayores requisitos de seguridad.",
+          "de": "Light ist die optimale Lösung, wenn Sie ein einfaches und zuverlässiges Videoüberwachungssystem ohne komplexe Analysefunktionen benötigen. Diese Serie ist ideal für Privathäuser, kleine Geschäfte, Büros und andere Einrichtungen, in denen eine grundlegende Gebietskontrolle ohne die Notwendigkeit einer erweiterten Videoanalyse erforderlich ist. \n\n\nStandard ist die beste Wahl, wenn Sie Wert auf modernste Bildqualität, intelligente Bewegungserkennung und stabile Leistung bei allen Lichtverhältnissen legen. Die Kameras dieser Serie sind mit hybrider Smart-Hintergrundbeleuchtung und BrightVu-Technologie (in ausgewählten Modellen) ausgestattet, was sie zu einer hervorragenden Lösung für Immobilien, kleine Unternehmen, Büros, Parkplätze, Kindergärten, Schulen und medizinische Einrichtungen macht. \n\n\nPremium ist eine ideale Option für diejenigen, die maximale Qualität, Zuverlässigkeit und Funktionalität suchen. Die Kameras dieser Serie nutzen KI-Analysen und fortschrittliche Technologien und bieten nicht nur Videoüberwachung, sondern auch intelligente Ereignissteuerung, Perimeterschutz und Gesichtserkennung. Sie eignen sich für große Gewerbe- und Industrieanlagen mit erhöhten Sicherheitsanforderungen."
+        },
+        "value": "",
+        "items": {}
+      },
+      "resolution": {
+        "id": "resolution",
+        "name": {
+          "ru": "Разрешение",
+          "en": "Permission",
+          "es": "Permiso",
+          "de": "Erlaubnis"
+        },
+        "description": {
+          "ru": "2 МП — если вам нужно простое и стабильное качество изображения для базового видеонаблюдения, разрешение 2 МП станет оптимальным выбором. Оно подходит для общего контроля территории, где важно видеть движение  и основные события без необходимости в высокой детализации. \n\n4 МП — если вам важно более чёткое и детализированное изображение при сохранении разумного баланса между качеством и стоимостью системы, разрешение 4 МП станет лучшим выбором. Оно позволяет уверенно различать лица и детали на среднем расстоянии. 4 МП подходит для большинства объектов, где требуется не просто обзор, а уверенная фиксация событий.\n\n8 МП — если вы ищете максимальную детализацию и высокое качество изображения для задач повышенной безопасности, разрешение 8 МП станет идеальным вариантом. Такие камеры позволяют рассматривать мелкие детали, лица и номерные знаки даже на большом расстоянии. 8 МП выбирают в тех случаях, где видеонаблюдение используется не только для контроля, но и для точного анализа событий.",
+          "en": "2 MP - If you need simple, consistent image quality for basic video surveillance, 2 MP resolution is the best choice. It is suitable for general area monitoring where it is important to see movement and major events without the need for high detail. \n\n4 MP - If you want sharper, more detailed images while maintaining a reasonable balance between system quality and cost, 4 MP resolution is your best bet. It allows you to confidently distinguish faces and details at an average distance. 4 MP is suitable for most objects where not just an overview is required, but a confident recording of events. \n\n8 MP - If you're looking for maximum detail and high image quality for high-security applications, 8 MP resolution is ideal. Such cameras allow you to view small details, faces and license plates even from a great distance. 8 MP is chosen in cases where video surveillance is used not only for control, but also for accurate analysis of events.",
+          "es": "2 MP: si necesita una calidad de imagen simple y consistente para videovigilancia básica, la resolución de 2 MP es la mejor opción. Es adecuado para el monitoreo general de áreas donde es importante ver el movimiento y los eventos importantes sin necesidad de mucho detalle. \n\n4 MP: si desea imágenes más nítidas y detalladas y al mismo tiempo mantener un equilibrio razonable entre la calidad y el costo del sistema, la resolución de 4 MP es su mejor opción. Le permite distinguir con confianza caras y detalles a una distancia promedio. 4 MP es adecuado para la mayoría de objetos donde no solo se requiere una visión general, sino también una grabación segura de los eventos. \n\n8 MP: si busca máximo detalle y alta calidad de imagen para aplicaciones de alta seguridad, la resolución de 8 MP es ideal. Estas cámaras permiten ver pequeños detalles, rostros y matrículas incluso desde una gran distancia. Se elige 8 MP en los casos en que la videovigilancia se utiliza no solo para el control, sino también para el análisis preciso de los eventos.",
+          "de": "2 MP – Wenn Sie für eine einfache Videoüberwachung eine einfache, konsistente Bildqualität benötigen, ist die Auflösung von 2 MP die beste Wahl. Es eignet sich für die allgemeine Bereichsüberwachung, bei der es wichtig ist, Bewegungen und Großereignisse zu erkennen, ohne dass eine hohe Detailgenauigkeit erforderlich ist. \n\n4 MP – Wenn Sie schärfere, detailliertere Bilder wünschen und gleichzeitig ein angemessenes Gleichgewicht zwischen Systemqualität und Kosten wahren möchten, ist die 4 MP-Auflösung die beste Wahl. Damit können Sie Gesichter und Details aus durchschnittlicher Entfernung sicher erkennen. 4 MP eignet sich für die meisten Objekte, bei denen nicht nur ein Überblick, sondern eine sichere Aufzeichnung von Ereignissen erforderlich ist. \n\n8 MP – Wenn Sie maximale Details und hohe Bildqualität für Hochsicherheitsanwendungen suchen, ist eine Auflösung von 8 MP ideal. Mit solchen Kameras können Sie auch aus großer Entfernung kleine Details, Gesichter und Nummernschilder erkennen. 8 MP werden dort gewählt, wo Videoüberwachung nicht nur zur Kontrolle, sondern auch zur genauen Analyse von Ereignissen eingesetzt wird."
+        },
+        "value": "",
+        "items": {}
+      },
+      "storageTime": {
+        "id": "storageTime",
+        "name": {
+          "ru": "Архив хранения",
+          "en": "Archive storage",
+          "es": "Almacenamiento de archivos",
+          "de": "Archivspeicher"
+        },
+        "description": {
+          "ru": "10 дней — хранение записей за последнюю неделю с небольшим.\nПодходит для текущего контроля и быстрых проверок. Экономичный вариант без лишних затрат.\n\n20 дней — доступ к событиям почти за месяц.\nУдобно для анализа инцидентов и внутреннего контроля. Оптимальный баланс цены и безопасности.\n\n30 дней — хранение записей за полный месяц.\nМаксимальная история и защита данных. Подходит для объектов с повышенными требованиями к безопасности.\n\n \n \n \n                   ",
+          "en": "10 days - storage of records for the last week or so. \nSuitable for routine monitoring and quick checks. An economical option without extra costs. \n\n20 days - access to almost a month's worth of events. \nConvenient for incident analysis and internal control. Optimal balance of price and safety. \n\n30 days – storage of records for a full month. \nMaximum history and data protection. Suitable for facilities with increased security requirements.",
+          "es": "10 días: almacenamiento de registros de la última semana aproximadamente. \nAdecuado para monitorización rutinaria y comprobaciones rápidas. Una opción económica sin costes extra. \n\n20 días: acceso a casi un mes de eventos. \nConveniente para el análisis de incidentes y el control interno. Equilibrio óptimo entre precio y seguridad. \n\n30 días: almacenamiento de registros durante un mes completo. \nMáxima protección de historial y datos. Adecuado para instalaciones con mayores requisitos de seguridad.",
+          "de": "10 Tage – Speicherung der Aufzeichnungen der letzten Woche oder so. \nGeeignet für Routineüberwachung und Schnellkontrollen. Eine wirtschaftliche Option ohne zusätzliche Kosten. \n\n20 Tage – Zugang zu Veranstaltungen im Umfang von fast einem Monat. \nPraktisch für die Analyse von Vorfällen und die interne Kontrolle. Optimales Preis-Leistungs-Verhältnis. \n\n30 Tage – Speicherung der Aufzeichnungen für einen ganzen Monat. \nMaximaler Verlauf und Datenschutz. Geeignet für Einrichtungen mit erhöhten Sicherheitsanforderungen."
+        },
+        "value": "",
+        "items": {}
+      },
+      "installation": {
+        "id": "installation",
+        "name": {
+          "ru": "Монтаж",
+          "en": "Installation",
+          "es": "Instalación",
+          "de": "Installation"
+        },
+        "description": {
+          "ru": "Премиальный монтаж — безупречная установка системы под ключ с максимальным уровнем сервиса.\nВы получаете гарантию 24–36 месяцев, подменное оборудование  и 12 месяцев технического обслуживания, чтобы система работала стабильно и без вашего участия. Мы берём на себя всё — от аккуратного монтажа до полной настройки и поддержки. \n  \n",
+          "en": "Premium installation - flawless installation of a turnkey system with the maximum level of service. \nYou get a 24-36 month warranty, replacement equipment and 12 months of maintenance to ensure the system works stably without your intervention. We take care of everything - from careful installation to full setup and support.",
+          "es": "Instalación premium: instalación impecable de un sistema llave en mano con el máximo nivel de servicio. \nObtiene una garantía de 24 a 36 meses, equipo de reemplazo y 12 meses de mantenimiento para garantizar que el sistema funcione de manera estable sin su intervención. Nos encargamos de todo, desde la instalación cuidadosa hasta la configuración y el soporte completos.",
+          "de": "Premium-Installation – einwandfreie Installation eines schlüsselfertigen Systems mit maximalem Serviceniveau. \nSie erhalten 24–36 Monate Garantie, Ersatzgeräte und 12 Monate Wartung, um sicherzustellen, dass das System ohne Ihr Eingreifen stabil funktioniert. Wir kümmern uns um alles – von der sorgfältigen Installation bis hin zur vollständigen Einrichtung und dem Support."
+        },
+        "value": "",
+        "items": {}
+      },
+      "mountingBox": {
+        "id": "mountingBox",
+        "name": {
+          "ru": "Монтажная коробка для камер",
+          "en": "Camera Mounting Box",
+          "es": "Caja de montaje de cámara",
+          "de": "Kamera-Montagebox"
+        },
+        "description": {
+          "ru": "Специализированные алюминиевые монтажные коробки используются для камер видеонаблюдения, чтобы защитить кабельные соединения от внешних воздействий, обеспечить аккуратный и профессиональный внешний вид установки, а также упростить обслуживание системы",
+          "en": "Custom aluminum mounting boxes are used for Showers cameras to protect cable connections from external influences, provide a neat and professional appearance to the installation, and simplify system maintenance",
+          "es": "Se utilizan cajas de montaje de aluminio personalizadas para cámaras Showers para proteger las conexiones de cables de influencias externas, proporcionar una apariencia limpia y profesional a la instalación y simplificar el mantenimiento del sistema.",
+          "de": "Für Showers-Kameras werden maßgeschneiderte Montageboxen aus Aluminium verwendet, um Kabelverbindungen vor äußeren Einflüssen zu schützen, der Installation ein ordentliches und professionelles Erscheinungsbild zu verleihen und die Systemwartung zu vereinfachen"
+        },
+        "value": "",
+        "items": {}
+      },
+      "compositeBox": {
+        "id": "compositeBox",
+        "name": {
+          "ru": "Композитный ящик для оборудования",
+          "en": "Composite Equipment Box",
+          "es": "Caja de equipo compuesto",
+          "de": "Komposit-Ausrüstungsbox"
+        },
+        "description": {
+          "ru": "Композитный ящик для установки конечного оборудования видеонаблюдения используется для размещения регистраторов и коммутаторов, чтобы защитить их от внешних воздействий и несанкционированного доступа, обеспечить аккуратный и профессиональный внешний вид системы, а также упростить обслуживание и организацию подключения оборудования.",
+          "en": "The composite box for installing end-point video surveillance equipment is used to house recorders and switches to protect them from external influences and unauthorized access, provide a neat and professional appearance of the system, and simplify maintenance and connection of equipment.",
+          "es": "La caja compuesta para instalar equipos de videovigilancia de punto final se utiliza para alojar grabadoras e interruptores para protegerlos de influencias externas y accesos no autorizados, proporcionar una apariencia limpia y profesional del sistema y simplificar el mantenimiento y la conexión de los equipos.",
+          "de": "Der Verbundkasten für die Installation von Endpunkt-Videoüberwachungsgeräten dient zur Unterbringung von Rekordern und Schaltern, um sie vor äußeren Einflüssen und unbefugtem Zugriff zu schützen, für ein gepflegtes und professionelles Erscheinungsbild des Systems zu sorgen und die Wartung und den Anschluss von Geräten zu vereinfachen."
+        },
+        "value": "",
+        "items": {}
+      }
+    }
+  },
+  {
+    "id": "error-messages",
+    "code": null,
+    "name": {
+      "ru": "Кастомные сообщения об ошибках",
+      "en": "Custom error messages",
+      "es": "Mensajes de error personalizados",
+      "de": "Benutzerdefinierte Fehlermeldungen"
+    },
+    "description": {
+      "ru": "",
+      "en": "",
+      "es": "",
+      "de": ""
+    },
+    "value": 0,
+    "items": {
+      "pipelinesOverload": {
+        "id": "pipelinesOverload",
+        "name": {
+          "ru": "Перегрузка пайплайнов",
+          "en": "Pipeline overload",
+          "es": "Sobrecarga de tubería",
+          "de": "Überlastung der Pipeline"
+        },
+        "description": {
+          "ru": "У вас серьезная задача, необходим детальный просчет. Свяжитесь с нами и мы запланируем встречу на вашем объекте. \n\n\n\n",
+          "en": "You have a serious task, a detailed calculation is required. Contact us and we will schedule an appointment at your site.",
+          "es": "Tienes una tarea seria, se requiere un cálculo detallado. Contáctenos y programaremos una cita en su sitio.",
+          "de": "Sie haben eine ernste Aufgabe, eine detaillierte Berechnung ist erforderlich. Kontaktieren Sie uns und wir vereinbaren einen Termin bei Ihnen vor Ort."
+        },
+        "value": "",
+        "items": {}
+      }
+    }
+  },
+  {
+    "id": "payment-controls",
+    "code": null,
+    "name": {
+      "ru": "Управление ценой",
+      "en": "Price management",
+      "es": "Gestión de precios",
+      "de": "Preismanagement"
+    },
+    "description": {
+      "ru": "Блок настройки управления ценой в пользовательском калькуляторе",
+      "en": "Price control settings block in a custom calculator",
+      "es": "Bloque de configuración de control de precios en una calculadora personalizada",
+      "de": "Block für Preiskontrolleinstellungen in einem benutzerdefinierten Rechner"
+    },
+    "value": 0,
+    "items": {
+      "inCash": {
+        "id": "inCash",
+        "code": null,
+        "name": {
+          "ru": "Расчет наличными",
+          "en": "Cash payment",
+          "es": "Pago al contado",
+          "de": "Barzahlung"
+        },
+        "description": {
+          "ru": "Скидка в % за расчет наличными",
+          "en": "% discount for cash payments",
+          "es": "% de descuento para pagos en efectivo",
+          "de": "% Rabatt bei Barzahlung"
+        },
+        "value": 6,
+        "items": {}
+      },
+      "installment": {
+        "id": "installment",
+        "code": null,
+        "name": {
+          "ru": "Оплата в рассрочку",
+          "en": "Payment by installments",
+          "es": "Pago a plazos",
+          "de": "Ratenzahlung"
+        },
+        "description": {
+          "ru": "Процент наценки для оплаты в рассрочку",
+          "en": "Markup percentage for payment in installments",
+          "es": "Porcentaje de margen para pago a plazos",
+          "de": "Aufschlagsprozentsatz für Ratenzahlung"
+        },
+        "value": 0,
+        "items": {}
+      },
+      "installmentDuration": {
+        "id": "installmentDuration",
+        "code": null,
+        "name": {
+          "ru": "Срок рассрочки",
+          "en": "Installment period",
+          "es": "Período de pago",
+          "de": "Ratenzahlungszeitraum"
+        },
+        "description": {
+          "ru": "Срок рассрочки в месяцах",
+          "en": "Installment period in months",
+          "es": "Plazo de pago en meses",
+          "de": "Ratenlaufzeit in Monaten"
+        },
+        "value": 6,
+        "items": {}
+      }
+    }
+  },
+  {
+    "id": "active-controls",
+    "code": null,
+    "name": {
+      "ru": "Управление активными элементами по умолчанию",
+      "en": "Managing default active elements",
+      "es": "Gestionar elementos activos predeterminados",
+      "de": "Verwalten standardmäßiger aktiver Elemente"
+    },
+    "description": {
+      "ru": "",
+      "en": "",
+      "es": "",
+      "de": ""
+    },
+    "value": 0,
+    "items": {
+      "mountingBox": {
+        "id": "mountingBox",
+        "name": {
+          "ru": "Монтажная коробка для камер",
+          "en": "Camera Mounting Box",
+          "es": "Caja de montaje de cámara",
+          "de": "Kamera-Montagebox"
+        },
+        "description": {
+          "ru": "",
+          "en": "",
+          "es": "",
+          "de": ""
+        },
+        "value": 1,
+        "items": {}
+      },
+      "compositeBox": {
+        "id": "compositeBox",
+        "name": {
+          "ru": "Композитный ящик для оборудования",
+          "en": "Composite Equipment Box",
+          "es": "Caja de equipo compuesto",
+          "de": "Komposit-Ausrüstungsbox"
+        },
+        "description": {
+          "ru": "",
+          "en": "",
+          "es": "",
+          "de": ""
+        },
+        "value": 0,
+        "items": {}
+      }
+    }
+  }
+]

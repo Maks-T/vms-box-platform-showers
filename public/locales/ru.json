@@ -1,0 +1,106 @@
+{
+  "ru": {
+    "kanban": {
+      "items": "",
+      "min": "Мин.",
+      "max": "Максимум",
+      "cardsSelected": "Выбранные карты",
+      "addTitle": "Добавить новую карту",
+      "editTitle": "Изменить данные карты",
+      "deleteTitle": "Удалить карту",
+      "deleteContent": "Вы уверены, что хотите удалить эту карту?",
+      "save": "Сохранить",
+      "delete": "Удалить",
+      "cancel": "Отмена",
+      "yes": "Да",
+      "no": "Нет",
+      "close": "Закрывать",
+      "noCard": "Нет карточек для отображения",
+      "unassigned": "Не назначен",
+      "cards": "Карты"
+    },
+    "dropdowns": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса",
+      "overflowCountTemplate": "+${count} больше ..",
+      "selectAllText": "Выбрать все",
+      "unSelectAllText": "Снять все",
+      "totalCountTemplate": "${count} выбран"
+    },
+    "drop-down-list": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса"
+    },
+    "combo-box": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса"
+    },
+    "auto-complete": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса"
+    },
+    "multi-select": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса",
+      "overflowCountTemplate": "+${count} больше ..",
+      "selectAllText": "Выбрать все",
+      "unSelectAllText": "Снять все",
+      "totalCountTemplate": "${count} выбран"
+    },
+    "listbox": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса",
+      "selectAllText": "Выбрать все",
+      "unSelectAllText": "Снять все",
+      "moveUp": "Двигаться вверх",
+      "moveDown": "Двигаться вниз",
+      "moveTo": "Переместить в",
+      "moveFrom": "Двигаться из",
+      "moveAllTo": "Переместить все в",
+      "moveAllFrom": "Переместить все из"
+    },
+    "dialog": {
+      "close": "близко"
+    },
+    "toast": {
+      "close": "близко"
+    },
+    "tab": {
+      "closeButtonTitle": "близко"
+    },
+    "numerictextbox": {
+      "incrementTitle": "Значение приращения",
+      "decrementTitle": "Значение декремента"
+    },
+    "drop-down-base": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Ошибка запроса"
+    },
+    "drop-down-tree": {
+      "noRecordsTemplate": "Записей не найдено",
+      "actionFailureTemplate": "Запрос не выполнен",
+      "overflowCountTemplate": "+${count} еще..",
+      "totalCountTemplate": "Выбрано ${count}"
+    },
+    "message": {
+      "close": "Закрывать"
+    },
+    "mention": {
+      "noRecordsTemplate": "записей не найдено"
+    },
+    "inplaceeditor": {
+      "save": "Сохранять",
+      "cancel": "Отмена",
+      "loadingText": "Загрузка...",
+      "editIcon": "Нажмите, чтобы изменить",
+      "editAreaClick": "Нажмите, чтобы изменить",
+      "editAreaDoubleClick": "Дважды щелкните, чтобы изменить"
+    },
+    "stepper": {
+      "optional": "Необязательный"
+    },
+    "multicolumncombobox": {
+      "noRecordsTemplate": "Записи не найдены"
+    }
+  }
+}

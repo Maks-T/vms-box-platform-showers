@@ -1,0 +1,22 @@
+{
+  "name": "valerie/box-industry-showers",
+  "description": "On-Premise (Box) Showers Industry module for VMS",
+  "type": "library",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "Valerie\\Box\\IndustryShowers\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Valerie\\Box\\IndustryShowers\\ValerieShowersServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": "^8.5",
+    "nicole/box-core": "@dev"
+  }
+}

@@ -1,0 +1,767 @@
+/* ==========================================================================
+   1. ГЛОБАЛЬНЫЕ НАСТРОЙКИ СТРАНИЦЫ И ТИПОГРАФИКА
+   ========================================================================== */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+:root {
+  /* Палитра бренда Vistegra */
+  --bg-dark: #16191B;
+  --bg-light: #EFF1F4;
+  --bg-grey: #F5F5F5;
+  --bg-blue-light: #F0F6FD;
+  --brand-blue: #005ECA;
+  --brand-blue-hover: #3B96FF;
+  --brand-red: #DD2C2C;
+  --stroke-light: #E8EBEF;
+
+  /* Цвета текста */
+  --text-heading: #16191B;
+  --text-primary: #16191B;
+  --text-secondary: #303B48;
+  --text-muted: #728499;
+  --text-disabled: #9A9A9A;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', 'Inter', -apple-system, sans-serif;
+  background-color: #ffffff;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Контейнер страницы формата А4 */
+.page {
+  width: 800px;
+  height: 1130px;
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  page-break-after: always;
+  margin: 0 auto;
+}
+
+/* Темная тема (для обложки и финальных промо-страниц) */
+.page-dark {
+  background-color: var(--bg-dark);
+}
+
+.page-content {
+  padding: 100px 30px 80px 30px;
+  height: 100%;
+}
+
+/* Шапки внутренних страниц сметы */
+.page-title-container {
+  margin-bottom: 25px;
+}
+
+.page-title {
+  color: var(--text-heading);
+  font-size: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.page-subtitle {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   2. СИСТЕМНЫЕ ШАПКИ И ПОДВАЛЫ (HEADERS / FOOTERS)
+   ========================================================================== */
+.pdf-header {
+  width: 801px;
+  height: 50px;
+  padding: 10px 30px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: var(--bg-light);
+  border-bottom: 1px var(--stroke-light) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-header-dark {
+  background-color: var(--bg-dark);
+  border-bottom: 1px #242729 solid;
+}
+
+.pdf-footer {
+  width: 800px;
+  height: 45px;
+  padding: 10px 30px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: var(--bg-light);
+  border-top: 1px var(--stroke-light) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdf-footer-dark {
+  background-color: var(--bg-dark);
+  border-top: 1px #242729 solid;
+}
+
+/* Тексты в шапках и подвалах */
+.header-contacts {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-phone {
+  color: var(--text-heading);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
+
+.header-phone-dark {
+  color: var(--text-muted) !important;
+}
+
+.header-emails {
+  display: flex;
+  gap: 4px;
+  color: var(--text-heading);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+.header-emails-dark, .header-emails-dark span {
+  color: var(--text-muted) !important;
+}
+
+.footer-text {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+.footer-text-dark {
+  color: var(--text-muted);
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.header-logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.header-logo-text {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text-heading);
+  letter-spacing: 0.5px;
+}
+
+.pdf-header-dark .header-logo-text {
+  color: #ffffff;
+}
+
+.footer-text-center {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.footer-text-center.footer-text-dark {
+  color: var(--text-muted);
+}
+
+.footer-text-right {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  min-width: 50px;
+  text-align: right;
+}
+
+.footer-text-right.footer-text-dark {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   3. ВЕРСТКА ОБЛОЖКИ (COVER PAGE) - ТОЧНОЕ МАТЕМАТИЧЕСКОЕ ЦЕНТРИРОВАНИЕ
+   ========================================================================= */
+.page-cover {
+  background-color: var(--bg-dark);
+  height: 1130px;
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-top-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Высота контейнера изображения из макета (600px) */
+.cover-img-container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  background-color: #1e2124;
+  border-bottom: 1px solid #242729;
+}
+
+/* Картинка позиционируется абсолютно */
+.cover-img-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Плавная маска-градиент */
+.cover-img-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: linear-gradient(to bottom, rgba(22, 25, 27, 0) 0%, #16191B 100%);
+  z-index: 2;
+}
+
+/* Текстовый блок абсолютно спозиционирован по выверенной координате */
+.cover-content-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 748px;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 3;
+}
+
+.cover-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cover-subtitle-showers {
+  color: var(--brand-blue-hover);
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 18px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cover-title-showers {
+  color: #ffffff;
+  font-size: 40px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  line-height: 48px;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+/* Мета-данные обложки */
+.cover-meta-showers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cover-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cover-meta-label-showers {
+  color: var(--text-disabled);
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cover-meta-value-showers {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+/* ==========================================================================
+   4. ТАБЛИЦЫ СМЕТЫ И ИТОГОВЫЕ КАРТОЧКИ (ESTIMATE)
+   ========================================================================== */
+.section-summary-title-bar {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-dark);
+  border-radius: 4px;
+  border-left: 2px var(--brand-blue) solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.section-summary-title-text {
+  color: #ffffff;
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section-summary-price {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* Группировочный заголовок категории (камеры / доп. оборудование) */
+.category-header-bar {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: var(--bg-grey);
+  border-radius: 4px;
+  border-left: 2px var(--brand-blue) solid;
+  margin-bottom: 10px;
+}
+
+.category-header-text {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Таблицы вывода */
+.estimate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.estimate-table-th {
+  border-bottom: 1px solid #D5E1EE;
+}
+
+.estimate-th-cell,
+.estimate-th-cell-right {
+  padding: 5px 10px;
+  color: var(--text-secondary, #303B48);
+  font-size: 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.estimate-th-cell-right {
+  text-align: right;
+  width: 90px;
+}
+
+/* Строки товаров */
+.estimate-row {
+  border-bottom: 1px solid #D5E1EE;
+}
+
+.estimate-cell-product {
+  padding: 6px 10px 6px 0;
+  display: flex;
+  align-items: center;        /* Центрируем картинку и текст по вертикали */
+  gap: 15px;
+}
+
+.estimate-cell-product-no-photo {
+  padding-left: 10px;
+}
+
+.product-preview-img {
+  width: 64px;               /* Уменьшено с 70px до компактных 64px */
+  height: 64px;              /* Уменьшено с 70px до компактных 64px */
+  border-radius: 6px;
+  border: 1px var(--stroke-light) solid;
+  object-fit: contain;        /* Картинка полностью умещается внутри рамки */
+  background-color: #ffffff;  /* Чистый белый фон для прозрачных PNG-товаров */
+  padding: 4px;              /* Мягкие мини-паддинги внутри квадрата */
+}
+
+.product-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-name {
+  color: #2B2D42;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.product-description {
+  color: var(--text-muted);
+  font-size: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 13px;
+}
+
+/* Специальные классы для ячеек */
+.estimate-cell-bold {
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #2B2D42;
+}
+
+.estimate-cell-qty,
+.estimate-cell-price,
+.estimate-cell-total {
+  padding: 6px 10px;          /* Уменьшенные вертикальные отступы для плотной верстки */
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.estimate-cell-qty-left {
+  text-align: left;
+  width: 60px;
+}
+
+
+.estimate-cell-red {
+  color: var(--brand-red);
+}
+
+
+/* Финальная строка Итого в таблицах */
+.estimate-row-total {
+  background-color: var(--bg-blue-light);
+  border-top: 1.5px solid var(--brand-blue);
+}
+
+.estimate-cell-total-bold {
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--brand-blue);
+  line-height: 16px;
+}
+
+.estimate-cell-total-medium {
+  padding: 10px;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--brand-blue);
+  line-height: 16px;
+}
+
+.estimate-cell-total-right-blue {
+  padding: 10px;
+  text-align: right;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--brand-blue);
+  line-height: 16px;
+}
+
+.estimate-cell-total-right-red {
+  padding: 10px;
+  text-align: right;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--brand-red);
+  line-height: 16px;
+}
+
+.estimate-cell-total-right-bold {
+  padding: 10px;
+  text-align: right;
+  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--brand-blue);
+  line-height: 16px;
+}
+
+/* ==========================================================================
+   5. КАРТЫ ИТОГОВ (BREAKDOWN)
+   ========================================================================== */
+.total-breakdown-card {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px var(--brand-blue) solid;
+  margin-top: 20px;
+}
+
+.breakdown-row {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px #EDEDED solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdown-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.breakdown-value {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.breakdown-value-discount {
+  color: var(--brand-red);
+}
+
+/* Финальная строка Итого */
+.breakdown-row-grand {
+  background-color: var(--bg-blue-light);
+  border-top: 1px var(--brand-blue) solid;
+  border-bottom: none;
+  padding: 12px 10px;
+}
+
+.breakdown-label-grand {
+  color: var(--brand-blue);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.breakdown-value-grand {
+  color: var(--brand-blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   6. КОНТАКТЫ И ШАГИ ОФОРМЛЕНИЯ ЗАКАЗА (CONTACTS PAGE)
+   ========================================================================== */
+.contacts-title {
+  color: #ffffff;
+  font-size: 34px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 10px 0;
+}
+
+.gold-italic {
+  color: var(--brand-blue-hover);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.dark-divider {
+  width: 150px;
+  height: 1.5px;
+  background-color: var(--brand-blue);
+  margin-bottom: 30px;
+}
+
+/* Блок шагов */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.step-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.step-desc {
+  color: var(--text-disabled);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Карточка персонального менеджера */
+.manager-card {
+  width: 100%;
+  background-color: #1e2124;
+  border: 1px solid #2d3135;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 35px;
+}
+
+.manager-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.manager-post {
+  color: var(--brand-blue-hover);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.manager-name {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.manager-contacts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.manager-contacts-list li {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.manager-contacts-list li span {
+  color: var(--text-disabled);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+/* Футер страницы контактов */
+.closing-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #2d3135;
+  padding-top: 20px;
+}
+
+.closing-cell-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.closing-cell-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+.closing-label-left,
+.closing-label-right {
+  color: var(--text-disabled);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.closing-value-left {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.closing-value-right {
+  color: var(--brand-blue-hover);
+  font-size: 20px;
+  font-weight: 700;
+}
