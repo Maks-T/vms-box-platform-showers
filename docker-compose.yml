@@ -1,10 +1,10 @@
-name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}
+name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}
 services:
   app:
     build:
       context: .
       dockerfile: docker/php/Dockerfile
-    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}-app
+    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}-app
     restart: unless-stopped
     volumes:
       - .:/var/www/html
@@ -17,7 +17,7 @@ services:
 
   nginx:
     image: nginx:alpine
-    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}-nginx
+    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}-nginx
     restart: unless-stopped
     ports:
       - "${APP_PORT:-80}:80"
@@ -29,7 +29,7 @@ services:
 
   db:
     image: postgres:18-alpine
-    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}-db
+    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}-db
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${DB_DATABASE}
@@ -37,24 +37,22 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db_data:/var/lib/postgresql
-      # Тестовая бд:
       - ./docker/db/10-create-testing-database.sql:/docker-entrypoint-initdb.d/10-create-testing-database.sql
     networks:
       - app_net
 
   adminer:
     image: adminer
-    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}-adminer
+    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}-adminer
     restart: unless-stopped
     ports:
       - "${ADMINER_PORT:-8080}:8080"
     networks:
       - app_net
 
-  # Кэш и Очереди
   redis:
     image: redis:7-alpine
-    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-cctv}-redis
+    container_name: ${COMPOSE_PROJECT_NAME:-vms-box-showers}-redis
     restart: unless-stopped
     ports:
       - "${REDIS_PORT:-6379}:6379"
@@ -74,5 +72,5 @@ networks:
     driver: bridge
 
 volumes:
-  db_data:     # Диск для PostgreSQL
-  redis_data:  # Диск для Redis
+  db_data:
+  redis_data:
