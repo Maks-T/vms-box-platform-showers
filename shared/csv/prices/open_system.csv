@@ -1,0 +1,45 @@
+active;id;type;material_type_id;furniture_type_id;name;unit;currency;price
+;;;;;;;;
++;id_1;hinge;zn;chrome;Hinges (zinc alloy, chrome);psc.;USD;30
++;id_2;hinge;zn;black;Hinges (zinc alloy, black);psc.;USD;35
+;;;;;;;;
++;id_3;hinge;stainless;chrome;Hinges (stainless steel, chrome);psc.;USD;60
++;id_4;hinge;stainless;chrome_matte;Hinges (stainless steel, matte chrome);psc.;USD;80
++;id_5;hinge;stainless;black;Hinges (istainless steel, black);psc.;USD;65
++;id_6;hinge;stainless;bronze;Hinges (istainless steel, bronze);psc.;USD;75
++;id_7;hinge;stainless;gold;Hinges (stainless steel, gold);psc.;USD;75
++;id_8;hinge;stainless;gold_matte;Hinges (stainless steel, matte gold);psc.;USD;80
++;id_9;hinge;stainless;white;Hinges (stainless steel, white);psc.;USD;75
+;;;;;;;;
++;id_10;hinge;brass;chrome;Hinges (brass, chrome);psc.;USD;160
++;id_11;hinge;brass;chrome_matte;Hinges (brass, matte chrome);psc.;USD;200
++;id_12;hinge;brass;black;Hinges (brass, black);psc.;USD;165
++;id_13;hinge;brass;bronze;Hinges (brass, bronze);psc.;USD;180
++;id_14;hinge;brass;gold;Hinges (brass, gold);psc.;USD;190
++;id_15;hinge;brass;gold_matte;Hinges (brass, matte gold);psc.;USD;190
++;id_16;hinge;brass;white;Hinges (brass, white);psc.;USD;180
+;;;;;;;;
++;id_1;track;stainless;chrome; Track (inox, chrome);psc.;USD;50
++;id_2;track;stainless;chrome_matte; Track (inox, matte chrome);psc.;USD;55
++;id_3;track;stainless;black; Track (inox, black);psc.;USD;50
++;id_4;track;stainless;bronze; Track (inox, bronze);psc.;USD;55
++;id_5;track;stainless;gold; Track (inox, gold);psc.;USD;55
++;id_6;track;stainless;gold_matte; Track (inox, matte gold);psc.;USD;55
++;id_7;track;stainless;white; Track (inox, white);psc.;USD;55
+;;;;;;;;
++;id_1;slide;stainless;chrome;Sliding System for Glass Door (stainless steel, chrome);set;USD;110
++;id_2;slide;stainless;chrome_matte;Sliding System for Glass Door (stainless steel, matte chrome);set;USD;120
++;id_3;slide;stainless;black;Sliding System for Glass Door (stainless steel, black);set;USD;110
++;id_4;slide;stainless;bronze;Sliding System for Glass Door (stainless steel, bronze);set;USD;120
++;id_5;slide;stainless;gold;Sliding System for Glass Door (stainless steel, gold);set;USD;120
++;id_6;slide;stainless;gold_matte;Sliding System for Glass Door (stainless steel, matte gold);set;USD;120
++;id_7;slide;stainless;white;Sliding System for Glass Door (stainless steel, white);set;USD;110
+;;;;;;;;
++;id_1;connector;stainless;chrome;Track Connector (corner, chrome);lm.;USD;25
++;id_2;connector;stainless;chrome_matte;Track Connector (corner, matte chrome);lm.;USD;30
++;id_3;connector;stainless;black;Track Connector (corner, black);lm.;USD;25
++;id_4;connector;stainless;bronze;Track Connector (corner, bronze);lm.;USD;30
++;id_5;connector;stainless;gold;Track Connector (corner, gold);lm.;USD;30
++;id_6;connector;stainless;gold_matte;Track Connector (corner, matte gold);lm.;USD;30
++;id_7;connector;stainless;white;Track Connector (corner, white);lm.;USD;30
+;;;;;;;;

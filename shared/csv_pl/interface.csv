@@ -1,0 +1,5 @@
+id;name;show_admin;show_manager;show_user;value_admin;value_user;value_user
+currencyChange;Waluta dla kosztorysu i kto może ją zmieniać;+;-;+;PLN;PLN;PLN
+priceBlock;Pokaż blok "Kwota";+;+;+;;;
+estimateBlock;Pokaż kosztorys;+;+;+;;;
+;;;;;;;

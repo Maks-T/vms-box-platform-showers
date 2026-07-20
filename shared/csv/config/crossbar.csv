@@ -1,0 +1,6 @@
+active;id;name
+;;
++;rect;Rectangular
++;round;Round
++;corner;Corner stabilizing rod
++;none;No rod (attached to the ceiling)

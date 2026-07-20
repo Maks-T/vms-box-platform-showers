@@ -1,0 +1,10 @@
+form;height_min;height_max;length_min;length_max
+;;;;
+line;1700;3200;300;1500
+corner;1700;3200;750;1500
+free;1700;3500;500;2000
+trapezoid;1700;3200;300;700
+ushaped;1800;3200;450;1250
+door;500;2500;500;900
+curtain;300;2000;300;2000
+;;;;

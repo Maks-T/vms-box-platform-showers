@@ -1,0 +1,10 @@
+active;id;furniture_type_id;name;unit;currency;price
+;;;;;;
++;id_1;chrome;External Threshold (chrome);lm.;USD;55
++;id_2;chrome_matte;External Threshold (matte chrome);lm.;USD;80
++;id_3;black;External Threshold (black);lm.;USD;55
++;id_4;bronze;External Threshold (bronze);lm.;USD;80
++;id_5;gold;External Threshold (gold);lm.;USD;80
++;id_6;gold_matte;External Threshold (matte gold);lm.;USD;80
++;id_7;white;External Threshold (white);lm.;USD;60
+;;;;;;

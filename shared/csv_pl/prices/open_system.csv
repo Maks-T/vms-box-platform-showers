@@ -1,0 +1,45 @@
+active;id;type;material_type_id;furniture_type_id;name;unit;currency;price
+;;;;;;;;
++;id_1;hinge;zn;chrome;Zawiasy (stop cynku, chrom);szt.;USD;30
++;id_2;hinge;zn;black;Zawiasy (stop cynku, czarny);szt.;USD;35
+;;;;;;;;
++;id_3;hinge;stainless;chrome;Zawiasy (stal nierdzewna, chrom);szt.;USD;60
++;id_4;hinge;stainless;chrome_matte;Zawiasy (stal nierdzewna, chrom matowy);szt.;USD;80
++;id_5;hinge;stainless;black;Zawiasy (stal nierdzewna, czarny);szt.;USD;65
++;id_6;hinge;stainless;bronze;Zawiasy (stal nierdzewna, brąz);szt.;USD;75
++;id_7;hinge;stainless;gold;Zawiasy (stal nierdzewna, złoto);szt.;USD;75
++;id_8;hinge;stainless;gold_matte;Zawiasy (stal nierdzewna, złoto matowe);szt.;USD;80
++;id_9;hinge;stainless;white;Zawiasy (stal nierdzewna, biały);szt.;USD;75
+;;;;;;;;
++;id_10;hinge;brass;chrome;Zawiasy (mosiądz, chrom);szt.;USD;160
++;id_11;hinge;brass;chrome_matte;Zawiasy (mosiądz, chrom matowy);szt.;USD;200
++;id_12;hinge;brass;black;Zawiasy (mosiądz, czarny);szt.;USD;165
++;id_13;hinge;brass;bronze;Zawiasy (mosiądz, brąz);szt.;USD;180
++;id_14;hinge;brass;gold;Zawiasy (mosiądz, złoto);szt.;USD;190
++;id_15;hinge;brass;gold_matte;Zawiasy (mosiądz, złoto matowe);szt.;USD;190
++;id_16;hinge;brass;white;Zawiasy (mosiądz, biały);szt.;USD;180
+;;;;;;;;
++;id_1;track;stainless;chrome;Tor (stal nierdzewna, chrom);szt.;USD;50
++;id_2;track;stainless;chrome_matte;Tor (stal nierdzewna, chrom matowy);szt.;USD;55
++;id_3;track;stainless;black;Tor (stal nierdzewna, czarny);szt.;USD;50
++;id_4;track;stainless;bronze;Tor (stal nierdzewna, brąz);szt.;USD;55
++;id_5;track;stainless;gold;Tor (stal nierdzewna, złoto);szt.;USD;55
++;id_6;track;stainless;gold_matte;Tor (stal nierdzewna, złoto matowe);szt.;USD;55
++;id_7;track;stainless;white;Tor (stal nierdzewna, biały);szt.;USD;55
+;;;;;;;;
++;id_1;slide;stainless;chrome;System przesuwny do drzwi szklanych (stal nierdzewna, chrom) ;Zestaw;USD;110
++;id_2;slide;stainless;chrome_matte;System przesuwny do drzwi szklanych (stal nierdzewna, chrom matowy);Zestaw;USD;120
++;id_3;slide;stainless;black;System przesuwny do drzwi szklanych (stal nierdzewna, czarny);Zestaw;USD;110
++;id_4;slide;stainless;bronze;System przesuwny do drzwi szklanych (stal nierdzewna, brąz);Zestaw;USD;120
++;id_5;slide;stainless;gold;System przesuwny do drzwi szklanych (stal nierdzewna, złoto);Zestaw;USD;120
++;id_6;slide;stainless;gold_matte;System przesuwny do drzwi szklanych (stal nierdzewna, złoto matowe);Zestaw;USD;120
++;id_7;slide;stainless;white;System przesuwny do drzwi szklanych (stal nierdzewna, biały);Zestaw;USD;110
+;;;;;;;;
++;id_1;connector;stainless;chrome;Łącznik toru narożny (chrom);mb.;USD;25
++;id_2;connector;stainless;chrome_matte;Łącznik toru narożny (chrom matowy);mb.;USD;30
++;id_3;connector;stainless;black;Łącznik toru narożny (czarny);mb.;USD;25
++;id_4;connector;stainless;bronze;Łącznik toru narożny (brąz);mb.;USD;30
++;id_5;connector;stainless;gold;Łącznik toru narożny (złoto);mb.;USD;30
++;id_6;connector;stainless;gold_matte;Łącznik toru narożny (złoto matowe);mb.;USD;30
++;id_7;connector;stainless;white;Łącznik toru narożny (biały);mb.;USD;30
+;;;;;;;;

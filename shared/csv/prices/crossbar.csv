@@ -1,0 +1,58 @@
+active;id;type;crossbar_type_id;furniture_type_id;name;unit;currency;price
+;;;;;;;;
++;id_1;crossbar;rect;chrome;Stabilizing rod (rectangular, chrome);lm.;USD;50
++;id_2;crossbar;rect;chrome_matte;Stabilizing rod (rectangular, matte chrome);lm.;USD;55
++;id_3;crossbar;rect;black;Stabilizing rod (rectangular, black);lm.;USD;50
++;id_4;crossbar;rect;bronze;Stabilizing rod (rectangular, bronze);lm.;USD;55
++;id_5;crossbar;rect;gold;Stabilizing rod (rectangular, gold);lm.;USD;55
++;id_6;crossbar;rect;gold_matte;Stabilizing rod (rectangular, matte gold);lm.;USD;55
++;id_7;crossbar;rect;white;Stabilizing rod (rectangular, white);lm.;USD;55
+;;;;;;;;
++;id_8;crossbar;round;chrome;Stabilizing rod (round, chrome);lm.;USD;65
++;id_9;crossbar;round;chrome_matte;Stabilizing rod (round, matte chrome);lm.;USD;80
++;id_10;crossbar;round;black;Stabilizing rod (round, black);lm.;USD;65
++;id_11;crossbar;round;bronze;Stabilizing rod (round, bronze);lm.;USD;80
++;id_12;crossbar;round;gold;Stabilizing rod (round, gold);lm.;USD;80
++;id_13;crossbar;round;gold_matte;Stabilizing rod (round, matte gold);lm.;USD;80
++;id_14;crossbar;round;white;Stabilizing rod (round, white);lm.;USD;80
+;;;;;;;;
++;id_15;crossbar;corner;chrome;Corner stabilizer (chrome);pcs.;USD;305
++;id_16;crossbar;corner;chrome_matte;Corner stabilizer (matte chrome);pcs.;USD;350
++;id_17;crossbar;corner;black;Corner stabilizer (black);pcs.;USD;305
++;id_18;crossbar;corner;bronze;Corner stabilizer (bronze);pcs.;USD;320
++;id_19;crossbar;corner;gold;Corner stabilizer (gold);pcs.;USD;320
++;id_20;crossbar;corner;gold_matte;Corner stabilizer (matte gold);pcs.;USD;350
++;id_21;crossbar;corner;white;Corner stabilizer (white);pcs.;USD;320
+;;;;;;;;
++;id_1;fix;rect;chrome;Wall mount for rectangular rod (chrome);pcs.;USD;25
++;id_2;fix;rect;chrome_matte;Wall mount for rectangular rod (matte chrome);pcs.;USD;30
++;id_3;fix;rect;black;Wall mount for rectangular rod (black);pcs.;USD;25
++;id_4;fix;rect;bronze;Wall mount for rectangular rod (bronze);pcs.;USD;30
++;id_5;fix;rect;gold;Wall mount for rectangular rod (gold);pcs.;USD;30
++;id_6;fix;rect;gold_matte;Wall mount for rectangular rod (matte gold);pcs.;USD;30
++;id_7;fix;rect;white;Wall mount for rectangular rod (white);pcs.;USD;30
+;;;;;;;;
++;id_8;fix;round;chrome;Wall mount for round rod (chrome);pcs.;USD;25
++;id_9;fix;round;chrome_matte;Wall mount for round rod (matte chrome);pcs.;USD;30
++;id_10;fix;round;black;Wall mount for round rod (black);pcs.;USD;25
++;id_11;fix;round;bronze;Wall mount for round rod (bronze);pcs.;USD;30
++;id_12;fix;round;gold;Wall mount for round rod (gold);pcs.;USD;30
++;id_13;fix;round;gold_matte;Wall mount for round rod (matte gold);pcs.;USD;30
++;id_14;fix;round;white;Wall mount for round rod (white);pcs.;USD;30
+;;;;;;;;
++;id_1;fix_glass;rect;chrome;Glass holder for rectangular rod (chrome);pcs.;USD;25
++;id_2;fix_glass;rect;chrome_matte;Glass holder for rectangular rod (matte chrome);pcs.;USD;30
++;id_3;fix_glass;rect;black;Glass holder for rectangular rod (black);pcs.;USD;25
++;id_4;fix_glass;rect;bronze;Glass holder for rectangular rod (bronze);pcs.;USD;30
++;id_5;fix_glass;rect;gold;Glass holder for rectangular rod (gold);pcs.;USD;30
++;id_6;fix_glass;rect;gold_matte;Glass holder for rectangular rod (matte gold);pcs.;USD;30
++;id_7;fix_glass;rect;white;Glass holder for rectangular rod (white);pcs.;USD;30
+;;;;;;;;
++;id_8;fix_glass;round;chrome;Glass holder for round rod (chrome);pcs.;USD;25
++;id_9;fix_glass;round;chrome_matte;Glass holder for round rod (matte chrome);pcs.;USD;30
++;id_10;fix_glass;round;black;Glass holder for round rod (black);pcs.;USD;25
++;id_11;fix_glass;round;bronze;Glass holder for round rod (bronze);pcs.;USD;30
++;id_12;fix_glass;round;gold;Glass holder for round rod (gold);pcs.;USD;30
++;id_13;fix_glass;round;gold_matte;Glass holder for round rod (matte gold);pcs.;USD;30
++;id_14;fix_glass;round;white;Glass holder for round rod (white);pcs.;USD;30
+;;;;;;;;

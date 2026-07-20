@@ -1,0 +1,11 @@
+active;id;name;unit;currency;price_6mm;price_8mm;price_10mm;HEX_color;roughness;fluted;autoImg;pathImg
+;;;;;;;;;;;;
++;id_1;Szkło hartowane przezroczyste uniwersalne;m²;USD;183,4;262;340,6;#D6E4E5;0;-;+;
++;id_2;Szkło hartowane matowe uniwersalne;m²;USD;256,2;366;475,8;#D6E4E5;0.5;-;+;
++;id_3;Szkło hartowane przezroczyste odżelazione;m²;USD;349,3;499;648,7;#FFFFFF;0;-;+;
++;id_4;Szkło hartowane matowe odżelazione;m²;USD;395,5;565;734,5;#FFFFFF;0.5;-;+;
++;id_5;Szkło hartowane przyciemniane półprzezroczyste grafitowe;m²;USD;307,3;439;570,7;#787878;0;-;+;
++;id_6;Szkło hartowane przyciemniane półprzezroczyste brązowe;m²;USD;307,3;439;570,7;#91765b;0;-;+;
++;id_7;Szkło hartowane matowe grafitowe;m²;USD;302,4;432;561,6;#787878;0.5;-;+;
++;id_8;Szkło hartowane matowe brązowe;m²;USD;302,4;432;561,6;#91765b;0.5;-;+;
++;id_9;Szkło hartowane ryflowane;m²;USD;735;1050;1365;#C0C0C0;0.3;+;+;

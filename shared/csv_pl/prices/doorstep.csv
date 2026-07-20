@@ -1,0 +1,10 @@
+active;id;furniture_type_id;name;unit;currency;price
+;;;;;;
++;id_1;chrome;Zewnętrzny próg profilowany chrom;mb.;USD;55
++;id_2;chrome_matte;Zewnętrzny próg profilowany matowy chrom;mb.;USD;80
++;id_3;black;Zewnętrzny próg profilowany czarny;mb.;USD;55
++;id_4;bronze;Zewnętrzny próg profilowany brąz;mb.;USD;80
++;id_5;gold;Zewnętrzny próg profilowany złoto;mb.;USD;80
++;id_6;gold_matte;Zewnętrzny próg profilowany matowe złoto\r\n;mb.;USD;80
++;id_7;white;Zewnętrzny próg profilowany biały;mb.;USD;60
+;;;;;;

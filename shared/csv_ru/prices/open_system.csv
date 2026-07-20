@@ -1,0 +1,45 @@
+active;id;type;material_type_id;furniture_type_id;name;unit;currency;price
+;;;;;;;;
++;id_1;hinge;zn;chrome;Петли цинковый сплав хром;шт.;USD;30
++;id_2;hinge;zn;black;Петли цинковый сплав черный;шт.;USD;35
+;;;;;;;;
++;id_3;hinge;stainless;chrome;Петли нержавеющая сталь хром;шт.;USD;60
++;id_4;hinge;stainless;chrome_matte;Петли нержавеющая сталь матовый хром;шт.;USD;80
++;id_5;hinge;stainless;black;Петли нержавеющая сталь черный;шт.;USD;65
++;id_6;hinge;stainless;bronze;Петли нержавеющая сталь бронза;шт.;USD;75
++;id_7;hinge;stainless;gold;Петли нержавеющая сталь золото;шт.;USD;75
++;id_8;hinge;stainless;gold_matte;Петли нержавеющая сталь матовое золото;шт.;USD;80
++;id_9;hinge;stainless;white;Петли нержавеющая сталь белый;шт.;USD;75
+;;;;;;;;
++;id_10;hinge;brass;chrome;Петли латунь хром;шт.;USD;160
++;id_11;hinge;brass;chrome_matte;Петли латунь матовый хром;шт.;USD;200
++;id_12;hinge;brass;black;Петли латунь черный;шт.;USD;165
++;id_13;hinge;brass;bronze;Петли латунь бронза;шт.;USD;180
++;id_14;hinge;brass;gold;Петли латунь золото;шт.;USD;190
++;id_15;hinge;brass;gold_matte;Петли латунь матовое золото;шт.;USD;190
++;id_16;hinge;brass;white;Петли латунь белый;шт.;USD;180
+;;;;;;;;
++;id_1;track;stainless;chrome;Трек, нержавеющая сталь, хром;мп.;USD;50
++;id_2;track;stainless;chrome_matte;Трек, нержавеющая сталь, матовый хром;мп.;USD;55
++;id_3;track;stainless;black;Трек, нержавеющая сталь, черный;мп.;USD;50
++;id_4;track;stainless;bronze;Трек, нержавеющая сталь, бронза;мп.;USD;55
++;id_5;track;stainless;gold;Трек, нержавеющая сталь, золото;мп.;USD;55
++;id_6;track;stainless;gold_matte;Трек, нержавеющая сталь, матовое золото;мп.;USD;55
++;id_7;track;stainless;white;Трек, нержавеющая сталь, белый;мп.;USD;55
+;;;;;;;;
++;id_1;slide;stainless;chrome;Раздвижная система для стеклянной двери, нержавеющая сталь, хром;комплект;USD;110
++;id_2;slide;stainless;chrome_matte;Раздвижная система для стеклянной двери, нержавеющая сталь, матовый хром;комплект;USD;120
++;id_3;slide;stainless;black;Раздвижная система для стеклянной двери, нержавеющая сталь, черный;комплект;USD;110
++;id_4;slide;stainless;bronze;Раздвижная система для стеклянной двери, нержавеющая сталь, бронза;комплект;USD;120
++;id_5;slide;stainless;gold;Раздвижная система для стеклянной двери, нержавеющая сталь, золото;комплект;USD;120
++;id_6;slide;stainless;gold_matte;Раздвижная система для стеклянной двери, нержавеющая сталь, матовое золото;комплект;USD;120
++;id_7;slide;stainless;white;Раздвижная система для стеклянной двери, нержавеющая сталь, белый;комплект;USD;110
+;;;;;;;;
++;id_1;connector;stainless;chrome;Соединитель трека угловой, хром;мп.;USD;25
++;id_2;connector;stainless;chrome_matte;Соединитель трека угловой, матовый хром;мп.;USD;30
++;id_3;connector;stainless;black;Соединитель трека угловой, черный;мп.;USD;25
++;id_4;connector;stainless;bronze;Соединитель трека угловой, бронза;мп.;USD;30
++;id_5;connector;stainless;gold;Соединитель трека угловой, золото;мп.;USD;30
++;id_6;connector;stainless;gold_matte;Соединитель трека угловой, матовое золото;мп.;USD;30
++;id_7;connector;stainless;white;Соединитель трека угловой, белый;мп.;USD;30
+;;;;;;;;

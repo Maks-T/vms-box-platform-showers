@@ -1,0 +1,57 @@
+active;id;type;furniture_type_id;door_type_ids;interface_name;name;unit;currency;price;pathImg
+;;;;;;;;;;
++;id_1;knob;chrome;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (chrome);pcs.;USD;65;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_2;knob;chrome_matte;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (matte chrome);pcs.;USD;80;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_3;knob;black;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (black);pcs.;USD;70;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_4;knob;bronze;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (bronze);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_5;knob;gold;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (gold);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_6;knob;gold_matte;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (matte gold);pcs.;USD;80;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_7;knob;white;one_swing, two_swing;Knob-handle 1;Knob-handle 1 (white);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_1_1;knob;chrome;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (chrome);pcs.;USD;65;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_2_1;knob;chrome_matte;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (matte chrome);pcs.;USD;80;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_3_1;knob;black;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (black);pcs.;USD;70;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_4_1;knob;bronze;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (bronze);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_5_1;knob;gold;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (gold);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_6_1;knob;gold_matte;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (matte gold);pcs.;USD;80;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
++;id_7_1;knob;white;one_swing, two_swing;Knob-handle 2;Knob-handle 2 (white);pcs.;USD;75;https://media.rs-online.com/image/upload/bo_1.5px_solid_white,b_auto,c_pad,dpr_2,f_auto,h_399,q_auto,w_710/c_pad,h_399,w_710/F8946844-01?pgw=1
+;;;;;;;;;;
++;id_8;bracket;chrome;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (chrome);pcs.;USD;140;
++;id_9;bracket;chrome_matte;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (matte chrome);pcs.;USD;168;
++;id_10;bracket;black;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (black);pcs.;USD;150;
++;id_11;bracket;bronze;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (bronze);pcs.;USD;155;
++;id_12;bracket;gold;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (gold);pcs.;USD;155;
++;id_13;bracket;gold_matte;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (matte gold);pcs.;USD;168;
++;id_14;bracket;white;one_swing, two_swing;Pull Bar Handle 1;Pull Bar Handle 1 (white);pcs.;USD;155;
++;id_8_1;bracket;chrome;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (chrome);pcs.;USD;140;
++;id_9_1;bracket;chrome_matte;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (matte chrome);pcs.;USD;168;
++;id_10_1;bracket;black;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (black);pcs.;USD;150;
++;id_11_1;bracket;bronze;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (bronze);pcs.;USD;155;
++;id_12_1;bracket;gold;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (gold);pcs.;USD;155;
++;id_13_1;bracket;gold_matte;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (matte gold);pcs.;USD;168;
++;id_14_1;bracket;white;one_swing, two_swing;Pull Bar Handle 2;Pull Bar Handle 2 (white);pcs.;USD;155;
+;;;;;;;;;;
++;id_15;holder;chrome;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (chrome);pcs.;USD;95;
++;id_16;holder;chrome_matte;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (matte chrome);pcs.;USD;110;
++;id_17;holder;black;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (black);pcs.;USD;100;
++;id_18;holder;bronze;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (bronze);pcs.;USD;110;
++;id_19;holder;gold;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (gold);pcs.;USD;110;
++;id_20;holder;gold_matte;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (matte gold);pcs.;USD;110;
++;id_21;holder;white;one_swing, two_swing;Towel Rail Handle;Towel Rail Handle (white);pcs.;USD;100;
+;;;;;;;;;;
++;id_22;sliding;chrome;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (chrome);pcs.;USD;65;
++;id_23;sliding;chrome_matte;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (matte chrome);pcs.;USD;80;
++;id_24;sliding;black;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (black);pcs.;USD;70;
++;id_25;sliding;bronze;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (bronze);pcs.;USD;75;
++;id_26;sliding;gold;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (gold);pcs.;USD;75;
++;id_27;sliding;gold_matte;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (matte gold);pcs.;USD;80;
++;id_28;sliding;white;one_slide,two_slide;Flush Pull Handle 1;Flush Pull Handle 1 (white);pcs.;USD;75;
++;id_22_1;sliding;chrome;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (chrome);pcs.;USD;65;
++;id_23_1;sliding;chrome_matte;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (matte chrome);pcs.;USD;80;
++;id_24_1;sliding;black;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (black);pcs.;USD;70;
++;id_25_1;sliding;bronze;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (bronze);pcs.;USD;75;
++;id_26_1;sliding;gold;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (gold);pcs.;USD;75;
++;id_27_1;sliding;gold_matte;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (matte gold);pcs.;USD;80;
++;id_28_1;sliding;white;one_slide,two_slide;Flush Pull Handle 2;Flush Pull Handle 2 (white);pcs.;USD;75;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;

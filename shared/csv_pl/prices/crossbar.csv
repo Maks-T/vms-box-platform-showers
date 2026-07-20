@@ -1,0 +1,58 @@
+active;id;type;crossbar_type_id;furniture_type_id;name;unit;currency;price
+;;;;;;;;
++;id_1;crossbar;rect;chrome;Drążek stabilizujący prostokątny (chrom);mb.;USD;50
++;id_2;crossbar;rect;chrome_matte;Drążek stabilizujący prostokątny (matowy chrom)\r\n;mb.;USD;55
++;id_3;crossbar;rect;black;Drążek stabilizujący prostokątny (czarny);mb.;USD;50
++;id_4;crossbar;rect;bronze;Drążek stabilizujący prostokątny (brąz);mb.;USD;55
++;id_5;crossbar;rect;gold;Drążek stabilizujący prostokątny (złoto);mb.;USD;55
++;id_6;crossbar;rect;gold_matte;Drążek stabilizujący prostokątny (matowe złoto);mb.;USD;55
++;id_7;crossbar;rect;white;Drążek stabilizujący prostokątny (biały);mb.;USD;55
+;;;;;;;;
++;id_8;crossbar;round;chrome;Drążek stabilizujący okrągły (chrom);mb.;USD;65
++;id_9;crossbar;round;chrome_matte;Drążek stabilizujący okrągły (matowy chrom)\r\n;mb.;USD;80
++;id_10;crossbar;round;black;Drążek stabilizujący okrągły (czarny);mb.;USD;65
++;id_11;crossbar;round;bronze;Drążek stabilizujący okrągły (brąz);mb.;USD;80
++;id_12;crossbar;round;gold;Drążek stabilizujący okrągły (złoto);mb.;USD;80
++;id_13;crossbar;round;gold_matte;Drążek stabilizujący okrągły (matowe złoto);mb.;USD;80
++;id_14;crossbar;round;white;Drążek stabilizujący okrągły (biały);mb.;USD;80
+;;;;;;;;
++;id_15;crossbar;corner;chrome;Stabilizator narożny (chrom);szt.;USD;305
++;id_16;crossbar;corner;chrome_matte;Stabilizator narożny (matowy chrom);szt.;USD;350
++;id_17;crossbar;corner;black;Stabilizator narożny (czarny);szt.;USD;305
++;id_18;crossbar;corner;bronze;Stabilizator narożny (brąz);szt.;USD;320
++;id_19;crossbar;corner;gold;Stabilizator narożny (złoto);szt.;USD;320
++;id_20;crossbar;corner;gold_matte;Stabilizator narożny (matowe złoto);szt.;USD;350
++;id_21;crossbar;corner;white;Stabilizator narożny (biały);szt.;USD;320
+;;;;;;;;
++;id_1;fix;rect;chrome;Mocowanie do drążka prostokątnego do ściany (chrom);szt.;USD;25
++;id_2;fix;rect;chrome_matte;Mocowanie do drążka prostokątnego do ściany (matowy chrom);szt.;USD;30
++;id_3;fix;rect;black;Mocowanie do drążka prostokątnego do ściany (czarny);szt.;USD;25
++;id_4;fix;rect;bronze;Mocowanie do drążka prostokątnego do ściany (brąz);szt.;USD;30
++;id_5;fix;rect;gold;Mocowanie do drążka prostokątnego do ściany (złoto);szt.;USD;30
++;id_6;fix;rect;gold_matte;Mocowanie do drążka prostokątnego do ściany (matowe złoto);szt.;USD;30
++;id_7;fix;rect;white;Mocowanie do drążka prostokątnego do ściany (biały);szt.;USD;30
+;;;;;;;;
++;id_8;fix;round;chrome;Mocowanie do drążka okrągłego do ściany (chrom);szt.;USD;25
++;id_9;fix;round;chrome_matte;Mocowanie do drążka okrągłego do ściany (matowy chrom);szt.;USD;30
++;id_10;fix;round;black;Mocowanie do drążka okrągłego do ściany (czarny);szt.;USD;25
++;id_11;fix;round;bronze;Mocowanie do drążka okrągłego do ściany (brąz);szt.;USD;30
++;id_12;fix;round;gold;Mocowanie do drążka okrągłego do ściany (złoto);szt.;USD;30
++;id_13;fix;round;gold_matte;Mocowanie do drążka okrągłego do ściany (matowe złoto);szt.;USD;30
++;id_14;fix;round;white;Mocowanie do drążka okrągłego do ściany (biały);szt.;USD;30
+;;;;;;;;
++;id_1;fix_glass;rect;chrome;Uchwyt do szkła do drążka prostokątnego (chrom);szt.;USD;25
++;id_2;fix_glass;rect;chrome_matte;Uchwyt do szkła do drążka prostokątnego (matowy chrom);szt.;USD;30
++;id_3;fix_glass;rect;black;Uchwyt do szkła do drążka prostokątnego (czarny);szt.;USD;25
++;id_4;fix_glass;rect;bronze;Uchwyt do szkła do drążka prostokątnego (brąz);szt.;USD;30
++;id_5;fix_glass;rect;gold;Uchwyt do szkła do drążka prostokątnego (złoto);szt.;USD;30
++;id_6;fix_glass;rect;gold_matte;Uchwyt do szkła do drążka prostokątnego (matowe złoto);szt.;USD;30
++;id_7;fix_glass;rect;white;Uchwyt do szkła do drążka prostokątnego (biały);szt.;USD;30
+;;;;;;;;
++;id_8;fix_glass;round;chrome;Uchwyt do szkła do drążka okrągłego (chrom);szt.;USD;25
++;id_9;fix_glass;round;chrome_matte;Uchwyt do szkła do drążka okrągłego (matowy chrom);szt.;USD;30
++;id_10;fix_glass;round;black;Uchwyt do szkła do drążka okrągłego (czarny);szt.;USD;25
++;id_11;fix_glass;round;bronze;Uchwyt do szkła do drążka okrągłego (brąz);szt.;USD;30
++;id_12;fix_glass;round;gold;Uchwyt do szkła do drążka okrągłego (złoto);szt.;USD;30
++;id_13;fix_glass;round;gold_matte;Uchwyt do szkła do drążka okrągłego (matowe złoto);szt.;USD;30
++;id_14;fix_glass;round;white;Uchwyt do szkła do drążka okrągłego (biały);szt.;USD;30
+;;;;;;;;

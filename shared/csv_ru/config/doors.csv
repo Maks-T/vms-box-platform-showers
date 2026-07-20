@@ -1,0 +1,10 @@
+active;id;name
+;;
++;one_swing;Одна распашная дверь
++;two_swing;Две распашные двери
++;one_slide;Одна раздвижная дверь
++;two_slide;Две раздвижные двери
++;accordion_2glass;Гармошка, 2 стекла
++;accordion_3glass;Гармошка, 3 стекла
++;static;Стационарная
++;one_swing_with_partition;Распашная с перегородкой

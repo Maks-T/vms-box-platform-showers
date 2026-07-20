@@ -1,0 +1,26 @@
+active;id;type;furniture_type_id;name;unit;currency;price_6mm;price_8mm;price_10mm
+;;;;;;;;;
++;id_1;profile;chrome;Profil U z aluminium z powłoką polimerową (chrom);szt.;USD;53,2;76;98,8
++;id_2;profile;chrome_matte;Profil U z aluminium z powłoką polimerową (chrom matowy);szt.;USD;76,3;109;141,7
++;id_3;profile;black;Profil U z aluminium z powłoką polimerową (czarny);szt.;USD;60,2;86;111,8
++;id_4;profile;bronze;Profil U z aluminium z powłoką polimerową (brąz);szt.;USD;65,1;93;120,9
++;id_5;profile;gold;Profil U z aluminium z powłoką polimerową (złoto);szt.;USD;62,3;89;115,7
++;id_6;profile;gold_matte;Profil U z aluminium z powłoką polimerową (złoto matowe);szt.;USD;76,3;109;141,7
++;id_7;profile;white;Profil U z aluminium z powłoką polimerową (biały);szt.;USD;58,1;83;561,6
+;;;;;;;;;
++;id_1;corner;chrome;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, chrom);szt.;USD;20.3;29;37,7
++;id_2;corner;chrome_matte;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, chrom matowy);szt.;USD;20.3;29;37,7
++;id_3;corner;black;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, czarny);szt.;USD;21.7;31;40,3
++;id_4;corner;bronze;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, brąz);szt.;USD;25.9;37;48,1
++;id_5;corner;gold;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, złoto);szt.;USD;25.9;37;48,1
++;id_6;corner;gold_matte;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, złoto matowe);szt.;USD;25.9;37;48,1
++;id_7;corner;white;Profil narożny 90° do szkła, mm (łączniki 90° szkło–szkło, zestaw, biały);szt.;USD;20.3;29;37,7
+;;;;;;;;;
++;id_1;cap;chrome;Zaślepka profilu U (chrom);szt.;USD;20,3;37,7;29
++;id_2;cap;chrome_matte;Zaślepka profilu U (chrom matowy);szt.;USD;20,3;37,7;29
++;id_3;cap;black;Zaślepka profilu U (czarny);szt.;USD;21,7;40,3;31
++;id_4;cap;bronze;Zaślepka profilu U (brąz);szt.;USD;25,9;48,1;37
++;id_5;cap;gold;Zaślepka profilu U (złoto);szt.;USD;25,9;48,1;37
++;id_6;cap;gold_matte;Zaślepka profilu U (złoto matowe);szt.;USD;25,9;48,1;37
++;id_7;cap;white;Zaślepka profilu U (biały);szt.;USD;20,3;37,7;29
+;;;;;;;;;

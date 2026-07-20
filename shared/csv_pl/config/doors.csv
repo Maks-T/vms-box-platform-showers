@@ -1,0 +1,10 @@
+active;id;name
+;;
++;one_swing;Otwierane jednoskrzydłowe
++;two_swing;Otwierane dwuskrzydłowe
++;one_slide;Przesuwne jednoskrzydłowe
++;two_slide;Przesuwne dwuskrzydłowe
++;accordion_2glass;Harmonijkowe, 2 szyby
++;accordion_3glass;Harmonijkowe, 3 szyby
++;static;Stała ścianka
++;one_swing_with_partition;Drzwi uchylne ze ścianką stałą

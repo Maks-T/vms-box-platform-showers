@@ -1,0 +1,9 @@
+active;id;name
+;;
++;line;Линейная
++;corner;Угловая
++;free;Свободный вход
++;trapezoid;Трапецевидная
++;ushaped;П-образная
++;door;Дверь в нишу
++;curtain;Шторка в ванную

@@ -1,0 +1,9 @@
+active;id;name;HEX_color;metallic;roughness
+;;;;;
++;chrome;Хром;#E4E4E4;0.9;0
++;chrome_matte;Матовый хром;#B3B3B3;0.5;0.5
++;black;Черный;#000000;0;0.5
++;bronze;Бронза;#CC8E34;0.6;0.5
++;gold;Золото;#FFD700;0.9;0
++;gold_matte;Матовое золото;#D4AF37;0.5;0.5
++;white;Белый;#FFFFFF;0;0.5

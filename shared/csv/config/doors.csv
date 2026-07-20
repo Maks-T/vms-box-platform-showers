@@ -1,0 +1,10 @@
+active;id;name
+;;
++;one_swing;One-hinged door
++;two_swing;Two-hinged doors
++;one_slide;One-sliding door
++;two_slide;Two-sliding doors
++;accordion_2glass;Foldable-door
++;accordion_3glass;Foldable-door
++;static;Fixed door
++;one_swing_with_partition;One fixed + one hinged door

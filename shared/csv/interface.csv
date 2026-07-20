@@ -1,0 +1,5 @@
+id;name;show_admin;show_manager;show_user;value_admin;value_user;value_user
+currencyChange;Currency for the Estimate and its availability for users to change;+;-;-;USD;USD;USD
+priceBlock;"Show the ""Amount"" block";+;+;+;;;
+estimateBlock;"Show the ""Estimate"" ";+;+;+;;;
+;;;;;;;

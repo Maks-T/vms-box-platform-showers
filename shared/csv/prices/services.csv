@@ -1,0 +1,22 @@
+active;id;type;form;doors;name;unit;currency;price_1;price_2
+;;;;;;;;;
+;;;;;;;;Within the City Limits;price_1 + x * distance
++;measure;measure;;;Measurement Service;service;USD;30;1
++;delivery;delivery;;;Delivery Service;service;USD;30;2.5
+;;;;;;;;;
+;;;;;;;;A freight elevator in the building;No freight elevator in the building
++;lift;lift;;;Delivery to the Floor;service;USD;0;10
+;;;;;;;;;
++;id_1;montage;line;one_swing, two_swing;Installation (Line-Form hinged door);service;USD;100;
++;id_2;montage;line;one_slide, two_slide;Installation (Line-Form sliding door);service;USD;110;
++;id_3;montage;corner;one_swing, two_swing;Installation (Angular hinged door);service;USD;105;
++;id_4;montage;corner;one_slide, two_slide;Installation (Angular sliding door);service;USD;115;
++;id_5;montage;free;;Installation (Walk-in);service;USD;150;
++;id_6;montage;trapezoid;;Installation (Pentagonal);service;USD;130;
++;id_7;montage;ushaped;;Installation (Wall-adjusted rectangular);service;USD;150;
++;id_8;montage;door;;Installation (Alcove shower door);service;USD;120;
++;id_9;montage;curtain;static;Installation (Bathtube screen fixed door);service;USD;110;
++;id_10;montage;curtain;one_swing, two_swing, one_swing_with_partition;Installation (Bathtube screen hinged door);service;USD;90;
++;id_11;montage;curtain;one_slide, two_slide;Installation (Bathtube screen sliding door);service;USD;110;
++;id_12;montage;curtain;accordion_2glass, accordion_3glass;Installation (Bathtube screen foldable-door);service;USD;100;
+;;;;;;;;;

@@ -1,0 +1,24 @@
+active;id;type;form;doors;name;unit;currency;price_1;price_2
+;;;;;;;;;
+;;;;;;;;W granicach miasta;price_1 + x * distance
++;measure;measure;;;Pomiar;usługa;USD;30;1
++;delivery;delivery;;;Dostawa;usługa;USD;30;2.5
+;;;;;;;;;
+;;;;;;;;W budynku znajduje się winda towarowa;W budynku brak windy towarowej
++;lift;lift;;;Wniesienie na piętro;usługa;USD;0;10
+;;;;;;;;;
++;id_1;montage;line;one_swing, two_swing;Montaż (liniowa, drzwi uchylne);usługa;USD;100;
++;id_2;montage;line;one_slide, two_slide;Montaż (liniowa, drzwi przesuwne);usługa;USD;110;
++;id_3;montage;corner;one_swing, two_swing;Montaż (narożna, drzwi uchylne);usługa;USD;105;
++;id_4;montage;corner;one_slide, two_slide;Montaż (narożna, drzwi przesuwne);usługa;USD;115;
++;id_5;montage;free;;Montaż (walk-in);usługa;USD;150;
++;id_6;montage;trapezoid;;Montaż (pięciokątna);usługa;USD;130;
++;id_7;montage;ushaped;;Montaż (w kształcie litery U);usługa;USD;150;
++;id_8;montage;door;;Montaż (drzwi wnękowe);usługa;USD;120;
++;id_9;montage;curtain;static;Montaż (parawan nawannowy, stały);usługa;USD;110;
++;id_10;montage;curtain;one_swing, two_swing, one_swing_with_partition;Montaż (parawan nawannowy, z drzwiami uchylnymi);usługa;USD;90;
++;id_11;montage;curtain;one_slide, two_slide;Montaż (parawan nawannowy, drzwi przesuwne);usługa;USD;110;
++;id_12;montage;curtain;accordion_2glass, accordion_3glass;Montaż (parawan nawannowy, drzwi składane);usługa;USD;100;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;

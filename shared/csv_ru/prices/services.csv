@@ -1,0 +1,22 @@
+active;id;type;form;doors;name;unit;currency;price_1;price_2
+;;;;;;;;;
+;;;;;;;;в пределах МКАД;price_1 + x * расстояние от МКАД
++;measure;measure;;;Замер;услуга;BYN;30;1
++;delivery;delivery;;;Доставка ;услуга;BYN;30;2.5
+;;;;;;;;;
+;;;;;;;;При наличии грузового лифта;При отсутствии грузового лифта
++;lift;lift;;;Подъем на этаж;услуга;BYN;0;10
+;;;;;;;;;
++;id_1;montage;line;one_swing, two_swing;Монтаж линейная распашная;услуга;BYN;100;
++;id_2;montage;line;one_slide, two_slide;Монтаж линейная раздвижная;услуга;BYN;110;
++;id_3;montage;corner;one_swing, two_swing;Монтаж угловая распашная;услуга;BYN;105;
++;id_4;montage;corner;one_slide, two_slide;Монтаж угловая раздвижная;услуга;BYN;115;
++;id_5;montage;free;;Монтаж свободный вход;услуга;BYN;150;
++;id_6;montage;trapezoid;;Монтаж трапециевидная;услуга;BYN;130;
++;id_7;montage;ushaped;;Монтаж п-образная;услуга;BYN;150;
++;id_8;montage;door;;Монтаж дверь в нишу;услуга;BYN;120;
++;id_9;montage;curtain;static;Монтаж шторка стационарная;услуга;BYN;110;
++;id_10;montage;curtain;one_swing, two_swing, one_swing_with_partition;Монтаж шторка с распашной дверью;услуга;BYN;90;
++;id_11;montage;curtain;one_slide, two_slide;Монтаж шторка раздвижная;услуга;BYN;110;
++;id_12;montage;curtain;accordion_2glass, accordion_3glass;Монтаж шторка гармошка;услуга;BYN;100;
+;;;;;;;;;

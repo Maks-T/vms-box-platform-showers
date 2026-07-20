@@ -1,0 +1,5 @@
+id;name;show_admin;show_manager;show_user;value_admin;value_user;value_user
+currencyChange;Валюта для сметы и кто может ее менять;+;-;+;RUB;RUB;RUB
+priceBlock;Показать блок "стоимость";+;+;+;;;
+estimateBlock;Показать смету;+;+;+;;;
+;;;;;;;
