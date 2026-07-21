@@ -1,7 +1,92 @@
+# scripts/convert_cctv_to_import_data.py
 import os
 import csv
 import json
 
+# ==============================================================================
+# ГЛОБАЛЬНЫЙ БЛОК КОНСТАНТ И НАСТРОЕК
+# ==============================================================================
+MARKUP_PERCENT = 30.0  # Процент маржи (наценки) для всех товаров на складе
+STOCK_DEFAULT = 10.0   # Дефолтный остаток на складе для всех вариантов
+
+# Официальные курсы валют относительно RUB на 20 июля 2026 года
+CURRENCIES = [
+    {
+        "external_code": "BYN",
+        "code": "BYN",
+        "symbol": "Br",
+        "symbol_native": {"ru": "руб."},
+        "name": {"ru": "Белорусский рубль"},
+        "rate": 3.6963,
+        "is_default": False,
+        "is_active": True
+    },
+    {
+        "external_code": "RUB",
+        "code": "RUB",
+        "symbol": "₽",
+        "symbol_native": {"ru": "руб."},
+        "name": {"ru": "Российский рубль"},
+        "rate": 1.0,
+        "is_default": True,
+        "is_active": True
+    },
+    {
+        "external_code": "USD",
+        "code": "USD",
+        "symbol": "$",
+        "symbol_native": {"ru": "$"},
+        "name": {"ru": "Доллар США"},
+        "rate": 78.3159,
+        "is_default": False,
+        "is_active": True
+    }
+]
+
+# Карта перевода системных ключей в человекочитаемые названия
+FIELD_LABELS = {
+    "hex_color": "HEX Цвет",
+    "metallic": "Металличность",
+    "roughness": "Шероховатость",
+    "height_min": "Мин. высота",
+    "height_max": "Макс. высота",
+    "length_min": "Мин. длина",
+    "length_max": "Макс. длина",
+    "show_admin": "Админ",
+    "show_manager": "Менеджер",
+    "show_user": "Пользователь",
+    "value_admin": "Значение админа",
+    "value_manager": "Значение менеджера",
+    "value_user": "Значение пользователя",
+}
+
+# Системные названия типов товаров
+PRODUCT_TYPE_NAMES = {
+    "shower_glass": "Стекло душевое",
+    "shower_profile": "Профиль душевой",
+    "shower_handle": "Ручка душевая",
+    "shower_open_system": "Система открывания",
+    "shower_crossbar": "Штанга стабилизационная",
+    "shower_sealant": "Уплотнитель душевой",
+    "shower_doorstep": "Порог душевой",
+    "shower_service": "Услуга душевой",
+}
+
+# Системные названия категорий
+CATEGORY_NAMES = {
+    "cat_showers_glass": "Стекла",
+    "cat_showers_profiles": "Профили",
+    "cat_showers_handles": "Ручки",
+    "cat_showers_open_systems": "Петли и треки",
+    "cat_showers_crossbars": "Штанги",
+    "cat_showers_sealants": "Уплотнители",
+    "cat_showers_doorsteps": "Пороги",
+    "cat_showers_services": "Услуги",
+}
+
+# ==============================================================================
+# ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ
+# ==============================================================================
 def find_project_root():
     curr = os.path.abspath(os.getcwd())
     while curr != os.path.dirname(curr):
@@ -88,6 +173,9 @@ def get_preview_picture(row):
         return img_val if img_val else None
     return None
 
+# ==============================================================================
+# КОНВЕРТАЦИЯ
+# ==============================================================================
 def run_conversion(base_dir=None, out_file=None):
     if not base_dir:
         base_dir = find_project_root()
@@ -221,6 +309,13 @@ def run_conversion(base_dir=None, out_file=None):
         {"external_code": "opt_thickness_10mm", "slug": "10mm", "value": {"ru": "10 мм"}, "meta": {"hex": None, "image": None}, "param": 10.0}
     ]
 
+    crossbar_type_options = [
+        {"external_code": "opt_cb_type_rect", "slug": "rect", "value": {"ru": "Прямоугольная"}, "meta": {"hex": None, "image": None}, "param": "rect"},
+        {"external_code": "opt_cb_type_round", "slug": "round", "value": {"ru": "Круглая"}, "meta": {"hex": None, "image": None}, "param": "round"},
+        {"external_code": "opt_cb_type_corner", "slug": "corner", "value": {"ru": "Угловая штанга"}, "meta": {"hex": None, "image": None}, "param": "corner"},
+        {"external_code": "opt_cb_type_none", "slug": "none", "value": {"ru": "Без штанги (при креплении к потолку)"}, "meta": {"hex": None, "image": None}, "param": "none"}
+    ]
+
     type_options = [
         {"external_code": "opt_sh_type_profile", "slug": "profile", "value": {"ru": "П-профиль"}, "meta": {"hex": None, "image": None}, "param": "profile"},
         {"external_code": "opt_sh_type_corner", "slug": "corner", "value": {"ru": "Угловой профиль"}, "meta": {"hex": None, "image": None}, "param": "corner"},
@@ -255,38 +350,7 @@ def run_conversion(base_dir=None, out_file=None):
     }
 
     import_data = {
-        "currencies": [
-            {
-                "external_code": "BYN",
-                "code": "BYN",
-                "symbol": "Br",
-                "symbol_native": {"ru": "руб."},
-                "name": {"ru": "Белорусский рубль"},
-                "rate": 0.03691,
-                "is_default": False,
-                "is_active": True
-            },
-            {
-                "external_code": "RUB",
-                "code": "RUB",
-                "symbol": "₽",
-                "symbol_native": {"ru": "руб."},
-                "name": {"ru": "Российский рубль"},
-                "rate": 1.0,
-                "is_default": True,
-                "is_active": True
-            },
-            {
-                "external_code": "USD",
-                "code": "USD",
-                "symbol": "$",
-                "symbol_native": {"ru": "$"},
-                "name": {"ru": "Доллар США"},
-                "rate": 0.01276,
-                "is_default": False,
-                "is_active": True
-            }
-        ],
+        "currencies": CURRENCIES,
         "price_types": [
             {
                 "slug": "retail",
@@ -309,7 +373,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_glass",
                 "family_external_code": "fam_showers",
                 "code": "shower_glass",
-                "name": {"ru": "Стекло душевое"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_glass"]},
                 "attached_attributes": [
                     {"code": "glass_thickness", "is_variant_only": True},
                     {"code": "color", "is_variant_only": False},
@@ -322,7 +386,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_profile",
                 "family_external_code": "fam_showers",
                 "code": "shower_profile",
-                "name": {"ru": "Профиль душевой"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_profile"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "furniture_type_id", "is_variant_only": True},
@@ -333,7 +397,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_handle",
                 "family_external_code": "fam_showers",
                 "code": "shower_handle",
-                "name": {"ru": "Ручка душевая"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_handle"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "furniture_type_id", "is_variant_only": True},
@@ -345,7 +409,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_open_system",
                 "family_external_code": "fam_showers",
                 "code": "shower_open_system",
-                "name": {"ru": "Система открывания"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_open_system"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "material_type_id", "is_variant_only": True},
@@ -356,7 +420,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_crossbar",
                 "family_external_code": "fam_showers",
                 "code": "shower_crossbar",
-                "name": {"ru": "Штанга стабилизационная"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_crossbar"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "crossbar_type_id", "is_variant_only": True},
@@ -367,7 +431,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_sealant",
                 "family_external_code": "fam_showers",
                 "code": "shower_sealant",
-                "name": {"ru": "Уплотнитель душевой"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_sealant"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "glass_thickness", "is_variant_only": True}
@@ -377,7 +441,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_doorstep",
                 "family_external_code": "fam_showers",
                 "code": "shower_doorstep",
-                "name": {"ru": "Порог душевой"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_doorstep"]},
                 "attached_attributes": [
                     {"code": "furniture_type_id", "is_variant_only": True}
                 ]
@@ -386,7 +450,7 @@ def run_conversion(base_dir=None, out_file=None):
                 "external_code": "type_shower_service",
                 "family_external_code": "fam_showers",
                 "code": "shower_service",
-                "name": {"ru": "Услуга душевой"},
+                "name": {"ru": PRODUCT_TYPE_NAMES["shower_service"]},
                 "attached_attributes": [
                     {"code": "type", "is_variant_only": False},
                     {"code": "form_type", "is_variant_only": True},
@@ -395,14 +459,14 @@ def run_conversion(base_dir=None, out_file=None):
             }
         ],
         "categories": [
-            {"external_code": "cat_showers_glass", "slug": "shower-glass", "name": {"ru": "Стекла"}, "parent_external_code": None},
-            {"external_code": "cat_showers_profiles", "slug": "shower-profiles", "name": {"ru": "Профили"}, "parent_external_code": None},
-            {"external_code": "cat_showers_handles", "slug": "shower-handles", "name": {"ru": "Ручки"}, "parent_external_code": None},
-            {"external_code": "cat_showers_open_systems", "slug": "shower-open-systems", "name": {"ru": "Петли и треки"}, "parent_external_code": None},
-            {"external_code": "cat_showers_crossbars", "slug": "shower-crossbars", "name": {"ru": "Штанги"}, "parent_external_code": None},
-            {"external_code": "cat_showers_sealants", "slug": "shower-sealants", "name": {"ru": "Уплотнители"}, "parent_external_code": None},
-            {"external_code": "cat_showers_doorsteps", "slug": "shower-doorsteps", "name": {"ru": "Пороги"}, "parent_external_code": None},
-            {"external_code": "cat_showers_services", "slug": "shower-services", "name": {"ru": "Услуги"}, "parent_external_code": None}
+            {"external_code": "cat_showers_glass", "slug": "shower-glass", "name": {"ru": CATEGORY_NAMES["cat_showers_glass"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_profiles", "slug": "shower-profiles", "name": {"ru": CATEGORY_NAMES["cat_showers_profiles"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_handles", "slug": "shower-handles", "name": {"ru": CATEGORY_NAMES["cat_showers_handles"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_open_systems", "slug": "shower-open-systems", "name": {"ru": CATEGORY_NAMES["cat_showers_open_systems"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_crossbars", "slug": "shower-crossbars", "name": {"ru": CATEGORY_NAMES["cat_showers_crossbars"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_sealants", "slug": "shower-sealants", "name": {"ru": CATEGORY_NAMES["cat_showers_sealants"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_doorsteps", "slug": "shower-doorsteps", "name": {"ru": CATEGORY_NAMES["cat_showers_doorsteps"]}, "parent_external_code": None},
+            {"external_code": "cat_showers_services", "slug": "shower-services", "name": {"ru": CATEGORY_NAMES["cat_showers_services"]}, "parent_external_code": None}
         ],
         "attributes": [
             {
@@ -516,9 +580,9 @@ def run_conversion(base_dir=None, out_file=None):
         "code": "shower_furniture",
         "name": {"ru": "Цвета фурнитуры"},
         "meta_schema": [
-            {"key": "hex_color", "type": "text", "label": {"ru": "HEX Цвет"}},
-            {"key": "metallic", "type": "number", "label": {"ru": "Металлик"}},
-            {"key": "roughness", "type": "number", "label": {"ru": "Шероховатость"}}
+            {"key": "hex_color", "type": "text", "label": {"ru": FIELD_LABELS["hex_color"]}},
+            {"key": "metallic", "type": "number", "label": {"ru": FIELD_LABELS["metallic"]}},
+            {"key": "roughness", "type": "number", "label": {"ru": FIELD_LABELS["roughness"]}}
         ],
         "records": furniture_records
     })
@@ -542,10 +606,10 @@ def run_conversion(base_dir=None, out_file=None):
         "code": "shower_measure_limits",
         "name": {"ru": "Лимиты размеров душевых"},
         "meta_schema": [
-            {"key": "height_min", "type": "number", "label": {"ru": "Мин. высота"}},
-            {"key": "height_max", "type": "number", "label": {"ru": "Макс. высота"}},
-            {"key": "length_min", "type": "number", "label": {"ru": "Мин. длина"}},
-            {"key": "length_max", "type": "number", "label": {"ru": "Макс. длина"}}
+            {"key": "height_min", "type": "number", "label": {"ru": FIELD_LABELS["height_min"]}},
+            {"key": "height_max", "type": "number", "label": {"ru": FIELD_LABELS["height_max"]}},
+            {"key": "length_min", "type": "number", "label": {"ru": FIELD_LABELS["length_min"]}},
+            {"key": "length_max", "type": "number", "label": {"ru": FIELD_LABELS["length_max"]}}
         ],
         "records": measure_records
     })
@@ -571,12 +635,12 @@ def run_conversion(base_dir=None, out_file=None):
         "code": "shower_interface_settings",
         "name": {"ru": "Параметры интерфейса калькулятора"},
         "meta_schema": [
-            {"key": "show_admin", "type": "boolean", "label": {"ru": "Админ"}},
-            {"key": "show_manager", "type": "boolean", "label": {"ru": "Менеджер"}},
-            {"key": "show_user", "type": "boolean", "label": {"ru": "Пользователь"}},
-            {"key": "value_admin", "type": "text", "label": {"ru": "Значение админа"}},
-            {"key": "value_manager", "type": "text", "label": {"ru": "Значение менеджера"}},
-            {"key": "value_user", "type": "text", "label": {"ru": "Значение пользователя"}}
+            {"key": "show_admin", "type": "boolean", "label": {"ru": FIELD_LABELS["show_admin"]}},
+            {"key": "show_manager", "type": "boolean", "label": {"ru": FIELD_LABELS["show_manager"]}},
+            {"key": "show_user", "type": "boolean", "label": {"ru": FIELD_LABELS["show_user"]}},
+            {"key": "value_admin", "type": "text", "label": {"ru": FIELD_LABELS["value_admin"]}},
+            {"key": "value_manager", "type": "text", "label": {"ru": FIELD_LABELS["value_manager"]}},
+            {"key": "value_user", "type": "text", "label": {"ru": FIELD_LABELS["value_user"]}}
         ],
         "records": interface_records
     })
@@ -685,7 +749,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"glass_{glass_id}",
             "is_active": True,
             "eav": {
-                "color": glass_id,
+                "color": f"opt_glass_color_{glass_id}",
                 "autoImg": to_bool(row["autoImg"]),
                 "roughness": to_float(row["roughness"]),
                 "fluted": to_bool(row["fluted"])
@@ -700,13 +764,14 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": parent_var_code,
                 "sku": f"GLASS-{glass_id}-{thick_slug}MM",
-                "cost_price": round(price_val * 0.7, 2),
-                "currency": "USD",
-                "price": price_val,
+                "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
+                "currency": row.get("currency", "USD").strip(),
+                "markup": MARKUP_PERCENT,
                 "is_default": thick_slug == "8",
                 "is_active": True,
+                "stock": STOCK_DEFAULT,
                 "eav": {
-                    "glass_thickness": f"{thick_slug}mm"
+                    "glass_thickness": f"opt_thickness_{thick_slug}mm"
                 }
             })
 
@@ -739,7 +804,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"profile_{ptype}",
             "is_active": True,
             "eav": {
-                "type": ptype
+                "type": f"opt_sh_type_{ptype}"
             },
             "variants": []
         }
@@ -751,14 +816,15 @@ def run_conversion(base_dir=None, out_file=None):
                 product["variants"].append({
                     "external_code": f"var_shower_profile_{ptype}_{fur_color}_{thick_slug}mm",
                     "sku": f"PROFILE-{ptype.upper()}-{fur_color.upper()}-{thick_slug}MM",
-                    "cost_price": round(price_val * 0.7, 2),
-                    "currency": "USD",
-                    "price": price_val,
+                    "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
+                    "currency": row.get("currency", "USD").strip(),
+                    "markup": MARKUP_PERCENT,
                     "is_default": thick_slug == "8",
                     "is_active": True,
+                    "stock": STOCK_DEFAULT,
                     "eav": {
-                        "glass_thickness": f"{thick_slug}mm",
-                        "furniture_type_id": fur_color
+                        "glass_thickness": f"opt_thickness_{thick_slug}mm",
+                        "furniture_type_id": f"opt_furniture_color_{fur_color}"
                     }
                 })
         import_data["products"].append(product)
@@ -780,6 +846,11 @@ def run_conversion(base_dir=None, out_file=None):
 
     for htype, rows in handle_groups.items():
         base_name = handle_name_map.get(htype, htype)
+
+        opt_type = htype
+        if opt_type == "sliding":
+            opt_type = "slide"
+
         product = {
             "external_code": f"prod_shower_handle_{htype}",
             "product_type_external_code": "type_shower_handle",
@@ -791,7 +862,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"handle_{htype}",
             "is_active": True,
             "eav": {
-                "type": htype
+                "type": f"opt_sh_type_{opt_type}"
             },
             "variants": []
         }
@@ -801,15 +872,16 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": f"var_shower_handle_{htype}_{fur_color}_{row_id}",
                 "sku": f"HANDLE-{htype.upper()}-{fur_color.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price"]) * 0.7, 2),
-                "currency": "USD",
-                "price": to_float(row["price"]),
+                "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
+                "currency": row.get("currency", "USD").strip(),
+                "markup": MARKUP_PERCENT,
                 "preview_picture": get_preview_picture(row),
                 "is_default": True,
                 "is_active": True,
+                "stock": STOCK_DEFAULT,
                 "eav": {
-                    "furniture_type_id": fur_color,
-                    "door_type_ids": [x.strip() for x in row["door_type_ids"].split(",") if x.strip()],
+                    "furniture_type_id": f"opt_furniture_color_{fur_color}",
+                    "door_type_ids": [f"opt_door_type_{x.strip()}" for x in row["door_type_ids"].split(",") if x.strip()],
                     "interface_name": row["interface_name"]
                 }
             })
@@ -842,7 +914,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"crossbar_{ctype}",
             "is_active": True,
             "eav": {
-                "type": ctype
+                "type": f"opt_sh_type_{ctype}"
             },
             "variants": []
         }
@@ -853,14 +925,15 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": f"var_shower_crossbar_{ctype}_{cb_type}_{fur_color}_{row_id}",
                 "sku": f"CROSSBAR-{ctype.upper()}-{cb_type.upper()}-{fur_color.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price"]) * 0.7, 2),
-                "currency": "USD",
-                "price": to_float(row["price"]),
+                "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
+                "currency": row.get("currency", "USD").strip(),
+                "markup": MARKUP_PERCENT,
                 "is_default": True,
                 "is_active": True,
+                "stock": STOCK_DEFAULT,
                 "eav": {
-                    "crossbar_type_id": cb_type,
-                    "furniture_type_id": fur_color
+                    "crossbar_type_id": f"opt_cb_type_{cb_type}",
+                    "furniture_type_id": f"opt_furniture_color_{fur_color}"
                 }
             })
         import_data["products"].append(product)
@@ -893,7 +966,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"opensys_{otype}",
             "is_active": True,
             "eav": {
-                "type": otype
+                "type": f"opt_sh_type_{otype}"
             },
             "variants": []
         }
@@ -904,14 +977,15 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": f"var_shower_opensys_{otype}_{mat_type}_{fur_color}_{row_id}",
                 "sku": f"OPENSYS-{otype.upper()}-{mat_type.upper()}-{fur_color.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price"]) * 0.7, 2),
-                "currency": "USD",
-                "price": to_float(row["price"]),
+                "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
+                "currency": row.get("currency", "USD").strip(),
+                "markup": MARKUP_PERCENT,
                 "is_default": True,
                 "is_active": True,
+                "stock": STOCK_DEFAULT,
                 "eav": {
-                    "material_type_id": mat_type,
-                    "furniture_type_id": fur_color
+                    "material_type_id": f"opt_material_type_{mat_type}",
+                    "furniture_type_id": f"opt_furniture_color_{fur_color}"
                 }
             })
         import_data["products"].append(product)
@@ -943,7 +1017,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"sealant_{stype}",
             "is_active": True,
             "eav": {
-                "type": stype
+                "type": f"opt_sh_type_{stype}"
             },
             "variants": []
         }
@@ -954,13 +1028,14 @@ def run_conversion(base_dir=None, out_file=None):
                 product["variants"].append({
                     "external_code": f"var_shower_sealant_{stype}_{thick_slug}mm",
                     "sku": f"SEALANT-{stype.upper()}-{thick_slug}MM",
-                    "cost_price": round(price_val * 0.7, 2),
-                    "currency": "USD",
-                    "price": price_val,
+                    "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
+                    "currency": row.get("currency", "USD").strip(),
+                    "markup": MARKUP_PERCENT,
                     "is_default": thick_slug == "8",
                     "is_active": True,
+                    "stock": STOCK_DEFAULT,
                     "eav": {
-                        "glass_thickness": f"{thick_slug}mm"
+                        "glass_thickness": f"opt_thickness_{thick_slug}mm"
                     }
                 })
         import_data["products"].append(product)
@@ -985,13 +1060,14 @@ def run_conversion(base_dir=None, out_file=None):
         product["variants"].append({
             "external_code": f"var_shower_doorstep_{row_id}",
             "sku": f"DOORSTEP-{fur_color.upper()}-{row_id.upper()}",
-            "cost_price": round(to_float(row["price"]) * 0.7, 2),
-            "currency": "USD",
-            "price": to_float(row["price"]),
+            "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
+            "currency": row.get("currency", "USD").strip(),
+            "markup": MARKUP_PERCENT,
             "is_default": True,
             "is_active": True,
+            "stock": STOCK_DEFAULT,
             "eav": {
-                "furniture_type_id": fur_color
+                "furniture_type_id": f"opt_furniture_color_{fur_color}"
             }
         })
     import_data["products"].append(product)
@@ -1024,7 +1100,7 @@ def run_conversion(base_dir=None, out_file=None):
             "code": f"service_{stype}",
             "is_active": True,
             "eav": {
-                "type": stype
+                "type": f"opt_sh_type_{stype}"
             },
             "variants": []
         }
@@ -1033,14 +1109,15 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": f"var_shower_service_{stype}_{row_id}",
                 "sku": f"SERVICE-{stype.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price_1"]) * 0.7, 2),
-                "currency": "USD",
-                "price": to_float(row["price_1"]),
+                "cost_price": round(to_float(row["price_1"]) / (MARKUP_PERCENT / 100 + 1), 2),
+                "currency": row.get("currency", "BYN").strip(),
+                "markup": MARKUP_PERCENT,
                 "is_default": True,
                 "is_active": True,
+                "stock": STOCK_DEFAULT,
                 "eav": {
-                    "form_type": row["form"],
-                    "door_type_ids": [x.strip() for x in row["doors"].split(",") if x.strip()]
+                    "form_type": f"opt_form_type_{row['form']}" if row["form"] else "",
+                    "door_type_ids": [f"opt_door_type_{x.strip()}" for x in row["doors"].split(",") if x.strip()]
                 }
             })
         import_data["products"].append(product)

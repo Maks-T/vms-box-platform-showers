@@ -11,10 +11,12 @@ use Illuminate\Support\Facades\Cache;
 use Nicole\Box\Core\Models\Product;
 use Nicole\Box\Core\Models\ComplexDictionary;
 use Nicole\Box\Core\Models\Currency;
+use Nicole\Box\Core\Models\Attribute;
+use Nicole\Box\Core\Services\PricingManager;
 
 class ShowersCalculatorBridgeController extends Controller
 {
-  public function appData(Request $request): JsonResponse
+  public function loadData(Request $request): JsonResponse
   {
     $version = Cache::get('catalog_version', 1);
     $cacheKey = 'showers_calc_bridge_v' . $version . '_' . app()->getLocale();
@@ -25,13 +27,17 @@ class ShowersCalculatorBridgeController extends Controller
         'prices' => $this->loadPrices(),
         'limits' => $this->loadLimits(),
         'interface' => $this->loadInterfaceSettings(),
-        'rates' => $this->loadExchangeRates()
+        'rates' => $this->loadExchangeRates(),
+        'status' => true // Добавлено для точного соответствия корню легаси-апи
       ];
     });
 
     return response()->json($responsePayload);
   }
 
+  /**
+   * Получение одиночного ЕАV-значения.
+   */
   protected function getEavValue($model, string $code): string
   {
     $val = $model->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
@@ -39,6 +45,20 @@ class ShowersCalculatorBridgeController extends Controller
       return '';
     }
     return $val->value_option_id ? ($val->option?->slug ?? '') : ($val->value_string ?? (string)$val->value_numeric);
+  }
+
+  /**
+   * Получение массива множественных ЕАV-значений (для doorTypeIds и совместимых дверей).
+   */
+  protected function getEavMultipleValues($model, string $code): array
+  {
+    $vals = $model->attributeValues->filter(fn($v) => $v->attribute && $v->attribute->code === $code);
+    if ($vals->isEmpty()) {
+      return [];
+    }
+    return $vals->map(function($v) {
+      return $v->value_option_id ? ($v->option?->slug ?? '') : ($v->value_string ?? (string)$v->value_numeric);
+    })->filter()->values()->toArray();
   }
 
   protected function getEavOptionParam($model, string $code): ?string
@@ -80,6 +100,17 @@ class ShowersCalculatorBridgeController extends Controller
       }
     }
 
+    // Динамическая подгрузка секции config.crossbar из справочных опций ЕАV
+    $crossbarAttr = Attribute::where('code', 'crossbar_type_id')->with('options')->first();
+    if ($crossbarAttr) {
+      foreach ($crossbarAttr->options as $option) {
+        $config['crossbar'][$option->slug] = [
+          'id' => $option->slug,
+          'name' => $option->getTranslation('value', app()->getLocale()) ?? $option->value
+        ];
+      }
+    }
+
     return $config;
   }
 
@@ -107,6 +138,10 @@ class ShowersCalculatorBridgeController extends Controller
       'gunmetal_grey' => 'id_8'
     ];
 
+    // Получаем текущую системную валюту для конвертации всех не-стеклянных цен
+    $pricingManager = app(PricingManager::class);
+    $priceTypeCurrencyCode = $pricingManager->defaultPriceType->currency->code ?? $pricingManager->baseCurrency->code;
+
     $allProducts = Product::with([
       'variants.attributeValues.attribute',
       'variants.attributeValues.option',
@@ -116,31 +151,64 @@ class ShowersCalculatorBridgeController extends Controller
 
     foreach ($allProducts as $product) {
       $catCode = $product->category?->external_code ?? '';
+      $unitSymbol = $product->unit ? ($product->unit->getTranslation('symbol', app()->getLocale()) ?? $product->unit->symbol) : 'шт.';
 
       if ($catCode === 'cat_showers_glass') {
-        $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
+        $groupedByColor = [];
+
         foreach ($product->variants as $variant) {
+          $colorOption = $variant->attributeValues
+            ->first(fn($v) => $v->attribute && $v->attribute->code === 'color')
+            ?->option;
+
+          if (!$colorOption) {
+            continue;
+          }
+
+          $colorSlug = $colorOption->slug;
+
+          if (!isset($groupedByColor[$colorSlug])) {
+            $groupedByColor[$colorSlug] = [
+              'id' => $colorSlug,
+              'name' => $colorOption->getTranslation('value', app()->getLocale()) ?? $colorOption->value,
+              'hexColor' => $colorOption->param ?: '#D6E4E5',
+              'roughness' => (float)$this->getEavValue($variant, 'roughness'),
+              'fluted' => (bool)$this->getEavValue($variant, 'fluted'),
+              'pathImg' => $variant->getPreviewUrl() ?? '',
+              'prices' => [
+                '6mm' => 0.0,
+                '8mm' => 0.0,
+                '10mm' => 0.0,
+              ],
+            ];
+          }
+
+          // Безопасное получение цены через розничный ЕАV-аксессор
+          $priceVal = (float)($variant->retail_price ?? $variant->getPrice());
           if (str_ends_with($variant->sku, '6MM')) {
-            $p6 = (float)$variant->price;
+            $groupedByColor[$colorSlug]['prices']['6mm'] = $priceVal;
           } elseif (str_ends_with($variant->sku, '8MM')) {
-            $p8 = (float)$variant->price;
+            $groupedByColor[$colorSlug]['prices']['8mm'] = $priceVal;
           } elseif (str_ends_with($variant->sku, '10MM')) {
-            $p10 = (float)$variant->price;
+            $groupedByColor[$colorSlug]['prices']['10mm'] = $priceVal;
           }
         }
-        $prices['glasses'][$product->code] = [
-          'id' => $product->code,
-          'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
-          'unit' => 'm²',
-          'currency' => 'USD',
-          'price1' => $p6,
-          'price2' => $p8,
-          'price3' => $p10,
-          'hexColor' => $this->getEavOptionParam($product, 'color') ?: '#D6E4E5',
-          'roughness' => (float)$this->getEavValue($product, 'roughness'),
-          'fluted' => (bool)$this->getEavValue($product, 'fluted'),
-          'pathImg' => $product->getPreviewUrl() ?? ''
-        ];
+
+        foreach ($groupedByColor as $colorSlug => $data) {
+          $prices['glasses'][$colorSlug] = [
+            'id' => $colorSlug,
+            'name' => $data['name'],
+            'unit' => $unitSymbol,
+            'currency' => 'USD', // Стекла всегда в USD
+            'price1' => $data['prices']['6mm'],
+            'price2' => $data['prices']['8mm'],
+            'price3' => $data['prices']['10mm'],
+            'hexColor' => $data['hexColor'],
+            'roughness' => $data['roughness'],
+            'fluted' => $data['fluted'],
+            'pathImg' => $data['pathImg'],
+          ];
+        }
       }
 
       if ($catCode === 'cat_showers_profiles') {
@@ -149,7 +217,7 @@ class ShowersCalculatorBridgeController extends Controller
         foreach ($product->variants as $v) {
           $color = $this->getEavValue($v, 'furniture_type_id');
           $thick = $this->getEavValue($v, 'glass_thickness');
-          $groupedByColor[$color][$thick] = (float)$v->price;
+          $groupedByColor[$color][$thick] = (float)($v->retail_price ?? $v->getPrice());
           $groupedByColor[$color]['name'] = $product->getTranslation('name', app()->getLocale()) ?? $product->name;
         }
         foreach ($groupedByColor as $color => $thickPrices) {
@@ -158,8 +226,8 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $id,
             'furnitureTypeId' => $color,
             'name' => $thickPrices['name'] ?? '',
-            'unit' => 'pcs.',
-            'currency' => 'USD',
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
             'price1' => $thickPrices['6mm'] ?? 0.0,
             'price2' => $thickPrices['8mm'] ?? 0.0,
             'price3' => $thickPrices['10mm'] ?? 0.0
@@ -177,12 +245,12 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $rawId,
             'type' => $type,
             'furnitureTypeId' => $color,
-            'doorTypeIds' => explode(',', $this->getEavValue($v, 'door_type_ids')),
+            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'), // Исправлено на множественный ЕАV
             'interfaceName' => $this->getEavValue($v, 'interface_name'),
             'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
-            'unit' => 'pcs.',
-            'currency' => 'USD',
-            'price' => (float)$v->price,
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
+            'price' => (float)($v->retail_price ?? $v->getPrice()),
             'pathImg' => $v->getPreviewUrl() ?? ''
           ];
         }
@@ -200,9 +268,9 @@ class ShowersCalculatorBridgeController extends Controller
             'crossbarTypeId' => $cbType,
             'furnitureTypeId' => $color,
             'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
-            'unit' => $product->unit?->symbol ?? 'pcs.',
-            'currency' => 'USD',
-            'price' => (float)$v->price
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
+            'price' => (float)($v->retail_price ?? $v->getPrice())
           ];
         }
       }
@@ -219,9 +287,9 @@ class ShowersCalculatorBridgeController extends Controller
             'materialTypeId' => $mat,
             'furnitureTypeId' => $color,
             'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
-            'unit' => 'psc.',
-            'currency' => 'USD',
-            'price' => (float)$v->price
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
+            'price' => (float)($v->retail_price ?? $v->getPrice())
           ];
         }
       }
@@ -230,19 +298,20 @@ class ShowersCalculatorBridgeController extends Controller
         $type = $this->getEavValue($product, 'type');
         $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
         foreach ($product->variants as $v) {
+          $priceVal = (float)($v->retail_price ?? $v->getPrice());
           if (str_ends_with($v->sku, '6MM')) {
-            $p6 = (float)$v->price;
+            $p6 = $priceVal;
           } elseif (str_ends_with($v->sku, '8MM')) {
-            $p8 = (float)$v->price;
+            $p8 = $priceVal;
           } elseif (str_ends_with($v->sku, '10MM')) {
-            $p10 = (float)$v->price;
+            $p10 = $priceVal;
           }
         }
         $prices['sealant'][$type]['id_1'] = [
           'id' => 'id_1',
           'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
-          'unit' => 'psc.',
-          'currency' => 'USD',
+          'unit' => $unitSymbol,
+          'currency' => $priceTypeCurrencyCode,
           'price1' => $p6,
           'price2' => $p8,
           'price3' => $p10
@@ -258,9 +327,9 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $rawId,
             'furnitureTypeId' => $color,
             'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
-            'unit' => 'lm.',
-            'currency' => 'USD',
-            'price' => (float)$v->price
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
+            'price' => (float)($v->retail_price ?? $v->getPrice())
           ];
         }
       }
@@ -273,12 +342,12 @@ class ShowersCalculatorBridgeController extends Controller
           $prices['services'][$type][$rawId] = [
             'id' => $rawId,
             'formTypeId' => $this->getEavValue($v, 'form_type'),
-            'doorTypeIds' => explode(',', $this->getEavValue($v, 'door_type_ids')),
+            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'), // Исправлено на множественный ЕАV
             'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
-            'unit' => 'service',
-            'currency' => 'USD',
-            'price1' => (float)$v->price,
-            'price2' => (float)$v->cost_price
+            'unit' => $unitSymbol,
+            'currency' => $priceTypeCurrencyCode,
+            'price1' => (float)($v->retail_price ?? $v->getPrice()),
+            'price2' => (float)$v->cost_price // Коэффициент расстояния/этажности (cost_price)
           ];
         }
       }
@@ -351,7 +420,7 @@ class ShowersCalculatorBridgeController extends Controller
         'name' => $currency->getTranslation('name', app()->getLocale()) ?? $currency->name,
         'scale' => 1,
         'rate' => (float)$currency->rate,
-        'main' => (bool)$currency->is_default,
+        'main' => $currency->is_default ? "1" : "0", // Преобразовано к строковому "1"/"0"
         'shortName' => $currency->symbol,
         'lastEditDate' => $currency->updated_at?->toDateTimeString() ?? date('Y-m-d H:i:s')
       ];

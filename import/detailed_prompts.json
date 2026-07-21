@@ -1,0 +1,221 @@
+[
+  {
+    "Общее описание": "Роль: Профессиональный генератор изображений для каталогов товаров и органайзер файлов.\n\nИнструкция:\nПользователь будет отправлять тебе JSON-объекты, содержащие информацию о товарах. Твоя задача состоит из следующих шагов:\n\n1. Извлеки значение из поля \"prompt\" присланного JSON-объекта.\n2. Используй этот текстовый промпт для генерации фотореалистичного изображения товара в высоком разрешении.\n3. Извлеки значение из поля \"product_code\" (например, \"glass_id_1\").\n4. Сохрани сгенерированное изображение в формате .webp под именем, соответствующим значению \"product_code\" (например, \"glass_id_1.webp\").\n5. Выведи пользователю сгенерированное изображение и предоставь прямую ссылку на скачивание файла с указанным именем. Не добавляй лишний текст и рассуждения."
+  },
+  {
+    "product_code": "glass_id_1",
+    "product_external_code": "prod_shower_glass_id_1",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное прозрачное универсальное",
+    "prompt": "A single flat rectangular sample pane of tempered clear transparent safety glass, 8mm thick, showcasing a natural subtle iron-jade green tint along the flat ground polished edges. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle to showcase the thin polished flat edges and realistic transparency. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное прозрачное универсальное** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nДанное безопасное закаленное стекло (ESG) толщиной 8 мм спроектировано для жестких условий повышенной влажности. Светопрозрачное полотно с безупречно обработанной полированной еврокромкой.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное прозрачное стекло (классический зеленоватый торец)\n- Рекомендуемая толщина стекла: 8 мм\n- Безопасность: При механическом разрушении рассыпается на мелкие осколки с тупыми гранями, исключая порезы.\n- Обработка кромок: Сверхточная полированная еврокромка по всему периметру полотна."
+  },
+  {
+    "product_code": "glass_id_2",
+    "product_external_code": "prod_shower_glass_id_2",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное матовое универсальное",
+    "prompt": "A single flat rectangular sample pane of acid-etched satinated frosted glass with a uniform velvety translucent finish, diffusing light softly with no visible glare, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing soft subsurface scattering light transmission and realistic matte texture. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное матовое универсальное** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nБезопасное закаленное стекло с химическим травлением (сатинато), обеспечивающее мягкое рассеивание света и приватность душевой зоны. Обладает приятной шелковистой текстурой, устойчивой к загрязнениям.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное матовое стекло (химическое травление, шелковистая текстура Satinato)\n- Рекомендуемая толщина стекла: 8 мм\n- Безопасность: При разрушении рассыпается на мелкие фракции без острых режущих углов.\n- Сфера применения: Стеклянные распашные и раздвижные двери, матовые перегородки."
+  },
+  {
+    "product_code": "glass_id_3",
+    "product_external_code": "prod_shower_glass_id_3",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное прозрачное осветленное",
+    "prompt": "A single flat rectangular sample pane of ultra-clear low-iron optiwhite crystal transparent safety glass, perfectly colorless with pristine neutral ice-blue polished edges, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing high-end optical clarity and premium edge treatment. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное прозрачное осветленное** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nПремиальное осветленное стекло (Optiwhite) со сниженным содержанием железа. Отличается абсолютной прозрачностью и отсутствием характерного бутылочного зеленого оттенка, торец имеет благородный ледяной оттенок.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное прозрачное осветленное стекло (Optiwhite, без зеленого оттенка, хрустальная прозрачность)\n- Рекомендуемая толщина стекла: 8 мм\n- Преимущества: Максимальное светопропускание и безупречная цветопередача.\n- Обработка кромок: Полированная еврокромка по периметру."
+  },
+  {
+    "product_code": "glass_id_4",
+    "product_external_code": "prod_shower_glass_id_4",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное матовое осветленное",
+    "prompt": "A single flat rectangular sample pane of satin-etched ultra-clear low-iron frosted glass, pristine bright-white translucent velvety matte finish, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing pristine white diffuse subsurface scattering glow and realistic satinated texture. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное матовое осветленное** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций премиум-класса.\n\n### Описание и назначение\nОсветленное матовое стекло сочетает в себе приватность сатинированной поверхности и кристальную белизну. Изделие не приобретает зеленого оттенка, рассеивая свет с чистым снежно-белым свечением.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное матовое осветленное стекло (сверхпрозрачная шелковистая матовая текстура)\n- Рекомендуемая толщина стекла: 8 мм\n- Особенности: Шелковистая поверхность Satinato, устойчивая к образованию известковых разводов.\n- Безопасность: Соответствует ГОСТу для безопасного остекления."
+  },
+  {
+    "product_code": "glass_id_5",
+    "product_external_code": "prod_shower_glass_id_5",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное тонированное полупрозрачное графит",
+    "prompt": "A single flat rectangular sample pane of smoky grey tinted transparent safety glass with a luxurious dark tint and clean transparent depth, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing the polished dark graphite gray edges and elegant dark reflections. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное тонированное полупрозрачное графит** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nСтекло тонировано в массе на этапе производства, что гарантирует однородность цвета. Обладает глубоким серым («графитовым») оттенком, который придает интерьеру ванной комнаты изысканный вид.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное прозрачное тонированное стекло (Графит, глубокий серый оттенок)\n- Рекомендуемая толщина стекла: 8 мм\n- Особенности: Мягкое приглушение светового потока, создание премиального визуального эффекта.\n- Обработка кромок: Сверхточная полированная еврокромка."
+  },
+  {
+    "product_code": "glass_id_6",
+    "product_external_code": "prod_shower_glass_id_6",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное тонированное полупрозрачное бронза",
+    "prompt": "A single flat rectangular sample pane of warm bronze tinted transparent safety glass with a rich amber-brown tint and elegant transparent depth, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing the polished warm bronze edges and rich golden-brown reflections. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное тонированное полупрозрачное бронза** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nЗакаленное стекло с благородным тонированием в теплый бронзовый (янтарный) цвет. Создает уютную атмосферу и гармонирует со смесителями и аксессуарами в цветах золото, бронза или латунь.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное прозрачное тонированное стекло (Бронза, благородный янтарный оттенок)\n- Рекомендуемая толщина стекла: 8 мм\n- Обработка кромок: Идеально гладкий полированный торец бронзового оттенка.\n- Сфера применения: Душевые кабины премиум-сегмента."
+  },
+  {
+    "product_code": "glass_id_7",
+    "product_external_code": "prod_shower_glass_id_7",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное матовое графит",
+    "prompt": "A single flat rectangular sample pane of satin-etched satinated graphite grey matte glass with a deep smoky translucent velvety finish, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing soft diffuse grey subsurface scattering and realistic satinated texture. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное матовое графит** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nМатированное графитовое стекло обеспечивает максимальную приватность и эксклюзивный дизайн. Темно-серая шелковистая текстура эффективно скрывает силуэты и капли воды.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное матовое тонированное стекло (Матовый графит, шелковистый серый тон)\n- Рекомендуемая толщина стекла: 8 мм\n- Особенности: Химическое матирование Satinato, исключающее появление глянцевых пятен при намокании.\n- Безопасность: Безопасное закаленное исполнение."
+  },
+  {
+    "product_code": "glass_id_8",
+    "product_external_code": "prod_shower_glass_id_8",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное матовое бронза",
+    "prompt": "A single flat rectangular sample pane of satin-etched satinated bronze matte glass with a warm amber-brown translucent velvety finish, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed at a slight 3/4 perspective angle showing soft diffuse amber-brown subsurface scattering and realistic satinated texture. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное матовое бронза** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nЗакаленное стекло янтарного оттенка с двухсторонней шелковистой матовой текстурой. Отличается приятными тактильными свойствами, приглушает свет и скрывает душевую зону от посторонних глаз.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное матовое тонированное стекло (Матовая бронза, шелковистый янтарный тон)\n- Рекомендуемая толщина стекла: 8 мм\n- Особенности: Легкий уход за матовой поверхностью, невосприимчивость к известковому налету.\n- Кромка: Полированная фаска."
+  },
+  {
+    "product_code": "glass_id_9",
+    "product_external_code": "prod_shower_glass_id_9",
+    "category": "cat_showers_glass",
+    "product_name_ru": "Стекло закаленное рифленое",
+    "prompt": "A single flat rectangular sample pane of architectural reeded fluted safety glass featuring deep uniform vertical ribbed parallel grooves, creating beautiful dynamic linear refractions, 8mm thick. The glass sheet is standing vertically upright, secured at its bottom base by a small square polished chrome metal mounting clamp bracket. Placed on a clean seamless minimalist light gray studio tabletop. Viewed from a slight 3/4 perspective angle to showcase the ribbed face and polished clean edges. Solid flat panel, realistic material sample, not a container, not hollow, not a cup, not a vase, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стекло закаленное рифленое** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nТрендовое рифленое стекло (Fluted / Reeded) с объемным 3D-рельефом в виде параллельных вертикальных полос. Создает красивую игру света и преломление контуров, сохраняя высокий уровень приватности.\n\n### Технические характеристики и особенности\n- Тип стекла: Закаленное рифленое стекло (Fluted/Reeded, глубокий вертикальный рельеф)\n- Рекомендуемая толщина стекла: 8 мм\n- Дизайн: Трехмерная геометрическая текстура на внешней стороне полотна.\n- Прочность: Прошло полный цикл термозакалки."
+  },
+  {
+    "product_code": "profile_profile",
+    "product_external_code": "prod_shower_profile_profile",
+    "category": "cat_showers_profiles",
+    "product_name_ru": "Профиль П-образный из алюминия в полимерном покрытии",
+    "prompt": "A close-up product photograph of a straight segment of a structural aluminum deep U-channel glass-glazing profile. The open-top three-sided metal track features a wide, deep central groove running continuously along its entire length. It has crisp, thin parallel vertical walls and a flat solid base with a highly reflective mirror-polished chrome finish. Displayed at a 3/4 perspective angle showing the hollow inside of the channel and the flat machine-cut cross-section end, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Профиль П-образный из алюминия в полимерном покрытии** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nАлюминиевый П-образный профиль (швеллер) предназначен для жесткого крепления стационарного закаленного стекла к стенам или полу. Обеспечивает компенсацию неровностей строительных стен.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Рекомендуемая толщина стекла: 8 мм\n- Сплав: Высокопрочный авиационный алюминий марки АД31 Т5.\n- Преимущества: Максимально плотный прижим стекла, антикоррозийная обработка."
+  },
+  {
+    "product_code": "profile_corner",
+    "product_external_code": "prod_shower_profile_corner",
+    "category": "cat_showers_profiles",
+    "product_name_ru": "Профиль угловой 90 градусов для стекла, мм",
+    "prompt": "A close-up product photograph of a straight segment of a structural aluminum 90-degree corner glazing profile bar. The profile has a square outer shape with two perpendicular vertical glass grooves running parallel along adjacent sides to join glass panels at a right angle. Made of solid extruded metal with a highly reflective mirror-polished chrome finish. Displayed diagonally showing the complex geometric machine-cut cross-section at its front end on a seamless light gray tabletop, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Профиль угловой 90 градусов для стекла, мм** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nЭкструдированная алюминиевая угловая рейка для жесткого сопряжения двух стеклянных полотен перпендикулярно друг другу под прямым углом. Создает герметичный и надежный стык.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Рекомендуемая толщина стекла: 8 мм\n- Конструкция: Двухсторонний направляющий профиль с точной геометрией углов.\n- Сплав: Алюминий АД31 Т5."
+  },
+  {
+    "product_code": "profile_cap",
+    "product_external_code": "prod_shower_profile_cap",
+    "category": "cat_showers_profiles",
+    "product_name_ru": "Заглушка П-профиля",
+    "prompt": "A close-up product rendering of a small, flat rectangular solid metal end-cap plate insert, designed as a decorative end cover plug for an aluminum U-profile channel. It is a solid flat rectangular cap with a smooth flat surface and a highly reflective mirror-polished chrome finish, displayed isolated as a single small hardware component, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Заглушка П-профиля** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nМеталлическая декоративная заглушка устанавливается на торцевой срез алюминиевого П-профиля, скрывая внутреннюю полость и придавая конструкции эстетически завершенный вид.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Рекомендуемая толщина стекла: 8 мм\n- Форма: Точное соответствие размерам торца швеллера для плотной посадки.\n- Материал: Сплав с высокой степенью антикоррозийной защиты."
+  },
+  {
+    "product_code": "handle_knob",
+    "product_external_code": "prod_shower_handle_knob",
+    "category": "cat_showers_handles",
+    "product_name_ru": "Ручка-кноб душевая",
+    "prompt": "A minimalist cylinder-shaped solid metal knob pull handle for glass shower doors. The solid metal cylindrical block features a highly reflective mirror-polished chrome finish with crisp clean edges, displayed close-up as an isolated architectural hardware sample, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Ручка-кноб душевая** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nКомпактная двухсторонняя ручка-кноб цилиндрической формы для распашных стеклянных дверей. Отличается лаконичным дизайном и удобным хватом.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Особенности: Комплектуется эластичными влагостойкими прокладками для защиты стекла от царапин.\n- Эргономика: Продуманная форма для безопасного хвата мокрыми руками, полное отсутствие острых углов."
+  },
+  {
+    "product_code": "handle_bracket",
+    "product_external_code": "prod_shower_handle_bracket",
+    "category": "cat_showers_handles",
+    "product_name_ru": "Ручка-скоба душевая",
+    "prompt": "A modern vertical D-shaped square pull bar handle for glass shower doors. The handle features clean square corner angles, dual rectangular mounting posts, and is made of solid brass with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Ручка-скоба душевая** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nКлассическая ручка-скоба (ручка-полотенцедержатель) для душевых дверей. Обладает прочной цельнометаллической структурой и строгим дизайном с четкой прямоугольной геометрией.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Монтаж: Двухстороннее сквозное крепление через отверстия в стекле.\n- Комплектация: Прозрачные уплотнительные шайбы из мягкого полимера."
+  },
+  {
+    "product_code": "handle_holder",
+    "product_external_code": "prod_shower_handle_holder",
+    "category": "cat_showers_handles",
+    "product_name_ru": "Ручка-полотенцедержатель душевая",
+    "prompt": "A premium modern horizontal towel rail bar combined with a shower glass door handle. Made of solid polished metal with a clean highly reflective mirror-polished chrome finish, flawless brilliant silver shine with cool metallic undertones, clean specular reflection with no visible grain. Minimalist architectural hardware, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Ручка-полотенцедержатель душевая** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nФункциональная комбинированная ручка. С наружной стороны стекла располагается удобная длинная штанга-держатель для полотенца, с внутренней — компактная ручка-кноб.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Преимущества: Совмещение функций открывания двери и сушки полотенец, экономия пространства.\n- Материал: Влагостойкий износостойкий сплав."
+  },
+  {
+    "product_code": "handle_sliding",
+    "product_external_code": "prod_shower_handle_sliding",
+    "category": "cat_showers_handles",
+    "product_name_ru": "Ручка утопленная для раздвижных дверей",
+    "prompt": "A minimalist circular recessed flush finger-pull handle for sliding glass shower doors. The round metal cup has a deep circular central indentation and is designed to sit completely flush with the glass surface, made of solid brass with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Ручка утопленная для раздвижных дверей** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nУтопленная (врезная) ручка круглой формы для раздвижных стеклянных дверей. Устанавливается заподлицо, позволяя стеклу беспрепятственно заходить за глухую створку перегородки.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Особенности: Монтируется сквозь круглое отверстие в стекле, не выступает над поверхностью полотна.\n- Безопасность: Гладкие скругленные края."
+  },
+  {
+    "product_code": "crossbar_crossbar",
+    "product_external_code": "prod_shower_crossbar_crossbar",
+    "category": "cat_showers_crossbars",
+    "product_name_ru": "Стабилизирующая штанга",
+    "prompt": "A straight segment of an architectural rectangular shower glass stabilizing support bar. The hollow metal profile has crisp square corners and a highly reflective mirror-polished chrome finish, displayed diagonally, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Стабилизирующая штанга** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nПрямоугольная стабилизирующая штанга (ригель жесткости) необходима для фиксации верхнего угла неподвижного стекла к стене. Предотвращает раскачивание и вибрацию стеклянной перегородки.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Назначение: Обеспечение конструкционной жесткости, устранение люфтов и сильной вибрации стекол.\n- Регулировка: Подрезная полая конструкция для точной подгонки длины по месту."
+  },
+  {
+    "product_code": "crossbar_fix",
+    "product_external_code": "prod_shower_crossbar_fix",
+    "category": "cat_showers_crossbars",
+    "product_name_ru": "Крепление штанги к стене",
+    "prompt": "A rectangular wall-to-rod connector bracket for a shower stabilizing support bar. It is a solid square metal bracket socket with a flat rectangular mounting flange, designed to hold a rectangular rod, made of solid brass with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Крепление штанги к стене** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nКоннектор (фланец) для надежного крепления стабилизирующей штанги прямоугольного сечения к стене ванной комнаты под прямым углом. Фиксируется саморезами.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Монтаж: Прочное винтовое настенное крепление с декоративным скрывающим кожухом.\n- Материал: Латунь с высоким ресурсом прочности."
+  },
+  {
+    "product_code": "crossbar_fix_glass",
+    "product_external_code": "prod_shower_crossbar_fix_glass",
+    "category": "cat_showers_crossbars",
+    "product_name_ru": "Держатель стекла для штанги",
+    "prompt": "A rectangular rod-to-glass connector clamp for a shower stabilizing bar. It features a solid square metal clamp bracket with a narrow open slot to grip a glass panel, made of solid brass with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Держатель стекла для штанги** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nЗажимной коннектор (клипса) для жесткого соединения прямоугольной стабилизирующей штанги с верхним торцом неподвижного стеклянного полотна. Не требует сверления стекла.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Конструкция: Сквозной зажимной винтовой блок со специальными виниловыми прокладками.\n- Преимущества: Исключает прямой контакт металла со стеклом."
+  },
+  {
+    "product_code": "opensys_hinge",
+    "product_external_code": "prod_shower_opensys_hinge",
+    "category": "cat_showers_open_systems",
+    "product_name_ru": "Петли душевые",
+    "prompt": "A close-up product photograph of a square heavy-duty glass-to-wall shower door hinge. It features two thick, flat rectangular metal plates made of solid zinc alloy connected by a clean rotating pivot pin axis, finished in a highly reflective mirror-polished chrome. The flat plates show precise clean edges and recessed countersunk screw holes, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Петли душевые** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nУсиленная душевая петля (тип «стекло-стена» или «стекло-стекло») для распашных дверей. Обеспечивает плавное и точное открывание стеклянной створки.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Материал изготовления: Цинковый сплав (ZAMAK)\n- Ресурс: Рабочий механизм рассчитан более чем на 100 000 рабочих циклов открывания и закрывания.\n- Функционал: Функция автоматического самозакрывания (доводчик) при угле поворота менее 25 градусов."
+  },
+  {
+    "product_code": "opensys_track",
+    "product_external_code": "prod_shower_opensys_track",
+    "category": "cat_showers_open_systems",
+    "product_name_ru": "Трек направляющий",
+    "prompt": "A straight segment of a solid rectangular overhead track rail for a sliding glass shower door. The linear profile features a smooth flat sliding surface, made of premium stainless steel with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Трек направляющий** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nМеталлическая направляющая рельса (трек) прямоугольного сечения для откатных душевых систем. Служит опорным элементом, по которому двигаются роликовые каретки двери.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Материал изготовления: Нержавеющая сталь марки AISI 304\n- Особенности: Устойчив к деформации под весом тяжелого стекла, идеально гладкая поверхность скольжения."
+  },
+  {
+    "product_code": "opensys_slide",
+    "product_external_code": "prod_shower_opensys_slide",
+    "category": "cat_showers_open_systems",
+    "product_name_ru": "Раздвижная система для стеклянных дверей",
+    "prompt": "A sliding shower door roller wheel assembly. It features two precision-engineered circular roller wheels on miniature ball bearings, attached to a solid metal glass clamp carriage bracket made of stainless steel with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Раздвижная система для стеклянных дверей** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nКомплект роликовых кареток для раздвижной душевой перегородки. Обеспечивает бесшумное и легкое скольжение тяжелого стеклянного полотна по верхнему треку.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Материал изготовления: Нержавеющая сталь марки AISI 304\n- Плавность хода: Износостойкие подшипники с фторопластовым (тефлоновым) покрытием колес."
+  },
+  {
+    "product_code": "opensys_connector",
+    "product_external_code": "prod_shower_opensys_connector",
+    "category": "cat_showers_open_systems",
+    "product_name_ru": "Коннектор трека угловой",
+    "prompt": "A solid 90-degree elbow track connector block for overhead sliding shower rails. It is a solid square L-shaped metal connector joint designed to join two track profiles at a right angle, made of stainless steel with a highly reflective mirror-polished chrome finish, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Коннектор трека угловой** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.\n\n### Описание и назначение\nУгловой Г-образный соединитель (коннектор) для стыковки двух отрезков раздвижного трека под углом 90 градусов. Используется в угловых раздвижных кабинах.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Материал изготовления: Нержавеющая сталь марки AISI 304\n- Конструкция: Точный внутренний зажимной блок для бесшовного прохождения роликов."
+  },
+  {
+    "product_code": "sealant_slide",
+    "product_external_code": "prod_shower_sealant_slide",
+    "category": "cat_showers_sealants",
+    "product_name_ru": "Уплотнитель для раздвижных дверей, 3м",
+    "prompt": "A clean-cut segment of an architectural translucent h-profile silicone door seal strip for sliding glass shower doors. The clear, flexible PVC extrusion features a rigid U-shaped channel to grip 8mm glass and a flexible wiping fin/flap extending from the side, displayed lying on a clean surface, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Уплотнитель для раздвижных дверей, 3м** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nСиликоновый уплотнительный профиль (тип h-профиль) для раздвижных стеклянных дверей. Предотвращает протекание воды в зазорах между стеклами.\n\n### Технические характеристики и особенности\n- Рекомендуемая толщина стекла: 8 мм\n- Материал: Эластичный светостойкий ПВХ, высокоустойчивый к пожелтению, старению и ультрафиолету.\n- Герметизация: Плотный прижим, надежный водоотводящий боковой лепесток.\n- Длина: 3 метра (подрезается под нужный размер)."
+  },
+  {
+    "product_code": "sealant_hinge",
+    "product_external_code": "prod_shower_sealant_hinge",
+    "category": "cat_showers_sealants",
+    "product_name_ru": "Уплотнитель для распашных дверей, 3м",
+    "prompt": "A clean-cut segment of a translucent clear silicone bottom sweep seal strip for hinged shower doors. The flexible PVC extrusion features a rigid channel to grip 8mm glass and twin flexible bottom drip fins, displayed lying on a clean surface, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Уплотнитель для распашных дверей, 3м** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nНижний водоотводящий силиконовый уплотнитель (капельник) для распашных дверей душевых кабин. Направляет стекающие струи воды внутрь поддона.\n\n### Технические характеристики и особенности\n- Рекомендуемая толщина стекла: 8 мм\n- Материал: Износостойкий светопрозрачный силикон, сохраняющий эластичность годами.\n- Особенности: Два гибких нижних лепестка («двойной капельник») для максимальной защиты от протекания."
+  },
+  {
+    "product_code": "sealant_magnetic",
+    "product_external_code": "prod_shower_sealant_magnetic",
+    "category": "cat_showers_sealants",
+    "product_name_ru": "Магнитный уплотнитель, 3м",
+    "prompt": "A segment of a premium co-extruded magnetic shower door seal strip. The semi-rigid translucent white PVC profile holds a strong dark grey magnetic insert running along its edge, showing a clean-cut flat geometric cross-section profile, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Магнитный уплотнитель, 3м** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nКомплект магнитных уплотнителей для стыка распашных дверей. Обеспечивает плотное притягивание створок и полную герметичность при закрытии.\n\n### Технические характеристики и особенности\n- Рекомендуемая толщина стекла: 8 мм\n- Материал: Эластичный ПВХ с коэкструдированным мощным неодимовым магнитным сердечником.\n- Преимущества: Исключает самопроизвольное распахивание дверей во время приема душа."
+  },
+  {
+    "product_code": "doorsteps",
+    "product_external_code": "prod_shower_doorstep_doorsteps",
+    "category": "cat_showers_doorsteps",
+    "product_name_ru": "Порог душевой",
+    "prompt": "A straight segment of a low-profile bathroom doorstep threshold water barrier strip. The solid extruded aluminum threshold bar features a clean half-round or flat rectangular profile with a highly reflective mirror-polished chrome finish, lying on a clean surface, isolated on a seamless clean minimalist light gray studio background, soft studio lighting, gentle realistic drop shadow, commercial product packshot photography, professional e-commerce catalog style, centered composition, sharp focus, highly detailed, realistic textures and materials",
+    "description": "**Порог душевой** — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.\n\n### Описание и назначение\nАлюминиевый акриловый порог-барьер. Устанавливается на бортик поддона или пол под уплотнитель двери для создания надежного гидробарьера.\n\n### Технические характеристики и особенности\n- Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)\n- Назначение: Эффективное предотвращение вытекания воды из душевой зоны наружу на пол ванной комнаты.\n- Монтаж: Фиксируется на прозрачный санитарный герметик."
+  }
+]

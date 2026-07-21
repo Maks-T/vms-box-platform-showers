@@ -34,19 +34,41 @@ def run_rules_generation():
     rule_idx = 1
 
     for glass_prod in glasses_products:
-        glass_id = glass_prod["code"]
         for glass_var in glass_prod["variants"]:
             glass_var_code = glass_var["external_code"]
-            thick_val = glass_var["eav"]["glass_thickness"]
+
+            # Безопасное извлечение толщины стекла
+            thick_val = glass_var.get("eav", {}).get("glass_thickness")
+            if not thick_val:
+                sku_parts = glass_var.get("sku", "").split("-")
+                if len(sku_parts) >= 3:
+                    thick_val = sku_parts[2].lower()  # Напр. "6mm"
+                else:
+                    thick_val = "8mm"
+
+            # Безопасное извлечение ID цвета (из EAV варианта, EAV продукта или SKU)
+            color_id = None
+            if "eav" in glass_var and "color" in glass_var["eav"]:
+                color_id = glass_var["eav"]["color"]
+            elif "eav" in glass_prod and "color" in glass_prod["eav"]:
+                color_id = glass_prod["eav"]["color"]
+            else:
+                sku_parts = glass_var.get("sku", "").split("-")
+                if len(sku_parts) >= 2:
+                    color_id = sku_parts[1]  # Напр. "id_1"
+                else:
+                    color_id = "id_1"
+
+            glass_color_id = f"glass_{color_id}"  # Формируем "glass_id_1"
 
             for prof_prod in profiles_products:
                 prof_slug = prof_prod["slug"]
                 for prof_var in prof_prod["variants"]:
                     if prof_var["eav"].get("glass_thickness") == thick_val:
                         data["binding_rules"].append({
-                            "external_code": f"rule_g_{glass_id}_{thick_val}_p_{prof_var['external_code']}",
+                            "external_code": f"rule_g_{glass_color_id}_{thick_val}_p_{prof_var['external_code']}",
                             "pipeline_external_code": "pl_showers",
-                            "name": f"Match Profile {prof_slug} ({thick_val}) to Glass {glass_id} ({thick_val})",
+                            "name": f"Match Profile {prof_slug} ({thick_val}) to Glass {glass_color_id} ({thick_val})",
                             "role": "profile",
                             "parent_type_key": "variant",
                             "parent_external_code": glass_var_code,
@@ -64,9 +86,9 @@ def run_rules_generation():
                 for seal_var in seal_prod["variants"]:
                     if seal_var["eav"].get("glass_thickness") == thick_val:
                         data["binding_rules"].append({
-                            "external_code": f"rule_g_{glass_id}_{thick_val}_s_{seal_var['external_code']}",
+                            "external_code": f"rule_g_{glass_color_id}_{thick_val}_s_{seal_var['external_code']}",
                             "pipeline_external_code": "pl_showers",
-                            "name": f"Match Sealant {seal_slug} ({thick_val}) to Glass {glass_id} ({thick_val})",
+                            "name": f"Match Sealant {seal_slug} ({thick_val}) to Glass {glass_color_id} ({thick_val})",
                             "role": "sealant",
                             "parent_type_key": "variant",
                             "parent_external_code": glass_var_code,
@@ -83,9 +105,9 @@ def run_rules_generation():
                 hd_slug = handle_prod["slug"]
                 for hd_var in handle_prod["variants"]:
                     data["binding_rules"].append({
-                        "external_code": f"rule_g_{glass_id}_{thick_val}_h_{hd_var['external_code']}",
+                        "external_code": f"rule_g_{glass_color_id}_{thick_val}_h_{hd_var['external_code']}",
                         "pipeline_external_code": "pl_showers",
-                        "name": f"Match Handle {hd_slug} to Glass {glass_id} ({thick_val})",
+                        "name": f"Match Handle {hd_slug} to Glass {glass_color_id} ({thick_val})",
                         "role": "handle",
                         "parent_type_key": "variant",
                         "parent_external_code": glass_var_code,
@@ -102,9 +124,9 @@ def run_rules_generation():
                 cb_slug = cb_prod["slug"]
                 for cb_var in cb_prod["variants"]:
                     data["binding_rules"].append({
-                        "external_code": f"rule_g_{glass_id}_{thick_val}_cb_{cb_var['external_code']}",
+                        "external_code": f"rule_g_{glass_color_id}_{thick_val}_cb_{cb_var['external_code']}",
                         "pipeline_external_code": "pl_showers",
-                        "name": f"Match Crossbar {cb_slug} to Glass {glass_id} ({thick_val})",
+                        "name": f"Match Crossbar {cb_slug} to Glass {glass_color_id} ({thick_val})",
                         "role": "crossbar",
                         "parent_type_key": "variant",
                         "parent_external_code": glass_var_code,
@@ -121,9 +143,9 @@ def run_rules_generation():
                 os_slug = os_prod["slug"]
                 for os_var in os_prod["variants"]:
                     data["binding_rules"].append({
-                        "external_code": f"rule_g_{glass_id}_{thick_val}_os_{os_var['external_code']}",
+                        "external_code": f"rule_g_{glass_color_id}_{thick_val}_os_{os_var['external_code']}",
                         "pipeline_external_code": "pl_showers",
-                        "name": f"Match OpenSys {os_slug} to Glass {glass_id} ({thick_val})",
+                        "name": f"Match OpenSys {os_slug} to Glass {glass_color_id} ({thick_val})",
                         "role": "open_system",
                         "parent_type_key": "variant",
                         "parent_external_code": glass_var_code,
@@ -140,9 +162,9 @@ def run_rules_generation():
                 ds_slug = ds_prod["slug"]
                 for ds_var in ds_prod["variants"]:
                     data["binding_rules"].append({
-                        "external_code": f"rule_g_{glass_id}_{thick_val}_ds_{ds_var['external_code']}",
+                        "external_code": f"rule_g_{glass_color_id}_{thick_val}_ds_{ds_var['external_code']}",
                         "pipeline_external_code": "pl_showers",
-                        "name": f"Match Doorstep {ds_slug} to Glass {glass_id} ({thick_val})",
+                        "name": f"Match Doorstep {ds_slug} to Glass {glass_color_id} ({thick_val})",
                         "role": "doorstep",
                         "parent_type_key": "variant",
                         "parent_external_code": glass_var_code,
@@ -159,9 +181,9 @@ def run_rules_generation():
                 srv_slug = srv_prod["slug"]
                 for srv_var in srv_prod["variants"]:
                     data["binding_rules"].append({
-                        "external_code": f"rule_g_{glass_id}_{thick_val}_srv_{srv_var['external_code']}",
+                        "external_code": f"rule_g_{glass_color_id}_{thick_val}_srv_{srv_var['external_code']}",
                         "pipeline_external_code": "pl_showers",
-                        "name": f"Match Service {srv_slug} to Glass {glass_id} ({thick_val})",
+                        "name": f"Match Service {srv_slug} to Glass {glass_color_id} ({thick_val})",
                         "role": "services",
                         "parent_type_key": "variant",
                         "parent_external_code": glass_var_code,

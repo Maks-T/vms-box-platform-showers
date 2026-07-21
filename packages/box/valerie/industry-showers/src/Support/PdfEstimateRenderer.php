@@ -15,15 +15,22 @@ class PdfEstimateRenderer
   public static function resolveProductPhoto(string $name, OrderSection $section): ?string
   {
     foreach ($section->products as $op) {
-      if ($op->variant && $op->variant->product) {
-        $prodName = $op->variant->product->getTranslation('name', app()->getLocale());
+      if ($op->variant) {
+        $variantName = $op->variant->getTranslation('name', app()->getLocale()) ?? $op->variant->name;
+        $product = $op->variant->product;
+        $prodName = $product ? ($product->getTranslation('name', app()->getLocale()) ?? $product->name) : '';
 
-        if (str_contains(strtolower($name), strtolower($prodName)) || str_contains(strtolower($prodName), strtolower($name))) {
-          // Системные коллекции Nicole Core
+        $match = false;
+        if ($variantName && (str_contains(strtolower($name), strtolower($variantName)) || str_contains(strtolower($variantName), strtolower($name)))) {
+          $match = true;
+        } elseif ($prodName && (str_contains(strtolower($name), strtolower($prodName)) || str_contains(strtolower($prodName), strtolower($name)))) {
+          $match = true;
+        }
+
+        if ($match) {
           $media = $op->variant->getFirstMedia('preview')
             ?? ($op->variant->getFirstMedia('main')
-              ?? ($op->variant->product->getFirstMedia('preview')
-                ?? $op->variant->product->getFirstMedia('main')));
+              ?? ($product ? ($product->getFirstMedia('preview') ?? $product->getFirstMedia('main')) : null));
 
           if ($media) {
             $path = $media->getPath();
@@ -45,11 +52,20 @@ class PdfEstimateRenderer
   public static function resolveProductDesc(string $name, OrderSection $section): string
   {
     foreach ($section->products as $op) {
-      if ($op->variant && $op->variant->product) {
-        $prodName = $op->variant->product->getTranslation('name', app()->getLocale());
+      if ($op->variant) {
+        $variantName = $op->variant->getTranslation('name', app()->getLocale()) ?? $op->variant->name;
+        $product = $op->variant->product;
+        $prodName = $product ? ($product->getTranslation('name', app()->getLocale()) ?? $product->name) : '';
 
-        if (str_contains(strtolower($name), strtolower($prodName)) || str_contains(strtolower($prodName), strtolower($name))) {
-          return $op->variant->product->getTranslation('description', app()->getLocale())
+        $match = false;
+        if ($variantName && (str_contains(strtolower($name), strtolower($variantName)) || str_contains(strtolower($variantName), strtolower($name)))) {
+          $match = true;
+        } elseif ($prodName && (str_contains(strtolower($name), strtolower($prodName)) || str_contains(strtolower($prodName), strtolower($name)))) {
+          $match = true;
+        }
+
+        if ($match && $product) {
+          return $product->getTranslation('description', app()->getLocale())
             ?? 'Технические характеристики уточняются.';
         }
       }

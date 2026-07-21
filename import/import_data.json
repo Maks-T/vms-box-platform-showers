@@ -10,7 +10,7 @@
       "name": {
         "ru": "Белорусский рубль"
       },
-      "rate": 0.03691,
+      "rate": 3.6963,
       "is_default": false,
       "is_active": true
     },
@@ -38,7 +38,7 @@
       "name": {
         "ru": "Доллар США"
       },
-      "rate": 0.01276,
+      "rate": 78.3159,
       "is_default": false,
       "is_active": true
     }
@@ -387,7 +387,7 @@
           "external_code": "opt_glass_color_id_1",
           "slug": "id_1",
           "value": {
-            "ru": "Стекло закаленное прозрачное универсальное\t\t\t"
+            "ru": "Стекло закаленное прозрачное универсальное"
           },
           "meta": {
             "hex": "#D6E4E5",
@@ -399,7 +399,7 @@
           "external_code": "opt_glass_color_id_2",
           "slug": "id_2",
           "value": {
-            "ru": "Стекло закаленное матовое универсальное\t\t\t"
+            "ru": "Стекло закаленное матовое универсальное"
           },
           "meta": {
             "hex": "#D6E4E5",
@@ -411,7 +411,7 @@
           "external_code": "opt_glass_color_id_3",
           "slug": "id_3",
           "value": {
-            "ru": "Стекло закаленное прозрачное осветленное\t\t\t"
+            "ru": "Стекло закаленное прозрачное осветленное"
           },
           "meta": {
             "hex": "#FFFFFF",
@@ -423,7 +423,7 @@
           "external_code": "opt_glass_color_id_4",
           "slug": "id_4",
           "value": {
-            "ru": "Стекло закаленное матовое осветленное\t\t\t"
+            "ru": "Стекло закаленное матовое осветленное"
           },
           "meta": {
             "hex": "#FFFFFF",
@@ -435,7 +435,7 @@
           "external_code": "opt_glass_color_id_5",
           "slug": "id_5",
           "value": {
-            "ru": "Стекло закаленное тонированное полупрозрачное графит\t\t\t"
+            "ru": "Стекло закаленное тонированное полупрозрачное графит"
           },
           "meta": {
             "hex": "#787878",
@@ -447,7 +447,7 @@
           "external_code": "opt_glass_color_id_6",
           "slug": "id_6",
           "value": {
-            "ru": "Стекло закаленное тонированное полупрозрачное бронза\t\t\t"
+            "ru": "Стекло закаленное тонированное полупрозрачное бронза"
           },
           "meta": {
             "hex": "#91765b",
@@ -459,7 +459,7 @@
           "external_code": "opt_glass_color_id_7",
           "slug": "id_7",
           "value": {
-            "ru": "Стекло закаленное матовое графит\t\t\t"
+            "ru": "Стекло закаленное матовое графит"
           },
           "meta": {
             "hex": "#787878",
@@ -471,7 +471,7 @@
           "external_code": "opt_glass_color_id_8",
           "slug": "id_8",
           "value": {
-            "ru": "Стекло закаленное матовое бронза\t\t\t"
+            "ru": "Стекло закаленное матовое бронза"
           },
           "meta": {
             "hex": "#91765b",
@@ -483,7 +483,7 @@
           "external_code": "opt_glass_color_id_9",
           "slug": "id_9",
           "value": {
-            "ru": "Стекло закаленное рифленое\t\t\t"
+            "ru": "Стекло закаленное рифленое"
           },
           "meta": {
             "hex": "#C0C0C0",
@@ -855,7 +855,7 @@
       "option_param_type": "string",
       "options": [
         {
-          "external_code": "opt_crossbar_type_rect",
+          "external_code": "opt_cb_type_rect",
           "slug": "rect",
           "value": {
             "ru": "Прямоугольная"
@@ -867,7 +867,7 @@
           "param": "rect"
         },
         {
-          "external_code": "opt_crossbar_type_round",
+          "external_code": "opt_cb_type_round",
           "slug": "round",
           "value": {
             "ru": "Круглая"
@@ -879,10 +879,10 @@
           "param": "round"
         },
         {
-          "external_code": "opt_crossbar_type_corner",
+          "external_code": "opt_cb_type_corner",
           "slug": "corner",
           "value": {
-            "ru": "Угловой стабилизатор"
+            "ru": "Угловая штанга"
           },
           "meta": {
             "hex": null,
@@ -891,7 +891,7 @@
           "param": "corner"
         },
         {
-          "external_code": "opt_crossbar_type_none",
+          "external_code": "opt_cb_type_none",
           "slug": "none",
           "value": {
             "ru": "Без штанги (при креплении к потолку)"
@@ -1278,12 +1278,12 @@
       "slug": "shower-glass-id_1",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное прозрачное универсальное\t\t\t"
+        "ru": "Стекло закаленное прозрачное универсальное"
       },
       "code": "glass_id_1",
       "is_active": true,
       "eav": {
-        "color": "id_1",
+        "color": "opt_glass_color_id_1",
         "autoImg": true,
         "roughness": 0.0,
         "fluted": false
@@ -1292,38 +1292,44 @@
         {
           "external_code": "var_shower_glass_id_1_6mm",
           "sku": "GLASS-id_1-6MM",
-          "cost_price": 128.38,
+          "cost_price": 141.08,
           "currency": "USD",
-          "price": 183.4,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
         },
         {
           "external_code": "var_shower_glass_id_1_8mm",
           "sku": "GLASS-id_1-8MM",
-          "cost_price": 183.4,
+          "cost_price": 201.54,
           "currency": "USD",
-          "price": 262.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
         },
         {
           "external_code": "var_shower_glass_id_1_10mm",
           "sku": "GLASS-id_1-10MM",
-          "cost_price": 238.42,
+          "cost_price": 262.0,
           "currency": "USD",
-          "price": 340.6,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
         }
       ]
     },
@@ -1336,12 +1342,12 @@
       "slug": "shower-glass-id_2",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное матовое универсальное\t\t\t"
+        "ru": "Стекло закаленное матовое универсальное"
       },
       "code": "glass_id_2",
       "is_active": true,
       "eav": {
-        "color": "id_2",
+        "color": "opt_glass_color_id_2",
         "autoImg": true,
         "roughness": 0.5,
         "fluted": false
@@ -1350,38 +1356,44 @@
         {
           "external_code": "var_shower_glass_id_2_6mm",
           "sku": "GLASS-id_2-6MM",
-          "cost_price": 179.34,
+          "cost_price": 197.08,
           "currency": "USD",
-          "price": 256.2,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
         },
         {
           "external_code": "var_shower_glass_id_2_8mm",
           "sku": "GLASS-id_2-8MM",
-          "cost_price": 256.2,
+          "cost_price": 281.54,
           "currency": "USD",
-          "price": 366.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
         },
         {
           "external_code": "var_shower_glass_id_2_10mm",
           "sku": "GLASS-id_2-10MM",
-          "cost_price": 333.06,
+          "cost_price": 366.0,
           "currency": "USD",
-          "price": 475.8,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
         }
       ]
     },
@@ -1394,12 +1406,12 @@
       "slug": "shower-glass-id_3",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное прозрачное осветленное\t\t\t"
+        "ru": "Стекло закаленное прозрачное осветленное"
       },
       "code": "glass_id_3",
       "is_active": true,
       "eav": {
-        "color": "id_3",
+        "color": "opt_glass_color_id_3",
         "autoImg": true,
         "roughness": 0.0,
         "fluted": false
@@ -1408,38 +1420,44 @@
         {
           "external_code": "var_shower_glass_id_3_6mm",
           "sku": "GLASS-id_3-6MM",
-          "cost_price": 244.51,
+          "cost_price": 268.69,
           "currency": "USD",
-          "price": 349.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
         },
         {
           "external_code": "var_shower_glass_id_3_8mm",
           "sku": "GLASS-id_3-8MM",
-          "cost_price": 349.3,
+          "cost_price": 383.85,
           "currency": "USD",
-          "price": 499.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
         },
         {
           "external_code": "var_shower_glass_id_3_10mm",
           "sku": "GLASS-id_3-10MM",
-          "cost_price": 454.09,
+          "cost_price": 499.0,
           "currency": "USD",
-          "price": 648.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
         }
       ]
     },
@@ -1452,12 +1470,12 @@
       "slug": "shower-glass-id_4",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное матовое осветленное\t\t\t"
+        "ru": "Стекло закаленное матовое осветленное"
       },
       "code": "glass_id_4",
       "is_active": true,
       "eav": {
-        "color": "id_4",
+        "color": "opt_glass_color_id_4",
         "autoImg": true,
         "roughness": 0.5,
         "fluted": false
@@ -1466,38 +1484,44 @@
         {
           "external_code": "var_shower_glass_id_4_6mm",
           "sku": "GLASS-id_4-6MM",
-          "cost_price": 276.85,
+          "cost_price": 304.23,
           "currency": "USD",
-          "price": 395.5,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
         },
         {
           "external_code": "var_shower_glass_id_4_8mm",
           "sku": "GLASS-id_4-8MM",
-          "cost_price": 395.5,
+          "cost_price": 434.62,
           "currency": "USD",
-          "price": 565.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
         },
         {
           "external_code": "var_shower_glass_id_4_10mm",
           "sku": "GLASS-id_4-10MM",
-          "cost_price": 514.15,
+          "cost_price": 565.0,
           "currency": "USD",
-          "price": 734.5,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
         }
       ]
     },
@@ -1510,12 +1534,12 @@
       "slug": "shower-glass-id_5",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное тонированное полупрозрачное графит\t\t\t"
+        "ru": "Стекло закаленное тонированное полупрозрачное графит"
       },
       "code": "glass_id_5",
       "is_active": true,
       "eav": {
-        "color": "id_5",
+        "color": "opt_glass_color_id_5",
         "autoImg": true,
         "roughness": 0.0,
         "fluted": false
@@ -1524,38 +1548,44 @@
         {
           "external_code": "var_shower_glass_id_5_6mm",
           "sku": "GLASS-id_5-6MM",
-          "cost_price": 215.11,
+          "cost_price": 236.38,
           "currency": "USD",
-          "price": 307.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
         },
         {
           "external_code": "var_shower_glass_id_5_8mm",
           "sku": "GLASS-id_5-8MM",
-          "cost_price": 307.3,
+          "cost_price": 337.69,
           "currency": "USD",
-          "price": 439.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
         },
         {
           "external_code": "var_shower_glass_id_5_10mm",
           "sku": "GLASS-id_5-10MM",
-          "cost_price": 399.49,
+          "cost_price": 439.0,
           "currency": "USD",
-          "price": 570.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
         }
       ]
     },
@@ -1568,12 +1598,12 @@
       "slug": "shower-glass-id_6",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное тонированное полупрозрачное бронза\t\t\t"
+        "ru": "Стекло закаленное тонированное полупрозрачное бронза"
       },
       "code": "glass_id_6",
       "is_active": true,
       "eav": {
-        "color": "id_6",
+        "color": "opt_glass_color_id_6",
         "autoImg": true,
         "roughness": 0.0,
         "fluted": false
@@ -1582,38 +1612,44 @@
         {
           "external_code": "var_shower_glass_id_6_6mm",
           "sku": "GLASS-id_6-6MM",
-          "cost_price": 215.11,
+          "cost_price": 236.38,
           "currency": "USD",
-          "price": 307.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
         },
         {
           "external_code": "var_shower_glass_id_6_8mm",
           "sku": "GLASS-id_6-8MM",
-          "cost_price": 307.3,
+          "cost_price": 337.69,
           "currency": "USD",
-          "price": 439.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
         },
         {
           "external_code": "var_shower_glass_id_6_10mm",
           "sku": "GLASS-id_6-10MM",
-          "cost_price": 399.49,
+          "cost_price": 439.0,
           "currency": "USD",
-          "price": 570.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
         }
       ]
     },
@@ -1626,12 +1662,12 @@
       "slug": "shower-glass-id_7",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное матовое графит\t\t\t"
+        "ru": "Стекло закаленное матовое графит"
       },
       "code": "glass_id_7",
       "is_active": true,
       "eav": {
-        "color": "id_7",
+        "color": "opt_glass_color_id_7",
         "autoImg": true,
         "roughness": 0.5,
         "fluted": false
@@ -1640,38 +1676,44 @@
         {
           "external_code": "var_shower_glass_id_7_6mm",
           "sku": "GLASS-id_7-6MM",
-          "cost_price": 211.68,
+          "cost_price": 232.62,
           "currency": "USD",
-          "price": 302.4,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
         },
         {
           "external_code": "var_shower_glass_id_7_8mm",
           "sku": "GLASS-id_7-8MM",
-          "cost_price": 302.4,
+          "cost_price": 332.31,
           "currency": "USD",
-          "price": 432.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
         },
         {
           "external_code": "var_shower_glass_id_7_10mm",
           "sku": "GLASS-id_7-10MM",
-          "cost_price": 393.12,
+          "cost_price": 432.0,
           "currency": "USD",
-          "price": 561.6,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
         }
       ]
     },
@@ -1684,12 +1726,12 @@
       "slug": "shower-glass-id_8",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное матовое бронза\t\t\t"
+        "ru": "Стекло закаленное матовое бронза"
       },
       "code": "glass_id_8",
       "is_active": true,
       "eav": {
-        "color": "id_8",
+        "color": "opt_glass_color_id_8",
         "autoImg": true,
         "roughness": 0.5,
         "fluted": false
@@ -1698,38 +1740,44 @@
         {
           "external_code": "var_shower_glass_id_8_6mm",
           "sku": "GLASS-id_8-6MM",
-          "cost_price": 211.68,
+          "cost_price": 232.62,
           "currency": "USD",
-          "price": 302.4,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
         },
         {
           "external_code": "var_shower_glass_id_8_8mm",
           "sku": "GLASS-id_8-8MM",
-          "cost_price": 302.4,
+          "cost_price": 332.31,
           "currency": "USD",
-          "price": 432.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
         },
         {
           "external_code": "var_shower_glass_id_8_10mm",
           "sku": "GLASS-id_8-10MM",
-          "cost_price": 393.12,
+          "cost_price": 432.0,
           "currency": "USD",
-          "price": 561.6,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
         }
       ]
     },
@@ -1742,12 +1790,12 @@
       "slug": "shower-glass-id_9",
       "preview_picture": null,
       "name": {
-        "ru": "Стекло закаленное рифленое\t\t\t"
+        "ru": "Стекло закаленное рифленое"
       },
       "code": "glass_id_9",
       "is_active": true,
       "eav": {
-        "color": "id_9",
+        "color": "opt_glass_color_id_9",
         "autoImg": true,
         "roughness": 0.3,
         "fluted": true
@@ -1756,38 +1804,44 @@
         {
           "external_code": "var_shower_glass_id_9_6mm",
           "sku": "GLASS-id_9-6MM",
-          "cost_price": 514.5,
+          "cost_price": 565.38,
           "currency": "USD",
-          "price": 735.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
-          }
+            "glass_thickness": "opt_thickness_6mm"
+          },
+          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
         },
         {
           "external_code": "var_shower_glass_id_9_8mm",
           "sku": "GLASS-id_9-8MM",
-          "cost_price": 735.0,
+          "cost_price": 807.69,
           "currency": "USD",
-          "price": 1050.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
-          }
+            "glass_thickness": "opt_thickness_8mm"
+          },
+          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
         },
         {
           "external_code": "var_shower_glass_id_9_10mm",
           "sku": "GLASS-id_9-10MM",
-          "cost_price": 955.5,
+          "cost_price": 1050.0,
           "currency": "USD",
-          "price": 1365.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
-          }
+            "glass_thickness": "opt_thickness_10mm"
+          },
+          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
         }
       ]
     },
@@ -1804,280 +1858,301 @@
       "code": "profile_profile",
       "is_active": true,
       "eav": {
-        "type": "profile"
+        "type": "opt_sh_type_profile"
       },
       "variants": [
         {
           "external_code": "var_shower_profile_profile_chrome_6mm",
           "sku": "PROFILE-PROFILE-CHROME-6MM",
-          "cost_price": 37.24,
+          "cost_price": 40.92,
           "currency": "USD",
-          "price": 53.2,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_profile_chrome_8mm",
           "sku": "PROFILE-PROFILE-CHROME-8MM",
-          "cost_price": 53.2,
+          "cost_price": 58.46,
           "currency": "USD",
-          "price": 76.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_profile_chrome_10mm",
           "sku": "PROFILE-PROFILE-CHROME-10MM",
-          "cost_price": 69.16,
+          "cost_price": 76.0,
           "currency": "USD",
-          "price": 98.8,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_profile_chrome_matte_6mm",
           "sku": "PROFILE-PROFILE-CHROME_MATTE-6MM",
-          "cost_price": 53.41,
+          "cost_price": 58.69,
           "currency": "USD",
-          "price": 76.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_chrome_matte_8mm",
           "sku": "PROFILE-PROFILE-CHROME_MATTE-8MM",
-          "cost_price": 76.3,
+          "cost_price": 83.85,
           "currency": "USD",
-          "price": 109.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_chrome_matte_10mm",
           "sku": "PROFILE-PROFILE-CHROME_MATTE-10MM",
-          "cost_price": 99.19,
+          "cost_price": 109.0,
           "currency": "USD",
-          "price": 141.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_black_6mm",
           "sku": "PROFILE-PROFILE-BLACK-6MM",
-          "cost_price": 42.14,
+          "cost_price": 46.31,
           "currency": "USD",
-          "price": 60.2,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_profile_black_8mm",
           "sku": "PROFILE-PROFILE-BLACK-8MM",
-          "cost_price": 60.2,
+          "cost_price": 66.15,
           "currency": "USD",
-          "price": 86.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_profile_black_10mm",
           "sku": "PROFILE-PROFILE-BLACK-10MM",
-          "cost_price": 78.26,
+          "cost_price": 86.0,
           "currency": "USD",
-          "price": 111.8,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_profile_bronze_6mm",
           "sku": "PROFILE-PROFILE-BRONZE-6MM",
-          "cost_price": 45.57,
+          "cost_price": 50.08,
           "currency": "USD",
-          "price": 65.1,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_profile_bronze_8mm",
           "sku": "PROFILE-PROFILE-BRONZE-8MM",
-          "cost_price": 65.1,
+          "cost_price": 71.54,
           "currency": "USD",
-          "price": 93.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_profile_bronze_10mm",
           "sku": "PROFILE-PROFILE-BRONZE-10MM",
-          "cost_price": 84.63,
+          "cost_price": 93.0,
           "currency": "USD",
-          "price": 120.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_6mm",
           "sku": "PROFILE-PROFILE-GOLD-6MM",
-          "cost_price": 43.61,
+          "cost_price": 47.92,
           "currency": "USD",
-          "price": 62.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_8mm",
           "sku": "PROFILE-PROFILE-GOLD-8MM",
-          "cost_price": 62.3,
+          "cost_price": 68.46,
           "currency": "USD",
-          "price": 89.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_10mm",
           "sku": "PROFILE-PROFILE-GOLD-10MM",
-          "cost_price": 80.99,
+          "cost_price": 89.0,
           "currency": "USD",
-          "price": 115.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_matte_6mm",
           "sku": "PROFILE-PROFILE-GOLD_MATTE-6MM",
-          "cost_price": 53.41,
+          "cost_price": 58.69,
           "currency": "USD",
-          "price": 76.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_matte_8mm",
           "sku": "PROFILE-PROFILE-GOLD_MATTE-8MM",
-          "cost_price": 76.3,
+          "cost_price": 83.85,
           "currency": "USD",
-          "price": 109.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_gold_matte_10mm",
           "sku": "PROFILE-PROFILE-GOLD_MATTE-10MM",
-          "cost_price": 99.19,
+          "cost_price": 109.0,
           "currency": "USD",
-          "price": 141.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_profile_white_6mm",
           "sku": "PROFILE-PROFILE-WHITE-6MM",
-          "cost_price": 40.67,
+          "cost_price": 44.69,
           "currency": "USD",
-          "price": 58.1,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_profile_white_8mm",
           "sku": "PROFILE-PROFILE-WHITE-8MM",
-          "cost_price": 58.1,
+          "cost_price": 63.85,
           "currency": "USD",
-          "price": 83.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_profile_white_10mm",
           "sku": "PROFILE-PROFILE-WHITE-10MM",
-          "cost_price": 393.12,
+          "cost_price": 432.0,
           "currency": "USD",
-          "price": 561.6,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -2095,280 +2170,301 @@
       "code": "profile_corner",
       "is_active": true,
       "eav": {
-        "type": "corner"
+        "type": "opt_sh_type_corner"
       },
       "variants": [
         {
           "external_code": "var_shower_profile_corner_chrome_6mm",
           "sku": "PROFILE-CORNER-CHROME-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_corner_chrome_8mm",
           "sku": "PROFILE-CORNER-CHROME-8MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_corner_chrome_10mm",
           "sku": "PROFILE-CORNER-CHROME-10MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_corner_chrome_matte_6mm",
           "sku": "PROFILE-CORNER-CHROME_MATTE-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_chrome_matte_8mm",
           "sku": "PROFILE-CORNER-CHROME_MATTE-8MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_chrome_matte_10mm",
           "sku": "PROFILE-CORNER-CHROME_MATTE-10MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_black_6mm",
           "sku": "PROFILE-CORNER-BLACK-6MM",
-          "cost_price": 15.19,
+          "cost_price": 16.69,
           "currency": "USD",
-          "price": 21.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_corner_black_8mm",
           "sku": "PROFILE-CORNER-BLACK-8MM",
-          "cost_price": 21.7,
+          "cost_price": 23.85,
           "currency": "USD",
-          "price": 31.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_corner_black_10mm",
           "sku": "PROFILE-CORNER-BLACK-10MM",
-          "cost_price": 28.21,
+          "cost_price": 31.0,
           "currency": "USD",
-          "price": 40.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_corner_bronze_6mm",
           "sku": "PROFILE-CORNER-BRONZE-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_corner_bronze_8mm",
           "sku": "PROFILE-CORNER-BRONZE-8MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_corner_bronze_10mm",
           "sku": "PROFILE-CORNER-BRONZE-10MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_6mm",
           "sku": "PROFILE-CORNER-GOLD-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_8mm",
           "sku": "PROFILE-CORNER-GOLD-8MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_10mm",
           "sku": "PROFILE-CORNER-GOLD-10MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_matte_6mm",
           "sku": "PROFILE-CORNER-GOLD_MATTE-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_matte_8mm",
           "sku": "PROFILE-CORNER-GOLD_MATTE-8MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_gold_matte_10mm",
           "sku": "PROFILE-CORNER-GOLD_MATTE-10MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_corner_white_6mm",
           "sku": "PROFILE-CORNER-WHITE-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_corner_white_8mm",
           "sku": "PROFILE-CORNER-WHITE-8MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_corner_white_10mm",
           "sku": "PROFILE-CORNER-WHITE-10MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -2386,280 +2482,301 @@
       "code": "profile_cap",
       "is_active": true,
       "eav": {
-        "type": "cap"
+        "type": "opt_sh_type_cap"
       },
       "variants": [
         {
           "external_code": "var_shower_profile_cap_chrome_6mm",
           "sku": "PROFILE-CAP-CHROME-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_cap_chrome_8mm",
           "sku": "PROFILE-CAP-CHROME-8MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_cap_chrome_10mm",
           "sku": "PROFILE-CAP-CHROME-10MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_profile_cap_chrome_matte_6mm",
           "sku": "PROFILE-CAP-CHROME_MATTE-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_chrome_matte_8mm",
           "sku": "PROFILE-CAP-CHROME_MATTE-8MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_chrome_matte_10mm",
           "sku": "PROFILE-CAP-CHROME_MATTE-10MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "chrome_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_black_6mm",
           "sku": "PROFILE-CAP-BLACK-6MM",
-          "cost_price": 15.19,
+          "cost_price": 16.69,
           "currency": "USD",
-          "price": 21.7,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_cap_black_8mm",
           "sku": "PROFILE-CAP-BLACK-8MM",
-          "cost_price": 28.21,
+          "cost_price": 31.0,
           "currency": "USD",
-          "price": 40.3,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_cap_black_10mm",
           "sku": "PROFILE-CAP-BLACK-10MM",
-          "cost_price": 21.7,
+          "cost_price": 23.85,
           "currency": "USD",
-          "price": 31.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "black"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_profile_cap_bronze_6mm",
           "sku": "PROFILE-CAP-BRONZE-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_cap_bronze_8mm",
           "sku": "PROFILE-CAP-BRONZE-8MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_cap_bronze_10mm",
           "sku": "PROFILE-CAP-BRONZE-10MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "bronze"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_6mm",
           "sku": "PROFILE-CAP-GOLD-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_8mm",
           "sku": "PROFILE-CAP-GOLD-8MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_10mm",
           "sku": "PROFILE-CAP-GOLD-10MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_matte_6mm",
           "sku": "PROFILE-CAP-GOLD_MATTE-6MM",
-          "cost_price": 18.13,
+          "cost_price": 19.92,
           "currency": "USD",
-          "price": 25.9,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_matte_8mm",
           "sku": "PROFILE-CAP-GOLD_MATTE-8MM",
-          "cost_price": 33.67,
+          "cost_price": 37.0,
           "currency": "USD",
-          "price": 48.1,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_gold_matte_10mm",
           "sku": "PROFILE-CAP-GOLD_MATTE-10MM",
-          "cost_price": 25.9,
+          "cost_price": 28.46,
           "currency": "USD",
-          "price": 37.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "gold_matte"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_profile_cap_white_6mm",
           "sku": "PROFILE-CAP-WHITE-6MM",
-          "cost_price": 14.21,
+          "cost_price": 15.62,
           "currency": "USD",
-          "price": 20.3,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_6mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_cap_white_8mm",
           "sku": "PROFILE-CAP-WHITE-8MM",
-          "cost_price": 26.39,
+          "cost_price": 29.0,
           "currency": "USD",
-          "price": 37.7,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_8mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_profile_cap_white_10mm",
           "sku": "PROFILE-CAP-WHITE-10MM",
-          "cost_price": 20.3,
+          "cost_price": 22.31,
           "currency": "USD",
-          "price": 29.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm",
-            "furniture_type_id": "white"
+            "glass_thickness": "opt_thickness_10mm",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -2677,23 +2794,24 @@
       "code": "handle_knob",
       "is_active": true,
       "eav": {
-        "type": "knob"
+        "type": "opt_sh_type_knob"
       },
       "variants": [
         {
           "external_code": "var_shower_handle_knob_chrome_id_1",
           "sku": "HANDLE-KNOB-CHROME-ID_1",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2701,17 +2819,18 @@
         {
           "external_code": "var_shower_handle_knob_chrome_matte_id_2",
           "sku": "HANDLE-KNOB-CHROME_MATTE-ID_2",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2719,17 +2838,18 @@
         {
           "external_code": "var_shower_handle_knob_black_id_3",
           "sku": "HANDLE-KNOB-BLACK-ID_3",
-          "cost_price": 49.0,
+          "cost_price": 53.85,
           "currency": "USD",
-          "price": 70.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2737,17 +2857,18 @@
         {
           "external_code": "var_shower_handle_knob_bronze_id_4",
           "sku": "HANDLE-KNOB-BRONZE-ID_4",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2755,17 +2876,18 @@
         {
           "external_code": "var_shower_handle_knob_gold_id_5",
           "sku": "HANDLE-KNOB-GOLD-ID_5",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2773,17 +2895,18 @@
         {
           "external_code": "var_shower_handle_knob_gold_matte_id_6",
           "sku": "HANDLE-KNOB-GOLD_MATTE-ID_6",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2791,17 +2914,18 @@
         {
           "external_code": "var_shower_handle_knob_white_id_7",
           "sku": "HANDLE-KNOB-WHITE-ID_7",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 1"
           }
@@ -2809,17 +2933,18 @@
         {
           "external_code": "var_shower_handle_knob_chrome_id_1_1",
           "sku": "HANDLE-KNOB-CHROME-ID_1_1",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2827,17 +2952,18 @@
         {
           "external_code": "var_shower_handle_knob_chrome_matte_id_2_1",
           "sku": "HANDLE-KNOB-CHROME_MATTE-ID_2_1",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2845,17 +2971,18 @@
         {
           "external_code": "var_shower_handle_knob_black_id_3_1",
           "sku": "HANDLE-KNOB-BLACK-ID_3_1",
-          "cost_price": 49.0,
+          "cost_price": 53.85,
           "currency": "USD",
-          "price": 70.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2863,17 +2990,18 @@
         {
           "external_code": "var_shower_handle_knob_bronze_id_4_1",
           "sku": "HANDLE-KNOB-BRONZE-ID_4_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2881,17 +3009,18 @@
         {
           "external_code": "var_shower_handle_knob_gold_id_5_1",
           "sku": "HANDLE-KNOB-GOLD-ID_5_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2899,17 +3028,18 @@
         {
           "external_code": "var_shower_handle_knob_gold_matte_id_6_1",
           "sku": "HANDLE-KNOB-GOLD_MATTE-ID_6_1",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2917,17 +3047,18 @@
         {
           "external_code": "var_shower_handle_knob_white_id_7_1",
           "sku": "HANDLE-KNOB-WHITE-ID_7_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-кноб 2"
           }
@@ -2947,23 +3078,24 @@
       "code": "handle_bracket",
       "is_active": true,
       "eav": {
-        "type": "bracket"
+        "type": "opt_sh_type_bracket"
       },
       "variants": [
         {
           "external_code": "var_shower_handle_bracket_chrome_id_8",
           "sku": "HANDLE-BRACKET-CHROME-ID_8",
-          "cost_price": 98.0,
+          "cost_price": 107.69,
           "currency": "USD",
-          "price": 140.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -2971,17 +3103,18 @@
         {
           "external_code": "var_shower_handle_bracket_chrome_matte_id_9",
           "sku": "HANDLE-BRACKET-CHROME_MATTE-ID_9",
-          "cost_price": 117.6,
+          "cost_price": 129.23,
           "currency": "USD",
-          "price": 168.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -2989,17 +3122,18 @@
         {
           "external_code": "var_shower_handle_bracket_black_id_10",
           "sku": "HANDLE-BRACKET-BLACK-ID_10",
-          "cost_price": 105.0,
+          "cost_price": 115.38,
           "currency": "USD",
-          "price": 150.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -3007,17 +3141,18 @@
         {
           "external_code": "var_shower_handle_bracket_bronze_id_11",
           "sku": "HANDLE-BRACKET-BRONZE-ID_11",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -3025,17 +3160,18 @@
         {
           "external_code": "var_shower_handle_bracket_gold_id_12",
           "sku": "HANDLE-BRACKET-GOLD-ID_12",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -3043,17 +3179,18 @@
         {
           "external_code": "var_shower_handle_bracket_gold_matte_id_13",
           "sku": "HANDLE-BRACKET-GOLD_MATTE-ID_13",
-          "cost_price": 117.6,
+          "cost_price": 129.23,
           "currency": "USD",
-          "price": 168.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -3061,17 +3198,18 @@
         {
           "external_code": "var_shower_handle_bracket_white_id_14",
           "sku": "HANDLE-BRACKET-WHITE-ID_14",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 1"
           }
@@ -3079,17 +3217,18 @@
         {
           "external_code": "var_shower_handle_bracket_chrome_id_8_1",
           "sku": "HANDLE-BRACKET-CHROME-ID_8_1",
-          "cost_price": 98.0,
+          "cost_price": 107.69,
           "currency": "USD",
-          "price": 140.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3097,17 +3236,18 @@
         {
           "external_code": "var_shower_handle_bracket_chrome_matte_id_9_1",
           "sku": "HANDLE-BRACKET-CHROME_MATTE-ID_9_1",
-          "cost_price": 117.6,
+          "cost_price": 129.23,
           "currency": "USD",
-          "price": 168.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3115,17 +3255,18 @@
         {
           "external_code": "var_shower_handle_bracket_black_id_10_1",
           "sku": "HANDLE-BRACKET-BLACK-ID_10_1",
-          "cost_price": 105.0,
+          "cost_price": 115.38,
           "currency": "USD",
-          "price": 150.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3133,17 +3274,18 @@
         {
           "external_code": "var_shower_handle_bracket_bronze_id_11_1",
           "sku": "HANDLE-BRACKET-BRONZE-ID_11_1",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3151,17 +3293,18 @@
         {
           "external_code": "var_shower_handle_bracket_gold_id_12_1",
           "sku": "HANDLE-BRACKET-GOLD-ID_12_1",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3169,17 +3312,18 @@
         {
           "external_code": "var_shower_handle_bracket_gold_matte_id_13_1",
           "sku": "HANDLE-BRACKET-GOLD_MATTE-ID_13_1",
-          "cost_price": 117.6,
+          "cost_price": 129.23,
           "currency": "USD",
-          "price": 168.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3187,17 +3331,18 @@
         {
           "external_code": "var_shower_handle_bracket_white_id_14_1",
           "sku": "HANDLE-BRACKET-WHITE-ID_14_1",
-          "cost_price": 108.5,
+          "cost_price": 119.23,
           "currency": "USD",
-          "price": 155.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-скоба 2"
           }
@@ -3217,23 +3362,24 @@
       "code": "handle_holder",
       "is_active": true,
       "eav": {
-        "type": "holder"
+        "type": "opt_sh_type_holder"
       },
       "variants": [
         {
           "external_code": "var_shower_handle_holder_chrome_id_15",
           "sku": "HANDLE-HOLDER-CHROME-ID_15",
-          "cost_price": 66.5,
+          "cost_price": 73.08,
           "currency": "USD",
-          "price": 95.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3241,17 +3387,18 @@
         {
           "external_code": "var_shower_handle_holder_chrome_matte_id_16",
           "sku": "HANDLE-HOLDER-CHROME_MATTE-ID_16",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3259,17 +3406,18 @@
         {
           "external_code": "var_shower_handle_holder_black_id_17",
           "sku": "HANDLE-HOLDER-BLACK-ID_17",
-          "cost_price": 70.0,
+          "cost_price": 76.92,
           "currency": "USD",
-          "price": 100.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3277,17 +3425,18 @@
         {
           "external_code": "var_shower_handle_holder_bronze_id_18",
           "sku": "HANDLE-HOLDER-BRONZE-ID_18",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3295,17 +3444,18 @@
         {
           "external_code": "var_shower_handle_holder_gold_id_19",
           "sku": "HANDLE-HOLDER-GOLD-ID_19",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3313,17 +3463,18 @@
         {
           "external_code": "var_shower_handle_holder_gold_matte_id_20",
           "sku": "HANDLE-HOLDER-GOLD_MATTE-ID_20",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3331,17 +3482,18 @@
         {
           "external_code": "var_shower_handle_holder_white_id_21",
           "sku": "HANDLE-HOLDER-WHITE-ID_21",
-          "cost_price": 70.0,
+          "cost_price": 76.92,
           "currency": "USD",
-          "price": 100.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ],
             "interface_name": "Ручка-полотенцедержатель"
           }
@@ -3361,23 +3513,24 @@
       "code": "handle_sliding",
       "is_active": true,
       "eav": {
-        "type": "sliding"
+        "type": "opt_sh_type_slide"
       },
       "variants": [
         {
           "external_code": "var_shower_handle_sliding_chrome_id_22",
           "sku": "HANDLE-SLIDING-CHROME-ID_22",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3385,17 +3538,18 @@
         {
           "external_code": "var_shower_handle_sliding_chrome_matte_id_23",
           "sku": "HANDLE-SLIDING-CHROME_MATTE-ID_23",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3403,17 +3557,18 @@
         {
           "external_code": "var_shower_handle_sliding_black_id_24",
           "sku": "HANDLE-SLIDING-BLACK-ID_24",
-          "cost_price": 49.0,
+          "cost_price": 53.85,
           "currency": "USD",
-          "price": 70.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3421,17 +3576,18 @@
         {
           "external_code": "var_shower_handle_sliding_bronze_id_25",
           "sku": "HANDLE-SLIDING-BRONZE-ID_25",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3439,17 +3595,18 @@
         {
           "external_code": "var_shower_handle_sliding_gold_id_26",
           "sku": "HANDLE-SLIDING-GOLD-ID_26",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3457,17 +3614,18 @@
         {
           "external_code": "var_shower_handle_sliding_gold_matte_id_27",
           "sku": "HANDLE-SLIDING-GOLD_MATTE-ID_27",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3475,17 +3633,18 @@
         {
           "external_code": "var_shower_handle_sliding_white_id_28",
           "sku": "HANDLE-SLIDING-WHITE-ID_28",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 1"
           }
@@ -3493,17 +3652,18 @@
         {
           "external_code": "var_shower_handle_sliding_chrome_id_22_1",
           "sku": "HANDLE-SLIDING-CHROME-ID_22_1",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome",
+            "furniture_type_id": "opt_furniture_color_chrome",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3511,17 +3671,18 @@
         {
           "external_code": "var_shower_handle_sliding_chrome_matte_id_23_1",
           "sku": "HANDLE-SLIDING-CHROME_MATTE-ID_23_1",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte",
+            "furniture_type_id": "opt_furniture_color_chrome_matte",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3529,17 +3690,18 @@
         {
           "external_code": "var_shower_handle_sliding_black_id_24_1",
           "sku": "HANDLE-SLIDING-BLACK-ID_24_1",
-          "cost_price": 49.0,
+          "cost_price": 53.85,
           "currency": "USD",
-          "price": 70.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black",
+            "furniture_type_id": "opt_furniture_color_black",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3547,17 +3709,18 @@
         {
           "external_code": "var_shower_handle_sliding_bronze_id_25_1",
           "sku": "HANDLE-SLIDING-BRONZE-ID_25_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze",
+            "furniture_type_id": "opt_furniture_color_bronze",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3565,17 +3728,18 @@
         {
           "external_code": "var_shower_handle_sliding_gold_id_26_1",
           "sku": "HANDLE-SLIDING-GOLD-ID_26_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold",
+            "furniture_type_id": "opt_furniture_color_gold",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3583,17 +3747,18 @@
         {
           "external_code": "var_shower_handle_sliding_gold_matte_id_27_1",
           "sku": "HANDLE-SLIDING-GOLD_MATTE-ID_27_1",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte",
+            "furniture_type_id": "opt_furniture_color_gold_matte",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3601,17 +3766,18 @@
         {
           "external_code": "var_shower_handle_sliding_white_id_28_1",
           "sku": "HANDLE-SLIDING-WHITE-ID_28_1",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "preview_picture": null,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white",
+            "furniture_type_id": "opt_furniture_color_white",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ],
             "interface_name": "Ручка-купе 2"
           }
@@ -3631,280 +3797,301 @@
       "code": "crossbar_crossbar",
       "is_active": true,
       "eav": {
-        "type": "crossbar"
+        "type": "opt_sh_type_crossbar"
       },
       "variants": [
         {
           "external_code": "var_shower_crossbar_crossbar_rect_chrome_id_1",
           "sku": "CROSSBAR-CROSSBAR-RECT-CHROME-ID_1",
-          "cost_price": 35.0,
+          "cost_price": 38.46,
           "currency": "USD",
-          "price": 50.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_chrome_matte_id_2",
           "sku": "CROSSBAR-CROSSBAR-RECT-CHROME_MATTE-ID_2",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_black_id_3",
           "sku": "CROSSBAR-CROSSBAR-RECT-BLACK-ID_3",
-          "cost_price": 35.0,
+          "cost_price": 38.46,
           "currency": "USD",
-          "price": 50.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_bronze_id_4",
           "sku": "CROSSBAR-CROSSBAR-RECT-BRONZE-ID_4",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_gold_id_5",
           "sku": "CROSSBAR-CROSSBAR-RECT-GOLD-ID_5",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_gold_matte_id_6",
           "sku": "CROSSBAR-CROSSBAR-RECT-GOLD_MATTE-ID_6",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_rect_white_id_7",
           "sku": "CROSSBAR-CROSSBAR-RECT-WHITE-ID_7",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_chrome_id_8",
           "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME-ID_8",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_chrome_matte_id_9",
           "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME_MATTE-ID_9",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_black_id_10",
           "sku": "CROSSBAR-CROSSBAR-ROUND-BLACK-ID_10",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_bronze_id_11",
           "sku": "CROSSBAR-CROSSBAR-ROUND-BRONZE-ID_11",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_gold_id_12",
           "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD-ID_12",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_gold_matte_id_13",
           "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD_MATTE-ID_13",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_round_white_id_14",
           "sku": "CROSSBAR-CROSSBAR-ROUND-WHITE-ID_14",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_chrome_id_15",
           "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME-ID_15",
-          "cost_price": 213.5,
+          "cost_price": 234.62,
           "currency": "USD",
-          "price": 305.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_chrome_matte_id_16",
           "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME_MATTE-ID_16",
-          "cost_price": 245.0,
+          "cost_price": 269.23,
           "currency": "USD",
-          "price": 350.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_black_id_17",
           "sku": "CROSSBAR-CROSSBAR-CORNER-BLACK-ID_17",
-          "cost_price": 213.5,
+          "cost_price": 234.62,
           "currency": "USD",
-          "price": 305.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_bronze_id_18",
           "sku": "CROSSBAR-CROSSBAR-CORNER-BRONZE-ID_18",
-          "cost_price": 224.0,
+          "cost_price": 246.15,
           "currency": "USD",
-          "price": 320.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_gold_id_19",
           "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD-ID_19",
-          "cost_price": 224.0,
+          "cost_price": 246.15,
           "currency": "USD",
-          "price": 320.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_gold_matte_id_20",
           "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD_MATTE-ID_20",
-          "cost_price": 245.0,
+          "cost_price": 269.23,
           "currency": "USD",
-          "price": 350.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_crossbar_corner_white_id_21",
           "sku": "CROSSBAR-CROSSBAR-CORNER-WHITE-ID_21",
-          "cost_price": 224.0,
+          "cost_price": 246.15,
           "currency": "USD",
-          "price": 320.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "corner",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_corner",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -3922,189 +4109,203 @@
       "code": "crossbar_fix",
       "is_active": true,
       "eav": {
-        "type": "fix"
+        "type": "opt_sh_type_fix"
       },
       "variants": [
         {
           "external_code": "var_shower_crossbar_fix_rect_chrome_id_1",
           "sku": "CROSSBAR-FIX-RECT-CHROME-ID_1",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_chrome_matte_id_2",
           "sku": "CROSSBAR-FIX-RECT-CHROME_MATTE-ID_2",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_black_id_3",
           "sku": "CROSSBAR-FIX-RECT-BLACK-ID_3",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_bronze_id_4",
           "sku": "CROSSBAR-FIX-RECT-BRONZE-ID_4",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_gold_id_5",
           "sku": "CROSSBAR-FIX-RECT-GOLD-ID_5",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_gold_matte_id_6",
           "sku": "CROSSBAR-FIX-RECT-GOLD_MATTE-ID_6",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_rect_white_id_7",
           "sku": "CROSSBAR-FIX-RECT-WHITE-ID_7",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_chrome_id_8",
           "sku": "CROSSBAR-FIX-ROUND-CHROME-ID_8",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_chrome_matte_id_9",
           "sku": "CROSSBAR-FIX-ROUND-CHROME_MATTE-ID_9",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_black_id_10",
           "sku": "CROSSBAR-FIX-ROUND-BLACK-ID_10",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_bronze_id_11",
           "sku": "CROSSBAR-FIX-ROUND-BRONZE-ID_11",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_gold_id_12",
           "sku": "CROSSBAR-FIX-ROUND-GOLD-ID_12",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_gold_matte_id_13",
           "sku": "CROSSBAR-FIX-ROUND-GOLD_MATTE-ID_13",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_round_white_id_14",
           "sku": "CROSSBAR-FIX-ROUND-WHITE-ID_14",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4122,189 +4323,203 @@
       "code": "crossbar_fix_glass",
       "is_active": true,
       "eav": {
-        "type": "fix_glass"
+        "type": "opt_sh_type_fix_glass"
       },
       "variants": [
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_chrome_id_1",
           "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME-ID_1",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_chrome_matte_id_2",
           "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME_MATTE-ID_2",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_black_id_3",
           "sku": "CROSSBAR-FIX_GLASS-RECT-BLACK-ID_3",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_bronze_id_4",
           "sku": "CROSSBAR-FIX_GLASS-RECT-BRONZE-ID_4",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_gold_id_5",
           "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD-ID_5",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_gold_matte_id_6",
           "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD_MATTE-ID_6",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_rect_white_id_7",
           "sku": "CROSSBAR-FIX_GLASS-RECT-WHITE-ID_7",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "rect",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_rect",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_chrome_id_8",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME-ID_8",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_chrome_matte_id_9",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME_MATTE-ID_9",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "chrome_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_black_id_10",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-BLACK-ID_10",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "black"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_bronze_id_11",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-BRONZE-ID_11",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "bronze"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_gold_id_12",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD-ID_12",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_gold_matte_id_13",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD_MATTE-ID_13",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "gold_matte"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_crossbar_fix_glass_round_white_id_14",
           "sku": "CROSSBAR-FIX_GLASS-ROUND-WHITE-ID_14",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "crossbar_type_id": "round",
-            "furniture_type_id": "white"
+            "crossbar_type_id": "opt_cb_type_round",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4322,215 +4537,231 @@
       "code": "opensys_hinge",
       "is_active": true,
       "eav": {
-        "type": "hinge"
+        "type": "opt_sh_type_hinge"
       },
       "variants": [
         {
           "external_code": "var_shower_opensys_hinge_zn_chrome_id_1",
           "sku": "OPENSYS-HINGE-ZN-CHROME-ID_1",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "zn",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_zn",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_zn_black_id_2",
           "sku": "OPENSYS-HINGE-ZN-BLACK-ID_2",
-          "cost_price": 24.5,
+          "cost_price": 26.92,
           "currency": "USD",
-          "price": 35.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "zn",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_zn",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_chrome_id_3",
           "sku": "OPENSYS-HINGE-STAINLESS-CHROME-ID_3",
-          "cost_price": 42.0,
+          "cost_price": 46.15,
           "currency": "USD",
-          "price": 60.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_chrome_matte_id_4",
           "sku": "OPENSYS-HINGE-STAINLESS-CHROME_MATTE-ID_4",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_black_id_5",
           "sku": "OPENSYS-HINGE-STAINLESS-BLACK-ID_5",
-          "cost_price": 45.5,
+          "cost_price": 50.0,
           "currency": "USD",
-          "price": 65.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_bronze_id_6",
           "sku": "OPENSYS-HINGE-STAINLESS-BRONZE-ID_6",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "bronze"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_gold_id_7",
           "sku": "OPENSYS-HINGE-STAINLESS-GOLD-ID_7",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_gold_matte_id_8",
           "sku": "OPENSYS-HINGE-STAINLESS-GOLD_MATTE-ID_8",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_stainless_white_id_9",
           "sku": "OPENSYS-HINGE-STAINLESS-WHITE-ID_9",
-          "cost_price": 52.5,
+          "cost_price": 57.69,
           "currency": "USD",
-          "price": 75.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "white"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_chrome_id_10",
           "sku": "OPENSYS-HINGE-BRASS-CHROME-ID_10",
-          "cost_price": 112.0,
+          "cost_price": 123.08,
           "currency": "USD",
-          "price": 160.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_chrome_matte_id_11",
           "sku": "OPENSYS-HINGE-BRASS-CHROME_MATTE-ID_11",
-          "cost_price": 140.0,
+          "cost_price": 153.85,
           "currency": "USD",
-          "price": 200.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "chrome_matte"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_black_id_12",
           "sku": "OPENSYS-HINGE-BRASS-BLACK-ID_12",
-          "cost_price": 115.5,
+          "cost_price": 126.92,
           "currency": "USD",
-          "price": 165.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_bronze_id_13",
           "sku": "OPENSYS-HINGE-BRASS-BRONZE-ID_13",
-          "cost_price": 126.0,
+          "cost_price": 138.46,
           "currency": "USD",
-          "price": 180.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "bronze"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_gold_id_14",
           "sku": "OPENSYS-HINGE-BRASS-GOLD-ID_14",
-          "cost_price": 133.0,
+          "cost_price": 146.15,
           "currency": "USD",
-          "price": 190.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "gold"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_gold_matte_id_15",
           "sku": "OPENSYS-HINGE-BRASS-GOLD_MATTE-ID_15",
-          "cost_price": 133.0,
+          "cost_price": 146.15,
           "currency": "USD",
-          "price": 190.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "gold_matte"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_hinge_brass_white_id_16",
           "sku": "OPENSYS-HINGE-BRASS-WHITE-ID_16",
-          "cost_price": 126.0,
+          "cost_price": 138.46,
           "currency": "USD",
-          "price": 180.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "brass",
-            "furniture_type_id": "white"
+            "material_type_id": "opt_material_type_brass",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4548,98 +4779,105 @@
       "code": "opensys_track",
       "is_active": true,
       "eav": {
-        "type": "track"
+        "type": "opt_sh_type_track"
       },
       "variants": [
         {
           "external_code": "var_shower_opensys_track_stainless_chrome_id_1",
           "sku": "OPENSYS-TRACK-STAINLESS-CHROME-ID_1",
-          "cost_price": 35.0,
+          "cost_price": 38.46,
           "currency": "USD",
-          "price": 50.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-TRACK-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_black_id_3",
           "sku": "OPENSYS-TRACK-STAINLESS-BLACK-ID_3",
-          "cost_price": 35.0,
+          "cost_price": 38.46,
           "currency": "USD",
-          "price": 50.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_bronze_id_4",
           "sku": "OPENSYS-TRACK-STAINLESS-BRONZE-ID_4",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "bronze"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_gold_id_5",
           "sku": "OPENSYS-TRACK-STAINLESS-GOLD-ID_5",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_gold_matte_id_6",
           "sku": "OPENSYS-TRACK-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_track_stainless_white_id_7",
           "sku": "OPENSYS-TRACK-STAINLESS-WHITE-ID_7",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "white"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4657,98 +4895,105 @@
       "code": "opensys_slide",
       "is_active": true,
       "eav": {
-        "type": "slide"
+        "type": "opt_sh_type_slide"
       },
       "variants": [
         {
           "external_code": "var_shower_opensys_slide_stainless_chrome_id_1",
           "sku": "OPENSYS-SLIDE-STAINLESS-CHROME-ID_1",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-SLIDE-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 84.0,
+          "cost_price": 92.31,
           "currency": "USD",
-          "price": 120.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_black_id_3",
           "sku": "OPENSYS-SLIDE-STAINLESS-BLACK-ID_3",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_bronze_id_4",
           "sku": "OPENSYS-SLIDE-STAINLESS-BRONZE-ID_4",
-          "cost_price": 84.0,
+          "cost_price": 92.31,
           "currency": "USD",
-          "price": 120.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "bronze"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_gold_id_5",
           "sku": "OPENSYS-SLIDE-STAINLESS-GOLD-ID_5",
-          "cost_price": 84.0,
+          "cost_price": 92.31,
           "currency": "USD",
-          "price": 120.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_gold_matte_id_6",
           "sku": "OPENSYS-SLIDE-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 84.0,
+          "cost_price": 92.31,
           "currency": "USD",
-          "price": 120.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_slide_stainless_white_id_7",
           "sku": "OPENSYS-SLIDE-STAINLESS-WHITE-ID_7",
-          "cost_price": 77.0,
+          "cost_price": 84.62,
           "currency": "USD",
-          "price": 110.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "white"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4766,98 +5011,105 @@
       "code": "opensys_connector",
       "is_active": true,
       "eav": {
-        "type": "connector"
+        "type": "opt_sh_type_connector"
       },
       "variants": [
         {
           "external_code": "var_shower_opensys_connector_stainless_chrome_id_1",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-CHROME-ID_1",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "chrome_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_black_id_3",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-BLACK-ID_3",
-          "cost_price": 17.5,
+          "cost_price": 19.23,
           "currency": "USD",
-          "price": 25.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "black"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_bronze_id_4",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-BRONZE-ID_4",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "bronze"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_gold_id_5",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-GOLD-ID_5",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_gold_matte_id_6",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "gold_matte"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_opensys_connector_stainless_white_id_7",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-WHITE-ID_7",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "material_type_id": "stainless",
-            "furniture_type_id": "white"
+            "material_type_id": "opt_material_type_stainless",
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -4875,43 +5127,46 @@
       "code": "sealant_slide",
       "is_active": true,
       "eav": {
-        "type": "slide"
+        "type": "opt_sh_type_slide"
       },
       "variants": [
         {
           "external_code": "var_shower_sealant_slide_6mm",
           "sku": "SEALANT-SLIDE-6MM",
-          "cost_price": 10.78,
+          "cost_price": 11.85,
           "currency": "USD",
-          "price": 15.4,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
+            "glass_thickness": "opt_thickness_6mm"
           }
         },
         {
           "external_code": "var_shower_sealant_slide_8mm",
           "sku": "SEALANT-SLIDE-8MM",
-          "cost_price": 15.4,
+          "cost_price": 16.92,
           "currency": "USD",
-          "price": 22.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
+            "glass_thickness": "opt_thickness_8mm"
           }
         },
         {
           "external_code": "var_shower_sealant_slide_10mm",
           "sku": "SEALANT-SLIDE-10MM",
-          "cost_price": 20.02,
+          "cost_price": 22.0,
           "currency": "USD",
-          "price": 28.6,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
+            "glass_thickness": "opt_thickness_10mm"
           }
         }
       ]
@@ -4929,43 +5184,46 @@
       "code": "sealant_hinge",
       "is_active": true,
       "eav": {
-        "type": "hinge"
+        "type": "opt_sh_type_hinge"
       },
       "variants": [
         {
           "external_code": "var_shower_sealant_hinge_6mm",
           "sku": "SEALANT-HINGE-6MM",
-          "cost_price": 14.7,
+          "cost_price": 16.15,
           "currency": "USD",
-          "price": 21.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
+            "glass_thickness": "opt_thickness_6mm"
           }
         },
         {
           "external_code": "var_shower_sealant_hinge_8mm",
           "sku": "SEALANT-HINGE-8MM",
-          "cost_price": 21.0,
+          "cost_price": 23.08,
           "currency": "USD",
-          "price": 30.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
+            "glass_thickness": "opt_thickness_8mm"
           }
         },
         {
           "external_code": "var_shower_sealant_hinge_10mm",
           "sku": "SEALANT-HINGE-10MM",
-          "cost_price": 27.3,
+          "cost_price": 30.0,
           "currency": "USD",
-          "price": 39.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
+            "glass_thickness": "opt_thickness_10mm"
           }
         }
       ]
@@ -4983,43 +5241,46 @@
       "code": "sealant_magnetic",
       "is_active": true,
       "eav": {
-        "type": "magnetic"
+        "type": "opt_sh_type_magnetic"
       },
       "variants": [
         {
           "external_code": "var_shower_sealant_magnetic_6mm",
           "sku": "SEALANT-MAGNETIC-6MM",
-          "cost_price": 44.1,
+          "cost_price": 48.46,
           "currency": "USD",
-          "price": 63.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "6mm"
+            "glass_thickness": "opt_thickness_6mm"
           }
         },
         {
           "external_code": "var_shower_sealant_magnetic_8mm",
           "sku": "SEALANT-MAGNETIC-8MM",
-          "cost_price": 63.0,
+          "cost_price": 69.23,
           "currency": "USD",
-          "price": 90.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "8mm"
+            "glass_thickness": "opt_thickness_8mm"
           }
         },
         {
           "external_code": "var_shower_sealant_magnetic_10mm",
           "sku": "SEALANT-MAGNETIC-10MM",
-          "cost_price": 81.9,
+          "cost_price": 90.0,
           "currency": "USD",
-          "price": 117.0,
+          "markup": 30.0,
           "is_default": false,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "glass_thickness": "10mm"
+            "glass_thickness": "opt_thickness_10mm"
           }
         }
       ]
@@ -5041,85 +5302,92 @@
         {
           "external_code": "var_shower_doorstep_id_1",
           "sku": "DOORSTEP-CHROME-ID_1",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome"
+            "furniture_type_id": "opt_furniture_color_chrome"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_2",
           "sku": "DOORSTEP-CHROME_MATTE-ID_2",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "chrome_matte"
+            "furniture_type_id": "opt_furniture_color_chrome_matte"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_3",
           "sku": "DOORSTEP-BLACK-ID_3",
-          "cost_price": 38.5,
+          "cost_price": 42.31,
           "currency": "USD",
-          "price": 55.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "black"
+            "furniture_type_id": "opt_furniture_color_black"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_4",
           "sku": "DOORSTEP-BRONZE-ID_4",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "bronze"
+            "furniture_type_id": "opt_furniture_color_bronze"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_5",
           "sku": "DOORSTEP-GOLD-ID_5",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold"
+            "furniture_type_id": "opt_furniture_color_gold"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_6",
           "sku": "DOORSTEP-GOLD_MATTE-ID_6",
-          "cost_price": 56.0,
+          "cost_price": 61.54,
           "currency": "USD",
-          "price": 80.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "gold_matte"
+            "furniture_type_id": "opt_furniture_color_gold_matte"
           }
         },
         {
           "external_code": "var_shower_doorstep_id_7",
           "sku": "DOORSTEP-WHITE-ID_7",
-          "cost_price": 42.0,
+          "cost_price": 46.15,
           "currency": "USD",
-          "price": 60.0,
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "furniture_type_id": "white"
+            "furniture_type_id": "opt_furniture_color_white"
           }
         }
       ]
@@ -5137,17 +5405,18 @@
       "code": "service_",
       "is_active": true,
       "eav": {
-        "type": ""
+        "type": "opt_sh_type_"
       },
       "variants": [
         {
           "external_code": "var_shower_service__",
           "sku": "SERVICE--",
           "cost_price": 0.0,
-          "currency": "USD",
-          "price": 0.0,
+          "currency": "",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
             "form_type": "",
             "door_type_ids": []
@@ -5157,10 +5426,11 @@
           "external_code": "var_shower_service__",
           "sku": "SERVICE--",
           "cost_price": 0.0,
-          "currency": "USD",
-          "price": 0.0,
+          "currency": "",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
             "form_type": "",
             "door_type_ids": []
@@ -5181,17 +5451,18 @@
       "code": "service_measure",
       "is_active": true,
       "eav": {
-        "type": "measure"
+        "type": "opt_sh_type_measure"
       },
       "variants": [
         {
           "external_code": "var_shower_service_measure_measure",
           "sku": "SERVICE-MEASURE-MEASURE",
-          "cost_price": 21.0,
-          "currency": "USD",
-          "price": 30.0,
+          "cost_price": 23.08,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
             "form_type": "",
             "door_type_ids": []
@@ -5212,17 +5483,18 @@
       "code": "service_delivery",
       "is_active": true,
       "eav": {
-        "type": "delivery"
+        "type": "opt_sh_type_delivery"
       },
       "variants": [
         {
           "external_code": "var_shower_service_delivery_delivery",
           "sku": "SERVICE-DELIVERY-DELIVERY",
-          "cost_price": 21.0,
-          "currency": "USD",
-          "price": 30.0,
+          "cost_price": 23.08,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
             "form_type": "",
             "door_type_ids": []
@@ -5243,17 +5515,18 @@
       "code": "service_lift",
       "is_active": true,
       "eav": {
-        "type": "lift"
+        "type": "opt_sh_type_lift"
       },
       "variants": [
         {
           "external_code": "var_shower_service_lift_lift",
           "sku": "SERVICE-LIFT-LIFT",
           "cost_price": 0.0,
-          "currency": "USD",
-          "price": 0.0,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
             "form_type": "",
             "door_type_ids": []
@@ -5274,186 +5547,198 @@
       "code": "service_montage",
       "is_active": true,
       "eav": {
-        "type": "montage"
+        "type": "opt_sh_type_montage"
       },
       "variants": [
         {
           "external_code": "var_shower_service_montage_id_1",
           "sku": "SERVICE-MONTAGE-ID_1",
-          "cost_price": 70.0,
-          "currency": "USD",
-          "price": 100.0,
+          "cost_price": 76.92,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "line",
+            "form_type": "opt_form_type_line",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_2",
           "sku": "SERVICE-MONTAGE-ID_2",
-          "cost_price": 77.0,
-          "currency": "USD",
-          "price": 110.0,
+          "cost_price": 84.62,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "line",
+            "form_type": "opt_form_type_line",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_3",
           "sku": "SERVICE-MONTAGE-ID_3",
-          "cost_price": 73.5,
-          "currency": "USD",
-          "price": 105.0,
+          "cost_price": 80.77,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "corner",
+            "form_type": "opt_form_type_corner",
             "door_type_ids": [
-              "one_swing",
-              "two_swing"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_4",
           "sku": "SERVICE-MONTAGE-ID_4",
-          "cost_price": 80.5,
-          "currency": "USD",
-          "price": 115.0,
+          "cost_price": 88.46,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "corner",
+            "form_type": "opt_form_type_corner",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_5",
           "sku": "SERVICE-MONTAGE-ID_5",
-          "cost_price": 105.0,
-          "currency": "USD",
-          "price": 150.0,
+          "cost_price": 115.38,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "free",
+            "form_type": "opt_form_type_free",
             "door_type_ids": []
           }
         },
         {
           "external_code": "var_shower_service_montage_id_6",
           "sku": "SERVICE-MONTAGE-ID_6",
-          "cost_price": 91.0,
-          "currency": "USD",
-          "price": 130.0,
+          "cost_price": 100.0,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "trapezoid",
+            "form_type": "opt_form_type_trapezoid",
             "door_type_ids": []
           }
         },
         {
           "external_code": "var_shower_service_montage_id_7",
           "sku": "SERVICE-MONTAGE-ID_7",
-          "cost_price": 105.0,
-          "currency": "USD",
-          "price": 150.0,
+          "cost_price": 115.38,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "ushaped",
+            "form_type": "opt_form_type_ushaped",
             "door_type_ids": []
           }
         },
         {
           "external_code": "var_shower_service_montage_id_8",
           "sku": "SERVICE-MONTAGE-ID_8",
-          "cost_price": 84.0,
-          "currency": "USD",
-          "price": 120.0,
+          "cost_price": 92.31,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "door",
+            "form_type": "opt_form_type_door",
             "door_type_ids": []
           }
         },
         {
           "external_code": "var_shower_service_montage_id_9",
           "sku": "SERVICE-MONTAGE-ID_9",
-          "cost_price": 77.0,
-          "currency": "USD",
-          "price": 110.0,
+          "cost_price": 84.62,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "curtain",
+            "form_type": "opt_form_type_curtain",
             "door_type_ids": [
-              "static"
+              "opt_door_type_static"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_10",
           "sku": "SERVICE-MONTAGE-ID_10",
-          "cost_price": 63.0,
-          "currency": "USD",
-          "price": 90.0,
+          "cost_price": 69.23,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "curtain",
+            "form_type": "opt_form_type_curtain",
             "door_type_ids": [
-              "one_swing",
-              "two_swing",
-              "one_swing_with_partition"
+              "opt_door_type_one_swing",
+              "opt_door_type_two_swing",
+              "opt_door_type_one_swing_with_partition"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_11",
           "sku": "SERVICE-MONTAGE-ID_11",
-          "cost_price": 77.0,
-          "currency": "USD",
-          "price": 110.0,
+          "cost_price": 84.62,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "curtain",
+            "form_type": "opt_form_type_curtain",
             "door_type_ids": [
-              "one_slide",
-              "two_slide"
+              "opt_door_type_one_slide",
+              "opt_door_type_two_slide"
             ]
           }
         },
         {
           "external_code": "var_shower_service_montage_id_12",
           "sku": "SERVICE-MONTAGE-ID_12",
-          "cost_price": 70.0,
-          "currency": "USD",
-          "price": 100.0,
+          "cost_price": 76.92,
+          "currency": "BYN",
+          "markup": 30.0,
           "is_default": true,
           "is_active": true,
+          "stock": 10.0,
           "eav": {
-            "form_type": "curtain",
+            "form_type": "opt_form_type_curtain",
             "door_type_ids": [
-              "accordion_2glass",
-              "accordion_3glass"
+              "opt_door_type_accordion_2glass",
+              "opt_door_type_accordion_3glass"
             ]
           }
         }
@@ -5479,7 +5764,7 @@
           "key": "metallic",
           "type": "number",
           "label": {
-            "ru": "Металлик"
+            "ru": "Металличность"
           }
         },
         {
