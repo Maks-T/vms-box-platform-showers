@@ -73,41 +73,40 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadConfigurations(): array
   {
     $config = [];
-    $dicts = [
-      'shower_forms' => 'form',
-      'shower_doors' => 'doors',
-      'shower_materials' => 'material',
-      'shower_furniture' => 'furniture'
-    ];
+    $locale = app()->getLocale();
 
-    foreach ($dicts as $dbCode => $frontKey) {
-      $dict = ComplexDictionary::where('code', $dbCode)->with('records')->first();
-      if ($dict) {
-        foreach ($dict->records as $record) {
-          $slug = $record->slug;
-          $config[$frontKey][$slug] = [
-            'id' => $slug,
-            'name' => $record->getTranslation('name', app()->getLocale()) ?? $record->name
-          ];
-
-          if ($frontKey === 'furniture') {
-            $config[$frontKey][$slug]['hexColor'] = $record->meta['hex_color'] ?? '#FFFFFF';
-            $config[$frontKey][$slug]['metallic'] = (float)($record->meta['metallic'] ?? 0.0);
-            $config[$frontKey][$slug]['roughness'] = (float)($record->meta['roughness'] ?? 0.0);
-            $config[$frontKey][$slug]['fluted'] = false;
-          }
-        }
+    $furnitureDict = ComplexDictionary::where('code', 'shower_furniture')->with('records')->first();
+    if ($furnitureDict) {
+      foreach ($furnitureDict->records as $record) {
+        $slug = $record->slug;
+        $config['furniture'][$slug] = [
+          'id' => $slug,
+          'name' => $record->getTranslation('name', $locale) ?? $record->name,
+          'hexColor' => $record->meta['hex_color'] ?? '#FFFFFF',
+          'metallic' => (float)($record->meta['metallic'] ?? 0.0),
+          'roughness' => (float)($record->meta['roughness'] ?? 0.0),
+          'fluted' => false
+        ];
       }
     }
 
-    // Динамическая подгрузка секции config.crossbar из справочных опций ЕАV
-    $crossbarAttr = Attribute::where('code', 'crossbar_type_id')->with('options')->first();
-    if ($crossbarAttr) {
-      foreach ($crossbarAttr->options as $option) {
-        $config['crossbar'][$option->slug] = [
-          'id' => $option->slug,
-          'name' => $option->getTranslation('value', app()->getLocale()) ?? $option->value
-        ];
+    $attributeMap = [
+      'form_type'        => 'form',
+      'door_type_ids'    => 'doors',
+      'material_type_id' => 'material',
+      'crossbar_type_id' => 'crossbar',
+    ];
+
+    foreach ($attributeMap as $attrCode => $frontKey) {
+      $attribute = Attribute::where('code', $attrCode)->with('options')->first();
+      if ($attribute) {
+        foreach ($attribute->options as $option) {
+          $slug = $option->slug;
+          $config[$frontKey][$slug] = [
+            'id' => $slug,
+            'name' => $option->getTranslation('value', $locale) ?? $option->value
+          ];
+        }
       }
     }
 
@@ -138,7 +137,6 @@ class ShowersCalculatorBridgeController extends Controller
       'gunmetal_grey' => 'id_8'
     ];
 
-    // Получаем текущую системную валюту для конвертации всех не-стеклянных цен
     $pricingManager = app(PricingManager::class);
     $priceTypeCurrencyCode = $pricingManager->defaultPriceType->currency->code ?? $pricingManager->baseCurrency->code;
 
@@ -245,9 +243,9 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $rawId,
             'type' => $type,
             'furnitureTypeId' => $color,
-            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'), // Исправлено на множественный ЕАV
+            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
             'interfaceName' => $this->getEavValue($v, 'interface_name'),
-            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?: ($product->getTranslation('name', app()->getLocale()) ?? ''),
             'unit' => $unitSymbol,
             'currency' => $priceTypeCurrencyCode,
             'price' => (float)($v->retail_price ?? $v->getPrice()),
@@ -267,7 +265,7 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $rawId,
             'crossbarTypeId' => $cbType,
             'furnitureTypeId' => $color,
-            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?: ($product->getTranslation('name', app()->getLocale()) ?? ''),
             'unit' => $unitSymbol,
             'currency' => $priceTypeCurrencyCode,
             'price' => (float)($v->retail_price ?? $v->getPrice())
@@ -286,7 +284,7 @@ class ShowersCalculatorBridgeController extends Controller
             'id' => $rawId,
             'materialTypeId' => $mat,
             'furnitureTypeId' => $color,
-            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?: ($product->getTranslation('name', app()->getLocale()) ?? ''),
             'unit' => $unitSymbol,
             'currency' => $priceTypeCurrencyCode,
             'price' => (float)($v->retail_price ?? $v->getPrice())
@@ -326,7 +324,7 @@ class ShowersCalculatorBridgeController extends Controller
           $prices['doorstep'][$rawId] = [
             'id' => $rawId,
             'furnitureTypeId' => $color,
-            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'name' => $v->getTranslation('name', app()->getLocale()) ?: ($product->getTranslation('name', app()->getLocale()) ?? ''),
             'unit' => $unitSymbol,
             'currency' => $priceTypeCurrencyCode,
             'price' => (float)($v->retail_price ?? $v->getPrice())
@@ -342,8 +340,8 @@ class ShowersCalculatorBridgeController extends Controller
           $prices['services'][$type][$rawId] = [
             'id' => $rawId,
             'formTypeId' => $this->getEavValue($v, 'form_type'),
-            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'), // Исправлено на множественный ЕАV
-            'name' => $v->getTranslation('name', app()->getLocale()) ?? $v->name,
+            'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
+            'name' => $v->getTranslation('name', app()->getLocale()) ?: ($product->getTranslation('name', app()->getLocale()) ?? ''),
             'unit' => $unitSymbol,
             'currency' => $priceTypeCurrencyCode,
             'price1' => (float)($v->retail_price ?? $v->getPrice()),
