@@ -1,4 +1,4 @@
-# scripts/convert_cctv_to_import_data.py
+# scripts/convert_showers_to_import_data.py
 import os
 import csv
 import json
@@ -977,7 +977,7 @@ def run_conversion(base_dir=None, out_file=None):
             product["variants"].append({
                 "external_code": f"var_shower_opensys_{otype}_{mat_type}_{fur_color}_{row_id}",
                 "sku": f"OPENSYS-{otype.upper()}-{mat_type.upper()}-{fur_color.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
+                "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
                 "currency": row.get("currency", "USD").strip(),
                 "markup": MARKUP_PERCENT,
                 "is_default": True,
@@ -1121,6 +1121,63 @@ def run_conversion(base_dir=None, out_file=None):
                 }
             })
         import_data["products"].append(product)
+
+    # --------------------------------------------------------------------------
+    # ОБОГАЩЕНИЕ ОПИСАНИЯМИ И ИЗОБРАЖЕНИЯМИ (ПОСТ-ОБРАБОТКА)
+    # --------------------------------------------------------------------------
+    # 1. Загрузка карты описаний из detailed_prompts.json
+    desc_map = {}
+    detailed_prompts_path = os.path.join(base_dir, "import", "detailed_prompts.json")
+    if os.path.exists(detailed_prompts_path):
+        try:
+            with open(detailed_prompts_path, 'r', encoding='utf-8') as pf:
+                prompts_data = json.load(pf)
+                for item in prompts_data:
+                    pcode = item.get("product_code")
+                    description = item.get("description")
+                    if pcode and description:
+                        desc_map[pcode] = description
+        except Exception as e:
+            print(f"[WARNING] Failed to load detailed_prompts.json: {e}")
+
+    # Пути к папкам с изображениями
+    products_img_dir = os.path.join(base_dir, "import", "export_images", "products")
+    variants_img_dir = os.path.join(base_dir, "import", "export_images", "variants")
+
+    for product in import_data["products"]:
+        pcode = product.get("code")
+
+        # Добавление описания базового товара
+        if pcode in desc_map:
+            product["description"] = {
+                "ru": desc_map[pcode]
+            }
+
+        # Добавление изображения базового товара, если файл {product_code}.jpg существует
+        if pcode:
+            prod_img_file = f"{pcode}.jpg"
+            prod_img_path = os.path.join(products_img_dir, prod_img_file)
+            if os.path.exists(prod_img_path):
+                product["preview_picture"] = f"products/{prod_img_file}"
+
+        # Добавление изображений вариантов (SKU), если файл {variant_sku}.jpg существует
+        for variant in product.get("variants", []):
+            vsku = variant.get("sku")
+            if vsku:
+                found_var_file = None
+                # Проверяем точный регистр, нижний и верхний регистры, а также разные расширения для надежности
+                for ext in [".jpg", ".JPG", ".png", ".PNG", ".webp", ".WEBP"]:
+                    for case_sku in [vsku, vsku.lower(), vsku.upper()]:
+                        test_file = f"{case_sku}{ext}"
+                        test_path = os.path.join(variants_img_dir, test_file)
+                        if os.path.exists(test_path):
+                            found_var_file = test_file
+                            break
+                    if found_var_file:
+                        break
+
+                if found_var_file:
+                    variant["preview_picture"] = f"variants/{found_var_file}"
 
     with open(out_file, 'w', encoding='utf-8') as f:
         json.dump(import_data, f, indent=2, ensure_ascii=False)

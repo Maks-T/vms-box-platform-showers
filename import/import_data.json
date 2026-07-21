@@ -387,7 +387,7 @@
           "external_code": "opt_glass_color_id_1",
           "slug": "id_1",
           "value": {
-            "ru": "Стекло закаленное прозрачное универсальное"
+            "ru": "Стекло закаленное прозрачное универсальное\t\t\t"
           },
           "meta": {
             "hex": "#D6E4E5",
@@ -399,7 +399,7 @@
           "external_code": "opt_glass_color_id_2",
           "slug": "id_2",
           "value": {
-            "ru": "Стекло закаленное матовое универсальное"
+            "ru": "Стекло закаленное матовое универсальное\t\t\t"
           },
           "meta": {
             "hex": "#D6E4E5",
@@ -411,7 +411,7 @@
           "external_code": "opt_glass_color_id_3",
           "slug": "id_3",
           "value": {
-            "ru": "Стекло закаленное прозрачное осветленное"
+            "ru": "Стекло закаленное прозрачное осветленное\t\t\t"
           },
           "meta": {
             "hex": "#FFFFFF",
@@ -423,7 +423,7 @@
           "external_code": "opt_glass_color_id_4",
           "slug": "id_4",
           "value": {
-            "ru": "Стекло закаленное матовое осветленное"
+            "ru": "Стекло закаленное матовое осветленное\t\t\t"
           },
           "meta": {
             "hex": "#FFFFFF",
@@ -435,7 +435,7 @@
           "external_code": "opt_glass_color_id_5",
           "slug": "id_5",
           "value": {
-            "ru": "Стекло закаленное тонированное полупрозрачное графит"
+            "ru": "Стекло закаленное тонированное полупрозрачное графит\t\t\t"
           },
           "meta": {
             "hex": "#787878",
@@ -447,7 +447,7 @@
           "external_code": "opt_glass_color_id_6",
           "slug": "id_6",
           "value": {
-            "ru": "Стекло закаленное тонированное полупрозрачное бронза"
+            "ru": "Стекло закаленное тонированное полупрозрачное бронза\t\t\t"
           },
           "meta": {
             "hex": "#91765b",
@@ -459,7 +459,7 @@
           "external_code": "opt_glass_color_id_7",
           "slug": "id_7",
           "value": {
-            "ru": "Стекло закаленное матовое графит"
+            "ru": "Стекло закаленное матовое графит\t\t\t"
           },
           "meta": {
             "hex": "#787878",
@@ -471,7 +471,7 @@
           "external_code": "opt_glass_color_id_8",
           "slug": "id_8",
           "value": {
-            "ru": "Стекло закаленное матовое бронза"
+            "ru": "Стекло закаленное матовое бронза\t\t\t"
           },
           "meta": {
             "hex": "#91765b",
@@ -483,7 +483,7 @@
           "external_code": "opt_glass_color_id_9",
           "slug": "id_9",
           "value": {
-            "ru": "Стекло закаленное рифленое"
+            "ru": "Стекло закаленное рифленое\t\t\t"
           },
           "meta": {
             "hex": "#C0C0C0",
@@ -1276,9 +1276,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_1",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_1.jpg",
       "name": {
-        "ru": "Стекло закаленное прозрачное универсальное"
+        "ru": "Стекло закаленное прозрачное универсальное\t\t\t"
       },
       "code": "glass_id_1",
       "is_active": true,
@@ -1300,8 +1300,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_1_8mm",
@@ -1314,8 +1313,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_1_10mm",
@@ -1328,10 +1326,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_1-8mm_a_single_flat_rectangular_sample_pane_of_tempered_clear_tran.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное прозрачное универсальное</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Данное безопасное закаленное стекло (ESG) толщиной 8 мм спроектировано для жестких условий повышенной влажности. Светопрозрачное полотно с безупречно обработанной полированной еврокромкой.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное прозрачное стекло (классический зеленоватый торец)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Безопасность: При механическом разрушении рассыпается на мелкие осколки с тупыми гранями, исключая порезы.</li><li>Обработка кромок: Сверхточная полированная еврокромка по всему периметру полотна.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_2",
@@ -1340,9 +1340,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_2",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_2.jpg",
       "name": {
-        "ru": "Стекло закаленное матовое универсальное"
+        "ru": "Стекло закаленное матовое универсальное\t\t\t"
       },
       "code": "glass_id_2",
       "is_active": true,
@@ -1364,8 +1364,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_2_8mm",
@@ -1378,8 +1377,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_2_10mm",
@@ -1392,10 +1390,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_2-8mm_a_single_flat_rectangular_sample_pane_of_acid_etched_frosted.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное матовое универсальное</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Безопасное закаленное стекло с химическим травлением (сатинато), обеспечивающее мягкое рассеивание света и приватность душевой зоны. Обладает приятной шелковистой текстурой, устойчивой к загрязнениям.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное матовое стекло (химическое травление, шелковистая текстура Satinato)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Безопасность: При разрушении рассыпается на мелкие фракции без острых режущих углов.</li><li>Сфера применения: Стеклянные распашные и раздвижные двери, матовые перегородки.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_3",
@@ -1404,9 +1404,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_3",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_3.jpg",
       "name": {
-        "ru": "Стекло закаленное прозрачное осветленное"
+        "ru": "Стекло закаленное прозрачное осветленное\t\t\t"
       },
       "code": "glass_id_3",
       "is_active": true,
@@ -1428,8 +1428,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_3_8mm",
@@ -1442,8 +1441,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_3_10mm",
@@ -1456,10 +1454,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_3-8mm_a_single_flat_rectangular_sample_pane_of_ultra_clear_low_iro.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное прозрачное осветленное</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Премиальное осветленное стекло (Optiwhite) со сниженным содержанием железа. Отличается абсолютной прозрачностью и отсутствием характерного бутылочного зеленого оттенка, торец имеет благородный ледяной оттенок.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное прозрачное осветленное стекло (Optiwhite, без зеленого оттенка, хрустальная прозрачность)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Преимущества: Максимальное светопропускание и безупречная цветопередача.</li><li>Обработка кромок: Полированная еврокромка по периметру.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_4",
@@ -1468,9 +1468,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_4",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_4.jpg",
       "name": {
-        "ru": "Стекло закаленное матовое осветленное"
+        "ru": "Стекло закаленное матовое осветленное\t\t\t"
       },
       "code": "glass_id_4",
       "is_active": true,
@@ -1492,8 +1492,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_4_8mm",
@@ -1506,8 +1505,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_4_10mm",
@@ -1520,10 +1518,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_4-8mm_a_single_flat_rectangular_sample_pane_of_frosted_low_iron_op.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное матовое осветленное</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций премиум-класса.</p><h3>Описание и назначение</h3><p>Осветленное матовое стекло сочетает в себе приватность сатинированной поверхности и кристальную белизну. Изделие не приобретает зеленого оттенка, рассеивая свет с чистым снежно-белым свечением.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное матовое осветленное стекло (сверхпрозрачная шелковистая матовая текстура)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Особенности: Шелковистая поверхность Satinato, устойчивая к образованию известковых разводов.</li><li>Безопасность: Соответствует ГОСТу для безопасного остекления.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_5",
@@ -1532,9 +1532,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_5",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_5.jpg",
       "name": {
-        "ru": "Стекло закаленное тонированное полупрозрачное графит"
+        "ru": "Стекло закаленное тонированное полупрозрачное графит\t\t\t"
       },
       "code": "glass_id_5",
       "is_active": true,
@@ -1556,8 +1556,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_5_8mm",
@@ -1570,8 +1569,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_5_10mm",
@@ -1584,10 +1582,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_5-8mm_a_single_flat_rectangular_sample_pane_of_graphite_grey_tinte.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное тонированное полупрозрачное графит</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Стекло тонировано в массе на этапе производства, что гарантирует однородность цвета. Обладает глубоким серым («графитовым») оттенком, который придает интерьеру ванной комнаты изысканный вид.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное прозрачное тонированное стекло (Графит, глубокий серый оттенок)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Особенности: Мягкое приглушение светового потока, создание премиального визуального эффекта.</li><li>Обработка кромок: Сверхточная полированная еврокромка.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_6",
@@ -1596,9 +1596,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_6",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_6.jpg",
       "name": {
-        "ru": "Стекло закаленное тонированное полупрозрачное бронза"
+        "ru": "Стекло закаленное тонированное полупрозрачное бронза\t\t\t"
       },
       "code": "glass_id_6",
       "is_active": true,
@@ -1620,8 +1620,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_6_8mm",
@@ -1634,8 +1633,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_6_10mm",
@@ -1648,10 +1646,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_6-8mm_a_single_flat_rectangular_sample_pane_of_bronze_tinted_trans.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное тонированное полупрозрачное бронза</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Закаленное стекло с благородным тонированием в тепрый бронзовый (янтарный) цвет. Создает уютную атмосферу и гармонирует со смесителями и аксессуарами в цветах золото, бронза или латунь.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное прозрачное тонированное стекло (Бронза, благородный янтарный оттенок)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Обработка кромок: Идеально гладкий полированный торец бронзового оттенка.</li><li>Сфера применения: Душевые кабины премиум-сегмента.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_7",
@@ -1660,9 +1660,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_7",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_7.jpg",
       "name": {
-        "ru": "Стекло закаленное матовое графит"
+        "ru": "Стекло закаленное матовое графит\t\t\t"
       },
       "code": "glass_id_7",
       "is_active": true,
@@ -1684,8 +1684,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_7_8mm",
@@ -1698,8 +1697,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_7_10mm",
@@ -1712,10 +1710,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_7-8mm_a_single_flat_rectangular_sample_pane_of_frosted_graphite_gr.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное матовое графит</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Матированное графитовое стекло обеспечивает максимальную приватность и эксклюзивный дизайн. Темно-серая шелковистая текстура эффективно скрывает силуэты и капли воды.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное матовое тонированное стекло (Матовый графит, шелковистый серый тон)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Особенности: Химическое матирование Satinato, исключающее появление глянцевых пятен при намокании.</li><li>Безопасность: Безопасное закаленное исполнение.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_8",
@@ -1724,9 +1724,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_8",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_8.jpg",
       "name": {
-        "ru": "Стекло закаленное матовое бронза"
+        "ru": "Стекло закаленное матовое бронза\t\t\t"
       },
       "code": "glass_id_8",
       "is_active": true,
@@ -1748,8 +1748,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_8_8mm",
@@ -1762,8 +1761,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_8_10mm",
@@ -1776,10 +1774,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_8-8mm_a_single_flat_rectangular_sample_pane_of_frosted_bronze_matt.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное матовое бронза</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Закаленное стекло янтарного оттенка с двухсторонней шелковистой матовой текстурой. Отличается приятными тактильными свойствами, приглушает свет и скрывает душевую зону от посторонних глаз.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное матовое тонированное стекло (Матовая бронза, шелковистый янтарный тон)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Особенности: Легкий уход за матовой поверхностью, невосприимчивость к известковому налету.</li><li>Кромка: Полированная фаска.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_glass_id_9",
@@ -1788,9 +1788,9 @@
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": "shower-glass-id_9",
-      "preview_picture": null,
+      "preview_picture": "products/glass_id_9.jpg",
       "name": {
-        "ru": "Стекло закаленное рифленое"
+        "ru": "Стекло закаленное рифленое\t\t\t"
       },
       "code": "glass_id_9",
       "is_active": true,
@@ -1812,8 +1812,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_6mm"
-          },
-          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_9_8mm",
@@ -1826,8 +1825,7 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_8mm"
-          },
-          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
+          }
         },
         {
           "external_code": "var_shower_glass_id_9_10mm",
@@ -1840,10 +1838,12 @@
           "stock": 10.0,
           "eav": {
             "glass_thickness": "opt_thickness_10mm"
-          },
-          "preview_picture": "products/autofill_glass-id_9-8mm_a_single_flat_rectangular_sample_pane_of_reeded_fluted_corru.webp"
+          }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стекло закаленное рифленое</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Трендовое рифленое стекло (Fluted / Reeded) с объемным 3D-рельефом в виде параллельных вертикальных полос. Создает красивую игру света и преломление контуров, сохраняя высокий уровень приватности.</p><h3>Технические характеристики и особенности</h3><ul><li>Тип стекла: Закаленное рифленое стекло (Fluted/Reeded, глубокий вертикальный рельеф)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Дизайн: Трехмерная геометрическая текстура на внешней стороне полотна.</li><li>Прочность: Прошло полный цикл термозакалки.</li></ul>"
+      }
     },
     {
       "external_code": "prod_shower_profile_profile",
@@ -2155,7 +2155,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Профиль П-образный из алюминия в полимерном покрытии</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Алюминиевый П-образный профиль (швеллер) предназначен для жесткого крепления стационарного закаленного стекла к стенам или полу. Обеспечивает компенсацию неровностей строительных стен.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Сплав: Высокопрочный авиационный алюминий марки АД31 Т5.</li><li>Преимущества: Максимально плотный прижим стекла, антикоррозийная обработка.</li></ul>"
+      },
+      "preview_picture": "products/profile_profile.jpg"
     },
     {
       "external_code": "prod_shower_profile_corner",
@@ -2467,7 +2471,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Профиль угловой 90 градусов для стекла, мм</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Экструдированная алюминиевая угловая рейка для жесткого сопряжения двух стеклянных полотен перпендикулярно друг другу под прямым углом. Создает герметичный и надежный стык.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Конструкция: Двухсторонний направляющий профиль с точной геометрией углов.</li><li>Сплав: Алюминий АД31 Т5.</li></ul>"
+      },
+      "preview_picture": "products/profile_corner.jpg"
     },
     {
       "external_code": "prod_shower_profile_cap",
@@ -2779,7 +2787,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Заглушка П-профиля</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Металлическая декоративная заглушка устанавливается на торцевой срез алюминиевого П-профиля, скрывая внутреннюю полость и придавая конструкции эстетически завершенный вид.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Рекомендуемая толщина стекла: 8 мм</li><li>Форма: Точное соответствие размерам торца швеллера для плотной посадки.</li><li>Материал: Сплав с высокой степенью антикоррозийной защиты.</li></ul>"
+      },
+      "preview_picture": "products/profile_cap.jpg"
     },
     {
       "external_code": "prod_shower_handle_knob",
@@ -3063,7 +3075,11 @@
             "interface_name": "Ручка-кноб 2"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Ручка-кноб душевая</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Компактная двухсторонняя ручка-кноб цилиндрической формы для распашных стеклянных дверей. Отличается лаконичным дизайном и удобным хватом.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Особенности: Комплектуется эластичными влагостойкими прокладками для защиты стекла от царапин.</li><li>Эргономика: Продуманная форма для безопасного хвата мокрыми руками, полное отсутствие острых углов.</li></ul>"
+      },
+      "preview_picture": "products/handle_knob.jpg"
     },
     {
       "external_code": "prod_shower_handle_bracket",
@@ -3347,7 +3363,11 @@
             "interface_name": "Ручка-скоба 2"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Ручка-скоба душевая</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Классическая ручка-скоба (ручка-полотенцедержатель) для душевых дверей. Обладает прочной цельнометаллической структурой и строгим дизайном с чёткой прямоугольной геометрией.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Монтаж: Двухстороннее сквозное крепление через отверстия в стекле.</li><li>Комплектация: Прозрачные уплотнительные шайбы из мягкого полимера.</li></ul>"
+      },
+      "preview_picture": "products/handle_bracket.jpg"
     },
     {
       "external_code": "prod_shower_handle_holder",
@@ -3498,7 +3518,11 @@
             "interface_name": "Ручка-полотенцедержатель"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Ручка-полотенцедержатель душевая</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Функциональная комбинированная ручка. С наружной стороны стекла располагается удобная длинная штанга-держатель для полотенца, с внутренней — компактная ручка-кноб.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Преимущества: Совмещение функций открывания двери и сушки полотенец, экономия пространства.</li><li>Материал: Влагостойкий износостойкий сплав.</li></ul>"
+      },
+      "preview_picture": "products/handle_holder.jpg"
     },
     {
       "external_code": "prod_shower_handle_sliding",
@@ -3782,7 +3806,11 @@
             "interface_name": "Ручка-купе 2"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Ручка утопленная для раздвижных дверей</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Утопленная (врезная) ручка круглой формы для раздвижных стеклянных дверей. Устанавливается заподлицо, позволяя стеклу беспрепятственно заходить за глухую створку перегородки.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Особенности: Монтируется сквозь круглое отверстие в стекле, не выступает над поверхностью полотна.</li><li>Безопасность: Гладкие скругленные края.</li></ul>"
+      },
+      "preview_picture": "products/handle_sliding.jpg"
     },
     {
       "external_code": "prod_shower_crossbar_crossbar",
@@ -4094,7 +4122,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Стабилизирующая штанга</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Прямоугольная стабилизирующая штанга (ригель жесткости) необходима для фиксации верхнего угла неподвижного стекла к стене. Предотвращает раскачивание и вибрацию стеклянной перегородки.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Назначение: Обеспечение конструкционной жесткости, устранение люфтов и сильной вибрации стекол.</li><li>Регулировка: Подрезная полая конструкция для точной подгонки длины по месту.</li></ul>"
+      },
+      "preview_picture": "products/crossbar_crossbar.jpg"
     },
     {
       "external_code": "prod_shower_crossbar_fix",
@@ -4308,7 +4340,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Крепление штанги к стене</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Коннектор (фланец) для надежного крепления стабилизирующей штанги прямоугольного сечения к стене ванной комнаты под прямым углом. Фиксируется саморезами.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Монтаж: Прочное винтовое настенное крепление с декоративным скрывающим кожухом.</li><li>Материал: Латунь с высоким ресурсом прочности.</li></ul>"
+      },
+      "preview_picture": "products/crossbar_fix.jpg"
     },
     {
       "external_code": "prod_shower_crossbar_fix_glass",
@@ -4522,7 +4558,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Держатель стекла для штанги</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Зажимной коннектор (клипса) для жесткого соединения прямоугольной стабилизирующей штанги с верхним торцом неподвижного стеклянного полотна. Не требует сверления стекла.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Конструкция: Сквозной зажимной винтовой блок со специальными виниловыми прокладками.</li><li>Преимущества: Исключает прямой контакт металла со стеклом.</li></ul>"
+      },
+      "preview_picture": "products/crossbar_fix_glass.jpg"
     },
     {
       "external_code": "prod_shower_opensys_hinge",
@@ -4543,7 +4583,7 @@
         {
           "external_code": "var_shower_opensys_hinge_zn_chrome_id_1",
           "sku": "OPENSYS-HINGE-ZN-CHROME-ID_1",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4557,7 +4597,7 @@
         {
           "external_code": "var_shower_opensys_hinge_zn_black_id_2",
           "sku": "OPENSYS-HINGE-ZN-BLACK-ID_2",
-          "cost_price": 26.92,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4571,7 +4611,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_chrome_id_3",
           "sku": "OPENSYS-HINGE-STAINLESS-CHROME-ID_3",
-          "cost_price": 46.15,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4585,7 +4625,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_chrome_matte_id_4",
           "sku": "OPENSYS-HINGE-STAINLESS-CHROME_MATTE-ID_4",
-          "cost_price": 61.54,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4599,7 +4639,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_black_id_5",
           "sku": "OPENSYS-HINGE-STAINLESS-BLACK-ID_5",
-          "cost_price": 50.0,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4613,7 +4653,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_bronze_id_6",
           "sku": "OPENSYS-HINGE-STAINLESS-BRONZE-ID_6",
-          "cost_price": 57.69,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4627,7 +4667,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_gold_id_7",
           "sku": "OPENSYS-HINGE-STAINLESS-GOLD-ID_7",
-          "cost_price": 57.69,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4641,7 +4681,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_gold_matte_id_8",
           "sku": "OPENSYS-HINGE-STAINLESS-GOLD_MATTE-ID_8",
-          "cost_price": 61.54,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4655,7 +4695,7 @@
         {
           "external_code": "var_shower_opensys_hinge_stainless_white_id_9",
           "sku": "OPENSYS-HINGE-STAINLESS-WHITE-ID_9",
-          "cost_price": 57.69,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4669,7 +4709,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_chrome_id_10",
           "sku": "OPENSYS-HINGE-BRASS-CHROME-ID_10",
-          "cost_price": 123.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4683,7 +4723,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_chrome_matte_id_11",
           "sku": "OPENSYS-HINGE-BRASS-CHROME_MATTE-ID_11",
-          "cost_price": 153.85,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4697,7 +4737,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_black_id_12",
           "sku": "OPENSYS-HINGE-BRASS-BLACK-ID_12",
-          "cost_price": 126.92,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4711,7 +4751,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_bronze_id_13",
           "sku": "OPENSYS-HINGE-BRASS-BRONZE-ID_13",
-          "cost_price": 138.46,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4725,7 +4765,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_gold_id_14",
           "sku": "OPENSYS-HINGE-BRASS-GOLD-ID_14",
-          "cost_price": 146.15,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4739,7 +4779,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_gold_matte_id_15",
           "sku": "OPENSYS-HINGE-BRASS-GOLD_MATTE-ID_15",
-          "cost_price": 146.15,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4753,7 +4793,7 @@
         {
           "external_code": "var_shower_opensys_hinge_brass_white_id_16",
           "sku": "OPENSYS-HINGE-BRASS-WHITE-ID_16",
-          "cost_price": 138.46,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4764,7 +4804,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Петли душевые</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Усиленная душевая петля (тип «стекло-стена» или «стекло-стекло») для распашных дверей. Обеспечивает плавное и точное открывание стеклянной створки.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Материал изготовления: Цинковый сплав (ZAMAK)</li><li>Ресурс: Рабочий механизм рассчитан более чем на 100 000 рабочих циклов открывания и закрывания.</li><li>Функционал: Функция автоматического самозакрывания (доводчик) при угле поворота менее 25 градусов.</li></ul>"
+      },
+      "preview_picture": "products/opensys_hinge.jpg"
     },
     {
       "external_code": "prod_shower_opensys_track",
@@ -4785,7 +4829,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_chrome_id_1",
           "sku": "OPENSYS-TRACK-STAINLESS-CHROME-ID_1",
-          "cost_price": 38.46,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4799,7 +4843,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-TRACK-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 42.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4813,7 +4857,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_black_id_3",
           "sku": "OPENSYS-TRACK-STAINLESS-BLACK-ID_3",
-          "cost_price": 38.46,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4827,7 +4871,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_bronze_id_4",
           "sku": "OPENSYS-TRACK-STAINLESS-BRONZE-ID_4",
-          "cost_price": 42.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4841,7 +4885,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_gold_id_5",
           "sku": "OPENSYS-TRACK-STAINLESS-GOLD-ID_5",
-          "cost_price": 42.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4855,7 +4899,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_gold_matte_id_6",
           "sku": "OPENSYS-TRACK-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 42.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4869,7 +4913,7 @@
         {
           "external_code": "var_shower_opensys_track_stainless_white_id_7",
           "sku": "OPENSYS-TRACK-STAINLESS-WHITE-ID_7",
-          "cost_price": 42.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4880,7 +4924,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Трек направляющий</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Металлическая направляющая рельса (трек) прямоугольного сечения для откатных душевых систем. Служит опорным элементом, по которому двигаются роликовые каретки двери.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Материал изготовления: Нержавеющая сталь марки AISI 304</li><li>Особенности: Устойчив к деформации под весом тяжелого стекла, идеально гладкая поверхность скольжения.</li></ul>"
+      },
+      "preview_picture": "products/opensys_track.jpg"
     },
     {
       "external_code": "prod_shower_opensys_slide",
@@ -4901,7 +4949,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_chrome_id_1",
           "sku": "OPENSYS-SLIDE-STAINLESS-CHROME-ID_1",
-          "cost_price": 84.62,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4915,7 +4963,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-SLIDE-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 92.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4929,7 +4977,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_black_id_3",
           "sku": "OPENSYS-SLIDE-STAINLESS-BLACK-ID_3",
-          "cost_price": 84.62,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4943,7 +4991,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_bronze_id_4",
           "sku": "OPENSYS-SLIDE-STAINLESS-BRONZE-ID_4",
-          "cost_price": 92.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4957,7 +5005,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_gold_id_5",
           "sku": "OPENSYS-SLIDE-STAINLESS-GOLD-ID_5",
-          "cost_price": 92.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4971,7 +5019,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_gold_matte_id_6",
           "sku": "OPENSYS-SLIDE-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 92.31,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4985,7 +5033,7 @@
         {
           "external_code": "var_shower_opensys_slide_stainless_white_id_7",
           "sku": "OPENSYS-SLIDE-STAINLESS-WHITE-ID_7",
-          "cost_price": 84.62,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -4996,7 +5044,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Раздвижная система для стеклянных дверей</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Комплект роликовых кареток для раздвижной душевой перегородки. Обеспечивает бесшумное и легкое скольжение тяжелого стеклянного полотна по верхнему треку.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Материал изготовления: Нержавеющая сталь марки AISI 304</li><li>Плавность хода: Износостойкие подшипники с фторопластовым (тефлоновым) покрытием колес.</li></ul>"
+      },
+      "preview_picture": "products/opensys_slide.jpg"
     },
     {
       "external_code": "prod_shower_opensys_connector",
@@ -5017,7 +5069,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_chrome_id_1",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-CHROME-ID_1",
-          "cost_price": 19.23,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5031,7 +5083,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_chrome_matte_id_2",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-CHROME_MATTE-ID_2",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5045,7 +5097,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_black_id_3",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-BLACK-ID_3",
-          "cost_price": 19.23,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5059,7 +5111,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_bronze_id_4",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-BRONZE-ID_4",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5073,7 +5125,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_gold_id_5",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-GOLD-ID_5",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5087,7 +5139,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_gold_matte_id_6",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-GOLD_MATTE-ID_6",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5101,7 +5153,7 @@
         {
           "external_code": "var_shower_opensys_connector_stainless_white_id_7",
           "sku": "OPENSYS-CONNECTOR-STAINLESS-WHITE-ID_7",
-          "cost_price": 23.08,
+          "cost_price": 22.31,
           "currency": "USD",
           "markup": 30.0,
           "is_default": true,
@@ -5112,7 +5164,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Коннектор трека угловой</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных конструкций.</p><h3>Описание и назначение</h3><p>Угловой Г-образный соединитель (коннектор) для стыковки двух отрезков раздвижного трека под углом 90 градусов. Используется в угловых раздвижных кабинах.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Материал изготовления: Нержавеющая сталь марки AISI 304</li><li>Конструкция: Точный внутренний зажимной блок для бесшовного прохождения роликов.</li></ul>"
+      },
+      "preview_picture": "products/opensys_connector.jpg"
     },
     {
       "external_code": "prod_shower_sealant_slide",
@@ -5169,7 +5225,11 @@
             "glass_thickness": "opt_thickness_10mm"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Уплотнитель для раздвижных дверей, 3м</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Силиконовый уплотнительный профиль (тип h-профиль) для раздвижных стеклянных дверей. Предотвращает протекание воды в зазорах между стеклами.</p><h3>Технические характеристики и особенности</h3><ul><li>Рекомендуемая толщина стекла: 8 мм</li><li>Материал: Эластичный светостойкий ПВХ, высокоустойчивый к пожелтению, старению и ультрафиолету.</li><li>Герметизация: Плотный прижим, надежный водоотводящий боковой лепесток.</li><li>Длина: 3 метра (подрезается под нужный размер).</li></ul>"
+      },
+      "preview_picture": "products/sealant_slide.jpg"
     },
     {
       "external_code": "prod_shower_sealant_hinge",
@@ -5226,7 +5286,11 @@
             "glass_thickness": "opt_thickness_10mm"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Уплотнитель для распашных дверей, 3м</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Нижний водоотводящий силиконовый уплотнитель (капельник) для распашных дверей душевых кабин. Направляет стекающие струи воды внутрь поддона.</p><h3>Технические характеристики и особенности</h3><ul><li>Рекомендуемая толщина стекла: 8 мм</li><li>Материал: Износостойкий светопрозрачный силикон, сохраняющий эластичность годами.</li><li>Особенности: Два гибких нижних лепестка («двойной капельник») для максимальной защиты от протекания.</li></ul>"
+      },
+      "preview_picture": "products/sealant_hinge.jpg"
     },
     {
       "external_code": "prod_shower_sealant_magnetic",
@@ -5283,7 +5347,11 @@
             "glass_thickness": "opt_thickness_10mm"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Магнитный уплотнитель, 3м</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Комплект магнитных уплотнителей для стыка распашных дверей. Обеспечивает плотное притягивание створок и полную герметичность при закрытии.</p><h3>Технические характеристики и особенности</h3><ul><li>Рекомендуемая толщина стекла: 8 мм</li><li>Материал: Эластичный ПВХ с коэкструдированным мощным неодимовым магнитным сердечником.</li><li>Преимущества: Исключает самопроизвольное распахивание дверей во время приема душа.</li></ul>"
+      },
+      "preview_picture": "products/sealant_magnetic.jpg"
     },
     {
       "external_code": "prod_shower_doorstep_doorsteps",
@@ -5390,7 +5458,11 @@
             "furniture_type_id": "opt_furniture_color_white"
           }
         }
-      ]
+      ],
+      "description": {
+        "ru": "<p><strong>Порог душевой</strong> — профессиональное комплектующее решение для создания современных душевых ограждений и стеклянных перегородок.</p><h3>Описание и назначение</h3><p>Алюминиевый акриловый порог-барьер. Устанавливается на бортик поддона или пол под уплотнитель двери для создания надежного гидробарьера.</p><h3>Технические характеристики и особенности</h3><ul><li>Цвет покрытия: Глянцевый хром (высокополированное гальваническое покрытие)</li><li>Назначение: Эффективное предотвращение вытекания воды из душевой зоны наружу на пол ванной комнаты.</li><li>Монтаж: Фиксируется на прозрачный санитарный герметик.</li></ul>"
+      },
+      "preview_picture": "products/doorsteps.jpg"
     },
     {
       "external_code": "prod_shower_service_",

@@ -22,7 +22,7 @@
     "lara-zeus/spatie-translatable": "^2.0",
     "laravel/framework": "^13.0",
     "laravel/tinker": "^3.0",
-    "nicole/box-core": "dev-main",
+    "nicole/box-core": "@dev",
     "njxqlus/filament-relation-manager-component": "^2.2",
     "outerweb/filament-translatable-fields": "^4.1",
     "spatie/browsershot": "^5.4",

@@ -8,8 +8,8 @@ interface Props {
   name: string;
   priceFrom: number;
   bootstrapConfig?: any;
-  shortDescription?: string | null; // Добавили краткое описание
-  description?: string | null;      // Добавили полное описание
+  shortDescription?: string | null;
+  description?: string | null;
 }
 
 export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescription, description}: Props) {
