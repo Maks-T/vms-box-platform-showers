@@ -1,45 +1,42 @@
-<?php
-/** @var \Nicole\Box\Core\Models\Order $order */
+@php
+  /** @var \Nicole\Box\Core\Models\Order $order */
 
-// Извлекаем и кодируем обложку из конфигурации для безопасного Dompdf
-$coverPath = public_path(config('nicole.company.cover_image', 'pdf/cover.jpg'));
-$coverBase64 = '';
-if (file_exists($coverPath)) {
-  $coverBase64 = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($coverPath));
-}
-?>
+  $currencySymbol = match($order->currency) {
+      'RUB' => 'руб.',
+      'USD' => '$',
+      'BYN' => 'Br',
+      default => $order->currency
+  };
+
+  $coverPath = public_path(config('nicole.company.cover_image', 'pdf/cover.jpg'));
+  $coverBase64 = '';
+  if (file_exists($coverPath)) {
+      $coverBase64 = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($coverPath));
+  } else {
+      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#0f172a"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="4" stroke-opacity="0.4"/><circle cx="400" cy="300" r="120" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.3"/></svg>';
+      $coverBase64 = 'data:image/svg+xml;base64,' . base64_encode($svg);
+  }
+@endphp
 
 <div class="page page-cover">
   <div class="cover-top-section">
-    <!-- Шапка обложки в темном стиле (логотип и контакты Vistegra) -->
     @include('valerie-showers::pdf.partials.header', ['theme' => 'dark'])
 
-    <!-- Превью-изображение (Камера) с плавным градиентным размытием к низу -->
     <div class="cover-img-container">
-      @if ($coverBase64)
-        <img src="{{ $coverBase64 }}" alt="Cover Image" class="cover-img-photo">
-      @else
-        <!-- Заглушка, если файл обложки не настроен в конфигурации -->
-        <img src="https://placehold.co/800x600" alt="Placeholder Image" class="cover-img-photo">
-      @endif
-
-      <!-- Системная маска-градиент для перехода к темному фону (определена в CSS) -->
+      <img src="{{ $coverBase64 }}" alt="Cover Image" class="cover-img-photo">
       <div class="cover-img-gradient"></div>
     </div>
   </div>
 
-  <!-- Информационный блок коммерческого предложения -->
   <div class="cover-content-container">
     <div class="cover-title-container">
       <div class="cover-subtitle-showers">Коммерческое предложение</div>
       <h1 class="cover-title-showers">
-        Система видеонаблюдения<br>и контроля доступа
+        Душевые перегородки<br>и стеклянные конструкции
       </h1>
     </div>
 
-    <!-- Список мета-данных по заказу из БД -->
     <div class="cover-meta-showers">
-      <!-- Добавленная строка: Номер КП (уникальный код заказа в БД Laravel) -->
       <div class="cover-meta-row">
         <span class="cover-meta-label-showers">Номер КП:</span>
         <span class="cover-meta-value-showers">
@@ -48,21 +45,30 @@ if (file_exists($coverPath)) {
       </div>
 
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">дата формирования:</span>
+        <span class="cover-meta-label-showers">Дата формирования:</span>
         <span class="cover-meta-value-showers">
           {{ $order->created_at ? \Carbon\Carbon::parse($order->created_at)->format('d.m.Y') : date('d.m.Y') }}
         </span>
       </div>
 
+      @if ($order->customer)
+        <div class="cover-meta-row">
+          <span class="cover-meta-label-showers">Заказчик:</span>
+          <span class="cover-meta-value-showers">
+            {{ $order->customer->full_name }}
+          </span>
+        </div>
+      @endif
+
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">расчётов в корзине:</span>
+        <span class="cover-meta-label-showers">Изделий в заказе:</span>
         <span class="cover-meta-value-showers">
           {{ $order->sections->count() }}
         </span>
       </div>
 
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">итого к оплате:</span>
+        <span class="cover-meta-label-showers">Итого к оплате:</span>
         <span class="cover-meta-value-showers">
           {{ number_format($order->grand_total, 0, '.', ' ') }} {{ $currencySymbol }}
         </span>
@@ -70,6 +76,5 @@ if (file_exists($coverPath)) {
     </div>
   </div>
 
-  <!-- Подвал обложки в темном стиле -->
-  @include('valerie-showers::pdf.partials.footer', ['pageNum' => 1, 'theme' => 'dark'])
+  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++, 'theme' => 'dark'])
 </div>

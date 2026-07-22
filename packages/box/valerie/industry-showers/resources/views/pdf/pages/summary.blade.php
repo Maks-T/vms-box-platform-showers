@@ -23,12 +23,10 @@
 @endphp
 
 <div class="page">
-  <!-- Шапка в светлом стиле -->
   @include('valerie-showers::pdf.partials.header', ['theme' => 'light'])
 
   <div class="page-content">
 
-    <!-- 1. Заголовок страницы -->
     <div class="page-title-container">
       <h1 class="page-title">Коммерческое предложение</h1>
       <div class="page-subtitle">
@@ -38,7 +36,6 @@
       </div>
     </div>
 
-    <!-- 2. Сводная таблица по всем расчетам -->
     <table class="estimate-table">
       <thead>
       <tr class="estimate-table-th">
@@ -92,7 +89,6 @@
         </tr>
       @endforeach
 
-      <!-- Строка общих итогов сметы -->
       <tr class="estimate-row-total">
         <td class="estimate-cell-total-bold">Итого по заказу</td>
         <td class="estimate-cell-total-medium">{{ $totalPositions }}</td>
@@ -112,29 +108,58 @@
       </tbody>
     </table>
 
-    <!-- 3. Спецификация первого расчета (Только Камеры) -->
-    @if($order->sections->isNotEmpty())
+    @foreach ($order->sections as $index => $section)
       @php
-        $firstSection = $order->sections->first();
+        $drawImg = null;
+        $mediaItem = $section->getFirstMedia('drawing');
+
+        if ($mediaItem && file_exists($mediaItem->getPath())) {
+          $mime = mime_content_type($mediaItem->getPath());
+          $drawImg = 'data:' . $mime . ';base64,' . base64_encode(file_get_contents($mediaItem->getPath()));
+        } else {
+          $meta = is_array($section->meta) ? $section->meta : json_decode((string)($section->meta ?? '{}'), true);
+          $drawImg = $meta['draw'][0] ?? ($meta['properties']['draw'][0] ?? null);
+        }
       @endphp
 
-      <div class="section-summary-title-bar">
-        <div class="section-summary-title-text">Расчёт №1 · {{ $firstSection->title }}</div>
-        <div class="section-summary-price">
-          {{ PdfEstimateRenderer::formatPrice($firstSection->price_grand_total, $currencySymbol) }}
+      <div class="section-card">
+        <div class="section-card-header">
+          <div class="section-header-title">
+            0{{ $index + 1 }} · {{ $section->title }}
+          </div>
+          <div class="section-header-price">
+            {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
+          </div>
+        </div>
+
+        <div class="section-card-body">
+          @if ($drawImg)
+            <div class="section-body-left">
+              <img src="{{ $drawImg }}" alt="{{ $section->title }}" class="section-fallback-img">
+            </div>
+          @endif
+
+          <div class="section-body-right" style="width: {{ $drawImg ? '50%' : '100%' }} !important;">
+            @if (!empty($section->description))
+              <table class="specs-table">
+                @foreach ($section->description as $spec)
+                  @if (!empty($spec['name']) && !empty($spec['description']))
+                    <tr>
+                      <td class="spec-label">{{ $spec['name'] }}</td>
+                      <td class="spec-value">{{ $spec['description'] }}</td>
+                    </tr>
+                  @endif
+                @endforeach
+              </table>
+            @else
+              <div class="specs-missing">Характеристики не указаны</div>
+            @endif
+          </div>
         </div>
       </div>
-
-      @foreach($firstSection->estimate ?? [] as $index => $categoryNode)
-        <!-- На второй странице выводятся только Камеры первого расчета -->
-        @continue($index !== 1)
-
-        <!-- Внедряем наш переиспользуемый компонент таблицы сметы -->
-        @include('valerie-showers::pdf.partials.estimate-table', ['categoryNode' => $categoryNode, 'section' => $firstSection])
-      @endforeach
-    @endif
+    @endforeach
 
   </div>
 
-  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++])
+  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++, 'theme' => 'light'])
 </div>
