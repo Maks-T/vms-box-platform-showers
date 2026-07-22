@@ -71,6 +71,8 @@
 
 @include('valerie-showers::pdf.pages.estimate')
 
+@include('valerie-showers::pdf.pages.materials')
+
 @include('valerie-showers::pdf.pages.contacts')
 
 </body>

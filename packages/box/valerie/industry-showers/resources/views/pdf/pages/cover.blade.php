@@ -13,7 +13,7 @@
   if (file_exists($coverPath)) {
       $coverBase64 = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($coverPath));
   } else {
-      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#0f172a"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="4" stroke-opacity="0.4"/><circle cx="400" cy="300" r="120" fill="none" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.3"/></svg>';
+      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#0f172a"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="3" stroke-opacity="0.3"/><circle cx="400" cy="300" r="100" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.2"/></svg>';
       $coverBase64 = 'data:image/svg+xml;base64,' . base64_encode($svg);
   }
 @endphp
@@ -69,7 +69,7 @@
 
       <div class="cover-meta-row">
         <span class="cover-meta-label-showers">Итого к оплате:</span>
-        <span class="cover-meta-value-showers">
+        <span class="cover-meta-value-showers cover-meta-value-price">
           {{ number_format($order->grand_total, 0, '.', ' ') }} {{ $currencySymbol }}
         </span>
       </div>
