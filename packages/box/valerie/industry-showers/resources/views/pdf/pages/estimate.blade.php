@@ -12,8 +12,6 @@
 
 @foreach ($order->sections as $sectionIndex => $section)
   @php
-    $techPrice = PdfEstimateRenderer::resolveTechSupervisionPrice($section->estimate ?? []);
-
     $validCategories = [];
     foreach ($section->estimate ?? [] as $index => $categoryNode) {
       if ($index === 0) continue;
@@ -42,20 +40,11 @@
 
         <div class="total-breakdown-card">
           <div class="breakdown-row">
-            <span class="breakdown-label">Стоимость оборудования и работ</span>
+            <span class="breakdown-label">Стоимость материалов и работ</span>
             <span class="breakdown-value">
-              {{ PdfEstimateRenderer::formatPrice($section->price_grand_total - $techPrice, $currencySymbol) }}
+              {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
             </span>
           </div>
-
-          @if($techPrice > 0)
-            <div class="breakdown-row">
-              <span class="breakdown-label">Технический надзор</span>
-              <span class="breakdown-value">
-                {{ PdfEstimateRenderer::formatPrice($techPrice, $currencySymbol) }}
-              </span>
-            </div>
-          @endif
 
           @if($section->price_discount > 0)
             <div class="breakdown-row">
@@ -76,7 +65,7 @@
 
       </div>
 
-      @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++])
+      @include('valerie-showers::pdf.partials.footer')
     </div>
   @endif
 @endforeach

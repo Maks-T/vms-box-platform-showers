@@ -104,5 +104,5 @@
 
   </div>
 
-  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++])
+  @include('valerie-showers::pdf.partials.footer')
 </div>

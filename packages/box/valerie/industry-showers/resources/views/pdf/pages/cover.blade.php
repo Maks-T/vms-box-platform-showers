@@ -13,14 +13,14 @@
   if (file_exists($coverPath)) {
       $coverBase64 = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($coverPath));
   } else {
-      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#0f172a"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="3" stroke-opacity="0.3"/><circle cx="400" cy="300" r="100" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-opacity="0.2"/></svg>';
+      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f8fafc"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="2" stroke-opacity="0.3"/><circle cx="400" cy="300" r="100" fill="none" stroke="#0284c7" stroke-width="1" stroke-opacity="0.2"/></svg>';
       $coverBase64 = 'data:image/svg+xml;base64,' . base64_encode($svg);
   }
 @endphp
 
 <div class="page page-cover">
   <div class="cover-top-section">
-    @include('valerie-showers::pdf.partials.header', ['theme' => 'dark'])
+    @include('valerie-showers::pdf.partials.header', ['theme' => 'light'])
 
     <div class="cover-img-container">
       <img src="{{ $coverBase64 }}" alt="Cover Image" class="cover-img-photo">
@@ -34,6 +34,7 @@
       <h1 class="cover-title-showers">
         Душевые перегородки<br>и стеклянные конструкции
       </h1>
+      <div class="cover-fade-divider"></div>
     </div>
 
     <div class="cover-meta-showers">
@@ -76,5 +77,5 @@
     </div>
   </div>
 
-  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++, 'theme' => 'dark'])
+  @include('valerie-showers::pdf.partials.footer', ['theme' => 'light'])
 </div>

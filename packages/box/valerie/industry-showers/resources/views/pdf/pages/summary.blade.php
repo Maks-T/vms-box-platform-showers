@@ -43,7 +43,6 @@
         <th class="estimate-th-cell-right">Позиций</th>
         <th class="estimate-th-cell-right">Без скидки</th>
         <th class="estimate-th-cell-right">Скидка</th>
-        <th class="estimate-th-cell-right">Тех. надзор</th>
         <th class="estimate-th-cell-right">Итого</th>
       </tr>
       </thead>
@@ -52,7 +51,6 @@
         $totalPositions = 0;
         $totalBasePrice = 0;
         $totalDiscount = 0;
-        $totalTechPrice = 0;
       @endphp
 
       @foreach ($order->sections as $index => $section)
@@ -60,11 +58,8 @@
           $positionsCount = PdfEstimateRenderer::countTotalPositions($section);
           $totalPositions += $positionsCount;
 
-          $techPrice = PdfEstimateRenderer::resolveTechSupervisionPrice($section->estimate ?? []);
-
           $totalBasePrice += $section->price_total;
           $totalDiscount += $section->price_discount;
-          $totalTechPrice += $techPrice;
         @endphp
 
         <tr class="estimate-row">
@@ -80,9 +75,6 @@
           <td class="estimate-cell-price estimate-cell-red">
             {{ $section->price_discount > 0 ? '-' . PdfEstimateRenderer::formatPrice($section->price_discount, $currencySymbol) : '—' }}
           </td>
-          <td class="estimate-cell-price">
-            {{ $techPrice > 0 ? PdfEstimateRenderer::formatPrice($techPrice, $currencySymbol) : '—' }}
-          </td>
           <td class="estimate-cell-total">
             {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
           </td>
@@ -97,9 +89,6 @@
         </td>
         <td class="estimate-cell-total-right-red">
           {{ $totalDiscount > 0 ? '-' . PdfEstimateRenderer::formatPrice($totalDiscount, $currencySymbol) : '—' }}
-        </td>
-        <td class="estimate-cell-total-right-blue">
-          {{ $totalTechPrice > 0 ? PdfEstimateRenderer::formatPrice($totalTechPrice, $currencySymbol) : '—' }}
         </td>
         <td class="estimate-cell-total-right-bold">
           {{ PdfEstimateRenderer::formatPrice($order->grand_total, $currencySymbol) }}
@@ -139,7 +128,7 @@
             </div>
           @endif
 
-          <div class="section-body-right" style="width: {{ $drawImg ? '50%' : '100%' }} !important;">
+          <div class="section-body-right" style="width: {{ $drawImg ? '48%' : '100%' }} !important;">
             @if (!empty($section->description))
               <table class="specs-table">
                 @foreach ($section->description as $spec)
@@ -161,5 +150,5 @@
 
   </div>
 
-  @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++, 'theme' => 'light'])
+  @include('valerie-showers::pdf.partials.footer', ['theme' => 'light'])
 </div>

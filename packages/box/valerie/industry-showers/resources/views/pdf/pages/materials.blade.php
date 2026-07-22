@@ -70,7 +70,7 @@
                     </div>
                   @endif
 
-                  <div class="material-info-cell" style="width: {{ $base64Photo ? '68%' : '100%' }} !important;">
+                  <div class="material-info-cell">
                     <div class="material-title">{{ $prodName }}</div>
                     <div class="material-sku">Артикул: {{ $variant->sku }}</div>
                     @if (!empty($prodDesc))
@@ -84,7 +84,7 @@
 
         </div>
 
-        @include('valerie-showers::pdf.partials.footer', ['pageNum' => $pageCounter++])
+        @include('valerie-showers::pdf.partials.footer')
       </div>
     @endforeach
   @endforeach
