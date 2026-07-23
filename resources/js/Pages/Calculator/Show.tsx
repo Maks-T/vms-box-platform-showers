@@ -1,9 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {Head} from '@inertiajs/react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Head } from '@inertiajs/react';
 import MainLayout from '@/layouts/MainLayout';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
-import {ShowCalcLoader} from './components/ShowCalcLoader';
-import CalculatorTabs from './components/CalculatorTabs';
 
 interface Props {
   assets: {
@@ -17,8 +15,6 @@ interface Props {
     policyLink?: string;
     ofertaLink?: string;
     state: any;
-    user: any;
-    employee: any;
   };
   currentType: string | null;
 }
@@ -100,16 +96,14 @@ export default function CalculatorShow({assets, initialData, currentType}: Props
       <Head title="Онлайн-калькулятор изделий - VMS-NC"/>
 
       <SectionLayout containerVariant="page" className="!py-0">
-
-        <CalculatorTabs
-          currentType={currentType || 'manager'}
-          className="m-4"
-        />
-
-        <div className="w-full relative z-10 bg-white rounded-2xl border border-border p-4 md:p-8 shadow-sm">
+        <div className="w-full relative z-10 bg-white rounded-2xl border border-border p-4 md:p-8 shadow-sm my-6">
           <div className="relative w-full min-h-[650px] flex flex-col">
-            <ShowCalcLoader isWidgetReady={isWidgetReady}/>
-            <div id={ROOT_CONTAINER_ID} className="w-full flex-1"/>
+            {!isWidgetReady && (
+              <div className="flex items-center justify-center min-h-[400px]">
+                <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary" />
+              </div>
+            )}
+            <div id={ROOT_CONTAINER_ID} />
           </div>
         </div>
       </SectionLayout>

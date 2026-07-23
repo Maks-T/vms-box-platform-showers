@@ -11,13 +11,6 @@ use Inertia\Response;
 
 class CalculatorController
 {
-  /**
-   * Отображение страницы калькулятора Showers с безопасной загрузкой КП.
-   *
-   * @param Request $request
-   * @param string $type Тип калькулятора (user или manager)
-   * @return Response
-   */
   public function show(Request $request, string $type = 'user'): Response
   {
     $widgetSlug = 'widget';
@@ -29,7 +22,6 @@ class CalculatorController
     $orderCode = $request->input('order') ?? $request->input('code');
 
     if ($orderCode) {
-      // Ищем заказ в базе данных строго по уникальному символьному коду КП
       $order = Order::where('code', $orderCode)->first();
     }
 
@@ -49,12 +41,6 @@ class CalculatorController
     ]);
   }
 
-  /**
-   * Динамическое чтение manifest.json и сборка гарантированных абсолютных путей.
-   *
-   * @param string $widgetSlug
-   * @return array{js: string|null, css: string|null}
-   */
   protected function getAssets(string $widgetSlug): array
   {
     $manifestPath = public_path($widgetSlug . '/manifest.json');

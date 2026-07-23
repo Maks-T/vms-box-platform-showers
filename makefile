@@ -115,19 +115,19 @@ package-update:
 
 dw:
 	@echo "Cleaning old widget files..."
-	rm -rf /home/maks-t/vms-box-platform-cctv/public/widget/*
-	@echo "Copying new dev files..."
-	mkdir -p /home/maks-t/vms-box-platform-cctv/public/widget/
-	cp -r /mnt/d/Vistegra/projects/viview/build/* /home/maks-t/vms-box-platform-cctv/public/widget/
+	rm -rf /home/maks-t/vms-box-platform-showers/public/widget/*
+	@echo "Copying new dev build files from Windows..."
+	mkdir -p /home/maks-t/vms-box-platform-showers/public/widget/
+	cp -r /mnt/d/Vistegra/projects/showers/build/* /home/maks-t/vms-box-platform-showers/public/widget/
 	@echo "Clearing Laravel cache..."
 	$(COMPOSE) exec app $(ARTISAN) cache:clear
 	@echo "Done!"
 dww:
 	@echo "Cleaning old widget files..."
-	rm -rf /home/maks-t/vms-box-platform-cctv/public/widget/*
+	rm -rf /home/maks-t/vms-box-platform-showers/public/widget/*
 	@echo "Copying new dev files..."
-	mkdir -p /home/maks-t/vms-box-platform-cctv/public/widget/
-	cp -r /mnt/d/projects/viview/build/* /home/maks-t/vms-box-platform-cctv/public/widget/
+	mkdir -p /home/maks-t/vms-box-platform-showers/public/widget/
+	cp -r /mnt/d/projects/viview/build/* /home/maks-t/vms-box-platform-showers/public/widget/
 	@echo "Clearing Laravel cache..."
 	$(COMPOSE) exec app $(ARTISAN) cache:clear
 	@echo "Done!"

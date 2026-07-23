@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# deploy-hook.sh
+
 set -e # Останавливать выполнение при любых ошибках
 
 BRANCH_NAME=${1:-"deploy/build"}
@@ -7,7 +10,7 @@ echo "Обновление статических файлов виджета к
 
 rm -rf public/widget
 
-git clone -b "$BRANCH_NAME" --single-branch git@github.com:kapitulin24/viview.git public/widget
+git clone -b "$BRANCH_NAME" --single-branch git@github.com:kapitulin24/showers.git public/widget
 
 rm -rf public/widget/.git
 
