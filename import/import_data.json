@@ -10,7 +10,7 @@
       "name": {
         "ru": "Белорусский рубль"
       },
-      "rate": 0.037,
+      "rate": 27.0538,
       "is_default": false,
       "is_active": true
     },
@@ -38,7 +38,7 @@
       "name": {
         "ru": "Доллар США"
       },
-      "rate": 0.0078,
+      "rate": 78.3159,
       "is_default": false,
       "is_active": true
     }
