@@ -58,9 +58,15 @@ class ShowersCalculatorBridgeController extends Controller
   protected function getEavValue($model, string $code): string
   {
     $val = $model->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
+
+    if (!$val && isset($model->product) && $model->product) {
+      $val = $model->product->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
+    }
+
     if (!$val) {
       return '';
     }
+
     return $val->value_option_id ? ($val->option?->slug ?? '') : ($val->value_string ?? (string)$val->value_numeric);
   }
 

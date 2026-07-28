@@ -7,8 +7,20 @@ import path from 'path';
 export default defineConfig({
   plugins: [
     laravel({
-      input: ['resources/css/app.css', 'resources/js/app.tsx'],
-      refresh: true,
+      input: [
+        'resources/css/app.css',
+        'resources/js/app.tsx',
+        'resources/css/filament/admin/theme.css'
+      ],
+      refresh: [
+        'resources/views/**',
+        'resources/js/**',
+        'app/Filament/**',
+        'packages/box/nicole/core/resources/views/**/*.blade.php',
+        'packages/box/nicole/core/src/**/*.php',
+        'packages/box/valerie/industry-showers/resources/views/**/*.blade.php',
+        'packages/box/valerie/industry-showers/src/**/*.php',
+      ],
     }),
     tailwindcss(),
     react(),
