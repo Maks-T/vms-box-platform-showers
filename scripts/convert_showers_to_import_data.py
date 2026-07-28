@@ -9,7 +9,6 @@ import json
 MARKUP_PERCENT = 30.0  # Процент маржи (наценки) для всех товаров на складе
 STOCK_DEFAULT = 10.0   # Дефолтный остаток на складе для всех вариантов
 
-# Официальные курсы валют относительно RUB (прямой курс: сколько рублей в 1 единице валюты)
 CURRENCIES = [
     {
         "external_code": "BYN",
@@ -43,7 +42,6 @@ CURRENCIES = [
     }
 ]
 
-# Карта перевода системных ключей в человекочитаемые названия
 FIELD_LABELS = {
     "hex_color": "HEX Цвет",
     "metallic": "Металличность",
@@ -60,7 +58,6 @@ FIELD_LABELS = {
     "value_user": "Значение пользователя",
 }
 
-# Системные названия типов товаров
 PRODUCT_TYPE_NAMES = {
     "shower_glass": "Стекло душевое",
     "shower_profile": "Профиль душевой",
@@ -72,7 +69,6 @@ PRODUCT_TYPE_NAMES = {
     "shower_service": "Услуга душевой",
 }
 
-# Системные названия категорий
 CATEGORY_NAMES = {
     "cat_showers_glass": "Стекла",
     "cat_showers_profiles": "Профили",
@@ -84,9 +80,6 @@ CATEGORY_NAMES = {
     "cat_showers_services": "Услуги",
 }
 
-# ==============================================================================
-# ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ
-# ==============================================================================
 def find_project_root():
     curr = os.path.abspath(os.getcwd())
     while curr != os.path.dirname(curr):
@@ -173,9 +166,6 @@ def get_preview_picture(row):
         return img_val if img_val else None
     return None
 
-# ==============================================================================
-# КОНВЕРТАЦИЯ
-# ==============================================================================
 def run_conversion(base_dir=None, out_file=None):
     if not base_dir:
         base_dir = find_project_root()
@@ -191,13 +181,8 @@ def run_conversion(base_dir=None, out_file=None):
         furniture_options.append({
             "external_code": f"opt_furniture_color_{fur_id}",
             "slug": fur_id,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": row["HEX_color"].strip(),
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": row["HEX_color"].strip(), "image": None},
             "param": row["HEX_color"].strip()
         })
 
@@ -208,13 +193,8 @@ def run_conversion(base_dir=None, out_file=None):
         glass_color_options.append({
             "external_code": f"opt_glass_color_{glass_id}",
             "slug": glass_id,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": row["HEX_color"].strip(),
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": row["HEX_color"].strip(), "image": None},
             "param": row["HEX_color"].strip()
         })
 
@@ -225,13 +205,8 @@ def run_conversion(base_dir=None, out_file=None):
         door_options.append({
             "external_code": f"opt_door_type_{did}",
             "slug": did,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": None,
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": None, "image": None},
             "param": did
         })
 
@@ -242,13 +217,8 @@ def run_conversion(base_dir=None, out_file=None):
         material_options.append({
             "external_code": f"opt_material_type_{mid}",
             "slug": mid,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": None,
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": None, "image": None},
             "param": mid
         })
 
@@ -259,13 +229,8 @@ def run_conversion(base_dir=None, out_file=None):
         form_options.append({
             "external_code": f"opt_form_type_{fid}",
             "slug": fid,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": None,
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": None, "image": None},
             "param": fid
         })
 
@@ -276,13 +241,8 @@ def run_conversion(base_dir=None, out_file=None):
         crossbar_type_options.append({
             "external_code": f"opt_cb_type_{cid}",
             "slug": cid,
-            "value": {
-                "ru": row["name"].strip()
-            },
-            "meta": {
-                "hex": None,
-                "image": None
-            },
+            "value": {"ru": row["name"].strip()},
+            "meta": {"hex": None, "image": None},
             "param": cid
         })
 
@@ -312,16 +272,8 @@ def run_conversion(base_dir=None, out_file=None):
 
     attr_chan_settings = {
         "channels": {
-            "widget": {
-                "is_public": True,
-                "is_filterable": True,
-                "sort_order": 10
-            },
-            "catalog": {
-                "is_public": True,
-                "is_filterable": True,
-                "sort_order": 10
-            }
+            "widget": {"is_public": True, "is_filterable": True, "sort_order": 10},
+            "catalog": {"is_public": True, "is_filterable": True, "sort_order": 10}
         }
     }
 
@@ -529,7 +481,7 @@ def run_conversion(base_dir=None, out_file=None):
         "binding_rules": []
     }
 
-    # Справочник 1: Фурнитура
+    # Справочники
     en_furniture = load_csv_map(base_dir, "config/furniture.csv")
     furniture_records = []
     for fur_id, row in en_furniture.items():
@@ -555,7 +507,6 @@ def run_conversion(base_dir=None, out_file=None):
         "records": furniture_records
     })
 
-    # Справочник 2: Лимиты геометрии
     en_measures = load_csv_map(base_dir, "limits/measure.csv", "form")
     measure_records = []
     for form_id, row in en_measures.items():
@@ -583,7 +534,6 @@ def run_conversion(base_dir=None, out_file=None):
         "records": measure_records
     })
 
-    # Справочник 3: Лимиты параметров услуг (расстояние МКАД, этаж)
     en_srv_limits = load_csv_map(base_dir, "limits/services.csv", "id")
     srv_limit_records = []
     for sid, row in en_srv_limits.items():
@@ -605,7 +555,6 @@ def run_conversion(base_dir=None, out_file=None):
         "records": srv_limit_records
     })
 
-    # Справочник 4: Настройки интерфейса
     en_interface = load_interface_csv(base_dir, "interface.csv")
     interface_records = []
     for inf_id, row in en_interface.items():
@@ -637,7 +586,7 @@ def run_conversion(base_dir=None, out_file=None):
         "records": interface_records
     })
 
-    # Пайплайн душевых
+    # Плоская схема пайплайна
     import_data["pipelines"].append({
         "external_code": "pl_showers",
         "code": "pl_showers",
@@ -652,9 +601,14 @@ def run_conversion(base_dir=None, out_file=None):
         "schema": {
             "shower_glass": {
                 "profile": {
-                    "label_key": {"ru": "Профиль"},
+                    "label_key": {"ru": "Профиль (П-профиль)"},
                     "type_code": "shower_profile",
                     "is_required": True
+                },
+                "cap": {
+                    "label_key": {"ru": "Заглушка профиля"},
+                    "type_code": "shower_profile",
+                    "is_required": False
                 },
                 "handle": {
                     "label_key": {"ru": "Ручка"},
@@ -671,14 +625,24 @@ def run_conversion(base_dir=None, out_file=None):
                     "type_code": "shower_sealant",
                     "is_required": True
                 },
-                "doorstep": {
-                    "label_key": {"ru": "Порог"},
-                    "type_code": "shower_doorstep",
-                    "is_required": False
-                },
                 "crossbar": {
                     "label_key": {"ru": "Штанга"},
                     "type_code": "shower_crossbar",
+                    "is_required": False
+                },
+                "fix": {
+                    "label_key": {"ru": "Крепление штанги к стене"},
+                    "type_code": "shower_crossbar",
+                    "is_required": False
+                },
+                "fix_glass": {
+                    "label_key": {"ru": "Держатель стекла для штанги"},
+                    "type_code": "shower_crossbar",
+                    "is_required": False
+                },
+                "doorstep": {
+                    "label_key": {"ru": "Порог"},
+                    "type_code": "shower_doorstep",
                     "is_required": False
                 },
                 "services": {
@@ -687,47 +651,11 @@ def run_conversion(base_dir=None, out_file=None):
                     "is_required": False,
                     "is_multiple": True
                 }
-            },
-            "shower_profile": {
-                "cap": {
-                    "label_key": {"ru": "Заглушка"},
-                    "type_code": "shower_profile",
-                    "is_required": True
-                }
-            },
-            "shower_crossbar": {
-                "fix": {
-                    "label_key": {"ru": "Крепление к стене"},
-                    "type_code": "shower_crossbar",
-                    "is_required": True
-                },
-                "fix_glass": {
-                    "label_key": {"ru": "Держатель стекла"},
-                    "type_code": "shower_crossbar",
-                    "is_required": True
-                }
-            },
-            "shower_open_system": {
-                "connector": {
-                    "label_key": {"ru": "Соединитель трека"},
-                    "type_code": "shower_open_system",
-                    "is_required": False
-                },
-                "slide": {
-                    "label_key": {"ru": "Ролики"},
-                    "type_code": "shower_open_system",
-                    "is_required": True
-                },
-                "sealant": {
-                    "label_key": {"ru": "Уплотнитель"},
-                    "type_code": "shower_sealant",
-                    "is_required": True
-                }
             }
         }
     })
 
-    # --- Товар: Стёкла ---
+    # Товары: Стёкла
     for row in en_glasses:
         glass_id = row["id"].strip()
         glass_ext_code = f"prod_shower_glass_{glass_id}"
@@ -771,7 +699,7 @@ def run_conversion(base_dir=None, out_file=None):
 
         import_data["products"].append(product)
 
-    # --- Товар: Профили ---
+    # Товары: Профили
     en_profiles = load_csv_list(base_dir, "prices/profile.csv")
     profile_groups = {}
     for row in en_profiles:
@@ -824,7 +752,7 @@ def run_conversion(base_dir=None, out_file=None):
                 })
         import_data["products"].append(product)
 
-    # --- Товар: Ручки ---
+    # Товары: Ручки
     en_handles = load_csv_list(base_dir, "prices/handle.csv")
     handle_groups = {}
     for row in en_handles:
@@ -883,7 +811,7 @@ def run_conversion(base_dir=None, out_file=None):
             })
         import_data["products"].append(product)
 
-    # --- Товар: Штанги ---
+    # Товары: Штанги
     en_crossbars = load_csv_list(base_dir, "prices/crossbar.csv")
     crossbar_groups = {}
     for row in en_crossbars:
@@ -935,7 +863,7 @@ def run_conversion(base_dir=None, out_file=None):
             })
         import_data["products"].append(product)
 
-    # --- Товар: Системы открывания (Петли / Треки / Ролики) ---
+    # Товары: Системы открывания
     en_open_systems = load_csv_list(base_dir, "prices/open_system.csv")
     opensys_groups = {}
     for row in en_open_systems:
@@ -990,7 +918,7 @@ def run_conversion(base_dir=None, out_file=None):
             })
         import_data["products"].append(product)
 
-    # --- Товар: Уплотнители ---
+    # Товары: Уплотнители
     en_sealants = load_csv_list(base_dir, "prices/sealant.csv")
     sealant_groups = {}
     for row in en_sealants:
@@ -1041,7 +969,7 @@ def run_conversion(base_dir=None, out_file=None):
                 })
         import_data["products"].append(product)
 
-    # --- Товар: Порожки ---
+    # Товары: Порожки
     en_doorsteps = load_csv_list(base_dir, "prices/doorstep.csv")
     product = {
         "external_code": "prod_shower_doorstep_doorsteps",
@@ -1074,60 +1002,54 @@ def run_conversion(base_dir=None, out_file=None):
         })
     import_data["products"].append(product)
 
-    # --- Товар: Услуги ---
+    # =========================================================================
+    # ОБНОВЛЕННЫЕ УСЛУГИ: Каждая строка = отдельный товар с 1 вариацией
+    # =========================================================================
     en_services = load_csv_list(base_dir, "prices/services.csv")
-    service_groups = {}
     for row in en_services:
+        sid = row["id"].strip()
         stype = row["type"].strip()
-        if stype not in service_groups:
-            service_groups[stype] = []
-        service_groups[stype].append(row)
+        sname = row["name"].strip()
+        price1 = to_float(row["price_1"])
+        currency = row.get("currency", "BYN").strip()
 
-    service_name_map = {
-        "measure": "Услуга замера",
-        "delivery": "Услуга доставки",
-        "lift": "Подъем на этаж",
-        "montage": "Монтажные работы"
-    }
+        form_type = row.get("form", "").strip()
+        doors_str = row.get("doors", "").strip()
 
-    for stype, rows in service_groups.items():
-        base_name = service_name_map.get(stype, stype)
         product = {
-            "external_code": f"prod_shower_service_{stype}",
+            "external_code": f"prod_shower_service_{sid}",
             "product_type_external_code": "type_shower_service",
             "category_external_code": "cat_showers_services",
             "catalog_type": "service",
             "unit_code": "pcs",
-            "slug": f"shower-service-{stype}",
-            "name": {"ru": base_name},
-            "code": f"service_{stype}",
+            "slug": f"shower-service-{sid}",
+            "name": {"ru": sname},
+            "code": f"service_{sid}",
             "is_active": True,
             "eav": {
                 "type": f"opt_sh_type_{stype}"
             },
-            "variants": []
-        }
-        for row in rows:
-            row_id = row["id"].strip()
-            product["variants"].append({
-                "external_code": f"var_shower_service_{stype}_{row_id}",
-                "sku": f"SERVICE-{stype.upper()}-{row_id.upper()}",
-                "cost_price": round(to_float(row["price_1"]) / (MARKUP_PERCENT / 100 + 1), 2),
-                "currency": row.get("currency", "BYN").strip(),
-                "markup": MARKUP_PERCENT,
-                "is_default": True,
-                "is_active": True,
-                "stock": STOCK_DEFAULT,
-                "eav": {
-                    "form_type": f"opt_form_type_{row['form'].strip()}" if row.get("form") else "",
-                    "door_type_ids": [f"opt_door_type_{x.strip()}" for x in row.get("doors", "").split(",") if x.strip()]
+            "variants": [
+                {
+                    "external_code": f"var_shower_service_{sid}",
+                    "sku": f"SERVICE-{sid.upper()}",
+                    "name": {"ru": sname},
+                    "cost_price": round(price1 / (MARKUP_PERCENT / 100 + 1), 2),
+                    "currency": currency,
+                    "markup": MARKUP_PERCENT,
+                    "is_default": True,
+                    "is_active": True,
+                    "stock": STOCK_DEFAULT,
+                    "eav": {
+                        "form_type": f"opt_form_type_{form_type}" if form_type else "",
+                        "door_type_ids": [f"opt_door_type_{x.strip()}" for x in doors_str.split(",") if x.strip()]
+                    }
                 }
-            })
+            ]
+        }
         import_data["products"].append(product)
 
-    # --------------------------------------------------------------------------
-    # ОБОГАЩЕНИЕ ОПИСАНИЯМИ И ИЗОБРАЖЕНИЯМИ (ПОСТ-ОБРАБОТКА)
-    # --------------------------------------------------------------------------
+    # Обогащение описаниями и картинками
     desc_map = {}
     detailed_prompts_path = os.path.join(base_dir, "import", "detailed_prompts.json")
     if os.path.exists(detailed_prompts_path):
