@@ -26,9 +26,9 @@ class CalculatorController
     }
 
     $initialData = [
-      'apiUrl' => config('app.url') . '/api/v1',
-      'assetsUrl' => config('app.url') . '/' . $widgetSlug . '/',
-      'baseUrl' => config('app.url'),
+      'apiUrl' => url('/api/v1'),
+      'assetsUrl' => url('/' . $widgetSlug . '/'),
+      'baseUrl' => url('/'),
       'policyLink' => config('nicole.policy_link', '#'),
       'ofertaLink' => config('nicole.oferta_link', '#'),
       'state' => $order ? $order->calc_state : null,
