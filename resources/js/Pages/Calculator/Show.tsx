@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Head } from '@inertiajs/react';
+import React, {useEffect, useRef, useState} from 'react';
+import {Head} from '@inertiajs/react';
+import {Loader2} from 'lucide-react';
 import MainLayout from '@/layouts/MainLayout';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
 
@@ -15,6 +16,9 @@ interface Props {
     policyLink?: string;
     ofertaLink?: string;
     state: any;
+    user: any;
+    employee: any;
+    type: string | null;
   };
   currentType: string | null;
 }
@@ -110,3 +114,5 @@ export default function CalculatorShow({assets, initialData, currentType}: Props
     </MainLayout>
   );
 }
+
+CalculatorShow.layout = (page: any) => page;

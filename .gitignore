@@ -33,3 +33,5 @@ etc/*
 git_diff
 root
 etc
+*_combine*.txt
+*/**/*_combine*.txt

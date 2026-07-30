@@ -19,7 +19,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
 @layer calc {
     .dummy-calc-anchor {
         display: none;
@@ -120,7 +119,7 @@
     }
 
     html {
-        scroll-behavior: smooth;
+
     }
 
     body {

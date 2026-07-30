@@ -1,13 +1,11 @@
-# scripts/convert_showers_to_import_data.py
 import os
 import csv
 import json
+import urllib.request
+import urllib.error
 
-# ==============================================================================
-# ГЛОБАЛЬНЫЙ БЛОК КОНСТАНТ И НАСТРОЕК
-# ==============================================================================
-MARKUP_PERCENT = 30.0  # Процент маржи (наценки) для всех товаров на складе
-STOCK_DEFAULT = 10.0  # Дефолтный остаток на складе для всех вариантов
+MARKUP_PERCENT = 30.0
+STOCK_DEFAULT = 10.0
 
 CURRENCIES = [
   {
@@ -16,8 +14,8 @@ CURRENCIES = [
     "symbol": "Br",
     "symbol_native": {"ru": "руб."},
     "name": {"ru": "Белорусский рубль"},
-    "rate": 27.0538,
-    "is_default": False,
+    "rate": 1.0,
+    "is_default": True,
     "is_active": True
   },
   {
@@ -26,8 +24,8 @@ CURRENCIES = [
     "symbol": "₽",
     "symbol_native": {"ru": "руб."},
     "name": {"ru": "Российский рубль"},
-    "rate": 1.0,
-    "is_default": True,
+    "rate": 0.0472,
+    "is_default": False,
     "is_active": True
   },
   {
@@ -36,7 +34,7 @@ CURRENCIES = [
     "symbol": "$",
     "symbol_native": {"ru": "$"},
     "name": {"ru": "Доллар США"},
-    "rate": 78.3159,
+    "rate": 3.6963,
     "is_default": False,
     "is_active": True
   }
@@ -87,11 +85,11 @@ def find_project_root():
     if os.path.exists(os.path.join(curr, "shared", "csv_ru")):
       return curr
     curr = os.path.dirname(curr)
-  script_dir = os.path.dirname(os.path.abspath(__file__))
+  local_script_dir = os.path.dirname(os.path.abspath(__file__))
   possible_roots = [
-    os.path.abspath(os.path.join(script_dir, "../../../../../")),
-    os.path.abspath(os.path.join(script_dir, "../..")),
-    script_dir
+    os.path.abspath(os.path.join(local_script_dir, "../../../../../")),
+    os.path.abspath(os.path.join(local_script_dir, "../..")),
+    local_script_dir
   ]
   for root in possible_roots:
     if os.path.exists(os.path.join(root, "shared", "csv_ru")):
@@ -166,12 +164,51 @@ def to_bool(val):
   return str(val).lower() in ["+", "true", "yes", "1", "да"]
 
 
-def get_preview_picture(row):
+def download_and_get_preview_picture(row, products_img_dir):
   img = row.get("pathImg")
-  if img:
-    img_val = img.strip()
-    return img_val if img_val else None
-  return None
+  if not img:
+    return None
+  img_val = img.strip()
+  if img_val.startswith("http://") or img_val.startswith("https://"):
+    try:
+      filename = img_val.split("/")[-1]
+      local_path = os.path.join(products_img_dir, filename)
+      if not os.path.exists(local_path):
+        os.makedirs(products_img_dir, exist_ok=True)
+        urllib.request.urlretrieve(img_val, local_path)
+      return f"products/{filename}"
+    except (urllib.error.URLError, ValueError, OSError):
+      return None
+  return img_val if img_val else None
+
+
+def build_complex_dictionary(external_code, code, name, records_list, record_prefix):
+  records = []
+  for row in records_list:
+    rec_id = row["id"].strip()
+    records.append({
+      "external_code": f"{record_prefix}_{rec_id}",
+      "slug": rec_id,
+      "name": {"ru": row["name"].strip()},
+      "meta": {}
+    })
+  return {
+    "external_code": external_code,
+    "code": code,
+    "name": {"ru": name},
+    "meta_schema": [],
+    "records": records
+  }
+
+
+def build_option(external_code, slug, name, hex_color=None, param=None):
+  return {
+    "external_code": external_code,
+    "slug": slug,
+    "value": {"ru": name},
+    "meta": {"hex": hex_color, "image": None},
+    "param": param if param is not None else slug
+  }
 
 
 def run_conversion(base_dir=None, out_file=None):
@@ -181,78 +218,48 @@ def run_conversion(base_dir=None, out_file=None):
     out_file = os.path.join(base_dir, "import", "import_data.json")
 
   os.makedirs(os.path.dirname(out_file), exist_ok=True)
+  products_img_dir = os.path.join(base_dir, "import", "export_images", "products")
+  variants_img_dir = os.path.join(base_dir, "import", "export_images", "variants")
 
   en_furniture = load_csv_list(base_dir, "config/furniture.csv")
   furniture_options = []
   for row in en_furniture:
     fur_id = row["id"].strip()
-    furniture_options.append({
-      "external_code": f"opt_furniture_color_{fur_id}",
-      "slug": fur_id,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": row["HEX_color"].strip(), "image": None},
-      "param": row["HEX_color"].strip()
-    })
+    furniture_options.append(
+      build_option(f"opt_furniture_color_{fur_id}", fur_id, row["name"].strip(), row["HEX_color"].strip(),
+                   row["HEX_color"].strip()))
 
   en_glasses = load_csv_list(base_dir, "prices/glasses.csv")
   glass_color_options = []
   for row in en_glasses:
     glass_id = row["id"].strip()
-    glass_color_options.append({
-      "external_code": f"opt_glass_color_{glass_id}",
-      "slug": glass_id,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": row["HEX_color"].strip(), "image": None},
-      "param": row["HEX_color"].strip()
-    })
+    glass_color_options.append(
+      build_option(f"opt_glass_color_{glass_id}", glass_id, row["name"].strip(), row["HEX_color"].strip(),
+                   row["HEX_color"].strip()))
 
   en_doors = load_csv_list(base_dir, "config/doors.csv")
   door_options = []
   for row in en_doors:
     did = row["id"].strip()
-    door_options.append({
-      "external_code": f"opt_door_type_{did}",
-      "slug": did,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": None, "image": None},
-      "param": did
-    })
+    door_options.append(build_option(f"opt_door_type_{did}", did, row["name"].strip()))
 
   en_materials = load_csv_list(base_dir, "config/material.csv")
   material_options = []
   for row in en_materials:
     mid = row["id"].strip()
-    material_options.append({
-      "external_code": f"opt_material_type_{mid}",
-      "slug": mid,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": None, "image": None},
-      "param": mid
-    })
+    material_options.append(build_option(f"opt_material_type_{mid}", mid, row["name"].strip()))
 
   en_forms = load_csv_list(base_dir, "config/form.csv")
   form_options = []
   for row in en_forms:
     fid = row["id"].strip()
-    form_options.append({
-      "external_code": f"opt_form_type_{fid}",
-      "slug": fid,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": None, "image": None},
-      "param": fid
-    })
+    form_options.append(build_option(f"opt_form_type_{fid}", fid, row["name"].strip()))
 
   en_crossbar_types = load_csv_list(base_dir, "config/crossbar.csv")
   crossbar_type_options = []
   for row in en_crossbar_types:
     cid = row["id"].strip()
-    crossbar_type_options.append({
-      "external_code": f"opt_cb_type_{cid}",
-      "slug": cid,
-      "value": {"ru": row["name"].strip()},
-      "meta": {"hex": None, "image": None},
-      "param": cid
-    })
+    crossbar_type_options.append(build_option(f"opt_cb_type_{cid}", cid, row["name"].strip()))
 
   thickness_options = [
     {"external_code": "opt_thickness_6mm", "slug": "6mm", "value": {"ru": "6 мм"}, "meta": {"hex": None, "image": None},
@@ -303,12 +310,12 @@ def run_conversion(base_dir=None, out_file=None):
     }
   }
 
-  import_data = {
+  import_data: dict[str, list] = {
     "currencies": CURRENCIES,
     "price_types": [
       {
         "slug": "retail",
-        "currency_code": "RUB",
+        "currency_code": "BYN",
         "is_default": True,
         "name": {"ru": "Цена продажи"},
         "description": {"ru": "Базовая розничная цена в системе"}
@@ -516,7 +523,6 @@ def run_conversion(base_dir=None, out_file=None):
     "binding_rules": []
   }
 
-  # Справочники
   en_furniture = load_csv_map(base_dir, "config/furniture.csv")
   furniture_records = []
   for fur_id, row in en_furniture.items():
@@ -621,7 +627,6 @@ def run_conversion(base_dir=None, out_file=None):
     "records": interface_records
   })
 
-  # Плоская схема пайплайна
   import_data["pipelines"].append({
     "external_code": "pl_showers",
     "code": "pl_showers",
@@ -690,10 +695,11 @@ def run_conversion(base_dir=None, out_file=None):
     }
   })
 
-  # Товары: Стёкла
   for row in en_glasses:
     glass_id = row["id"].strip()
     glass_ext_code = f"prod_shower_glass_{glass_id}"
+    local_preview_path = download_and_get_preview_picture(row, products_img_dir)
+
     product = {
       "external_code": glass_ext_code,
       "product_type_external_code": "type_shower_glass",
@@ -701,7 +707,7 @@ def run_conversion(base_dir=None, out_file=None):
       "catalog_type": "product",
       "unit_code": "m2",
       "slug": f"shower-glass-{glass_id}",
-      "preview_picture": get_preview_picture(row),
+      "preview_picture": local_preview_path,
       "name": {"ru": row["name"].strip()},
       "code": f"glass_{glass_id}",
       "is_active": True,
@@ -714,11 +720,14 @@ def run_conversion(base_dir=None, out_file=None):
       "variants": []
     }
 
+    variants = []
     thicknesses = [("6", "price_6mm"), ("8", "price_8mm"), ("10", "price_10mm")]
     for thick_slug, col_name in thicknesses:
       price_val = to_float(row[col_name])
+      if price_val <= 0:
+        continue
       parent_var_code = f"var_shower_glass_{glass_id}_{thick_slug}mm"
-      product["variants"].append({
+      variants.append({
         "external_code": parent_var_code,
         "sku": f"GLASS-{glass_id}-{thick_slug}MM",
         "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
@@ -731,10 +740,9 @@ def run_conversion(base_dir=None, out_file=None):
           "glass_thickness": f"opt_thickness_{thick_slug}mm"
         }
       })
-
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Профили
   en_profiles = load_csv_list(base_dir, "prices/profile.csv")
   profile_groups = {}
   for row in en_profiles:
@@ -766,12 +774,15 @@ def run_conversion(base_dir=None, out_file=None):
       },
       "variants": []
     }
+    variants = []
     for row in rows:
       fur_color = row["furniture_type_id"].strip()
       thicknesses = [("6", "price_6mm"), ("8", "price_8mm"), ("10", "price_10mm")]
       for thick_slug, col_name in thicknesses:
         price_val = to_float(row[col_name])
-        product["variants"].append({
+        if price_val <= 0:
+          continue
+        variants.append({
           "external_code": f"var_shower_profile_{ptype}_{fur_color}_{thick_slug}mm",
           "sku": f"PROFILE-{ptype.upper()}-{fur_color.upper()}-{thick_slug}MM",
           "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
@@ -785,9 +796,9 @@ def run_conversion(base_dir=None, out_file=None):
             "furniture_type_id": f"opt_furniture_color_{fur_color}"
           }
         })
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Ручки
   en_handles = load_csv_list(base_dir, "prices/handle.csv")
   handle_groups = {}
   for row in en_handles:
@@ -825,16 +836,17 @@ def run_conversion(base_dir=None, out_file=None):
       },
       "variants": []
     }
+    variants = []
     for row in rows:
       fur_color = row["furniture_type_id"].strip()
       row_id = row["id"].strip()
-      product["variants"].append({
+      variants.append({
         "external_code": f"var_shower_handle_{htype}_{fur_color}_{row_id}",
         "sku": f"HANDLE-{htype.upper()}-{fur_color.upper()}-{row_id.upper()}",
         "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
         "currency": row.get("currency", "USD").strip(),
         "markup": MARKUP_PERCENT,
-        "preview_picture": get_preview_picture(row),
+        "preview_picture": download_and_get_preview_picture(row, products_img_dir),
         "is_default": True,
         "is_active": True,
         "stock": STOCK_DEFAULT,
@@ -844,9 +856,9 @@ def run_conversion(base_dir=None, out_file=None):
           "interface_name": row["interface_name"].strip()
         }
       })
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Штанги
   en_crossbars = load_csv_list(base_dir, "prices/crossbar.csv")
   crossbar_groups = {}
   for row in en_crossbars:
@@ -878,11 +890,12 @@ def run_conversion(base_dir=None, out_file=None):
       },
       "variants": []
     }
+    variants = []
     for row in rows:
       fur_color = row["furniture_type_id"].strip()
       row_id = row["id"].strip()
       cb_type = row["crossbar_type_id"].strip()
-      product["variants"].append({
+      variants.append({
         "external_code": f"var_shower_crossbar_{ctype}_{cb_type}_{fur_color}_{row_id}",
         "sku": f"CROSSBAR-{ctype.upper()}-{cb_type.upper()}-{fur_color.upper()}-{row_id.upper()}",
         "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
@@ -896,9 +909,9 @@ def run_conversion(base_dir=None, out_file=None):
           "furniture_type_id": f"opt_furniture_color_{fur_color}"
         }
       })
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Системы открывания
   en_open_systems = load_csv_list(base_dir, "prices/open_system.csv")
   opensys_groups = {}
   for row in en_open_systems:
@@ -931,13 +944,14 @@ def run_conversion(base_dir=None, out_file=None):
       },
       "variants": []
     }
+    variants = []
     for row in rows:
       fur_color = row["furniture_type_id"].strip()
       row_id = row["id"].strip()
       mat_type = row["material_type_id"].strip()
       item_price = to_float(row.get("price", 0))
 
-      product["variants"].append({
+      variants.append({
         "external_code": f"var_shower_opensys_{otype}_{mat_type}_{fur_color}_{row_id}",
         "sku": f"OPENSYS-{otype.upper()}-{mat_type.upper()}-{fur_color.upper()}-{row_id.upper()}",
         "cost_price": round(item_price / (MARKUP_PERCENT / 100 + 1), 2),
@@ -951,9 +965,9 @@ def run_conversion(base_dir=None, out_file=None):
           "furniture_type_id": f"opt_furniture_color_{fur_color}"
         }
       })
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Уплотнители
   en_sealants = load_csv_list(base_dir, "prices/sealant.csv")
   sealant_groups = {}
   for row in en_sealants:
@@ -985,11 +999,14 @@ def run_conversion(base_dir=None, out_file=None):
       },
       "variants": []
     }
+    variants = []
     for row in rows:
       thicknesses = [("6", "price_6mm"), ("8", "price_8mm"), ("10", "price_10mm")]
       for thick_slug, col_name in thicknesses:
         price_val = to_float(row[col_name])
-        product["variants"].append({
+        if price_val <= 0:
+          continue
+        variants.append({
           "external_code": f"var_shower_sealant_{stype}_{thick_slug}mm",
           "sku": f"SEALANT-{stype.upper()}-{thick_slug}MM",
           "cost_price": round(price_val / (MARKUP_PERCENT / 100 + 1), 2),
@@ -1002,9 +1019,9 @@ def run_conversion(base_dir=None, out_file=None):
             "glass_thickness": f"opt_thickness_{thick_slug}mm"
           }
         })
+    product["variants"] = variants
     import_data["products"].append(product)
 
-  # Товары: Порожки
   en_doorsteps = load_csv_list(base_dir, "prices/doorstep.csv")
   product = {
     "external_code": "prod_shower_doorstep_doorsteps",
@@ -1019,10 +1036,11 @@ def run_conversion(base_dir=None, out_file=None):
     "eav": {},
     "variants": []
   }
+  variants = []
   for row in en_doorsteps:
     fur_color = row["furniture_type_id"].strip()
     row_id = row["id"].strip()
-    product["variants"].append({
+    variants.append({
       "external_code": f"var_shower_doorstep_{row_id}",
       "sku": f"DOORSTEP-{fur_color.upper()}-{row_id.upper()}",
       "cost_price": round(to_float(row["price"]) / (MARKUP_PERCENT / 100 + 1), 2),
@@ -1035,11 +1053,9 @@ def run_conversion(base_dir=None, out_file=None):
         "furniture_type_id": f"opt_furniture_color_{fur_color}"
       }
     })
+  product["variants"] = variants
   import_data["products"].append(product)
 
-  # =========================================================================
-  # ОБНОВЛЕННЫЕ УСЛУГИ: Каждая строка = отдельный товар с 1 вариацией
-  # =========================================================================
   en_services = load_csv_list(base_dir, "prices/services.csv")
   for row in en_services:
     sid = row["id"].strip()
@@ -1084,7 +1100,6 @@ def run_conversion(base_dir=None, out_file=None):
     }
     import_data["products"].append(product)
 
-  # Обогащение описаниями и картинками
   desc_map = {}
   detailed_prompts_path = os.path.join(base_dir, "import", "detailed_prompts.json")
   if os.path.exists(detailed_prompts_path):
@@ -1096,11 +1111,8 @@ def run_conversion(base_dir=None, out_file=None):
           description = item.get("description")
           if pcode and description:
             desc_map[pcode] = description
-    except Exception as e:
-      print(f"[WARNING] Failed to load detailed_prompts.json: {e}")
-
-  products_img_dir = os.path.join(base_dir, "import", "export_images", "products")
-  variants_img_dir = os.path.join(base_dir, "import", "export_images", "variants")
+    except (urllib.error.URLError, ValueError, OSError):
+      pass
 
   for product in import_data["products"]:
     pcode = product.get("code")
@@ -1133,12 +1145,22 @@ def run_conversion(base_dir=None, out_file=None):
         if found_var_file:
           variant["preview_picture"] = f"variants/{found_var_file}"
 
+  import_data["complex_dictionaries"].append(
+    build_complex_dictionary("dict_shower_forms", "shower_forms", "Формы душевых", en_forms, "rec_config_form")
+  )
+  import_data["complex_dictionaries"].append(
+    build_complex_dictionary("dict_shower_doors", "shower_doors", "Типы дверей душевых", en_doors, "rec_config_door")
+  )
+  import_data["complex_dictionaries"].append(
+    build_complex_dictionary("dict_shower_materials", "shower_materials", "Материалы душевых", en_materials,
+                             "rec_config_material")
+  )
+
   with open(out_file, 'w', encoding='utf-8') as f:
     json.dump(import_data, f, indent=2, ensure_ascii=False)
 
 
 if __name__ == '__main__':
-  script_dir = os.path.dirname(os.path.abspath(__file__))
   default_base = find_project_root()
   default_out = os.path.join(default_base, "import", "import_data.json")
   run_conversion(default_base, default_out)
