@@ -1,50 +1,64 @@
-import {route} from 'ziggy-js';
-
 export interface NavItem {
   label: string;
   href: string;
   disabled?: boolean;
+  forceRefresh?: boolean;
 }
 
 export interface SocialItem {
   id: string;
   src?: string;
-  icon?: any;
   href: string;
   label: string;
 }
 
 export const siteConfig = {
   company: {
-    name: "VMS-NC Cloud SaaS",
-    status: "Каталог VMS-NC",
-    copyright: `© ${new Date().getFullYear()} Vistegra. Все права защищены.`,
+    name: "Прозрачные решения",
+    tagline: "Душевые кабины, перегородки и зеркала на заказ в Минске",
+    status: "Изготовление за 15 дней",
+    copyright: `© ${new Date().getFullYear()} Прозрачные решения. Все права защищены.`,
   },
 
   contacts: {
-    phone: {label: "+375 29 189-83-22", href: "tel:++375291898322"},
-    email: {label: "info@vistegra.by", href: "mailto:info@vistegra.by"},
+    phone: {
+      label: "+375 (44) 555-61-01",
+      href: "tel:+375445556101",
+      formatted: "+375 (44) 555-61-01",
+    },
+    email: {
+      label: "info@proreshenia.by",
+      href: "mailto:info@proreshenia.by",
+    },
+    address: "г. Минск, Республика Беларусь",
+    workingHours: "Пн-Вс: 09:00 - 20:00",
   },
 
   socials: [
-    {id: 'telegram', src: "/images/icons/telegram.svg", href: "https://t.me/Andrey_Uglikov", label: "Telegram"},
-    {id: 'viber', src: "/images/icons/viber.svg", href: "viber://chat?number=+375291898322", label: "Viber"},
-    {id: 'whatsapp', src: "/images/icons/whatsapp.svg", href: "https://wa.me/375291898322", label: "WhatsApp"},
-    {id: 'chanel', src: "/images/icons/chanel.svg", href: "https://t.me/margin_sense", label: "Канал основателя"},
     {
-      id: 'linkedin',
-      src: "/images/icons/linkedin.svg",
-      href: "https://www.linkedin.com/in/andrey-uglikov-4945881a8/",
-      label: "LinkedIn"
+      id: 'telegram',
+      src: "/images/icons/telegram.svg",
+      href: "https://t.me/proreshenia_by",
+      label: "Telegram",
+    },
+    {
+      id: 'viber',
+      src: "/images/icons/viber.svg",
+      href: "viber://chat?number=+375445556101",
+      label: "Viber",
+    },
+    {
+      id: 'instagram',
+      src: "/images/site/logo/logo-instagram_1.svg",
+      href: "https://instagram.com/proreshenia.by",
+      label: "Instagram",
     },
   ] as SocialItem[],
 
   headerNav: [
-    {label: 'Калькулятор', href: route('calculator.show'), disabled: false, forceRefresh: true},
-    {label: 'Конфигурация', href: route('bootstrap'), disabled: false},
-    {label: 'Каталог', href: route('catalog'), disabled: false},
-    {label: 'Услуги (Матрица)', href: route('services'), disabled: false},
-    {label: 'О компании', href: '#', disabled: true},
-  ] as (NavItem & { forceRefresh?: boolean })[],
-
+    { label: 'Душевые кабины', href: '/shower_cabin' },
+    { label: 'Межкомнатные перегородки', href: '/peregorodki' },
+    { label: 'Зеркала', href: '/zerkala' },
+    { label: 'Контакты', href: '/contacts' },
+  ] as NavItem[],
 };
