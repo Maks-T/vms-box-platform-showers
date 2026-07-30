@@ -15,7 +15,7 @@ export interface SocialItem {
 export const siteConfig = {
   company: {
     name: "Прозрачные решения",
-    tagline: "Душевые кабины, перегородки и зеркала на заказ в Минске",
+    tagline: "Индивидуальное изготовление душевых кабин, зеркал, межкомнатных перегородок «под ключ»",
     status: "Изготовление за 15 дней",
     copyright: `© ${new Date().getFullYear()} Прозрачные решения. Все права защищены.`,
   },
@@ -24,7 +24,6 @@ export const siteConfig = {
     phone: {
       label: "+375 (44) 555-61-01",
       href: "tel:+375445556101",
-      formatted: "+375 (44) 555-61-01",
     },
     email: {
       label: "info@proreshenia.by",
@@ -59,6 +58,8 @@ export const siteConfig = {
     { label: 'Душевые кабины', href: '/shower_cabin' },
     { label: 'Межкомнатные перегородки', href: '/peregorodki' },
     { label: 'Зеркала', href: '/zerkala' },
+    { label: 'Каталог', href: '/catalog' },
+    { label: '3D Калькулятор', href: '/calculator/user', forceRefresh: true },
     { label: 'Контакты', href: '/contacts' },
   ] as NavItem[],
 };

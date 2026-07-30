@@ -1,4 +1,4 @@
-// resources/js/types/catalog.ts
+
 
 /** 1. Метаданные (HEX, Картинки, Схемы, Наценки) */
 export interface EavMeta {
@@ -11,8 +11,8 @@ export interface EavMeta {
 /** 2. Значение справочника (Цвет, Бренд, Группа раскроя) */
 export interface EavValueOption {
   key: string;
-  label: string;                             // Был name
-  param?: string | number | boolean | null;  // Новое поле для технических расчетов!
+  label: string;                             
+  param?: string | number | boolean | null;  
   meta: EavMeta;
 }
 
@@ -22,7 +22,7 @@ export interface EavAttribute {
   type: 'string' | 'numeric' | 'boolean' | 'dictionary' | 'complex_reference';
   is_multiple: boolean;
   value: string | number | boolean | EavValueOption | Array<EavValueOption | string | number | boolean> | null;
-  param_type?: 'none' | 'string' | 'numeric' | 'boolean' | null; // Схема типа параметра с бэка
+  param_type?: 'none' | 'string' | 'numeric' | 'boolean' | null; 
 }
 
 /** 4. Единица измерения */
@@ -81,7 +81,7 @@ export interface Filter {
   code: string;
   name: string;
   type: string;
-  param_type?: 'none' | 'string' | 'numeric' | 'boolean' | null; // Схема типа параметра с бэка
+  param_type?: 'none' | 'string' | 'numeric' | 'boolean' | null; 
   settings: FilterSettings;
   options: EavValueOption[];
 }

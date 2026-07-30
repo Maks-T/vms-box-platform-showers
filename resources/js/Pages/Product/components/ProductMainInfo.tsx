@@ -8,8 +8,8 @@ interface Props {
   name: string;
   priceFrom: number;
   bootstrapConfig?: any;
-  shortDescription?: string | null; // Добавили краткое описание
-  description?: string | null;      // Добавили полное описание
+  shortDescription?: string | null; 
+  description?: string | null;      
 }
 
 export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescription, description}: Props) {
@@ -61,14 +61,14 @@ export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescript
         </div>
       </div>
 
-      {/* Рендеринг краткого описания товара (анонса) */}
+      {}
       {shortDescription && (
         <div className="text-sm text-slate-500 leading-relaxed max-w-2xl mb-6 italic">
           {shortDescription}
         </div>
       )}
 
-      {/* Рендеринг полного описания товара с поддержкой HTML */}
+      {}
       {description && (
         <div
           className="text-sm text-slate-600 leading-relaxed max-w-2xl border-t border-border/50 pt-6 prose prose-slate"

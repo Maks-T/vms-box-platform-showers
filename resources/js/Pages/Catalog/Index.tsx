@@ -69,7 +69,7 @@ export default function CatalogIndex() {
           setProductType={setProductType}
         />
 
-        {/* Строка поиска */}
+        {}
         <div className="mb-8 w-full flex justify-start">
           <CatalogSearchInput
             value={search}

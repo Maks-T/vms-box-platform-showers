@@ -1,4 +1,6 @@
-import {useState, useEffect} from 'react';
+
+
+import { useState, useEffect } from 'react';
 
 export interface CatalogParams {
   family: string;
@@ -8,7 +10,8 @@ export interface CatalogParams {
   filters: Record<string, string[]>;
 }
 
-export function useCatalogParams(defaultFamily: string = 'stone') {
+
+export function useCatalogParams(defaultFamily: string = 'shower') {
   const [params, setParams] = useState<CatalogParams>(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const initial: CatalogParams = {
@@ -49,20 +52,20 @@ export function useCatalogParams(defaultFamily: string = 'stone') {
   }, [params]);
 
   const setPage = (page: number) => {
-    setParams(prev => ({...prev, page}));
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    setParams(prev => ({ ...prev, page }));
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const setFamily = (family: string) => {
-    setParams({family, productType: '', search: '', page: 1, filters: {}});
+    setParams({ family, productType: '', search: '', page: 1, filters: {} });
   };
 
   const setProductType = (type: string) => {
-    setParams(prev => ({...prev, productType: type, page: 1}));
+    setParams(prev => ({ ...prev, productType: type, page: 1 }));
   };
 
   const setSearch = (search: string) => {
-    setParams(prev => ({...prev, search, page: 1}));
+    setParams(prev => ({ ...prev, search, page: 1 }));
   };
 
   const toggleFilter = (code: string, slug: string) => {
@@ -72,19 +75,19 @@ export function useCatalogParams(defaultFamily: string = 'stone') {
         ? currentValues.filter(v => v !== slug)
         : [...currentValues, slug];
 
-      const newFilters = {...prev.filters};
+      const newFilters = { ...prev.filters };
       if (newValues.length > 0) {
         newFilters[code] = newValues;
       } else {
         delete newFilters[code];
       }
 
-      return {...prev, page: 1, filters: newFilters};
+      return { ...prev, page: 1, filters: newFilters };
     });
   };
 
   const clearFilters = () => {
-    setParams(prev => ({...prev, search: '', page: 1, filters: {}}));
+    setParams(prev => ({ ...prev, search: '', page: 1, filters: {} }));
   };
 
   return {

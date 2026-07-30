@@ -2,24 +2,26 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+  <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
 
-    @include('partials.seo', ['seo' => $seo ?? []])
+  @include('partials.seo', ['seo' => $seo ?? []])
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <!-- Подключение официального шрифта TildaSans -->
+  <link rel="stylesheet" href="https://static.tildacdn.biz/css/fonts-tildasans.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
-    @routes
+  @routes
 
-    @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.tsx'])
-    @inertiaHead
+  @viteReactRefresh
+  @vite(['resources/css/app.css', 'resources/js/app.tsx'])
+  @inertiaHead
 </head>
-<body class="font-sans antialiased bg-bg-light text-tx-primary overflow-x-hidden">
+<body class="font-sans antialiased bg-background text-foreground overflow-x-hidden">
 @inertia
 <div class="dummy-calc-anchor">dummy-calc-anchor</div>
 </body>

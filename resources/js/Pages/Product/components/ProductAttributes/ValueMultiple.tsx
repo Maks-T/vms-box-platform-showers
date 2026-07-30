@@ -10,7 +10,7 @@ export function ValueMultiple({values}: Props) {
   return (
     <div className="flex flex-wrap gap-2 justify-end">
       {values.map((v, idx) => {
-        // Проверяем наличие ключа 'label' вместо 'name'
+        
         const isOption = typeof v === 'object' && v !== null && 'label' in v;
         const option = isOption ? (v as EavValueOption) : null;
 

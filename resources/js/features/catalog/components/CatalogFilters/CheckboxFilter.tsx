@@ -36,7 +36,7 @@ export const CheckboxFilter = ({ options, activeValues, onToggle }: any) => (
               "text-[14px] leading-tight transition-colors",
               isChecked ? "text-foreground font-bold" : "text-muted-foreground font-medium group-hover:text-primary"
             )}>
-              {opt.label} {/* Был value */}
+              {opt.label} {}
             </span>
           </div>
         </label>
