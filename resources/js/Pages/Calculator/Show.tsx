@@ -1,6 +1,5 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {Head} from '@inertiajs/react';
-import {Loader2} from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Head } from '@inertiajs/react';
 import MainLayout from '@/layouts/MainLayout';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
 
@@ -31,7 +30,7 @@ declare global {
 
 const ROOT_CONTAINER_ID = 'calcAppRoot';
 
-export default function CalculatorShow({assets, initialData, currentType}: Props) {
+export default function CalculatorShow({ assets, initialData, currentType }: Props) {
   const [isWidgetReady, setIsWidgetReady] = useState(false);
   const unmountFnRef = useRef<(() => void) | null>(null);
 
@@ -97,17 +96,17 @@ export default function CalculatorShow({assets, initialData, currentType}: Props
 
   return (
     <MainLayout headerOverlaps={false}>
-      <Head title="Онлайн-калькулятор изделий - VMS-NC"/>
+      <Head title="Онлайн-калькулятор изделий - Прозрачные решения" />
 
-      <SectionLayout containerVariant="page" className="!py-0">
-        <div className="w-full relative z-10 bg-white rounded-2xl border border-border p-4 md:p-8 shadow-sm my-6">
+      <SectionLayout containerVariant="page" className="!py-0 my-4">
+        <div className="w-full relative z-10 py-0">
           <div className="relative w-full min-h-[650px] flex flex-col">
             {!isWidgetReady && (
               <div className="flex items-center justify-center min-h-[400px]">
-                <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-primary" />
+                <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#004F87]" />
               </div>
             )}
-            <div id={ROOT_CONTAINER_ID} />
+            <div id={ROOT_CONTAINER_ID} className="px-4"/>
           </div>
         </div>
       </SectionLayout>

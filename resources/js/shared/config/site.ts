@@ -59,7 +59,7 @@ export const siteConfig = {
     { label: 'Межкомнатные перегородки', href: '/peregorodki' },
     { label: 'Зеркала', href: '/zerkala' },
     { label: 'Каталог', href: '/catalog' },
-    { label: '3D Калькулятор', href: '/calculator/user', forceRefresh: true },
+    { label: '3D Калькулятор', href: '/calculator', forceRefresh: true },
     { label: 'Контакты', href: '/contacts' },
   ] as NavItem[],
 };

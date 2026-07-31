@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import {Head} from '@inertiajs/react';
+import React, { useState } from 'react';
+import { Head } from '@inertiajs/react';
 import MainLayout from '@/layouts/MainLayout';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
-import {HeroCover} from '@/shared/components/blocks/HeroCover';
-import {FaqAccordion} from '@/shared/components/blocks/FaqAccordion';
-import {Input} from '@/shared/components/ui/Input';
-import {PhoneInput} from '@/shared/components/ui/PhoneInput';
-import {Button} from '@/shared/components/ui/Button';
-import {siteConfig} from '@/shared/config/site';
-import {siteAssets} from '@/shared/config/site-assets';
-import {Phone, Mail, MapPin, Clock, Send, User, CheckCircle2} from 'lucide-react';
+import { HeroCover } from '@/shared/components/blocks/HeroCover';
+import { FaqAccordion } from '@/shared/components/blocks/FaqAccordion';
+import { Input } from '@/shared/components/ui/Input';
+import { PhoneInput } from '@/shared/components/ui/PhoneInput';
+import { Button } from '@/shared/components/ui/Button';
+import { siteConfig } from '@/shared/config/site';
+import { siteAssets } from '@/shared/config/site-assets';
+import { Phone, Mail, MapPin, Clock, Send, User, CheckCircle2 } from 'lucide-react';
 import client from '@/shared/lib/client';
-import {toast} from 'sonner';
+import { toast } from 'sonner';
 
 export default function ContactsIndex() {
-  const {contacts, socials} = siteConfig;
+  const { contacts, socials } = siteConfig;
 
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -44,7 +44,7 @@ export default function ContactsIndex() {
         results: [
           {
             title: 'Консультация со страницы Контакты',
-            price: {total: 0, grand_total: 0},
+            price: { total: 0, grand_total: 0 },
           }
         ]
       });
@@ -61,7 +61,7 @@ export default function ContactsIndex() {
 
   return (
     <MainLayout headerOverlaps={false}>
-      <Head title="Контакты - Прозрачные решения"/>
+      <Head title="Контакты - Прозрачные решения" />
 
       <HeroCover
         title={<>Контактная <span className="text-[#024f87]">информация</span></>}
@@ -71,32 +71,27 @@ export default function ContactsIndex() {
 
       <SectionLayout className="py-12 md:py-20 bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-start w-full max-w-[1240px] mx-auto">
-
-          {/* Левая колонка: Контактные данные */}
           <div className="lg:col-span-6 flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight">
                 Наши <span className="text-[#024f87]">контакты</span>
               </h2>
               <p className="text-slate-600 text-sm md:text-base font-normal leading-relaxed">
-                Мы работаем без выходных. Свяжитесь с нами удобным для вас способом или приезжайте в наш офис для
-                ознакомления с образцами стекол и фурнитуры.
+                Мы работаем без выходных. Свяжитесь с нами удобным для вас способом или приезжайте в наш офис для ознакомления с образцами стекол и фурнитуры.
               </p>
             </div>
 
             <div className="flex flex-col gap-3.5 mt-2">
               <a
                 href={contacts.phone.href}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 hover:border-[#024f87]/40 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 hover:border-[#024f87]/40 transition-all group shadow-none"
               >
-                <div
-                  className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 shadow-sm border border-slate-100">
-                  <Phone className="w-5 h-5"/>
+                <div className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 border border-slate-100">
+                  <Phone className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Телефон</span>
-                  <span
-                    className="text-base md:text-lg font-bold text-slate-900 group-hover:text-[#024f87] transition-colors">
+                  <span className="text-base md:text-lg font-bold text-slate-900 group-hover:text-[#024f87] transition-colors">
                     {contacts.phone.label}
                   </span>
                 </div>
@@ -104,40 +99,36 @@ export default function ContactsIndex() {
 
               <a
                 href={contacts.email.href}
-                className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 hover:border-[#024f87]/40 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 hover:border-[#024f87]/40 transition-all group shadow-none"
               >
-                <div
-                  className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 shadow-sm border border-slate-100">
-                  <Mail className="w-5 h-5"/>
+                <div className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 border border-slate-100">
+                  <Mail className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">E-mail</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-[#024f87] transition-colors">
+                  <span className="text-base md:text-lg font-bold text-slate-900 group-hover:text-[#024f87] transition-colors">
                     {contacts.email.label}
                   </span>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60">
-                <div
-                  className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 shadow-sm border border-slate-100">
-                  <MapPin className="w-5 h-5"/>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 shadow-none">
+                <div className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 border border-slate-100">
+                  <MapPin className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Адрес</span>
-                  <span className="text-base font-bold text-slate-900">{contacts.address}</span>
+                  <span className="text-base md:text-lg font-bold text-slate-900">{contacts.address}</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60">
-                <div
-                  className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 shadow-sm border border-slate-100">
-                  <Clock className="w-5 h-5"/>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-[#F2F7FA] border border-slate-200/60 shadow-none">
+                <div className="w-11 h-11 rounded-xl bg-white text-[#024f87] flex items-center justify-center shrink-0 border border-slate-100">
+                  <Clock className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
-                  <span
-                    className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Режим работы</span>
-                  <span className="text-base font-bold text-slate-900">{contacts.workingHours}</span>
+                  <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Режим работы</span>
+                  <span className="text-base md:text-lg font-bold text-slate-900">{contacts.workingHours}</span>
                 </div>
               </div>
             </div>
@@ -153,7 +144,7 @@ export default function ContactsIndex() {
                     href={social.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-2.5 rounded-xl bg-[#F2F7FA] border border-slate-200 hover:bg-[#024f87] hover:text-white hover:border-[#024f87] transition-all text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer text-slate-800"
+                    className="px-4 py-2.5 rounded-xl bg-[#F2F7FA] border border-slate-200 hover:bg-[#024f87] hover:text-white hover:border-[#024f87] transition-all text-xs font-bold uppercase tracking-wider flex items-center gap-2 cursor-pointer text-slate-800 shadow-none"
                   >
                     {social.label}
                   </a>
@@ -162,8 +153,7 @@ export default function ContactsIndex() {
             </div>
           </div>
 
-          <div
-            className="lg:col-span-6 bg-[#F2F7FA] border border-slate-200 p-6 sm:p-8 md:p-10 rounded-3xl shadow-sm text-slate-900">
+          <div className="lg:col-span-6 bg-[#F2F7FA] border border-slate-200/80 p-6 sm:p-8 md:p-10 rounded-2xl text-slate-900 shadow-none">
             <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-2 text-slate-900">
               Форма обратной связи
             </h3>
@@ -173,9 +163,8 @@ export default function ContactsIndex() {
 
             {isSuccess ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
-                <div
-                  className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
-                  <CheckCircle2 className="w-10 h-10"/>
+                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4">
+                  <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-2">Заявка успешно отправлена!</h4>
                 <p className="text-slate-600 text-sm mb-6 max-w-sm">
@@ -192,7 +181,7 @@ export default function ContactsIndex() {
                   placeholder="Ваше имя"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  icon={<User className="w-4 h-4 text-slate-400"/>}
+                  icon={<User className="w-4 h-4 text-slate-400" />}
                 />
 
                 <PhoneInput
@@ -217,7 +206,7 @@ export default function ContactsIndex() {
                 >
                   {isLoading ? 'Отправка...' : (
                     <>
-                      <Send className="w-4 h-4 mr-2"/>
+                      <Send className="w-4 h-4 mr-2" />
                       Получить расчет
                     </>
                   )}
@@ -228,7 +217,7 @@ export default function ContactsIndex() {
         </div>
       </SectionLayout>
 
-      <FaqAccordion/>
+      <FaqAccordion />
     </MainLayout>
   );
 }
