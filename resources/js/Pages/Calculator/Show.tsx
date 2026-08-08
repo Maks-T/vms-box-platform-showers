@@ -98,7 +98,7 @@ export default function CalculatorShow({ assets, initialData, currentType }: Pro
     <MainLayout headerOverlaps={false}>
       <Head title="Онлайн-калькулятор изделий - Прозрачные решения" />
 
-      <SectionLayout containerVariant="page" className="!py-0 my-4">
+`      <SectionLayout containerVariant="page" className="!py-0 my-4 relative !z-[60]">
         <div className="w-full relative z-10 py-0">
           <div className="relative w-full min-h-[650px] flex flex-col">
             {!isWidgetReady && (
