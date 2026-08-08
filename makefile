@@ -27,6 +27,10 @@ migrate:
 mfs:
 	$(COMPOSE) exec app $(ARTISAN) migrate:fresh --seed
 
+mfsi:
+	$(COMPOSE) exec app $(ARTISAN) migrate:fresh --seed
+  $(COMPOSE) exec app $(ARTISAN) vms:import
+
 # Clear all Laravel cache
 pacc:
 	$(COMPOSE) exec app $(ARTISAN) cache:clear

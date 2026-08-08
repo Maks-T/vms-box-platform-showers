@@ -9,32 +9,40 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Cache;
 use Nicole\Box\Core\Models\Product;
+use Nicole\Box\Core\Models\ProductVariant;
 use Nicole\Box\Core\Models\ComplexDictionary;
 use Nicole\Box\Core\Models\Currency;
 use Nicole\Box\Core\Models\Attribute;
-use Nicole\Box\Core\Services\PricingManager;
 
 class ShowersCalculatorBridgeController extends Controller
 {
-  private const array COLOR_TO_LEGACY_ID_MAP = [
-    'chrome'        => 'id_1',
-    'chrome_matte'  => 'id_2',
-    'black'         => 'id_3',
-    'bronze'        => 'id_4',
-    'gold'          => 'id_5',
-    'gold_matte'    => 'id_6',
-    'white'         => 'id_7',
-    'gunmetal_grey' => 'id_8'
+
+  /**
+   * Фиксированная стоимость выезда (в пределах МКАД)
+   */
+  private const array SERVICE_BASE_PRICES = [
+    'measure' => 30.0, // 30 BYN
+    'delivery' => 30.0, // 30 BYN
+    'lift' => 0.0,  // 0 BYN при лифте
   ];
 
-  private const string CAT_GLASS        = 'cat_showers_glass';
-  private const string CAT_PROFILES     = 'cat_showers_profiles';
-  private const string CAT_HANDLES      = 'cat_showers_handles';
-  private const string CAT_CROSSBARS    = 'cat_showers_crossbars';
+  /**
+   * Точный тариф за километр за МКАД / этаж
+   */
+  private const array SERVICE_TARIFF_RATES = [
+    'measure' => 1.0,  // 1.0 BYN за 1 км
+    'delivery' => 2.5,  // 2.5 BYN за 1 км
+    'lift' => 10.0, // 10.0 BYN за 1 этаж
+  ];
+
+  private const string CAT_GLASS = 'cat_showers_glass';
+  private const string CAT_PROFILES = 'cat_showers_profiles';
+  private const string CAT_HANDLES = 'cat_showers_handles';
+  private const string CAT_CROSSBARS = 'cat_showers_crossbars';
   private const string CAT_OPEN_SYSTEMS = 'cat_showers_open_systems';
-  private const string CAT_SEALANTS     = 'cat_showers_sealants';
-  private const string CAT_DOORSTEPS    = 'cat_showers_doorsteps';
-  private const string CAT_SERVICES     = 'cat_showers_services';
+  private const string CAT_SEALANTS = 'cat_showers_sealants';
+  private const string CAT_DOORSTEPS = 'cat_showers_doorsteps';
+  private const string CAT_SERVICES = 'cat_showers_services';
 
   public function loadData(Request $request): JsonResponse
   {
@@ -43,16 +51,44 @@ class ShowersCalculatorBridgeController extends Controller
 
     $responsePayload = Cache::remember($cacheKey, 86400, function () {
       return [
-        'config'    => $this->loadConfigurations(),
-        'prices'    => $this->loadPrices(),
-        'limits'    => $this->loadLimits(),
+        'config' => $this->loadConfigurations(),
+        'prices' => $this->loadPrices(),
+        'limits' => $this->loadLimits(),
         'interface' => $this->loadInterfaceSettings(),
-        'rates'     => $this->loadExchangeRates(),
-        'status'    => true
+        'rates' => $this->loadExchangeRates(),
+        'status' => true
       ];
     });
 
     return response()->json($responsePayload);
+  }
+
+  /**
+   * Хелпер сборки базовых DTO-данных элемента товара/услуги
+   */
+  protected function buildBaseItemData(ProductVariant $variant, Product $product, string $unitSymbol): array
+  {
+    return [
+      'id' => (string)$variant->id,
+      'variant_id' => $variant->id,
+      'sku' => $variant->sku,
+      'name' => $this->resolveVariantName($variant, $product),
+      'unit' => $unitSymbol,
+      'price' => $this->resolveVariantPrice($variant),
+    ];
+  }
+
+  /**
+   * Хелпер сборки DTO модификаций (для стекол, профилей, уплотнителей)
+   */
+  protected function buildVariantData(ProductVariant $variant): array
+  {
+    return [
+      'id' => $variant->id,
+      'sku' => $variant->sku,
+      'price' => $this->resolveVariantPrice($variant),
+      'is_default' => (bool)$variant->is_default,
+    ];
   }
 
   protected function getEavValue($model, string $code): string
@@ -76,41 +112,27 @@ class ShowersCalculatorBridgeController extends Controller
     if ($vals->isEmpty()) {
       return [];
     }
-    return $vals->map(function($v) {
+    return $vals->map(function ($v) {
       return $v->value_option_id ? ($v->option?->slug ?? '') : ($v->value_string ?? (string)$v->value_numeric);
     })->filter()->values()->toArray();
   }
 
-  protected function getEavOptionParam($model, string $code): ?string
-  {
-    $val = $model->attributeValues->first(fn($v) => $v->attribute && $v->attribute->code === $code);
-    if (!$val || !$val->option) {
-      return null;
-    }
-    return $val->option->param;
-  }
-
-  protected function resolveVariantName($variant, $product): string
+  protected function resolveVariantName(ProductVariant $variant, Product $product): string
   {
     $locale = app()->getLocale();
     return $variant->getTranslation('name', $locale)
       ?: ($product->getTranslation('name', $locale) ?? '');
   }
 
-  protected function resolveVariantPreview($variant, $product): string
+  protected function resolveVariantPreview(ProductVariant $variant, Product $product): string
   {
     return $variant->getPreviewUrl()
       ?: ($product->getPreviewUrl() ?? '');
   }
 
-  protected function resolveVariantPrice($variant): float
+  protected function resolveVariantPrice(ProductVariant $variant): float
   {
     return (float)($variant->retail_price ?? $variant->getPrice());
-  }
-
-  protected function getLegacyColorId(string $colorSlug): string
-  {
-    return self::COLOR_TO_LEGACY_ID_MAP[$colorSlug] ?? $colorSlug;
   }
 
   protected function loadConfigurations(): array
@@ -123,19 +145,19 @@ class ShowersCalculatorBridgeController extends Controller
       foreach ($furnitureDict->records as $record) {
         $slug = $record->slug;
         $config['furniture'][$slug] = [
-          'id'        => $slug,
-          'name'      => $record->getTranslation('name', $locale) ?? $record->name,
-          'hexColor'  => $record->meta['hex_color'] ?? '#FFFFFF',
-          'metallic'  => (float)($record->meta['metallic'] ?? 0.0),
+          'id' => $slug,
+          'name' => $record->getTranslation('name', $locale) ?? $record->name,
+          'hexColor' => $record->meta['hex_color'] ?? '#FFFFFF',
+          'metallic' => (float)($record->meta['metallic'] ?? 0.0),
           'roughness' => (float)($record->meta['roughness'] ?? 0.0),
-          'fluted'    => false
+          'fluted' => false
         ];
       }
     }
 
     $attributeMap = [
-      'form_type'        => 'form',
-      'door_type_ids'    => 'doors',
+      'form_type' => 'form',
+      'door_type_ids' => 'doors',
       'material_type_id' => 'material',
       'crossbar_type_id' => 'crossbar',
     ];
@@ -146,7 +168,7 @@ class ShowersCalculatorBridgeController extends Controller
         foreach ($attribute->options as $option) {
           $slug = $option->slug;
           $config[$frontKey][$slug] = [
-            'id'   => $slug,
+            'id' => $slug,
             'name' => $option->getTranslation('value', $locale) ?? $option->value
           ];
         }
@@ -159,39 +181,43 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadPrices(): array
   {
     $prices = [
-      'crossbar'   => [],
-      'doorstep'   => [],
-      'glasses'    => [],
-      'handle'     => [],
+      'crossbar' => [],
+      'doorstep' => [],
+      'glasses' => [],
+      'handle' => [],
       'openSystem' => [],
-      'profile'    => [],
-      'sealant'    => [],
-      'services'   => []
+      'profile' => [],
+      'sealant' => [],
+      'services' => []
     ];
 
-    $pricingManager = app(PricingManager::class);
-    $priceTypeCurrencyCode = $pricingManager->defaultPriceType->currency->code ?? $pricingManager->baseCurrency->code;
-
-    $allProducts = Product::with([
-      'variants.attributeValues.attribute',
-      'variants.attributeValues.option',
-      'attributeValues.attribute',
-      'attributeValues.option'
-    ])->get();
+    $allProducts = Product::query()
+      ->where('is_active', true)
+      ->with([
+        'variants' => fn($query) => $query->where('is_active', true)->with([
+          'attributeValues.attribute',
+          'attributeValues.option',
+        ]),
+        'attributeValues.attribute',
+        'attributeValues.option',
+        'category',
+        'unit'
+      ])
+      ->get();
 
     foreach ($allProducts as $product) {
       $catCode = $product->category?->external_code ?? '';
       $unitSymbol = $product->unit ? ($product->unit->getTranslation('symbol', app()->getLocale()) ?? $product->unit->symbol) : 'шт.';
 
       match ($catCode) {
-        self::CAT_GLASS        => $this->parseGlassPrices($product, $unitSymbol, $prices),
-        self::CAT_PROFILES     => $this->parseProfilePrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_HANDLES      => $this->parseHandlePrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_CROSSBARS    => $this->parseCrossbarPrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_OPEN_SYSTEMS => $this->parseOpenSystemPrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_SEALANTS     => $this->parseSealantPrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_DOORSTEPS    => $this->parseDoorstepPrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
-        self::CAT_SERVICES     => $this->parseServicePrices($product, $unitSymbol, $priceTypeCurrencyCode, $prices),
+        self::CAT_GLASS => $this->parseGlassPrices($product, $unitSymbol, $prices),
+        self::CAT_PROFILES => $this->parseProfilePrices($product, $unitSymbol, $prices),
+        self::CAT_HANDLES => $this->parseHandlePrices($product, $unitSymbol, $prices),
+        self::CAT_CROSSBARS => $this->parseCrossbarPrices($product, $unitSymbol, $prices),
+        self::CAT_OPEN_SYSTEMS => $this->parseOpenSystemPrices($product, $unitSymbol, $prices),
+        self::CAT_SEALANTS => $this->parseSealantPrices($product, $unitSymbol, $prices),
+        self::CAT_DOORSTEPS => $this->parseDoorstepPrices($product, $unitSymbol, $prices),
+        self::CAT_SERVICES => $this->parseServicePrices($product, $unitSymbol, $prices),
         default => null
       };
     }
@@ -199,7 +225,7 @@ class ShowersCalculatorBridgeController extends Controller
     return $prices;
   }
 
-  private function parseGlassPrices($product, string $unitSymbol, array &$prices): void
+  private function parseGlassPrices(Product $product, string $unitSymbol, array &$prices): void
   {
     $groupedByColor = [];
 
@@ -219,237 +245,210 @@ class ShowersCalculatorBridgeController extends Controller
 
       if (!isset($groupedByColor[$colorSlug])) {
         $groupedByColor[$colorSlug] = [
-          'id'        => $colorSlug,
-          'variant_id' => $variant->id,
-          'name'      => $colorOption->getTranslation('value', app()->getLocale()) ?? $colorOption->value,
-          'hexColor'  => $colorOption->param ?: '#D6E4E5',
+          'id' => $colorSlug,
+          'name' => $colorOption->getTranslation('value', app()->getLocale()) ?? $colorOption->value,
+          'hexColor' => $colorOption->param ?: '#D6E4E5',
           'roughness' => (float)$this->getEavValue($variant, 'roughness'),
-          'fluted'    => (bool)$this->getEavValue($variant, 'fluted'),
-          'pathImg'   => $this->resolveVariantPreview($variant, $product),
-          'prices'    => [
-            '6mm'  => 0.0,
-            '8mm'  => 0.0,
-            '10mm' => 0.0,
-          ],
-          'variant_ids' => [
-            '6mm'  => null,
-            '8mm'  => null,
-            '10mm' => null,
-          ]
+          'fluted' => (bool)$this->getEavValue($variant, 'fluted'),
+          'pathImg' => $this->resolveVariantPreview($variant, $product),
+          'variants' => []
         ];
       }
 
-      $priceVal = $this->resolveVariantPrice($variant);
-      if (str_ends_with($variant->sku, '6MM')) {
-        $groupedByColor[$colorSlug]['prices']['6mm'] = $priceVal;
-        $groupedByColor[$colorSlug]['variant_ids']['6mm'] = $variant->id;
-      } elseif (str_ends_with($variant->sku, '8MM')) {
-        $groupedByColor[$colorSlug]['prices']['8mm'] = $priceVal;
-        $groupedByColor[$colorSlug]['variant_ids']['8mm'] = $variant->id;
-      } elseif (str_ends_with($variant->sku, '10MM')) {
-        $groupedByColor[$colorSlug]['prices']['10mm'] = $priceVal;
-        $groupedByColor[$colorSlug]['variant_ids']['10mm'] = $variant->id;
+      $thicknessSlug = $this->getEavValue($variant, 'glass_thickness');
+
+      if ($thicknessSlug) {
+        $groupedByColor[$colorSlug]['variants'][$thicknessSlug] = $this->buildVariantData($variant);
       }
     }
 
     foreach ($groupedByColor as $colorSlug => $data) {
       $prices['glasses'][$colorSlug] = [
-        'id'          => $colorSlug,
-        'variant_id'  => $data['variant_id'],
-        'name'        => $data['name'],
-        'unit'        => $unitSymbol,
-        'currency'    => 'USD',
-        'price1'      => $data['prices']['6mm'],
-        'price2'      => $data['prices']['8mm'],
-        'price3'      => $data['prices']['10mm'],
-        'variant_ids' => $data['variant_ids'],
-        'hexColor'    => $data['hexColor'],
-        'roughness'   => $data['roughness'],
-        'fluted'      => $data['fluted'],
-        'pathImg'     => $data['pathImg'] ?: ($product->getPreviewUrl() ?? ''),
+        'id' => $colorSlug,
+        'name' => $data['name'],
+        'unit' => $unitSymbol,
+        'variants' => $data['variants'],
+        'hexColor' => $data['hexColor'],
+        'roughness' => $data['roughness'],
+        'fluted' => $data['fluted'],
+        'pathImg' => $data['pathImg'] ?: ($product->getPreviewUrl() ?? ''),
       ];
     }
   }
 
-  private function parseProfilePrices($product, string $unitSymbol, string $currency, array &$prices): void
+  private function parseProfilePrices(Product $product, string $unitSymbol, array &$prices): void
   {
     $type = $this->getEavValue($product, 'type');
+    if (!$type) {
+      return;
+    }
+
     $groupedByColor = [];
 
     foreach ($product->variants as $v) {
       $color = $this->getEavValue($v, 'furniture_type_id');
       $thick = $this->getEavValue($v, 'glass_thickness');
-      $groupedByColor[$color][$thick] = $this->resolveVariantPrice($v);
-      $groupedByColor[$color][$thick . '_variant_id'] = $v->id;
-      $groupedByColor[$color]['name'] = $this->resolveVariantName($v, $product);
-      $groupedByColor[$color]['default_variant_id'] = $v->id;
-    }
 
-    foreach ($groupedByColor as $color => $thickPrices) {
-      $id = $this->getLegacyColorId($color);
-      $prices['profile'][$type][$id] = [
-        'id'              => $id,
-        'variant_id'      => $thickPrices['default_variant_id'] ?? null,
-        'furnitureTypeId' => $color,
-        'name'            => $thickPrices['name'] ?? '',
-        'unit'            => $unitSymbol,
-        'currency'        => $currency,
-        'price1'          => $thickPrices['6mm'] ?? 0.0,
-        'price2'          => $thickPrices['8mm'] ?? 0.0,
-        'price3'          => $thickPrices['10mm'] ?? 0.0,
-        'variant_ids' => [
-          '6mm'  => $thickPrices['6mm_variant_id'] ?? null,
-          '8mm'  => $thickPrices['8mm_variant_id'] ?? null,
-          '10mm' => $thickPrices['10mm_variant_id'] ?? null,
-        ]
-      ];
-    }
-  }
+      if (!$color) {
+        continue;
+      }
 
-  private function parseHandlePrices($product, string $unitSymbol, string $currency, array &$prices): void
-  {
-    foreach ($product->variants as $v) {
-      $type = $this->getEavValue($v, 'type');
-      $color = $this->getEavValue($v, 'furniture_type_id');
-      $skuParts = explode('-', $v->sku);
-      $rawId = strtolower(end($skuParts)) . '_' . $type;
+      if (!isset($groupedByColor[$color])) {
+        $groupedByColor[$color] = [
+          'name' => $this->resolveVariantName($v, $product),
+          'variants' => [],
+        ];
+      }
 
-      $prices['handle'][$rawId] = [
-        'id'              => $rawId,
-        'variant_id'      => $v->id,
-        'type'            => $type,
-        'furnitureTypeId' => $color,
-        'doorTypeIds'     => $this->getEavMultipleValues($v, 'door_type_ids'),
-        'interfaceName'   => $this->getEavValue($v, 'interface_name'),
-        'name'            => $this->resolveVariantName($v, $product),
-        'unit'            => $unitSymbol,
-        'currency'        => $currency,
-        'price'           => $this->resolveVariantPrice($v),
-        'pathImg'         => $this->resolveVariantPreview($v, $product)
-      ];
-    }
-  }
-
-  private function parseCrossbarPrices($product, string $unitSymbol, string $currency, array &$prices): void
-  {
-    $type = $this->getEavValue($product, 'type');
-    foreach ($product->variants as $v) {
-      $cbType = $this->getEavValue($v, 'crossbar_type_id');
-      $color = $this->getEavValue($v, 'furniture_type_id');
-      $skuParts = explode('-', $v->sku);
-      $rawId = strtolower(end($skuParts));
-
-      $prices['crossbar'][$type][$rawId] = [
-        'id'              => $rawId,
-        'variant_id'      => $v->id,
-        'crossbarTypeId'  => $cbType,
-        'furnitureTypeId' => $color,
-        'name'            => $this->resolveVariantName($v, $product),
-        'unit'            => $unitSymbol,
-        'currency'        => $currency,
-        'price'           => $this->resolveVariantPrice($v)
-      ];
-    }
-  }
-
-  private function parseOpenSystemPrices($product, string $unitSymbol, string $currency, array &$prices): void
-  {
-    $type = $this->getEavValue($product, 'type');
-    foreach ($product->variants as $v) {
-      $mat = $this->getEavValue($v, 'material_type_id');
-      $color = $this->getEavValue($v, 'furniture_type_id');
-      $skuParts = explode('-', $v->sku);
-      $rawId = strtolower(end($skuParts));
-
-      $prices['openSystem'][$type][$rawId] = [
-        'id'              => $rawId,
-        'variant_id'      => $v->id,
-        'materialTypeId'  => $mat,
-        'furnitureTypeId' => $color,
-        'name'            => $this->resolveVariantName($v, $product),
-        'unit'            => $unitSymbol,
-        'currency'        => $currency,
-        'price'           => $this->resolveVariantPrice($v)
-      ];
-    }
-  }
-
-  private function parseSealantPrices($product, string $unitSymbol, string $currency, array &$prices): void
-  {
-    $type = $this->getEavValue($product, 'type');
-    $p6 = 0.0; $p8 = 0.0; $p10 = 0.0;
-    $v6 = null; $v8 = null; $v10 = null;
-
-    foreach ($product->variants as $v) {
-      $priceVal = $this->resolveVariantPrice($v);
-      if (str_ends_with($v->sku, '6MM')) {
-        $p6 = $priceVal;
-        $v6 = $v->id;
-      } elseif (str_ends_with($v->sku, '8MM')) {
-        $p8 = $priceVal;
-        $v8 = $v->id;
-      } elseif (str_ends_with($v->sku, '10MM')) {
-        $p10 = $priceVal;
-        $v10 = $v->id;
+      if ($thick) {
+        $groupedByColor[$color]['variants'][$thick] = $this->buildVariantData($v);
       }
     }
 
-    $defaultVariantId = $v8 ?? ($v6 ?? ($v10 ?? $product->variants->first()?->id));
-
-    $prices['sealant'][$type]['id_1'] = [
-      'id'          => 'id_1',
-      'variant_id'  => $defaultVariantId,
-      'variant_ids' => [
-        '6mm'  => $v6,
-        '8mm'  => $v8,
-        '10mm' => $v10,
-      ],
-      'name'        => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
-      'unit'        => $unitSymbol,
-      'currency'    => $currency,
-      'price1'      => $p6,
-      'price2'      => $p8,
-      'price3'      => $p10
-    ];
-  }
-
-  private function parseDoorstepPrices($product, string $unitSymbol, string $currency, array &$prices): void
-  {
-    foreach ($product->variants as $v) {
-      $color = $this->getEavValue($v, 'furniture_type_id');
-      $skuParts = explode('-', $v->sku);
-      $rawId = strtolower(end($skuParts));
-
-      $prices['doorstep'][$rawId] = [
-        'id'              => $rawId,
-        'variant_id'      => $v->id,
+    foreach ($groupedByColor as $color => $data) {
+      $prices['profile'][$type][$color] = [
+        'id' => $color,
         'furnitureTypeId' => $color,
-        'name'            => $this->resolveVariantName($v, $product),
-        'unit'            => $unitSymbol,
-        'currency'        => $currency,
-        'price'           => $this->resolveVariantPrice($v)
+        'name' => $data['name'],
+        'unit' => $unitSymbol,
+        'variants' => $data['variants'],
       ];
     }
   }
 
-  private function parseServicePrices($product, string $unitSymbol, string $currency, array &$prices): void
+  private function parseHandlePrices(Product $product, string $unitSymbol, array &$prices): void
+  {
+    foreach ($product->variants as $v) {
+      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
+      $color = $this->getEavValue($v, 'furniture_type_id');
+      $rawId = (string)$v->id;
+
+      $interfaceName = $this->getEavValue($v, 'interface_name');
+      $variantName = $this->resolveVariantName($v, $product);
+
+      $prices['handle'][$rawId] = array_merge(
+        $this->buildBaseItemData($v, $product, $unitSymbol),
+        [
+          'type' => $type,
+          'furnitureTypeId' => $color,
+          'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
+          'interfaceName' => $interfaceName ?: $variantName,
+          'pathImg' => $this->resolveVariantPreview($v, $product),
+        ]
+      );
+    }
+  }
+
+  private function parseCrossbarPrices(Product $product, string $unitSymbol, array &$prices): void
+  {
+    foreach ($product->variants as $v) {
+      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
+      if (!$type) {
+        continue;
+      }
+
+      $rawId = (string)$v->id;
+
+      $prices['crossbar'][$type][$rawId] = array_merge(
+        $this->buildBaseItemData($v, $product, $unitSymbol),
+        [
+          'crossbarTypeId' => $this->getEavValue($v, 'crossbar_type_id'),
+          'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
+        ]
+      );
+    }
+  }
+
+  private function parseOpenSystemPrices(Product $product, string $unitSymbol, array &$prices): void
+  {
+    foreach ($product->variants as $v) {
+      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
+      if (!$type) {
+        continue;
+      }
+
+      $rawId = (string)$v->id;
+
+      $prices['openSystem'][$type][$rawId] = array_merge(
+        $this->buildBaseItemData($v, $product, $unitSymbol),
+        [
+          'materialTypeId' => $this->getEavValue($v, 'material_type_id'),
+          'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
+        ]
+      );
+    }
+  }
+
+  private function parseSealantPrices(Product $product, string $unitSymbol, array &$prices): void
   {
     $type = $this->getEavValue($product, 'type');
-    foreach ($product->variants as $v) {
-      $skuParts = explode('-', $v->sku);
-      $rawId = strtolower(end($skuParts));
+    if (!$type) {
+      return;
+    }
 
-      $prices['services'][$type][$rawId] = [
-        'id'          => $rawId,
-        'variant_id'  => $v->id,
-        'formTypeId'  => $this->getEavValue($v, 'form_type'),
-        'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
-        'name'        => $this->resolveVariantName($v, $product),
-        'unit'        => $unitSymbol,
-        'currency'    => $currency,
-        'price1'      => $this->resolveVariantPrice($v),
-        'price2'      => (float)$v->cost_price
-      ];
+    $variants = [];
+
+    foreach ($product->variants as $v) {
+      $thick = $this->getEavValue($v, 'glass_thickness');
+
+      if ($thick) {
+        $variants[$thick] = $this->buildVariantData($v);
+      }
+    }
+
+    $rawId = $product->code ?: ('id_' . $product->id);
+
+    $prices['sealant'][$type][$rawId] = [
+      'id' => $rawId,
+      'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
+      'unit' => $unitSymbol,
+      'variants' => $variants,
+    ];
+  }
+
+  private function parseDoorstepPrices(Product $product, string $unitSymbol, array &$prices): void
+  {
+    foreach ($product->variants as $v) {
+      $color = $this->getEavValue($v, 'furniture_type_id');
+      $rawId = (string)$v->id;
+
+      $prices['doorstep'][$rawId] = array_merge(
+        $this->buildBaseItemData($v, $product, $unitSymbol),
+        [
+          'furnitureTypeId' => $color,
+        ]
+      );
+    }
+  }
+
+  private function parseServicePrices(Product $product, string $unitSymbol, array &$prices): void
+  {
+    foreach ($product->variants as $v) {
+      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
+      if (!$type) {
+        continue;
+      }
+
+      $rawId = (string)$v->id;
+      $retailPrice = $this->resolveVariantPrice($v);
+
+      $basePrice = ($retailPrice > 0 && $retailPrice < 1000)
+        ? $retailPrice
+        : (self::SERVICE_BASE_PRICES[$type] ?? 30.0);
+
+      $secondaryRate = self::SERVICE_TARIFF_RATES[$type] ?? 0.0;
+      $baseData = $this->buildBaseItemData($v, $product, $unitSymbol);
+      $baseData['price'] = $basePrice;
+
+      $prices['services'][$type][$rawId] = array_merge(
+        $baseData,
+        [
+          'formTypeId' => $this->getEavValue($v, 'form_type'),
+          'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
+          'price1' => $basePrice,
+          'price2' => $secondaryRate,
+        ]
+      );
     }
   }
 
@@ -461,7 +460,7 @@ class ShowersCalculatorBridgeController extends Controller
     if ($measureDict) {
       foreach ($measureDict->records as $record) {
         $limits['measure'][$record->slug] = [
-          'id'        => $record->slug,
+          'id' => $record->slug,
           'heightMin' => (int)($record->meta['height_min'] ?? 0),
           'heightMax' => (int)($record->meta['height_max'] ?? 0),
           'lengthMin' => (int)($record->meta['length_min'] ?? 0),
@@ -474,7 +473,7 @@ class ShowersCalculatorBridgeController extends Controller
     if ($serviceDict) {
       foreach ($serviceDict->records as $record) {
         $limits['services'][$record->slug] = [
-          'id'       => $record->slug,
+          'id' => $record->slug,
           'valueMin' => 0,
           'valueMax' => (int)($record->meta['value_max'] ?? 0),
         ];
@@ -492,12 +491,12 @@ class ShowersCalculatorBridgeController extends Controller
     if ($dict) {
       foreach ($dict->records as $record) {
         $settings[$record->slug] = [
-          'adminShow'   => (bool)($record->meta['show_admin'] ?? false),
+          'adminShow' => (bool)($record->meta['show_admin'] ?? false),
           'managerShow' => (bool)($record->meta['show_manager'] ?? false),
-          'userShow'    => (bool)($record->meta['show_user'] ?? false),
-          'adminValue'  => (string)($record->meta['value_admin'] ?? ''),
-          'managerValue'=> (string)($record->meta['value_manager'] ?? ''),
-          'userValue'   => (string)($record->meta['value_user'] ?? ''),
+          'userShow' => (bool)($record->meta['show_user'] ?? false),
+          'adminValue' => (string)($record->meta['value_admin'] ?? ''),
+          'managerValue' => (string)($record->meta['value_manager'] ?? ''),
+          'userValue' => (string)($record->meta['value_user'] ?? ''),
         ];
       }
     }
@@ -508,21 +507,24 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadExchangeRates(): array
   {
     $rates = [];
-    $currencies = Currency::where('is_active', true)->get();
 
-    foreach ($currencies as $currency) {
-      $rates[$currency->code] = [
-        'ID'           => (string)$currency->id,
-        'code'         => $currency->code,
-        'name'         => $currency->getTranslation('name', app()->getLocale()) ?? $currency->name,
-        'scale'        => 1,
-        'rate'         => (float)$currency->rate,
-        'main'         => $currency->is_default ? "1" : "0",
-        'shortName'    => $currency->symbol,
-        'lastEditDate' => $currency->updated_at?->toDateTimeString() ?? date('Y-m-d H:i:s')
+    $baseCurrency = Currency::where('is_active', true)->where('is_default', true)->first()
+      ?? Currency::where('is_active', true)->first();
+
+    if ($baseCurrency) {
+      $rates[$baseCurrency->code] = [
+        'ID' => (string)$baseCurrency->id,
+        'code' => $baseCurrency->code,
+        'name' => $baseCurrency->getTranslation('name', app()->getLocale()) ?? $baseCurrency->name,
+        'scale' => 1,
+        'rate' => 1.0,
+        'main' => "1",
+        'shortName' => $baseCurrency->symbol,
+        'lastEditDate' => $baseCurrency->updated_at?->toDateTimeString() ?? date('Y-m-d H:i:s')
       ];
     }
 
     return $rates;
   }
+
 }
