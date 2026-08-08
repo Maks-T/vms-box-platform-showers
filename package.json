@@ -11,6 +11,7 @@
     "core-push": "cd packages/box/nicole/core && git add . && git commit -m 'update: auto-sync core' && git push origin core/main",
     "core-commit": "cd packages/box/nicole/core && git add . && git commit && git push origin core/main",
     "core-sync": "git add packages/box/nicole/core && git commit -m 'chore: bump core submodule pointer' && git push"
+
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
