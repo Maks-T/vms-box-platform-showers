@@ -113,7 +113,7 @@
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
-  "repositories":[
+  "repositories": [
     {
       "type": "path",
       "url": "packages/box/nicole/core",
@@ -122,15 +122,12 @@
       }
     },
     {
-      "type": "vcs",
-      "url": "git@github.com:Maks-T/vms-box-nicole-core.git"
-    },
-    {
       "type": "path",
       "url": "packages/box/valerie/industry-showers",
       "options": {
         "symlink": true
       }
     }
+
   ]
 }

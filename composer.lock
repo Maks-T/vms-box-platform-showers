@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31c8727e98a1f0e44cc4af10b7882d59",
+    "content-hash": "ce043c6c2de72b07bcd0260635ef7719",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -4914,22 +4914,15 @@
         {
             "name": "nicole/box-core",
             "version": "dev-core/main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Maks-T/vms-box-nicole-core.git",
-                "reference": "f3c7eb25c7381c09868db6c3a2a06cc78c0b0ce0"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Maks-T/vms-box-nicole-core/zipball/f3c7eb25c7381c09868db6c3a2a06cc78c0b0ce0",
-                "reference": "f3c7eb25c7381c09868db6c3a2a06cc78c0b0ce0",
-                "shasum": ""
+                "type": "path",
+                "url": "packages/box/nicole/core",
+                "reference": "ecd67375e55f4ddd211fdebb992bfc84f5af89cd"
             },
             "require": {
                 "laravel/framework": "^13.0",
                 "php": "^8.5"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -4948,11 +4941,10 @@
                 "proprietary"
             ],
             "description": "Cloud SaaS (Box) Nicole Core Engine for VMS",
-            "support": {
-                "source": "https://github.com/Maks-T/vms-box-nicole-core/tree/core/main",
-                "issues": "https://github.com/Maks-T/vms-box-nicole-core/issues"
-            },
-            "time": "2026-07-29T10:34:27+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "nikic/php-parser",
@@ -10197,7 +10189,7 @@
         },
         {
             "name": "valerie/box-industry-showers",
-            "version": "dev-client/proreshenia-new-front",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "packages/box/valerie/industry-showers",
