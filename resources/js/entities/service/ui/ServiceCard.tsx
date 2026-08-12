@@ -118,7 +118,7 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
                   "uppercase tracking-widest text-[9px] font-bold",
                   isAddon ? "text-amber-400" : "text-emerald-400"
                 )}>
-                  {tag.label} // Был name
+                  {tag.label} 
                 </span>
               </StatusBadge>
             );

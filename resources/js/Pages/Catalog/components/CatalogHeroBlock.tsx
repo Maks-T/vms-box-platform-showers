@@ -1,30 +1,24 @@
+
+
 import React from 'react';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
-import WaveBackground from '@/shared/components/ui/WaveBackground';
-import { H1, Text, Accent } from '@/shared/components/ui/Typography';
-import StatusBadge from '@/shared/components/ui/StatusBadge';
 
 export function CatalogHeroBlock() {
   return (
-    <SectionLayout
-      bg="bg-[#0B0F19]"
-      bgElement={<WaveBackground />}
-      containerVariant="content"
-      className="pt-2 md:pt-4"
-    >
-      <div className="flex flex-col pt-12 pb-16 lg:pt-20 lg:pb-24 max-w-3xl">
-        <StatusBadge variant="blue" className="mb-6 self-start">
-          API Sandbox & Catalog
-        </StatusBadge>
+    <SectionLayout className="py-4 md:py-8">
+      <div className="w-full max-w-[1240px] mx-auto rounded-[20px] md:rounded-[28px] bg-gradient-to-br from-[#0c4974] via-[#004F87] to-[#00385e] text-white p-8 md:p-12 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col gap-2 max-w-xl">
+          <span className="text-xs font-bold text-sky-300 uppercase tracking-widest">
+            Каталог продукции
+          </span>
+          <h1 className="text-2xl md:text-4xl font-extrabold text-white tracking-tight">
+            Каталог материалов и фурнитуры
+          </h1>
+        </div>
 
-        <H1 className="mb-6">
-          Каталог <Accent variant="light">материалов</Accent>
-        </H1>
-
-        <Text variant="leadDark" className="text-slate-400 leading-relaxed max-w-2xl">
-          Используйте этот раздел для тестирования выдачи API, проверки работы EAV-фильтров
-          и инспектирования структуры данных перед интеграцией.
-        </Text>
+        <p className="text-sm md:text-base text-white/80 max-w-md font-normal leading-relaxed">
+          Широкий выбор стекол, профилей, ручек и комплектующих. Удобная фильтрация по типам, цветам и характеристикам.
+        </p>
       </div>
     </SectionLayout>
   );

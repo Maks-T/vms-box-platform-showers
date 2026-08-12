@@ -1,3 +1,5 @@
+
+
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -6,26 +8,25 @@ import { Link } from '@inertiajs/react';
 import { cn } from "@/shared/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2.5 whitespace-nowrap font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98] cursor-pointer group",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-200 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer select-none active:scale-[0.98]",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:opacity-90 shadow-sm",
-        glass: "bg-white/[0.02] backdrop-blur-sm border border-white/5 shadow-sm text-white hover:bg-white/[0.06]",
-        outline: "border border-border bg-transparent hover:bg-muted text-foreground",
-        ghost: "hover:bg-muted text-foreground",
-        action: "bg-primary text-primary-foreground rounded-[10px] hover:bg-primary/90",
+        
+        tilda: "bg-[#004F87] text-white border-2 border-[#004F87] rounded-[10px] hover:bg-white hover:text-[#004F87] hover:shadow-[0px_10px_20px_rgba(0,11,48,0.25)] transition-all duration-200 font-semibold",
+        tildaOutline: "bg-white text-[#004F87] border-2 border-[#004F87] rounded-[10px] shadow-[0px_10px_20px_rgba(0,11,48,0.25)] hover:bg-[#004F87] hover:text-white transition-all duration-200 font-semibold",
+        default: "bg-[#004F87] text-white hover:bg-white hover:text-[#004F87] border-2 border-[#004F87] rounded-[10px]",
+        outline: "border-2 border-[#004F87] text-[#004F87] bg-white hover:bg-[#004F87] hover:text-white rounded-[10px]",
+        glass: "bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 rounded-[10px]",
       },
       size: {
-        default: "h-10 px-4 py-2 rounded-lg text-sm",
-        sm: "h-8 px-3 rounded-md text-xs",
-        lg: "h-[52px] px-8 rounded-lg text-[15px]",
-        action: "h-auto py-[18px] px-[36px] rounded-[10px] text-[16px]",
-        icon: "h-[44px] w-[44px] rounded-lg",
+        default: "h-[45px] px-7 text-[14px]",
+        sm: "h-9 px-4 text-xs",
+        lg: "h-[50px] px-9 text-[15px]",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "tilda",
       size: "default",
     },
   }
@@ -40,10 +41,8 @@ export interface ButtonProps
   target?: string;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, withArrow = false, href, children, ...props }, ref) => {
-
-
     if (href) {
       const isExternal = href.startsWith('http') || props.target === '_blank';
       const Comp = isExternal ? 'a' : Link;
@@ -56,7 +55,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           {...props}
         >
           {children}
-          {withArrow && <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" />}
+          {withArrow && <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />}
         </Comp>
       );
     }
@@ -72,7 +71,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {asChild ? children : (
           <>
             {children}
-            {withArrow && <ArrowRight className="w-5 h-5 ml-1 transition-transform group-hover:translate-x-1" />}
+            {withArrow && <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />}
           </>
         )}
       </Comp>
@@ -81,4 +80,3 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
-export { Button, buttonVariants };

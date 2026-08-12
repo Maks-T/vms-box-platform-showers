@@ -1,9 +1,10 @@
+
+
 import React, { useState } from 'react';
 import { Link } from '@inertiajs/react';
 import { Image as ImageIcon } from 'lucide-react';
 import { StoneProduct, EavValueOption, BootstrapConfig, ProductVariant } from '@/types/catalog';
 import { route } from "ziggy-js";
-import Badge from '@/shared/components/ui/Badge';
 import { cn } from '@/shared/lib/utils';
 import { FavoriteButton } from '@/shared/components/ui/FavoriteButton';
 
@@ -25,7 +26,7 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
     ? (activeVariant.prices?.[defaultPriceType] || Object.values(activeVariant.prices || {})[0] || price_from)
     : price_from;
 
-  const currencySymbol = bootstrapConfig?.base_currency?.symbol_native || bootstrapConfig?.base_currency?.symbol || 'Br';
+  const currencySymbol = bootstrapConfig?.base_currency?.symbol_native || bootstrapConfig?.base_currency?.symbol || 'руб.';
 
   const formattedNumber = displayPrice > 0
     ? new Intl.NumberFormat('ru-RU', {
@@ -36,14 +37,10 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
 
   const collection = attributes?.collection?.value as EavValueOption | undefined;
   const brand = attributes?.brand?.value as EavValueOption | undefined;
-  const serviceTags = attributes?.service_tags?.value as EavValueOption[] | undefined;
 
-  let subtitle = 'Каталог';
-  if (brand) subtitle = brand.label; // Был brand.name
-  else if (collection) subtitle = collection.label; // Был collection.name
-  else if (serviceTags && Array.isArray(serviceTags) && serviceTags.length > 0) {
-    subtitle = serviceTags.map(t => t.label).join(', '); // Был t.name
-  } else if (unit) subtitle = `Ед. изм: ${unit.name}`;
+  let subtitle = unit ? `Ед. изм: ${unit.name}` : 'Ед. изм: Штука';
+  if (brand) subtitle = `Бренд: ${brand.label}`;
+  else if (collection) subtitle = `Коллекция: ${collection.label}`;
 
   const parentColor = attributes?.color?.value as EavValueOption | undefined;
   const variantColors: EavValueOption[] = [];
@@ -52,8 +49,8 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
     const seen = new Set();
     variants.forEach(v => {
       const vColor = v.attributes?.color?.value as EavValueOption | undefined;
-      if (vColor && !seen.has(vColor.key)) { // Был vColor.slug
-        seen.add(vColor.key); // Был vColor.slug
+      if (vColor && !seen.has(vColor.key)) {
+        seen.add(vColor.key);
         variantColors.push(vColor);
       }
     });
@@ -83,10 +80,10 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
     const isSelected = color.key === activeColorSlug;
 
     const swatchClasses = cn(
-      "w-5 h-5 rounded-full object-cover border border-slate-200/80 shadow-sm cursor-pointer transition-all duration-300",
+      "w-5 h-5 rounded-full object-cover border border-slate-200/80 shadow-sm cursor-pointer transition-all duration-200",
       isSelected
-        ? "ring-1 ring-sky-800/40 ring-offset-[1.5px] scale-105 opacity-100"
-        : "opacity-65 hover:opacity-100 hover:scale-105"
+        ? "ring-2 ring-[#004F87] ring-offset-1 scale-105 opacity-100"
+        : "opacity-70 hover:opacity-100 hover:scale-105"
     );
 
     if (color.meta?.image) {
@@ -108,7 +105,7 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
           title={color.label}
           onClick={(e) => handleColorClick(e, color)}
           className={swatchClasses}
-          style={{backgroundColor: color.meta.hex}}
+          style={{ backgroundColor: color.meta.hex }}
         />
       );
     }
@@ -116,35 +113,42 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
   };
 
   return (
-    <div
-      className="group flex flex-col h-full bg-card rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-all duration-300">
+    <div className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200/80 hover:shadow-xl transition-all duration-300">
 
-      <div className="relative aspect-square bg-slate-50 overflow-hidden mb-5 border-b border-border">
-        <Link href={route('product.show', slug)} className="block w-full h-full p-6">
+      {}
+      <div className="relative aspect-[4/3] bg-slate-50 overflow-hidden border-b border-slate-100 p-4 flex items-center justify-center">
+        <Link href={route('product.show', slug)} className="block w-full h-full">
           {displayImage ? (
             <img
               src={displayImage}
               alt={name}
-              className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
             />
           ) : (
-            <div className="flex items-center justify-center w-full h-full opacity-20 text-muted-foreground">
-              <ImageIcon className="w-16 h-16"/>
+            <div className="flex items-center justify-center w-full h-full text-slate-300">
+              <ImageIcon className="w-12 h-12" />
             </div>
           )}
         </Link>
-        <div
-          className="absolute top-4 left-4 bg-primary text-primary-foreground text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest shadow-sm">
+
+        {}
+        <div className="absolute top-3 left-3 bg-[#004F87] text-white text-[11px] font-bold px-2.5 py-1 rounded-[6px] uppercase tracking-wider shadow-sm">
           ID {id}
         </div>
-        <FavoriteButton product={product} className="absolute top-4 right-4" />
+
+        <FavoriteButton product={product} className="absolute top-3 right-3" />
       </div>
 
-      <div className="flex flex-col flex-1 px-5 pb-5">
-        <p className="text-[11px] text-muted-foreground uppercase tracking-widest mb-2 line-clamp-1">{subtitle}</p>
-        <Link href={route('product.show', slug)} className="block mb-3 flex-1">
-          <h3
-            className="text-[16px] md:text-[18px] font-bold text-foreground leading-snug tracking-tight group-hover:text-primary transition-colors line-clamp-2">{name}</h3>
+      {}
+      <div className="flex flex-col flex-1 p-5 md:p-6">
+        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1.5 line-clamp-1">
+          {subtitle}
+        </p>
+
+        <Link href={route('product.show', slug)} className="block mb-4 flex-1">
+          <h3 className="text-base md:text-lg font-semibold text-slate-900 leading-snug tracking-tight group-hover:text-[#004F87] transition-colors line-clamp-2">
+            {name}
+          </h3>
         </Link>
 
         {colorsToShow.length > 0 && (
@@ -152,35 +156,40 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
             {colorsToShow.length === 1 ? (
               <div className="flex items-center gap-2">
                 {renderSwatch(colorsToShow[0])}
-                <span className="text-xs text-muted-foreground truncate">{colorsToShow[0].label}</span>
+                <span className="text-xs text-slate-500 truncate">{colorsToShow[0].label}</span>
               </div>
             ) : (
               <>
                 {colorsToShow.slice(0, 6).map(c => renderSwatch(c))}
-                {colorsToShow.length > 6 && <span
-                  className="text-[11px] font-medium text-muted-foreground ml-1">+{colorsToShow.length - 6}</span>}
+                {colorsToShow.length > 6 && (
+                  <span className="text-[11px] font-medium text-slate-400 ml-1">+{colorsToShow.length - 6}</span>
+                )}
               </>
             )}
           </div>
         )}
 
-        <div className="mt-auto flex flex-col gap-4">
-          <div className="text-[20px] md:text-[24px] font-black text-foreground flex items-baseline gap-1 min-h-[32px]">
+        {}
+        <div className="mt-auto flex flex-col gap-4 pt-2">
+          <div className="text-2xl font-bold text-slate-900 flex items-baseline gap-1 min-h-[32px]">
             {displayPrice > 0 ? (
               <>
                 <span>{formattedNumber}</span>
-                <span className="text-xs md:text-sm font-normal text-muted-foreground lowercase">
+                <span className="text-sm font-normal text-slate-500 lowercase">
                   {currencySymbol}
                 </span>
               </>
             ) : (
-              <Badge variant="gray" className="!bg-muted !border-border !text-muted-foreground !shadow-none !px-3 !py-1 text-xs">
-                Бесплатно / По запросу
-              </Badge>
+              <span className="text-sm font-medium text-slate-400">
+                По запросу
+              </span>
             )}
           </div>
-          <Link href={route('product.show', slug)}
-                className="w-full h-[46px] bg-slate-900 text-white hover:bg-sky-600 active:scale-[0.98] text-[13px] font-bold tracking-[0.1em] uppercase transition-all duration-300 flex items-center justify-center rounded-xl shadow-md">
+
+          <Link
+            href={route('product.show', slug)}
+            className="w-full h-11 bg-[#004F87] hover:bg-[#003559] text-white text-xs font-bold tracking-widest uppercase transition-all duration-200 flex items-center justify-center rounded-xl shadow-sm active:scale-[0.98]"
+          >
             Подробнее
           </Link>
         </div>

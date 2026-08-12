@@ -50,7 +50,7 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
 
       <div className="flex flex-col gap-3">
         {variants.map((variant) => {
-          // Сверяем имя с системным ключом 'code' (бывший 'sku')
+          
           const hasFriendlyName = variant.name && variant.name !== variant.sku;
 
           return (
@@ -67,12 +67,12 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
                 </IconBox>
 
                 <div className="min-w-0 flex-1">
-                  {/* Если есть красивое имя (например, цвет), выводим его, иначе системный код */}
+                  {}
                   <div className="font-bold text-foreground tracking-tight text-[15px]">
                     {hasFriendlyName ? variant.name : variant.sku}
                   </div>
 
-                  {/* Если вывели красивое имя, то ниже показываем системный код */}
+                  {}
                   {hasFriendlyName && (
                     <div className="text-[11px] font-mono text-muted-foreground/75 mt-0.5 lowercase">
                       Код: {variant.sku}

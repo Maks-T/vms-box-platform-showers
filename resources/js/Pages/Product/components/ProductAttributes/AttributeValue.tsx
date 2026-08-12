@@ -18,7 +18,7 @@ export function AttributeValue({attribute}: Props) {
     return <ValueMultiple values={val}/>;
   }
 
-  // ЗАМЕНИЛИ 'name' на 'label' в проверке:
+  
   if (typeof val === 'object' && !Array.isArray(val) && val !== null && 'label' in val) {
     return <ValueSingleOption option={val as EavValueOption}/>;
   }

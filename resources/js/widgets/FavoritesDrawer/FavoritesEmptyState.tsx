@@ -7,19 +7,19 @@ interface FavoritesEmptyStateProps {
 
 export const FavoritesEmptyState = ({ onClose }: FavoritesEmptyStateProps) => {
   return (
-    <div className="h-full flex flex-col items-center justify-center text-center p-6 min-h-[350px]">
-      <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-5 border border-white/10">
-        <Heart className="w-8 h-8 text-white/20" strokeWidth={1.5} />
+    <div className="h-full flex flex-col items-center justify-center text-center p-6 min-h-[320px]">
+      <div className="w-12 h-12 rounded-lg bg-[#F2F7FA] flex items-center justify-center mb-4 border border-slate-200 text-[#004F87]">
+        <Heart className="w-6 h-6" strokeWidth={1.5} />
       </div>
-      <p className="text-md font-bold uppercase tracking-wider text-white/90 mb-2">
+      <p className="text-sm font-bold tracking-tight text-slate-900 mb-1.5">
         Здесь пока пусто
       </p>
-      <p className="text-xs text-muted-foreground max-w-[240px] leading-relaxed mb-8">
+      <p className="text-xs text-slate-500 max-w-[220px] leading-relaxed mb-6">
         Добавляйте понравившиеся материалы в избранное, чтобы быстро вернуться к ним позже.
       </p>
       <button
         onClick={onClose}
-        className="px-6 py-3 bg-[#3D98FF] hover:bg-[#3D98FF]/90 transition-colors text-white text-xs font-bold uppercase tracking-widest rounded-xl shadow-md cursor-pointer"
+        className="px-5 py-2 bg-[#004F87] hover:bg-[#003559] transition-colors text-white text-xs font-bold uppercase tracking-wider rounded-md cursor-pointer"
       >
         В каталог
       </button>

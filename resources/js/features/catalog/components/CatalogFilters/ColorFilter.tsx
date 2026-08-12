@@ -45,7 +45,7 @@ export const ColorFilter = ({ options, activeValues, onToggle }: any) => (
                 : "text-muted-foreground font-medium group-hover:text-primary"
             )}
           >
-            {opt.label} {/* Был value */}
+            {opt.label} {}
           </span>
         </label>
       );
