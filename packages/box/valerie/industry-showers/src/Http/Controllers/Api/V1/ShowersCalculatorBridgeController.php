@@ -16,33 +16,14 @@ use Nicole\Box\Core\Models\Attribute;
 
 class ShowersCalculatorBridgeController extends Controller
 {
-
-  /**
-   * Фиксированная стоимость выезда (в пределах МКАД)
-   */
-  private const array SERVICE_BASE_PRICES = [
-    'measure' => 30.0, // 30 BYN
-    'delivery' => 30.0, // 30 BYN
-    'lift' => 0.0,  // 0 BYN при лифте
-  ];
-
-  /**
-   * Точный тариф за километр за МКАД / этаж
-   */
-  private const array SERVICE_TARIFF_RATES = [
-    'measure' => 1.0,  // 1.0 BYN за 1 км
-    'delivery' => 2.5,  // 2.5 BYN за 1 км
-    'lift' => 10.0, // 10.0 BYN за 1 этаж
-  ];
-
-  private const string CAT_GLASS = 'cat_showers_glass';
-  private const string CAT_PROFILES = 'cat_showers_profiles';
-  private const string CAT_HANDLES = 'cat_showers_handles';
-  private const string CAT_CROSSBARS = 'cat_showers_crossbars';
+  private const string CAT_GLASS        = 'cat_showers_glass';
+  private const string CAT_PROFILES     = 'cat_showers_profiles';
+  private const string CAT_HANDLES      = 'cat_showers_handles';
+  private const string CAT_CROSSBARS    = 'cat_showers_crossbars';
   private const string CAT_OPEN_SYSTEMS = 'cat_showers_open_systems';
-  private const string CAT_SEALANTS = 'cat_showers_sealants';
-  private const string CAT_DOORSTEPS = 'cat_showers_doorsteps';
-  private const string CAT_SERVICES = 'cat_showers_services';
+  private const string CAT_SEALANTS     = 'cat_showers_sealants';
+  private const string CAT_DOORSTEPS    = 'cat_showers_doorsteps';
+  private const string CAT_SERVICES     = 'cat_showers_services';
 
   public function loadData(Request $request): JsonResponse
   {
@@ -51,12 +32,12 @@ class ShowersCalculatorBridgeController extends Controller
 
     $responsePayload = Cache::remember($cacheKey, 86400, function () {
       return [
-        'config' => $this->loadConfigurations(),
-        'prices' => $this->loadPrices(),
-        'limits' => $this->loadLimits(),
+        'config'    => $this->loadConfigurations(),
+        'prices'    => $this->loadPrices(),
+        'limits'    => $this->loadLimits(),
         'interface' => $this->loadInterfaceSettings(),
-        'rates' => $this->loadExchangeRates(),
-        'status' => true
+        'rates'     => $this->loadExchangeRates(),
+        'status'    => true
       ];
     });
 
@@ -64,29 +45,29 @@ class ShowersCalculatorBridgeController extends Controller
   }
 
   /**
-   * Хелпер сборки базовых DTO-данных элемента товара/услуги
+   * Единый хелпер сборки базовых DTO-данных элемента товара/услуги
    */
   protected function buildBaseItemData(ProductVariant $variant, Product $product, string $unitSymbol): array
   {
     return [
-      'id' => (string)$variant->id,
+      'id'         => (string)$variant->id,
       'variant_id' => $variant->id,
-      'sku' => $variant->sku,
-      'name' => $this->resolveVariantName($variant, $product),
-      'unit' => $unitSymbol,
-      'price' => $this->resolveVariantPrice($variant),
+      'sku'        => $variant->sku,
+      'name'       => $this->resolveVariantName($variant, $product),
+      'unit'       => $unitSymbol,
+      'price'      => $this->resolveVariantPrice($variant),
     ];
   }
 
   /**
-   * Хелпер сборки DTO модификаций (для стекол, профилей, уплотнителей)
+   * Единый хелпер сборки DTO модификаций (для стекол, профилей, уплотнителей)
    */
   protected function buildVariantData(ProductVariant $variant): array
   {
     return [
-      'id' => $variant->id,
-      'sku' => $variant->sku,
-      'price' => $this->resolveVariantPrice($variant),
+      'id'         => $variant->id,
+      'sku'        => $variant->sku,
+      'price'      => $this->resolveVariantPrice($variant),
       'is_default' => (bool)$variant->is_default,
     ];
   }
@@ -145,19 +126,19 @@ class ShowersCalculatorBridgeController extends Controller
       foreach ($furnitureDict->records as $record) {
         $slug = $record->slug;
         $config['furniture'][$slug] = [
-          'id' => $slug,
-          'name' => $record->getTranslation('name', $locale) ?? $record->name,
-          'hexColor' => $record->meta['hex_color'] ?? '#FFFFFF',
-          'metallic' => (float)($record->meta['metallic'] ?? 0.0),
+          'id'        => $slug,
+          'name'      => $record->getTranslation('name', $locale) ?? $record->name,
+          'hexColor'  => $record->meta['hex_color'] ?? '#FFFFFF',
+          'metallic'  => (float)($record->meta['metallic'] ?? 0.0),
           'roughness' => (float)($record->meta['roughness'] ?? 0.0),
-          'fluted' => false
+          'fluted'    => false
         ];
       }
     }
 
     $attributeMap = [
-      'form_type' => 'form',
-      'door_type_ids' => 'doors',
+      'form_type'        => 'form',
+      'door_type_ids'    => 'doors',
       'material_type_id' => 'material',
       'crossbar_type_id' => 'crossbar',
     ];
@@ -168,7 +149,7 @@ class ShowersCalculatorBridgeController extends Controller
         foreach ($attribute->options as $option) {
           $slug = $option->slug;
           $config[$frontKey][$slug] = [
-            'id' => $slug,
+            'id'   => $slug,
             'name' => $option->getTranslation('value', $locale) ?? $option->value
           ];
         }
@@ -181,14 +162,14 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadPrices(): array
   {
     $prices = [
-      'crossbar' => [],
-      'doorstep' => [],
-      'glasses' => [],
-      'handle' => [],
+      'crossbar'   => [],
+      'doorstep'   => [],
+      'glasses'    => [],
+      'handle'     => [],
       'openSystem' => [],
-      'profile' => [],
-      'sealant' => [],
-      'services' => []
+      'profile'    => [],
+      'sealant'    => [],
+      'services'   => []
     ];
 
     $allProducts = Product::query()
@@ -210,14 +191,14 @@ class ShowersCalculatorBridgeController extends Controller
       $unitSymbol = $product->unit ? ($product->unit->getTranslation('symbol', app()->getLocale()) ?? $product->unit->symbol) : 'шт.';
 
       match ($catCode) {
-        self::CAT_GLASS => $this->parseGlassPrices($product, $unitSymbol, $prices),
-        self::CAT_PROFILES => $this->parseProfilePrices($product, $unitSymbol, $prices),
-        self::CAT_HANDLES => $this->parseHandlePrices($product, $unitSymbol, $prices),
-        self::CAT_CROSSBARS => $this->parseCrossbarPrices($product, $unitSymbol, $prices),
+        self::CAT_GLASS        => $this->parseGlassPrices($product, $unitSymbol, $prices),
+        self::CAT_PROFILES     => $this->parseProfilePrices($product, $unitSymbol, $prices),
+        self::CAT_HANDLES      => $this->parseHandlePrices($product, $unitSymbol, $prices),
+        self::CAT_CROSSBARS    => $this->parseCrossbarPrices($product, $unitSymbol, $prices),
         self::CAT_OPEN_SYSTEMS => $this->parseOpenSystemPrices($product, $unitSymbol, $prices),
-        self::CAT_SEALANTS => $this->parseSealantPrices($product, $unitSymbol, $prices),
-        self::CAT_DOORSTEPS => $this->parseDoorstepPrices($product, $unitSymbol, $prices),
-        self::CAT_SERVICES => $this->parseServicePrices($product, $unitSymbol, $prices),
+        self::CAT_SEALANTS     => $this->parseSealantPrices($product, $unitSymbol, $prices),
+        self::CAT_DOORSTEPS    => $this->parseDoorstepPrices($product, $unitSymbol, $prices),
+        self::CAT_SERVICES     => $this->parseServicePrices($product, $unitSymbol, $prices),
         default => null
       };
     }
@@ -245,13 +226,13 @@ class ShowersCalculatorBridgeController extends Controller
 
       if (!isset($groupedByColor[$colorSlug])) {
         $groupedByColor[$colorSlug] = [
-          'id' => $colorSlug,
-          'name' => $colorOption->getTranslation('value', app()->getLocale()) ?? $colorOption->value,
-          'hexColor' => $colorOption->param ?: '#D6E4E5',
+          'id'        => $colorSlug,
+          'name'      => $colorOption->getTranslation('value', app()->getLocale()) ?? $colorOption->value,
+          'hexColor'  => $colorOption->param ?: '#D6E4E5',
           'roughness' => (float)$this->getEavValue($variant, 'roughness'),
-          'fluted' => (bool)$this->getEavValue($variant, 'fluted'),
-          'pathImg' => $this->resolveVariantPreview($variant, $product),
-          'variants' => []
+          'fluted'    => (bool)$this->getEavValue($variant, 'fluted'),
+          'pathImg'   => $this->resolveVariantPreview($variant, $product),
+          'variants'  => []
         ];
       }
 
@@ -264,14 +245,14 @@ class ShowersCalculatorBridgeController extends Controller
 
     foreach ($groupedByColor as $colorSlug => $data) {
       $prices['glasses'][$colorSlug] = [
-        'id' => $colorSlug,
-        'name' => $data['name'],
-        'unit' => $unitSymbol,
-        'variants' => $data['variants'],
-        'hexColor' => $data['hexColor'],
+        'id'        => $colorSlug,
+        'name'      => $data['name'],
+        'unit'      => $unitSymbol,
+        'variants'  => $data['variants'],
+        'hexColor'  => $data['hexColor'],
         'roughness' => $data['roughness'],
-        'fluted' => $data['fluted'],
-        'pathImg' => $data['pathImg'] ?: ($product->getPreviewUrl() ?? ''),
+        'fluted'    => $data['fluted'],
+        'pathImg'   => $data['pathImg'] ?: ($product->getPreviewUrl() ?? ''),
       ];
     }
   }
@@ -295,7 +276,7 @@ class ShowersCalculatorBridgeController extends Controller
 
       if (!isset($groupedByColor[$color])) {
         $groupedByColor[$color] = [
-          'name' => $this->resolveVariantName($v, $product),
+          'name'     => $this->resolveVariantName($v, $product),
           'variants' => [],
         ];
       }
@@ -307,11 +288,11 @@ class ShowersCalculatorBridgeController extends Controller
 
     foreach ($groupedByColor as $color => $data) {
       $prices['profile'][$type][$color] = [
-        'id' => $color,
+        'id'              => $color,
         'furnitureTypeId' => $color,
-        'name' => $data['name'],
-        'unit' => $unitSymbol,
-        'variants' => $data['variants'],
+        'name'            => $data['name'],
+        'unit'            => $unitSymbol,
+        'variants'        => $data['variants'],
       ];
     }
   }
@@ -329,11 +310,11 @@ class ShowersCalculatorBridgeController extends Controller
       $prices['handle'][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
-          'type' => $type,
+          'type'            => $type,
           'furnitureTypeId' => $color,
-          'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
-          'interfaceName' => $interfaceName ?: $variantName,
-          'pathImg' => $this->resolveVariantPreview($v, $product),
+          'doorTypeIds'     => $this->getEavMultipleValues($v, 'door_type_ids'),
+          'interfaceName'   => $interfaceName ?: $variantName,
+          'pathImg'         => $this->resolveVariantPreview($v, $product),
         ]
       );
     }
@@ -352,7 +333,7 @@ class ShowersCalculatorBridgeController extends Controller
       $prices['crossbar'][$type][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
-          'crossbarTypeId' => $this->getEavValue($v, 'crossbar_type_id'),
+          'crossbarTypeId'  => $this->getEavValue($v, 'crossbar_type_id'),
           'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
         ]
       );
@@ -372,7 +353,7 @@ class ShowersCalculatorBridgeController extends Controller
       $prices['openSystem'][$type][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
-          'materialTypeId' => $this->getEavValue($v, 'material_type_id'),
+          'materialTypeId'  => $this->getEavValue($v, 'material_type_id'),
           'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
         ]
       );
@@ -399,9 +380,9 @@ class ShowersCalculatorBridgeController extends Controller
     $rawId = $product->code ?: ('id_' . $product->id);
 
     $prices['sealant'][$type][$rawId] = [
-      'id' => $rawId,
-      'name' => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
-      'unit' => $unitSymbol,
+      'id'       => $rawId,
+      'name'     => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
+      'unit'     => $unitSymbol,
       'variants' => $variants,
     ];
   }
@@ -429,26 +410,61 @@ class ShowersCalculatorBridgeController extends Controller
         continue;
       }
 
-      $rawId = (string)$v->id;
+      $rateType = $this->getEavValue($v, 'service_rate_type');
+      $formTypeId = $this->getEavValue($v, 'form_type') ?: $this->getEavValue($product, 'form_type');
+      $doorTypeIds = $this->getEavMultipleValues($v, 'door_type_ids') ?: $this->getEavMultipleValues($product, 'door_type_ids');
       $retailPrice = $this->resolveVariantPrice($v);
 
-      $basePrice = ($retailPrice > 0 && $retailPrice < 1000)
-        ? $retailPrice
-        : (self::SERVICE_BASE_PRICES[$type] ?? 30.0);
+      // Для монтажных работ выводим каждую разновидность по формам и дверям
+      if ($type === 'montage') {
+        $rawId = (string)$v->id;
+        $prices['services']['montage'][$rawId] = array_merge(
+          $this->buildBaseItemData($v, $product, $unitSymbol),
+          [
+            'formTypeId'      => $formTypeId,
+            'doorTypeIds'     => $doorTypeIds,
+            'price1'          => $retailPrice,
+            'price2'          => 0.0,
+            'base_variant_id' => $v->id,
+            'rate_variant_id' => $v->id,
+          ]
+        );
+        continue;
+      }
 
-      $secondaryRate = self::SERVICE_TARIFF_RATES[$type] ?? 0.0;
-      $baseData = $this->buildBaseItemData($v, $product, $unitSymbol);
-      $baseData['price'] = $basePrice;
+      // Для замера, доставки и подъема - группируем базовый выезд (price1) и тариф за км/этаж (price2)
+      if (!isset($prices['services'][$type]['main'])) {
+        $prices['services'][$type]['main'] = [
+          'id'              => (string)$v->id,
+          'variant_id'      => $v->id,
+          'sku'             => $v->sku,
+          'name'            => $product->getTranslation('name', app()->getLocale()) ?? $product->name,
+          'unit'            => $unitSymbol,
+          'price'           => $retailPrice,
+          'formTypeId'      => $formTypeId,
+          'doorTypeIds'     => $doorTypeIds,
+          'price1'          => 0.0,
+          'price2'          => 0.0,
+          'base_variant_id' => $v->id,
+          'rate_variant_id' => $v->id,
+        ];
+      }
 
-      $prices['services'][$type][$rawId] = array_merge(
-        $baseData,
-        [
-          'formTypeId' => $this->getEavValue($v, 'form_type'),
-          'doorTypeIds' => $this->getEavMultipleValues($v, 'door_type_ids'),
-          'price1' => $basePrice,
-          'price2' => $secondaryRate,
-        ]
-      );
+      // Если это вариант тарифа за км/этаж (KM/FLOOR или per_unit) -> пишем в price2
+      if ($rateType === 'per_unit' || str_contains($v->sku, '-KM') || str_contains($v->sku, '-FLOOR')) {
+        $prices['services'][$type]['main']['price2'] = $retailPrice;
+        $prices['services'][$type]['main']['rate_variant_id'] = $v->id;
+      }
+      // Если это базовый выезд (BASE/ELEVATOR) -> пишем в price1
+      else {
+        $prices['services'][$type]['main']['id'] = (string)$v->id;
+        $prices['services'][$type]['main']['variant_id'] = $v->id;
+        $prices['services'][$type]['main']['sku'] = $v->sku;
+        $prices['services'][$type]['main']['name'] = $this->resolveVariantName($v, $product);
+        $prices['services'][$type]['main']['price'] = $retailPrice;
+        $prices['services'][$type]['main']['price1'] = $retailPrice;
+        $prices['services'][$type]['main']['base_variant_id'] = $v->id;
+      }
     }
   }
 
@@ -460,7 +476,7 @@ class ShowersCalculatorBridgeController extends Controller
     if ($measureDict) {
       foreach ($measureDict->records as $record) {
         $limits['measure'][$record->slug] = [
-          'id' => $record->slug,
+          'id'        => $record->slug,
           'heightMin' => (int)($record->meta['height_min'] ?? 0),
           'heightMax' => (int)($record->meta['height_max'] ?? 0),
           'lengthMin' => (int)($record->meta['length_min'] ?? 0),
@@ -473,7 +489,7 @@ class ShowersCalculatorBridgeController extends Controller
     if ($serviceDict) {
       foreach ($serviceDict->records as $record) {
         $limits['services'][$record->slug] = [
-          'id' => $record->slug,
+          'id'       => $record->slug,
           'valueMin' => 0,
           'valueMax' => (int)($record->meta['value_max'] ?? 0),
         ];
@@ -491,12 +507,12 @@ class ShowersCalculatorBridgeController extends Controller
     if ($dict) {
       foreach ($dict->records as $record) {
         $settings[$record->slug] = [
-          'adminShow' => (bool)($record->meta['show_admin'] ?? false),
+          'adminShow'   => (bool)($record->meta['show_admin'] ?? false),
           'managerShow' => (bool)($record->meta['show_manager'] ?? false),
-          'userShow' => (bool)($record->meta['show_user'] ?? false),
-          'adminValue' => (string)($record->meta['value_admin'] ?? ''),
-          'managerValue' => (string)($record->meta['value_manager'] ?? ''),
-          'userValue' => (string)($record->meta['value_user'] ?? ''),
+          'userShow'    => (bool)($record->meta['show_user'] ?? false),
+          'adminValue'  => (string)($record->meta['value_admin'] ?? ''),
+          'managerValue'=> (string)($record->meta['value_manager'] ?? ''),
+          'userValue'   => (string)($record->meta['value_user'] ?? ''),
         ];
       }
     }
@@ -513,13 +529,13 @@ class ShowersCalculatorBridgeController extends Controller
 
     if ($baseCurrency) {
       $rates[$baseCurrency->code] = [
-        'ID' => (string)$baseCurrency->id,
-        'code' => $baseCurrency->code,
-        'name' => $baseCurrency->getTranslation('name', app()->getLocale()) ?? $baseCurrency->name,
-        'scale' => 1,
-        'rate' => 1.0,
-        'main' => "1",
-        'shortName' => $baseCurrency->symbol,
+        'ID'           => (string)$baseCurrency->id,
+        'code'         => $baseCurrency->code,
+        'name'         => $baseCurrency->getTranslation('name', app()->getLocale()) ?? $baseCurrency->name,
+        'scale'        => 1,
+        'rate'         => 1.0,
+        'main'         => "1",
+        'shortName'    => $baseCurrency->symbol,
         'lastEditDate' => $baseCurrency->updated_at?->toDateTimeString() ?? date('Y-m-d H:i:s')
       ];
     }
