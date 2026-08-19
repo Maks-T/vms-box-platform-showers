@@ -1,12 +1,13 @@
 @php
   $isDark = isset($theme) && $theme === 'dark';
 
-  $companyName = strtoupper(config('nicole.company.name', 'Vistegra'));
-  $companyPhone = config('nicole.company.phone', '+375 (29) 189-83-22');
-  $companyEmail = config('nicole.company.email', 'info@vistegra.by');
-  $companyWebsite = config('nicole.company.website', 'vistegra.ru');
+  $companyName = strtoupper(config('nicole.company.name', 'Прозрачные решения'));
+  $companyPhone = config('nicole.company.phone', '+375 29 555-61-01');
+  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
+  $companyWebsite = config('nicole.company.website', 'proreshenia.by');
 
-  // Динамически считываем SVG-логотип с диска (public/images/logo.svg) и кодируем в Base64 для надежного рендера
+  $cleanPhone = preg_replace('/[^\d+]/', '', $companyPhone);
+
   $logoPath = public_path('pdf/logo.svg');
   $logoBase64 = '';
   if (file_exists($logoPath)) {
@@ -15,26 +16,26 @@
 @endphp
 
 <div class="pdf-header {{ $isDark ? 'pdf-header-dark' : '' }}">
-  <!-- Контейнер логотипа со стилями из CSS -->
   <div class="header-logo-container">
     @if ($logoBase64)
-      <!-- Полноценный векторный логотип, прочитанный с диска -->
-      <img src="{{ $logoBase64 }}" alt="Logo" class="header-logo-img">
+      <a href="https://{{ $companyWebsite }}" target="_blank">
+        <img src="{{ $logoBase64 }}" alt="Logo" class="header-logo-img">
+      </a>
     @else
-      <!-- Красивый текстовый фоллбек-заголовок, если SVG-файл еще не залит на диск -->
-      <span class="header-logo-text">{{ $companyName }}</span>
+      <a href="https://{{ $companyWebsite }}" target="_blank">
+        <span class="header-logo-text">{{ $companyName }}</span>
+      </a>
     @endif
   </div>
 
-  <!-- Контактная информация -->
   <div class="header-contacts">
     <div class="header-phone {{ $isDark ? 'header-phone-dark' : '' }}">
-      {{ $companyPhone }}
+      <a href="tel:{{ $cleanPhone }}">{{ $companyPhone }}</a>
     </div>
     <div class="header-emails {{ $isDark ? 'header-emails-dark' : '' }}">
-      <span>{{ $companyEmail }}</span>
+      <a href="mailto:{{ $companyEmail }}">{{ $companyEmail }}</a>
       <span>·</span>
-      <span>{{ $companyWebsite }}</span>
+      <a href="https://{{ $companyWebsite }}" target="_blank">{{ $companyWebsite }}</a>
     </div>
   </div>
 </div>

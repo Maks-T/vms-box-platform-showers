@@ -10,6 +10,11 @@
   };
 
   $validUntil = PdfEstimateRenderer::getValidUntil($order->created_at);
+
+  $companyName = config('nicole.company.name', 'Прозрачные решения');
+  $companyPhone = config('nicole.company.phone', '+375 29 555-61-01');
+  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
+  $cleanPhone = preg_replace('/[^\d+]/', '', $companyPhone);
 @endphp
 
 <div class="page">
@@ -17,80 +22,74 @@
 
   <div class="page-content">
 
-    <div class="page-title-container">
-      <div class="category-header-text" style="color: var(--brand-blue); margin-bottom: 4px;">Завершающий шаг</div>
-      <h1 class="page-title" style="font-size: 24px;">Готовы оформить заказ?</h1>
-    </div>
-
-    <div class="light-divider"></div>
-
-    <div class="steps-container-light">
-      <div class="step-card-light">
-        <div class="step-num-light">1</div>
-        <div class="step-content-light">
-          <div class="step-title-light">Подтвердите расчёт и эскиз</div>
-          <div class="step-desc-light">Свяжитесь с вашим персональным менеджером для согласования типа стекла, цвета фурнитуры и нюансов монтажа.</div>
-        </div>
-      </div>
-
-      <div class="step-card-light">
-        <div class="step-num-light">2</div>
-        <div class="step-content-light">
-          <div class="step-title-light">Согласуйте дату замера</div>
-          <div class="step-desc-light">Наш инженер выедет на объект для точного снятия геометрических размеров и проверки плоскостей стен и пола.</div>
-        </div>
-      </div>
-
-      <div class="step-card-light">
-        <div class="step-num-light">3</div>
-        <div class="step-content-light">
-          <div class="step-title-light">Производство и профессиональный монтаж</div>
-          <div class="step-desc-light">Запускаем точный раскрой и закалку стекла, доставляем и производим чистый монтаж конструкции.</div>
-        </div>
-      </div>
-    </div>
-
-    @if ($order->manager)
-      <div class="manager-card-light">
-        <div class="manager-info">
-          <div class="manager-post-light">Ваш персональный менеджер</div>
-          <div class="manager-name-light">{{ $order->manager->name }}</div>
-
-          <ul class="manager-contacts-list-light">
-            @if ($order->manager->phone || config('nicole.company.phone'))
-              <li><span>Телефон:</span> {{ $order->manager->phone ?? config('nicole.company.phone') }}</li>
-            @endif
-            @if ($order->manager->email || config('nicole.company.email'))
-              <li><span>Email:</span> {{ $order->manager->email ?? config('nicole.company.email') }}</li>
-            @endif
-            <li><span>Поддержка:</span> Telegram · WhatsApp · Viber</li>
-            <li><span>График работы:</span> Пн–Пт 10:00–20:00</li>
+    <div class="info-blocks-container">
+      {{-- Блок 1: Условия оплаты --}}
+      <div class="info-block-card">
+        <div class="info-block-title">Условия оплаты</div>
+        <div class="info-block-content">
+          <p><strong>Варианты оплаты:</strong></p>
+          <ul>
+            <li>Наличный расчет — предоплата 50%.</li>
+            <li>ЕРИП — предоплата 50%.</li>
+            <li>
+              <strong>Рассрочка от Альфа-Банка:</strong>
+              <br>— 1% от 2 до 5 месяцев (оформление при проведении замера).
+            </li>
+            <li>
+              <strong>Кредит от Альфа-Банка:</strong>
+              <br>— 18,2% до 48 месяцев (оформление при проведении замера).
+            </li>
           </ul>
         </div>
       </div>
-    @elseif (config('nicole.company.phone') || config('nicole.company.email'))
-      <div class="manager-card-light">
-        <div class="manager-info">
-          <div class="manager-post-light">Контакты компании</div>
-          <div class="manager-name-light">{{ config('nicole.company.name', 'Vistegra') }}</div>
 
-          <ul class="manager-contacts-list-light">
-            @if (config('nicole.company.phone'))
-              <li><span>Телефон:</span> {{ config('nicole.company.phone') }}</li>
-            @endif
-            @if (config('nicole.company.email'))
-              <li><span>Email:</span> {{ config('nicole.company.email') }}</li>
-            @endif
-            <li><span>Поддержка:</span> Telegram · WhatsApp · Viber</li>
-            <li><span>График работы:</span> Пн–Пт 10:00–20:00</li>
-          </ul>
+      {{-- Блок 2: Сроки производства --}}
+      <div class="info-block-card">
+        <div class="info-block-title">Срок выполнения</div>
+        <div class="info-block-content">
+          <p>Срок выполнения работ составляет <strong>15 рабочих дней</strong>.</p>
         </div>
       </div>
-    @endif
+
+      {{-- Блок 3: Гарантийные обязательства --}}
+      <div class="info-block-card">
+        <div class="info-block-title">Гарантия</div>
+        <div class="info-block-content">
+          <p>Гарантия на стекло — <strong>36 месяцев</strong>, гарантия на выполненные работы — <strong>12 месяцев</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    {{-- Карточка контактов компании / менеджера --}}
+    <div class="manager-card-light">
+      <div class="manager-info">
+        <div class="manager-post-light">Контакты компании</div>
+        <div class="manager-name-light">{{ $companyName }}</div>
+
+        <ul class="manager-contacts-list-light">
+          <li>
+            <span>Телефон:</span>
+            <a href="tel:{{ $cleanPhone }}">{{ $companyPhone }}</a>
+          </li>
+          <li>
+            <span>Email:</span>
+            <a href="mailto:{{ $companyEmail }}">{{ $companyEmail }}</a>
+          </li>
+          <li>
+            <span>Поддержка:</span>
+            Telegram · WhatsApp · Viber
+          </li>
+          <li>
+            <span>График работы:</span>
+            Пн–Пт 10:00–20:00
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <div class="closing-meta-light">
       <div class="closing-cell-left">
-        <div class="closing-label-light">Срок действия КП</div>
+        <div class="closing-label-light">Срок действия предложения</div>
         <div class="closing-value-light">до {{ $validUntil }} года · 30 дней</div>
       </div>
 
