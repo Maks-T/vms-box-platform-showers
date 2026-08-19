@@ -27,7 +27,7 @@
 
       <div class="page-content">
         <div class="section-summary-title-bar">
-          <div class="section-summary-title-text">Детальный расчёт №{{ $sectionIndex + 1 }} · {{ $section->title }}</div>
+          <div class="section-summary-title-text">Детальный расчёт · {{ $section->title }}</div>
         </div>
 
         @foreach($validCategories as $categoryNode)
@@ -35,28 +35,12 @@
         @endforeach
 
         <div class="section-summary-title-bar">
-          <div class="section-summary-title-text">Итого по расчёту №{{ $sectionIndex + 1 }}</div>
+          <div class="section-summary-title-text">Итоговая стоимость</div>
         </div>
 
         <div class="total-breakdown-card">
-          <div class="breakdown-row">
-            <span class="breakdown-label">Стоимость материалов и работ</span>
-            <span class="breakdown-value">
-              {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
-            </span>
-          </div>
-
-          @if($section->price_discount > 0)
-            <div class="breakdown-row">
-              <span class="breakdown-label">Скидка</span>
-              <span class="breakdown-value breakdown-value-discount">
-                -{{ PdfEstimateRenderer::formatPrice($section->price_discount, $currencySymbol) }}
-              </span>
-            </div>
-          @endif
-
           <div class="breakdown-row breakdown-row-grand">
-            <span class="breakdown-label-grand">Итоговая сумма</span>
+            <span class="breakdown-label-grand">Итого к оплате</span>
             <span class="breakdown-value-grand">
               {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
             </span>

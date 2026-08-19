@@ -16,6 +16,8 @@
       $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f8fafc"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="2" stroke-opacity="0.3"/><circle cx="400" cy="300" r="100" fill="none" stroke="#0284c7" stroke-width="1" stroke-opacity="0.2"/></svg>';
       $coverBase64 = 'data:image/svg+xml;base64,' . base64_encode($svg);
   }
+
+  $customerFullName = $order->customer ? trim($order->customer->full_name) : '';
 @endphp
 
 <div class="page page-cover">
@@ -52,21 +54,14 @@
         </span>
       </div>
 
-      @if ($order->customer)
+      @if (!empty($customerFullName))
         <div class="cover-meta-row">
           <span class="cover-meta-label-showers">Заказчик:</span>
           <span class="cover-meta-value-showers">
-            {{ $order->customer->full_name }}
+            {{ $customerFullName }}
           </span>
         </div>
       @endif
-
-      <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">Изделий в заказе:</span>
-        <span class="cover-meta-value-showers">
-          {{ $order->sections->count() }}
-        </span>
-      </div>
 
       <div class="cover-meta-row">
         <span class="cover-meta-label-showers">Итого к оплате:</span>
