@@ -5,42 +5,17 @@ use Inertia\Inertia;
 use Nicole\Box\Core\Http\Resources\Api\V1\ProductResource;
 use Nicole\Box\Core\Models\Product;
 
-// 1. Главная страница (Душевые кабины под ключ)
+// 1. Главная страница (Каталог)
 Route::get('/', function () {
-  return Inertia::render('ShowerCabin/Index');
-})->name('home');
-
-// Страница Душевые кабины
-Route::get('/shower_cabin', function () {
-  return Inertia::render('ShowerCabin/Index');
-})->name('shower.cabin');
-
-// Страница Межкомнатные перегородки
-Route::get('/peregorodki', function () {
-  return Inertia::render('Partitions/Index');
-})->name('partitions');
-
-// Страница Зеркала
-Route::get('/zerkala', function () {
-  return Inertia::render('Mirrors/Index');
-})->name('mirrors');
-
-// Страница Контакты
-Route::get('/contacts', function () {
-  return Inertia::render('Contacts/Index');
-})->name('contacts');
-
-// Каталог материалов VMS-NC
-Route::get('/catalog', function () {
   return Inertia::render('Catalog/Index');
 })->name('catalog');
 
-// Страница конфигурации Bootstrap (API Инспектор)
+// Страница конфигурации Bootstrap
 Route::get('/bootstrap', function () {
   return Inertia::render('Bootstrap/Index');
 })->name('bootstrap');
 
-// Детальная карточка товара
+// Детальная страница товара
 Route::get('/product/{slug}', function (string $slug) {
   $product = Product::where('slug', $slug)
     ->where('is_active', true)
@@ -65,15 +40,18 @@ Route::get('/product/{slug}', function (string $slug) {
   ]);
 })->name('product.show');
 
-// Страница услуг и матрицы цен
+// Страница услуг калькулятора
 Route::get('/services', function () {
   return Inertia::render('Services/Index');
 })->name('services');
 
-// Переключение локали/языка
+// Переключение языка
 Route::get('/lang/{locale}', function (string $locale) {
-  if (in_array($locale, ['ru'])) {
+  if (in_array($locale, ['ru', 'en'])) {
+    // Записываем в сессию для нашего API
     session(['locale' => $locale]);
+
+    // Записываем в куку, чтобы Filament Language Switch не сбрасывал язык
     cookie()->queue(cookie()->forever('filament_language_switch_locale', $locale));
   }
 

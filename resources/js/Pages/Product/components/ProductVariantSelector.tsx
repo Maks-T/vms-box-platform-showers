@@ -43,14 +43,14 @@ export function ProductVariantSelector({ variants, activeVariant, onSelectVarian
 
   if (attrEntries.length > 0) {
     return (
-      <div className="flex flex-col gap-5 py-4 border-y border-slate-200/80 my-6">
+      <div className="flex flex-col gap-3 py-4 border-y border-zinc-200 my-4">
         {attrEntries.map(([code, { name, options }]) => {
           const activeValObj = (activeVariant?.attributes?.[code]?.value as EavValueOption | undefined);
           const activeKey = activeValObj?.key;
 
           return (
-            <div key={code} className="flex flex-col gap-2.5">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            <div key={code} className="flex flex-col gap-2">
+              <label className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
                 {name}:
               </label>
               <div className="flex flex-wrap gap-2">
@@ -63,19 +63,26 @@ export function ProductVariantSelector({ variants, activeVariant, onSelectVarian
                       type="button"
                       onClick={() => onSelectVariant(variant)}
                       className={cn(
-                        "px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all border cursor-pointer flex items-center gap-2",
+                        "px-3 py-1.5 rounded text-xs font-semibold transition-all border cursor-pointer flex items-center gap-2",
                         isSelected
-                          ? "bg-[#004F87] border-[#004F87] text-white shadow-sm"
-                          : "bg-white border-slate-200 text-slate-700 hover:border-[#004F87] hover:text-[#004F87]"
+                          ? "bg-zinc-900 border-zinc-900 text-white shadow-sm"
+                          : "bg-white border-zinc-200 text-zinc-700 hover:border-zinc-900 hover:text-zinc-900"
                       )}
                     >
                       {option.meta?.hex && (
                         <span
-                          className="w-3.5 h-3.5 rounded-full border border-slate-300 shrink-0"
+                          className="w-3.5 h-3.5 rounded-sm border border-zinc-300 shrink-0"
                           style={{ backgroundColor: option.meta.hex }}
                         />
                       )}
-                      {isSelected && !option.meta?.hex && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
+                      {option.meta?.image && (
+                        <img
+                          src={option.meta.image}
+                          alt=""
+                          className="w-4 h-4 rounded-sm object-cover border border-zinc-300 shrink-0"
+                        />
+                      )}
+                      {isSelected && !option.meta?.hex && !option.meta?.image && <Check className="w-3.5 h-3.5 stroke-[3px]" />}
                       <span>{option.label}</span>
                     </button>
                   );
@@ -89,9 +96,9 @@ export function ProductVariantSelector({ variants, activeVariant, onSelectVarian
   }
 
   return (
-    <div className="flex flex-col gap-2.5 py-4 border-y border-slate-200/80 my-6">
-      <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-        Вариант исполнения:
+    <div className="flex flex-col gap-2 py-4 border-y border-zinc-200 my-4">
+      <label className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
+        Вариант исполнения (SKU):
       </label>
       <div className="flex flex-wrap gap-2">
         {variants.map((v) => {
@@ -104,10 +111,10 @@ export function ProductVariantSelector({ variants, activeVariant, onSelectVarian
               type="button"
               onClick={() => onSelectVariant(v)}
               className={cn(
-                "px-4 py-2 rounded-xl text-xs md:text-sm font-semibold transition-all border cursor-pointer",
+                "px-3.5 py-1.5 rounded text-xs font-semibold transition-all border cursor-pointer",
                 isSelected
-                  ? "bg-[#004F87] border-[#004F87] text-white shadow-sm"
-                  : "bg-white border-slate-200 text-slate-700 hover:border-[#004F87] hover:text-[#004F87]"
+                  ? "bg-zinc-900 border-zinc-900 text-white shadow-sm"
+                  : "bg-white border-zinc-200 text-zinc-700 hover:border-zinc-900 hover:text-zinc-900"
               )}
             >
               {label}
