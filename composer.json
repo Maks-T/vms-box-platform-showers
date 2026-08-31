@@ -10,9 +10,11 @@
   "license": "MIT",
   "require": {
     "php": "^8.5",
+    "ext-fileinfo": "*",
     "barryvdh/laravel-dompdf": "^3.1",
     "bezhansalleh/filament-language-switch": "^4.3",
     "bezhansalleh/filament-shield": "^4.2",
+    "cms-multi/filament-clear-cache": "^3.0",
     "codewithdennis/filament-select-tree": "^4.1",
     "dedoc/scramble": "^0.13.22",
     "filament/filament": "^5.0",
@@ -29,8 +31,7 @@
     "spatie/laravel-medialibrary": "^11.0",
     "spatie/laravel-translatable": "^6.14",
     "tightenco/ziggy": "^2.6",
-    "valerie/box-industry-showers": "@dev",
-    "ext-fileinfo": "*"
+    "valerie/box-industry-showers": "@dev"
   },
   "require-dev": {
     "fakerphp/faker": "^1.23",

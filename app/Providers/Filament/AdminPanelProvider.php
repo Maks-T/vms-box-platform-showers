@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers\Filament;
 
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use CmsMulti\FilamentClearCache\FilamentClearCachePlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -93,6 +94,8 @@ class AdminPanelProvider extends PanelProvider
           ->collapsed(),
       ])
       ->plugins([
+        FilamentClearCachePlugin::make(),
+
         NicoleCorePlugin::make(),
 
         ValerieShowersPlugin::make(),
