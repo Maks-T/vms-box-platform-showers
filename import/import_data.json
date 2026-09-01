@@ -1,20 +1,6 @@
 {
   "currencies": [
     {
-      "external_code": "b0249465-14ea-4638-877b-5a15ab6389cc",
-      "code": "BYN",
-      "symbol": "Br",
-      "symbol_native": {
-        "ru": "руб."
-      },
-      "name": {
-        "ru": "Белорусский рубль"
-      },
-      "rate": 1,
-      "is_default": true,
-      "is_active": true
-    },
-    {
       "external_code": "0d520691-a9e9-4429-ae8e-1798afd9c8ed",
       "code": "RUB",
       "symbol": "₽",
@@ -24,7 +10,21 @@
       "name": {
         "ru": "Российский рубль"
       },
-      "rate": 0.036,
+      "rate": 1,
+      "is_default": true,
+      "is_active": true
+    },
+    {
+      "external_code": "b0249465-14ea-4638-877b-5a15ab6389cc",
+      "code": "BYN",
+      "symbol": "Br",
+      "symbol_native": {
+        "ru": "руб."
+      },
+      "name": {
+        "ru": "Белорусский рубль"
+      },
+      "rate": 28.0,
       "is_default": false,
       "is_active": true
     },
@@ -38,7 +38,7 @@
       "name": {
         "ru": "Доллар США"
       },
-      "rate": 2.9,
+      "rate": 90.0,
       "is_default": false,
       "is_active": true
     }
@@ -53,7 +53,7 @@
         "ru": "Базовая розничная цена в системе"
       },
       "is_default": true,
-      "currency_code": "BYN"
+      "currency_code": "RUB"
     }
   ],
   "families": [
