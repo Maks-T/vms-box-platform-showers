@@ -52,7 +52,10 @@
           <div class="product-name">{{ $itemName }}</div>
         </div>
       </td>
-      <td class="estimate-cell-qty">{{ $itemQty }} {{ $itemUnit === 'link-id:pcs' ? 'шт.' : ($itemUnit === 'link-id:m' ? 'м.' : $itemUnit) }}</td>
+      <td class="estimate-cell-qty">
+        {{ $itemQty }}
+        {{ $itemUnit === 'link-id:pcs' ? 'шт.' : ($itemUnit === 'link-id:m' ? 'м.' : ($itemUnit === 'link-id:m2' ? 'м²' : $itemUnit)) }}
+      </td>
       <td class="estimate-cell-price">{{ $itemPrice }}</td>
       <td class="estimate-cell-total">{{ $itemSum }}</td>
     </tr>

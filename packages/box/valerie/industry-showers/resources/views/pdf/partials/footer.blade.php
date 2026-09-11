@@ -1,8 +1,8 @@
 @php
   $isDark = isset($theme) && $theme === 'dark';
 
-  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
-  $companyWebsite = config('nicole.company.website', 'proreshenia.by');
+  $companyEmail = config('nicole.company.email', 'zakazamigrupp@gmail.com');
+  $companyWebsite = config('nicole.company.website', 'amigrupp.ru');
 @endphp
 
 <div class="pdf-footer {{ $isDark ? 'pdf-footer-dark' : '' }}">

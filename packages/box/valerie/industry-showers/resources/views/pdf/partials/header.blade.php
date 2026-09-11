@@ -1,17 +1,28 @@
 @php
   $isDark = isset($theme) && $theme === 'dark';
 
-  $companyName = strtoupper(config('nicole.company.name', 'Прозрачные решения'));
-  $companyPhone = config('nicole.company.phone', '+375 29 555-61-01');
-  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
-  $companyWebsite = config('nicole.company.website', 'proreshenia.by');
+  $companyName = strtoupper(config('nicole.company.name', 'АМИ ГРУПП'));
+  $companyPhone = config('nicole.company.phone', '8 (343) 288-26-04');
+  $companyEmail = config('nicole.company.email', 'zakazamigrupp@gmail.com');
+  $companyWebsite = config('nicole.company.website', 'amigrupp.ru');
 
   $cleanPhone = preg_replace('/[^\d+]/', '', $companyPhone);
 
-  $logoPath = public_path('pdf/logo.svg');
+  // Поддержка SVG и PNG логотипа
   $logoBase64 = '';
-  if (file_exists($logoPath)) {
-      $logoBase64 = 'data:image/svg+xml;base64,' . base64_encode(file_get_contents($logoPath));
+  $logoCandidates = [
+      public_path('pdf/logo.svg'),
+      public_path('pdf/logo.png'),
+      public_path('images/pdf/logo.svg'),
+      public_path('images/pdf/logo.png'),
+  ];
+
+  foreach ($logoCandidates as $path) {
+      if (file_exists($path)) {
+          $mime = str_ends_with($path, '.svg') ? 'image/svg+xml' : 'image/png';
+          $logoBase64 = 'data:' . $mime . ';base64,' . base64_encode(file_get_contents($path));
+          break;
+      }
   }
 @endphp
 
@@ -19,7 +30,7 @@
   <div class="header-logo-container">
     @if ($logoBase64)
       <a href="https://{{ $companyWebsite }}" target="_blank">
-        <img src="{{ $logoBase64 }}" alt="Logo" class="header-logo-img">
+        <img src="{{ $logoBase64 }}" alt="{{ $companyName }}" class="header-logo-img">
       </a>
     @else
       <a href="https://{{ $companyWebsite }}" target="_blank">

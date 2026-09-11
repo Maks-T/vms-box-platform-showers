@@ -3,19 +3,31 @@
   margin: 0;
 }
 
+/* ==========================================================================
+   1. ГЛОБАЛЬНЫЕ ПРАВИЛА И ФИРМЕННАЯ ПАЛИТРА АМИ ГРУПП (amigrupp.ru)
+   ========================================================================== */
 :root {
   --bg-main: #FFFFFF;
   --bg-light: #F8FAFC;
   --bg-grey: #F1F5F9;
-  --bg-blue-light: #F0F9FF;
-  --brand-blue: #0284C7;
-  --brand-blue-hover: #0EA5E9;
-  --brand-red: #E11D48;
+
+  /* Фирменные акценты АМИ ГРУПП */
+  --brand-red: #C91C3D; /* Главный рубиновый акцент (цены, итого) */
+  --brand-red-hover: #E02449; /* Яркий рубиновый */
+  --brand-red-light: rgba(201, 28, 61, 0.06); /* Мягкая рубиновая подложка */
+
+  --brand-teal: #228B88; /* Морская волна / тил (стекло, категории) */
+  --brand-teal-hover: #2BA3A0; /* Светлый тил */
+  --brand-teal-light: rgba(34, 139, 136, 0.08); /* Аквамариновая подложка */
+
+  /* Системные переменные для совместимости */
+  --brand-blue: var(--brand-teal);
+  --bg-blue-light: var(--brand-teal-light);
   --stroke-light: #E2E8F0;
 
-  --text-heading: #0F172A;
+  --text-heading: #111827;
   --text-primary: #1E293B;
-  --text-secondary: #334155;
+  --text-secondary: #475569;
   --text-muted: #64748B;
   --text-disabled: #94A3B8;
 }
@@ -45,6 +57,9 @@ html, body {
   align-items: center;
 }
 
+/* ==========================================================================
+   2. БАЗОВАЯ ГЕОМЕТРИЯ ЛИСТА А4
+   ========================================================================== */
 .page {
   width: 210mm !important;
   min-height: 297mm !important;
@@ -86,6 +101,9 @@ html, body {
   font-weight: 400;
 }
 
+/* ==========================================================================
+   3. КОЛОНТИТУЛЫ (HEADER & FOOTER)
+   ========================================================================== */
 .pdf-header {
   width: 210mm;
   height: 18mm;
@@ -131,7 +149,7 @@ html, body {
 .header-phone a:hover,
 .header-emails a:hover,
 .footer-text a:hover {
-  color: var(--brand-blue);
+  color: var(--brand-red);
 }
 
 .header-emails {
@@ -180,6 +198,9 @@ html, body {
   font-weight: 400;
 }
 
+/* ==========================================================================
+   4. ТИТУЛЬНЫЙ ЛИСТ (COVER)
+   ========================================================================== */
 .page-cover {
   background-color: #FFFFFF;
   min-height: 297mm !important;
@@ -241,12 +262,12 @@ html, body {
 }
 
 .cover-subtitle-showers {
-  color: var(--brand-blue);
+  color: var(--brand-teal);
   font-size: 12px;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .cover-title-showers {
@@ -258,10 +279,11 @@ html, body {
   margin: 0;
 }
 
+/* Фирменный рубиновый разделитель АМИ ГРУПП */
 .cover-fade-divider {
   width: 100%;
-  height: 1.5px;
-  background: linear-gradient(90deg, #0284C7 0%, rgba(2, 132, 199, 0) 85%);
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-red) 0%, rgba(201, 28, 61, 0) 85%);
   margin-top: 6px;
   margin-bottom: 6px;
 }
@@ -273,6 +295,7 @@ html, body {
   background-color: var(--bg-light);
   padding: 12px 16px;
   border: 1px solid var(--stroke-light);
+  border-left: 3px solid var(--brand-teal);
 }
 
 .cover-meta-row {
@@ -298,17 +321,20 @@ html, body {
 }
 
 .cover-meta-value-price {
-  color: var(--brand-blue);
-  font-size: 15px;
+  color: var(--brand-red);
+  font-size: 16px;
   font-weight: 700;
 }
 
+/* ==========================================================================
+   5. СВОДКА И КАРТОЧКИ ИЗДЕЛИЙ (SUMMARY & SECTION CARDS)
+   ========================================================================== */
 .section-summary-title-bar {
   width: 100%;
   padding: 6px 0 6px 12px;
   background: transparent;
   border: none;
-  border-left: 3px var(--brand-blue) solid;
+  border-left: 3px var(--brand-teal) solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -326,7 +352,7 @@ html, body {
 }
 
 .section-summary-price {
-  color: var(--brand-blue);
+  color: var(--brand-red);
   font-size: 13px;
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
@@ -334,10 +360,10 @@ html, body {
 
 .category-header-bar {
   width: 100%;
-  padding: 4px 8px;
+  padding: 5px 10px;
   background-color: var(--bg-grey);
   border: 1px solid var(--stroke-light);
-  border-left: 2px var(--brand-blue) solid;
+  border-left: 3px var(--brand-teal) solid;
   margin-bottom: 6px;
 }
 
@@ -345,123 +371,9 @@ html, body {
   color: var(--text-heading);
   font-size: 10px;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.estimate-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 12px;
-  border: 1px solid var(--stroke-light);
-  background-color: #FFFFFF;
-}
-
-.estimate-table-th {
-  background-color: var(--bg-grey);
-  border-bottom: 1px solid var(--stroke-light);
-}
-
-.estimate-th-cell,
-.estimate-th-cell-right {
-  padding: 6px 10px;
-  color: var(--text-secondary);
-  font-size: 10px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-.estimate-th-cell-right {
-  text-align: right;
-  width: 100px;
-}
-
-.estimate-row {
-  border-bottom: 1px solid var(--stroke-light);
-}
-
-.estimate-cell-product {
-  padding: 5px 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.product-preview-img {
-  width: 38px;
-  height: 38px;
-  border: 1px var(--stroke-light) solid;
-  object-fit: contain;
-  background-color: #FFFFFF;
-  padding: 2px;
-}
-
-.product-info-block {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.product-name {
-  color: #0F172A;
-  font-size: 11px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  line-height: 14px;
-}
-
-.estimate-cell-bold {
-  padding: 8px 10px;
-  font-size: 11px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  color: #0F172A;
-}
-
-.estimate-cell-qty,
-.estimate-cell-price,
-.estimate-cell-total {
-  padding: 8px 10px;
-  text-align: right;
-  color: var(--text-secondary);
-  font-size: 11px;
-  vertical-align: middle;
-}
-
-.estimate-cell-qty-center {
-  text-align: center;
-  width: 80px;
-}
-
-.estimate-row-total {
-  background-color: var(--bg-blue-light);
-  border-top: 1px solid var(--brand-blue);
-}
-
-.estimate-cell-total-bold,
-.estimate-cell-total-medium,
-.estimate-cell-total-right-bold {
-  padding: 8px 10px;
-  font-size: 11px;
-  font-family: 'Inter', sans-serif;
-  line-height: 14px;
-}
-
-.estimate-cell-total-bold,
-.estimate-cell-total-right-bold {
   font-weight: 700;
-  color: var(--brand-blue);
-}
-
-.estimate-cell-total-medium {
-  font-weight: 600;
-  color: var(--brand-blue);
-  text-align: center;
-}
-
-.estimate-cell-total-right-bold {
-  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .section-card {
@@ -482,6 +394,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--stroke-light);
+  border-left: 3px solid var(--brand-teal);
 }
 
 .section-header-title {
@@ -496,7 +409,7 @@ html, body {
   font-family: 'DM Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: var(--brand-blue);
+  color: var(--brand-red);
 }
 
 .section-card-body {
@@ -561,13 +474,136 @@ html, body {
   font-weight: 600;
 }
 
+/* ==========================================================================
+   6. ТАБЛИЦЫ СМЕТЫ И ПОЗИЦИЙ (ESTIMATE TABLES)
+   ========================================================================== */
+.estimate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  border: 1px solid var(--stroke-light);
+  background-color: #FFFFFF;
+}
+
+.estimate-table-th {
+  background-color: var(--bg-grey);
+  border-bottom: 1px solid var(--stroke-light);
+}
+
+.estimate-th-cell,
+.estimate-th-cell-right {
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.estimate-th-cell-right {
+  text-align: right;
+  width: 100px;
+}
+
+.estimate-row {
+  border-bottom: 1px solid var(--stroke-light);
+}
+
+.estimate-cell-product {
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-preview-img {
+  width: 38px;
+  height: 38px;
+  border: 1px var(--stroke-light) solid;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  padding: 2px;
+}
+
+.product-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.product-name {
+  color: #0F172A;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 14px;
+}
+
+.estimate-cell-bold {
+  padding: 8px 10px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.estimate-cell-qty,
+.estimate-cell-price,
+.estimate-cell-total {
+  padding: 8px 10px;
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.estimate-cell-qty-center {
+  text-align: center;
+  width: 80px;
+}
+
+/* Итоговая строка таблицы сметы (рубиновый акцент) */
+.estimate-row-total {
+  background-color: var(--brand-red-light);
+  border-top: 1.5px solid var(--brand-red);
+}
+
+.estimate-cell-total-bold,
+.estimate-cell-total-medium,
+.estimate-cell-total-right-bold {
+  padding: 8px 10px;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  line-height: 14px;
+}
+
+.estimate-cell-total-bold,
+.estimate-cell-total-right-bold {
+  font-weight: 700;
+  color: var(--brand-red);
+}
+
+.estimate-cell-total-medium {
+  font-weight: 600;
+  color: var(--brand-red);
+  text-align: center;
+}
+
+.estimate-cell-total-right-bold {
+  text-align: right;
+}
+
+/* ==========================================================================
+   7. ИТОГОВЫЕ БЛОКИ СТОИМОСТИ (TOTAL BREAKDOWNS)
+   ========================================================================== */
 .total-breakdown-card {
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--stroke-light);
-  border-left: 2px var(--brand-blue) solid;
+  border-left: 3px var(--brand-red) solid;
   margin-top: 10px;
   background-color: #FFFFFF;
 }
@@ -594,25 +630,29 @@ html, body {
 }
 
 .breakdown-row-grand {
-  background-color: var(--bg-blue-light);
-  border-top: 1px var(--brand-blue) solid;
+  background-color: var(--brand-red-light);
+  border-top: 1.5px var(--brand-red) solid;
   border-bottom: none;
   padding: 8px 10px;
 }
 
 .breakdown-label-grand {
-  color: var(--brand-blue);
+  color: var(--brand-red);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
 }
 
 .breakdown-value-grand {
-  color: var(--brand-blue);
-  font-size: 13px;
+  color: var(--brand-red);
+  font-size: 14px;
   font-weight: 700;
 }
 
-/* Информационные карточки контактов и условий */
+/* ==========================================================================
+   8. ИНФОРМАЦИОННЫЕ КАРТОЧКИ И КОНТАКТЫ (INFO BLOCKS & CONTACTS)
+   ========================================================================== */
 .info-blocks-container {
   display: flex;
   flex-direction: column;
@@ -626,9 +666,9 @@ html, body {
   flex-direction: column;
   gap: 4px;
   width: 100%;
-  background-color: var(--bg-blue-light);
-  border: 1px solid #BAE6FD;
-  border-left: 3px solid var(--brand-blue);
+  background-color: var(--bg-light);
+  border: 1px solid var(--stroke-light);
+  border-left: 3px solid var(--brand-teal);
   padding: 10px 14px;
 }
 
@@ -638,7 +678,7 @@ html, body {
   font-family: 'DM Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
 }
 
 .info-block-content {
@@ -665,12 +705,13 @@ html, body {
   width: 100%;
   background-color: var(--bg-grey);
   border: 1px solid var(--stroke-light);
+  border-left: 3px solid var(--brand-red);
   padding: 14px 16px;
   margin-bottom: 16px;
 }
 
 .manager-post-light {
-  color: var(--brand-blue);
+  color: var(--brand-teal);
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
@@ -712,7 +753,7 @@ html, body {
 }
 
 .manager-contacts-list-light a:hover {
-  color: var(--brand-blue);
+  color: var(--brand-red);
   text-decoration: underline;
 }
 
@@ -739,11 +780,14 @@ html, body {
 }
 
 .closing-value-light-price {
-  color: var(--brand-blue);
+  color: var(--brand-red);
   font-size: 18px;
   font-weight: 700;
 }
 
+/* ==========================================================================
+   9. ПРАВИЛА ПЕЧАТИ BROWSERSHOT
+   ========================================================================== */
 @media print {
   @page {
     size: 210mm 297mm;

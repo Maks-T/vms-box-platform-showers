@@ -6,14 +6,17 @@
       'RUB' => 'руб.',
       'USD' => '$',
       'BYN' => 'Br',
+      'KZT' => '₸',
       default => $order->currency
   };
 
   $validUntil = PdfEstimateRenderer::getValidUntil($order->created_at);
 
-  $companyName = config('nicole.company.name', 'Прозрачные решения');
-  $companyPhone = config('nicole.company.phone', '+375 29 555-61-01');
-  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
+  $companyName = config('nicole.company.name', 'АМИ ГРУПП');
+  $companyPhone = config('nicole.company.phone', '8 (343) 288-26-04');
+  $companyEmail = config('nicole.company.email', 'zakazamigrupp@gmail.com');
+  $companyAddress = config('nicole.company.address', 'г. Екатеринбург, ул. Рощинская 67, офис 2');
+  $companyWebsite = config('nicole.company.website', 'amigrupp.ru');
   $cleanPhone = preg_replace('/[^\d+]/', '', $companyPhone);
 @endphp
 
@@ -23,47 +26,36 @@
   <div class="page-content">
 
     <div class="info-blocks-container">
-      {{-- Блок 1: Условия оплаты --}}
+      {{-- Блок 1: Сроки производства --}}
       <div class="info-block-card">
-        <div class="info-block-title">Условия оплаты</div>
+        <div class="info-block-title">Срок производства</div>
         <div class="info-block-content">
-          <p><strong>Варианты оплаты:</strong></p>
-          <ul>
-            <li>Наличный расчет — предоплата 50%.</li>
-            <li>ЕРИП — предоплата 50%.</li>
-            <li>
-              <strong>Рассрочка от Альфа-Банка:</strong>
-              <br>— 1% от 2 до 5 месяцев (оформление при проведении замера).
-            </li>
-            <li>
-              <strong>Кредит от Альфа-Банка:</strong>
-              <br>— 18,2% до 48 месяцев (оформление при проведении замера).
-            </li>
-          </ul>
+          <p>Срок изготовления составляет <strong>3 недели</strong>.</p>
         </div>
       </div>
 
-      {{-- Блок 2: Сроки производства --}}
+      {{-- Блок 2: Пояснение о расчете и бесплатном замере --}}
       <div class="info-block-card">
-        <div class="info-block-title">Срок выполнения</div>
+        <div class="info-block-title">О расчёте и замере</div>
         <div class="info-block-content">
-          <p>Срок выполнения работ составляет <strong>15 рабочих дней</strong>.</p>
+          <p>Стоимость изделия представлена примерно. Цена может незначительно измениться из-за наличия той или иной фурнитуры.</p>
+          <p>Свяжитесь с нами — мы сделаем для вас <strong>бесплатно замеры</strong>, подберем оптимальную фурнитуру, поможем решить все технические вопросы. И вы получите фиксированную точную стоимость проекта.</p>
         </div>
       </div>
 
-      {{-- Блок 3: Гарантийные обязательства --}}
-      <div class="info-block-card">
-        <div class="info-block-title">Гарантия</div>
+      {{-- Блок 3: Призыв к действию (Следующий шаг) --}}
+      <div class="info-block-card" style="border-left-color: var(--brand-red);">
+        <div class="info-block-title" style="color: var(--brand-red);">Следующий шаг</div>
         <div class="info-block-content">
-          <p>Гарантия на стекло — <strong>36 месяцев</strong>, гарантия на выполненные работы — <strong>12 месяцев</strong>.</p>
+          <p><strong>Сообщите нашему менеджеру номер вашего расчета</strong>, для того чтобы он оперативно смог приступить к анализу проекта.</p>
         </div>
       </div>
     </div>
 
-    {{-- Карточка контактов компании / менеджера --}}
+    {{-- Карточка контактов компании для обратной связи --}}
     <div class="manager-card-light">
       <div class="manager-info">
-        <div class="manager-post-light">Контакты компании</div>
+        <div class="manager-post-light">Контакты для обратной связи</div>
         <div class="manager-name-light">{{ $companyName }}</div>
 
         <ul class="manager-contacts-list-light">
@@ -72,21 +64,24 @@
             <a href="tel:{{ $cleanPhone }}">{{ $companyPhone }}</a>
           </li>
           <li>
-            <span>Email:</span>
+            <span>Электронная почта:</span>
             <a href="mailto:{{ $companyEmail }}">{{ $companyEmail }}</a>
           </li>
+          @if(!empty($companyAddress))
+            <li>
+              <span>Адрес офиса:</span>
+              {{ $companyAddress }}
+            </li>
+          @endif
           <li>
-            <span>Поддержка:</span>
-            Telegram · WhatsApp · Viber
-          </li>
-          <li>
-            <span>График работы:</span>
-            Пн–Пт 10:00–20:00
+            <span>Сайт:</span>
+            <a href="https://{{ $companyWebsite }}" target="_blank">{{ $companyWebsite }}</a>
           </li>
         </ul>
       </div>
     </div>
 
+    {{-- Итоговый подвал: Срок действия и общая сумма заказа --}}
     <div class="closing-meta-light">
       <div class="closing-cell-left">
         <div class="closing-label-light">Срок действия предложения</div>
@@ -103,5 +98,5 @@
 
   </div>
 
-  @include('valerie-showers::pdf.partials.footer')
+  @include('valerie-showers::pdf.partials.footer', ['theme' => 'light'])
 </div>

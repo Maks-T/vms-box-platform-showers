@@ -5,15 +5,31 @@
       'RUB' => 'руб.',
       'USD' => '$',
       'BYN' => 'Br',
+      'KZT' => '₸',
       default => $order->currency
   };
 
-  $coverPath = public_path(config('nicole.company.cover_image', 'pdf/cover.jpg'));
+  // Поиск обложки по кандидатам с поддержкой разных папок
+  $coverSetting = ltrim(config('nicole.company.cover_image', 'pdf/cover.jpg'), '/');
+  $coverCandidates = [
+      public_path($coverSetting),
+      public_path('pdf/cover.jpg'),
+      public_path('images/pdf/cover.jpg'),
+      public_path('images/pdf/cover.png'),
+  ];
+
   $coverBase64 = '';
-  if (file_exists($coverPath)) {
-      $coverBase64 = 'data:image/jpeg;base64,' . base64_encode(file_get_contents($coverPath));
-  } else {
-      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f8fafc"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#0284c7" stroke-width="2" stroke-opacity="0.3"/><circle cx="400" cy="300" r="100" fill="none" stroke="#0284c7" stroke-width="1" stroke-opacity="0.2"/></svg>';
+  foreach ($coverCandidates as $path) {
+      if (file_exists($path)) {
+          $mime = str_ends_with($path, '.png') ? 'image/png' : 'image/jpeg';
+          $coverBase64 = 'data:' . $mime . ';base64,' . base64_encode(file_get_contents($path));
+          break;
+      }
+  }
+
+  // Архитектурный векторный фоллбек в фирменном тиловом цвете #228B88
+  if (empty($coverBase64)) {
+      $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="#f8fafc"/><path d="M200,100 L600,100 L600,500 L200,500 Z" fill="none" stroke="#228B88" stroke-width="2" stroke-opacity="0.35"/><circle cx="400" cy="300" r="100" fill="none" stroke="#228B88" stroke-width="1" stroke-opacity="0.25"/></svg>';
       $coverBase64 = 'data:image/svg+xml;base64,' . base64_encode($svg);
   }
 
