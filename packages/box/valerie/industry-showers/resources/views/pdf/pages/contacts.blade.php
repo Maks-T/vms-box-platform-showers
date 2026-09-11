@@ -44,8 +44,8 @@
       </div>
 
       {{-- Блок 3: Призыв к действию (Следующий шаг) --}}
-      <div class="info-block-card" style="border-left-color: var(--brand-red);">
-        <div class="info-block-title" style="color: var(--brand-red);">Следующий шаг</div>
+      <div class="info-block-card">
+        <div class="info-block-title">Следующий шаг</div>
         <div class="info-block-content">
           <p><strong>Сообщите нашему менеджеру номер вашего расчета</strong>, для того чтобы он оперативно смог приступить к анализу проекта.</p>
         </div>
