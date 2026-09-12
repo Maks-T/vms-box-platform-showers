@@ -11,62 +11,48 @@ use Inertia\Response;
 
 class CalculatorController
 {
-  public function show(Request $request, string $type = 'user'): Response
+  /**
+   * Отображение страницы 3D-калькулятора душевых.
+   */
+  public function show(Request $request): Response
   {
     $widgetSlug = 'widget';
-
-    $assets = $this->getAssets($widgetSlug);
-
     $order = null;
 
     $orderCode = $request->input('order') ?? $request->input('code');
+    $orderId = $request->input('orderId');
 
     if ($orderCode) {
       $order = Order::where('code', $orderCode)->first();
+    } elseif ($orderId) {
+      $order = Order::find($orderId);
     }
 
+    $user = auth()->user();
+
+    $type = $user ? 'manager' : 'user';
+
     $initialData = [
-      'apiUrl' => url('/api/v1'),
-      'assetsUrl' => url('/' . $widgetSlug . '/'),
-      'baseUrl' => url('/'),
+      'apiUrl'     => url('/api/v1'),
+      'assetsUrl'  => url('/' . $widgetSlug . '/'),
+      'baseUrl'    => url('/'),
       'policyLink' => config('nicole.policy_link', '#'),
       'ofertaLink' => config('nicole.oferta_link', '#'),
-      'state' => $order ? $order->calc_state : null,
+      'state'      => $order ? $order->calc_state : null,
+      'type'       => $type,
+      'auth'       => [
+        'client'   => null,
+        'employee' => $user ? [
+          'id'    => $user->id,
+          'name'  => $user->name,
+          'email' => $user->email,
+          'roles' => method_exists($user, 'getRoleNames') ? $user->getRoleNames()->toArray() : [],
+        ] : null,
+      ],
     ];
 
     return Inertia::render('Calculator/Show', [
-      'assets' => $assets,
       'initialData' => $initialData,
-      'currentType' => $type,
     ]);
-  }
-
-  protected function getAssets(string $widgetSlug): array
-  {
-    $manifestPath = public_path($widgetSlug . '/manifest.json');
-
-    if (!file_exists($manifestPath)) {
-      return ['js' => null, 'css' => null];
-    }
-
-    $manifest = json_decode(file_get_contents($manifestPath), true);
-
-    $jsFile = null;
-    $cssFile = null;
-
-    foreach ($manifest as $key => $path) {
-      if (str_ends_with($key, '.js') && (str_starts_with($key, 'main') || str_starts_with($key, 'index'))) {
-        $jsFile = url($widgetSlug . '/js/' . basename($path));
-      }
-
-      if (str_ends_with($key, '.css') && (str_starts_with($key, 'main') || str_starts_with($key, 'index'))) {
-        $cssFile = url($widgetSlug . '/css/' . basename($path));
-      }
-    }
-
-    return [
-      'js' => $jsFile,
-      'css' => $cssFile,
-    ];
   }
 }
