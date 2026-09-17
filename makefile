@@ -81,9 +81,10 @@ tree:
 
 # Delete temporary combine context files
 cc:
-	@echo "Deleting temporary files..."
-	@find . \( -name "*_combine*" -o -name "tree.txt" -o -name "*Zone.Identifier" \) -type f -delete
+	@echo "Deleting temporary files, dumps, and empty files..."
+	@find . -type f \( -name "*_dump.txt" -o -name "*:Zone.Identifier" -o -name "*_combine*" -o -name "tree.txt" -o -size 0 \) -delete
 	@echo "Done!"
+
 
 uw: update-widget
 

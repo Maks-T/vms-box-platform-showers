@@ -24,6 +24,73 @@
     .dummy-calc-anchor {
         display: none;
     }
+
+    #calcAppRoot {
+
+        --calc-radius: 0px;
+
+        --calc-primary: 184 67% 35%;
+        --calc-primary-foreground: 0 0% 100%;
+        --calc-ring: 184 67% 35%;
+
+        --calc-accent: 184 67% 95%;
+        --calc-accent-foreground: 184 67% 30%;
+
+        --calc-background: 0 0% 100%;
+        --calc-foreground: 213 34% 13%;
+
+        --calc-subtle: 214 11% 33%;
+        --calc-muted-foreground: 215 16% 47%;
+
+        --calc-card: 210 40% 98%;
+        --calc-card-foreground: 213 34% 13%;
+        --calc-secondary: 204 15% 94%;
+        --calc-secondary-foreground: 214 11% 33%;
+        --calc-muted: 204 15% 94%;
+
+        --calc-border: 214 32% 91%;
+        --calc-input: 214 32% 91%;
+        --calc-switch-unchecked: 214 20% 85%;
+
+        --calc-popover: 0 0% 100%;
+        --calc-popover-foreground: 213 34% 13%;
+
+        --calc-destructive: 348 74% 46%;
+        --calc-destructive-foreground: 0 0% 100%;
+    }
+
+
+    /* Прямоугольные кнопки, инпуты, селекты, таблицы, модалки и само меню селекта */
+    #calcAppRoot :is(input, select, [role="combobox"], [role="dialog"], [role="listbox"], table),
+    #calcAppRoot div[data-radix-popper-content-wrapper] > div,
+    #calcAppRoot div[role="option"],
+    #calcAppRoot button:not([role="radio"]):not([role="switch"]):not([style*="background-color"]) {
+        border-radius: 0 !important;
+    }
+
+    /* Радиокнопки выбора (толщина стекла, перегородки) — ровный круг */
+    #calcAppRoot [role="radio"] {
+        border-radius: 50% !important;
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    #calcAppRoot [role="radio"] div {
+        border-radius: 50% !important;
+    }
+
+    /* Образцы цвета фурнитуры — ровный круг с мягкой контрастной рамкой */
+    #calcAppRoot button[style*="background-color"] {
+        border-radius: 50% !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    /* Свитчер-тумблер — эргономичная капсульная форма */
+    #calcAppRoot button[role="switch"],
+    #calcAppRoot button[role="switch"] span {
+        border-radius: 9999px !important;
+    }
+
 }
 
 
