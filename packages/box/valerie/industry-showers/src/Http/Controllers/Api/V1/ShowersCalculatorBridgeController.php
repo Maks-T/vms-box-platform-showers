@@ -355,6 +355,7 @@ class ShowersCalculatorBridgeController extends Controller
         [
           'materialTypeId'  => $this->getEavValue($v, 'material_type_id'),
           'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
+          'pathImg'         => $this->resolveVariantPreview($v, $product),
         ]
       );
     }
