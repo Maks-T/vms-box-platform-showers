@@ -60,11 +60,18 @@
     }
 
 
-    /* Прямоугольные кнопки, инпуты, селекты, таблицы, модалки и само меню селекта */
-    #calcAppRoot :is(input, select, [role="combobox"], [role="dialog"], [role="listbox"], table),
+    /* Прямоугольные кнопки, инпуты, селекты, таблицы, карточки форм и каталога */
+    #calcAppRoot :is(input, select, [role="combobox"], [role="listbox"], table),
+    #calcAppRoot [class*="card"],
+    #calcAppRoot [class*="Card"],
+    #calcAppRoot [class*="wrapper"],
+    #calcAppRoot [class*="trigger"],
+    #calcAppRoot [class*="Trigger"],
     #calcAppRoot div[data-radix-popper-content-wrapper] > div,
     #calcAppRoot div[role="option"],
-    #calcAppRoot button:not([role="radio"]):not([role="switch"]):not([style*="background-color"]) {
+    #calcAppRoot button:not([role="radio"]):not([role="switch"]),
+    div[role="dialog"],
+    div[role="dialog"] * {
         border-radius: 0 !important;
     }
 
@@ -79,9 +86,9 @@
         border-radius: 50% !important;
     }
 
-    /* Образцы цвета фурнитуры — ровный круг с мягкой контрастной рамкой */
+    /* Образцы цвета фурнитуры — строгий квадрат с мягкой контрастной рамкой */
     #calcAppRoot button[style*="background-color"] {
-        border-radius: 50% !important;
+        border-radius: 0 !important;
         box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12) !important;
     }
 
