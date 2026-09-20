@@ -26,40 +26,38 @@
 
   #calcAppRoot,
   div[role="dialog"] {
-
     --calc-radius: 0px;
 
     --calc-primary: 184 67% 35%;
     --calc-primary-foreground: 0 0% 100%;
     --calc-ring: 184 67% 35%;
 
-    --calc-accent: 184 67% 95%;
-    --calc-accent-foreground: 184 67% 30%;
+    --calc-accent: 184 45% 94%;
+    --calc-accent-foreground: 184 67% 25%;
 
     --calc-background: 0 0% 100%;
-    --calc-foreground: 213 34% 13%;
+    --calc-foreground: 210 11% 10%;
 
     --calc-subtle: 214 11% 33%;
-    --calc-muted-foreground: 215 16% 47%;
+    --calc-muted-foreground: 215 14% 45%;
 
-    --calc-card: 210 40% 98%;
-    --calc-card-foreground: 213 34% 13%;
-    --calc-secondary: 204 15% 94%;
-    --calc-secondary-foreground: 214 11% 33%;
-    --calc-muted: 204 15% 94%;
+    --calc-card: 210 20% 98%;
+    --calc-card-foreground: 210 11% 10%;
+    --calc-secondary: 210 16% 96%;
+    --calc-secondary-foreground: 210 11% 10%;
+    --calc-muted: 210 16% 96%;
 
     --calc-border: 214 32% 91%;
     --calc-input: 214 32% 91%;
     --calc-switch-unchecked: 214 20% 85%;
 
     --calc-popover: 0 0% 100%;
-    --calc-popover-foreground: 213 34% 13%;
+    --calc-popover-foreground: 210 11% 10%;
 
     --calc-destructive: 348 74% 46%;
     --calc-destructive-foreground: 0 0% 100%;
   }
 
-  /* Прямоугольные кнопки, инпуты, селекты, таблицы, карточки форм и каталога */
   #calcAppRoot :is(input, select, [role="combobox"], [role="listbox"], table),
   #calcAppRoot [class*="card"],
   #calcAppRoot [class*="Card"],
@@ -86,10 +84,11 @@
   }
 
   div[role="dialog"] input:not([type="checkbox"]):not([type="radio"]):focus {
-    border-color: hsl(var(--calc-primary)) !important;
-    box-shadow: 0 0 0 1px hsl(var(--calc-primary)) !important;
+    border-color: #1E8E95 !important;
+    box-shadow: 0 0 0 1px #1E8E95 !important;
   }
 
+  /* 4. Радиокнопки выбора (толщина стекла, перегородки) — ровный круг фирменного цвета */
   #calcAppRoot [role="radio"] {
     border-radius: 50% !important;
     width: 18px !important;
@@ -97,27 +96,28 @@
   }
 
   #calcAppRoot [role="radio"][data-state="checked"] {
-    border-color: hsl(var(--calc-primary)) !important;
+    border-color: #1E8E95 !important;
   }
 
   #calcAppRoot [role="radio"] svg,
   #calcAppRoot [role="radio"] span,
   #calcAppRoot [role="radio"] div {
     border-radius: 50% !important;
-    color: hsl(var(--calc-primary)) !important;
-    fill: hsl(var(--calc-primary)) !important;
+    color: #1E8E95 !important;
+    fill: #1E8E95 !important;
   }
 
+  /* 5. Образцы цвета фурнитуры — строгий квадрат с тонкой рамкой */
   #calcAppRoot button[style*="background-color"] {
     border-radius: 0 !important;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12) !important;
   }
 
+  /* 6. Свитчер-тумблер услуг — эргономичная капсульная форма */
   #calcAppRoot button[role="switch"],
   #calcAppRoot button[role="switch"] span {
     border-radius: 9999px !important;
   }
-
 }
 
 
