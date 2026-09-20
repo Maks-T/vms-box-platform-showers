@@ -20,6 +20,54 @@
 @import "tw-animate-css";
 
 
+    /* Дефолтные переменные темы калькулятора (Vistegra / VMS-NC) */
+    #calcAppRoot,
+    div[role="dialog"] {
+        --calc-radius: 10px;
+
+        --calc-primary: 212.1 100% 39.6%;
+        --calc-primary-foreground: 0 0% 100%;
+        --calc-ring: 212.1 100% 39.6%;
+
+        --calc-accent: 212.1 100% 95%;
+        --calc-accent-foreground: 212.1 100% 39.6%;
+
+        --calc-background: 0 0% 100%;
+        --calc-foreground: 213 34% 13%;
+
+        --calc-card: 0 0% 100%;
+        --calc-card-foreground: 213 34% 13%;
+        --calc-secondary: 204 15% 94%;
+        --calc-secondary-foreground: 214 11% 33%;
+        --calc-muted: 204 15% 94%;
+        --calc-muted-foreground: 215 16% 47%;
+
+        --calc-border: 214.3 23.1% 92.4%;
+        --calc-input: 214.3 23.1% 92.4%;
+        --calc-switch-unchecked: 214 20% 85%;
+
+        --calc-popover: 0 0% 100%;
+        --calc-popover-foreground: 213 34% 13%;
+
+        --calc-destructive: 348 74% 46%;
+        --calc-destructive-foreground: 0 0% 100%;
+    }
+
+    div[role="dialog"] input:not([type="checkbox"]):not([type="radio"]) {
+        border: 1px solid #dae3ee !important;
+        border-radius: 6px !important;
+        padding: 6px 12px !important;
+        height: 38px !important;
+        background-color: #ffffff !important;
+        outline: none !important;
+        box-sizing: border-box !important;
+    }
+
+    div[role="dialog"] input:not([type="checkbox"]):not([type="radio"]):focus {
+        border-color: #005ECA !important;
+        box-shadow: 0 0 0 1px #005ECA !important;
+    }
+
 @layer calc {
     .dummy-calc-anchor {
         display: none;
