@@ -101,10 +101,10 @@ class AdminPanelProvider extends PanelProvider
         ValerieShowersPlugin::make(),
 
         SpatieTranslatablePlugin::make()
-          ->defaultLocales(['ru']),
+          ->defaultLocales(['ru', 'en']),
 
         TranslatableFieldsPlugin::make()
-          ->supportedLocales(['ru']),
+          ->supportedLocales(['ru', 'en']),
 
         FilamentShieldPlugin::make()->navigationGroup('Контроль доступа'),
       ]);
