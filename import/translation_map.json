@@ -1,0 +1,479 @@
+{
+    "10 мм": {
+        "en": "10 mm"
+    },
+    "6 мм": {
+        "en": "6 mm"
+    },
+    "8 мм": {
+        "en": "8 mm"
+    },
+    "HEX Цвет": {
+        "en": "HEX Color"
+    },
+    "Авто-изображение": {
+        "en": "Auto image"
+    },
+    "Админ": {
+        "en": "Admin"
+    },
+    "Базовый выезд": {
+        "en": "Base callout"
+    },
+    "Без штанги (при креплении к потолку)": {
+        "en": "Without rod (ceiling mounted)"
+    },
+    "Белорусский рубль": {
+        "en": "Belarusian Ruble"
+    },
+    "Белый": {
+        "en": "White"
+    },
+    "Бронза": {
+        "en": "Bronze"
+    },
+    "Валюта для сметы и кто может ее менять": {
+        "en": "Estimate currency and edit permissions"
+    },
+    "Гармошка, 2 стекла": {
+        "en": "Bi-fold, 2 glass panels"
+    },
+    "Гармошка, 3 стекла": {
+        "en": "Bi-fold, 3 glass panels"
+    },
+    "Две раздвижные двери": {
+        "en": "Double sliding doors"
+    },
+    "Две распашные двери": {
+        "en": "Double swing doors"
+    },
+    "Дверь в нишу": {
+        "en": "Niche door"
+    },
+    "Держатель стекла": {
+        "en": "Glass clamp"
+    },
+    "Держатель стекла для штанги": {
+        "en": "Glass holder for support bar"
+    },
+    "Доллар США": {
+        "en": "US Dollar"
+    },
+    "Доставка": {
+        "en": "Delivery"
+    },
+    "Доставка (Тариф за 1 км за МКАД)": {
+        "en": "Delivery (Rate per km outside MKAD)"
+    },
+    "Доставка (в пределах МКАД)": {
+        "en": "Delivery (within MKAD)"
+    },
+    "Душевые ограждения": {
+        "en": "Shower enclosures"
+    },
+    "Заглушка": {
+        "en": "End cap"
+    },
+    "Заглушка П-профиля": {
+        "en": "U-profile end cap"
+    },
+    "Замер": {
+        "en": "Measurement"
+    },
+    "Замер (Выезд в пределах МКАД)": {
+        "en": "Measurement (Within MKAD)"
+    },
+    "Замер (Тариф за 1 км за МКАД)": {
+        "en": "Measurement (Rate per km outside MKAD)"
+    },
+    "Значение админа": {
+        "en": "Admin value"
+    },
+    "Значение менеджера": {
+        "en": "Manager value"
+    },
+    "Значение пользователя": {
+        "en": "User value"
+    },
+    "Золото": {
+        "en": "Gold"
+    },
+    "Имя интерфейса": {
+        "en": "Interface name"
+    },
+    "Коннектор": {
+        "en": "Connector"
+    },
+    "Коннектор трека угловой": {
+        "en": "Corner track connector"
+    },
+    "Крепление к стене": {
+        "en": "Wall mount bracket"
+    },
+    "Крепление штанги к стене": {
+        "en": "Support bar wall mount"
+    },
+    "Круглая": {
+        "en": "Round"
+    },
+    "Латунь": {
+        "en": "Brass"
+    },
+    "Лимит параметров distance": {
+        "en": "Distance limit"
+    },
+    "Лимит параметров level": {
+        "en": "Floor limit"
+    },
+    "Лимиты параметров услуг": {
+        "en": "Service parameter limits"
+    },
+    "Лимиты размеров для corner": {
+        "en": "Size limits for corner"
+    },
+    "Лимиты размеров для curtain": {
+        "en": "Size limits for bath screen"
+    },
+    "Лимиты размеров для door": {
+        "en": "Size limits for door"
+    },
+    "Лимиты размеров для free": {
+        "en": "Size limits for walk-in"
+    },
+    "Лимиты размеров для line": {
+        "en": "Size limits for inline"
+    },
+    "Лимиты размеров для trapezoid": {
+        "en": "Size limits for trapezoid (neo-angle)"
+    },
+    "Лимиты размеров для ushaped": {
+        "en": "Size limits for U-shaped"
+    },
+    "Лимиты размеров душевых": {
+        "en": "Shower enclosure size limits"
+    },
+    "Линейная": {
+        "en": "Inline"
+    },
+    "Магнитный уплотнитель": {
+        "en": "Magnetic seal"
+    },
+    "Магнитный уплотнитель, 3м": {
+        "en": "Magnetic seal, 3m"
+    },
+    "Макс. высота": {
+        "en": "Max. height"
+    },
+    "Макс. длина": {
+        "en": "Max. length"
+    },
+    "Макс. значение": {
+        "en": "Max. value"
+    },
+    "Материал": {
+        "en": "Material"
+    },
+    "Матовое золото": {
+        "en": "Matte gold"
+    },
+    "Матовый хром": {
+        "en": "Matte chrome"
+    },
+    "Менеджер": {
+        "en": "Manager"
+    },
+    "Металличность": {
+        "en": "Metallic"
+    },
+    "Мин. высота": {
+        "en": "Min. height"
+    },
+    "Мин. длина": {
+        "en": "Min. length"
+    },
+    "Монтаж": {
+        "en": "Installation"
+    },
+    "Монтаж дверь в нишу": {
+        "en": "Installation: niche door"
+    },
+    "Монтаж линейная раздвижная": {
+        "en": "Installation: inline sliding"
+    },
+    "Монтаж линейная распашная": {
+        "en": "Installation: inline swing"
+    },
+    "Монтаж п-образная": {
+        "en": "Installation: U-shaped enclosure"
+    },
+    "Монтаж свободный вход": {
+        "en": "Installation: walk-in screen"
+    },
+    "Монтаж трапециевидная": {
+        "en": "Installation: neo-angle enclosure"
+    },
+    "Монтаж угловая раздвижная": {
+        "en": "Installation: corner sliding"
+    },
+    "Монтаж угловая распашная": {
+        "en": "Installation: corner swing"
+    },
+    "Монтаж шторка гармошка": {
+        "en": "Installation: bi-fold bath screen"
+    },
+    "Монтаж шторка раздвижная": {
+        "en": "Installation: sliding bath screen"
+    },
+    "Монтаж шторка с распашной дверью": {
+        "en": "Installation: swing bath screen"
+    },
+    "Монтаж шторка стационарная": {
+        "en": "Installation: fixed bath screen"
+    },
+    "Нержавеющая сталь": {
+        "en": "Stainless steel"
+    },
+    "Одна раздвижная дверь": {
+        "en": "Single sliding door"
+    },
+    "Одна распашная дверь": {
+        "en": "Single swing door"
+    },
+    "Оружейная сталь": {
+        "en": "Gunmetal"
+    },
+    "П-образная": {
+        "en": "U-shaped"
+    },
+    "П-профиль": {
+        "en": "U-profile"
+    },
+    "Параметры интерфейса калькулятора": {
+        "en": "Calculator interface settings"
+    },
+    "Петли душевые": {
+        "en": "Shower hinges"
+    },
+    "Петли и треки": {
+        "en": "Hinges & tracks"
+    },
+    "Петля": {
+        "en": "Hinge"
+    },
+    "Подъем": {
+        "en": "Lifting to floor"
+    },
+    "Подъем без лифта (за 1 этаж / 1 стекло)": {
+        "en": "Lifting without elevator (per 1 floor / 1 glass)"
+    },
+    "Подъем на грузовом лифте": {
+        "en": "Lifting by freight elevator"
+    },
+    "Подъем на этаж": {
+        "en": "Lifting to floor"
+    },
+    "Показать блок \"стоимость\"": {
+        "en": "Show \"Cost\" block"
+    },
+    "Показать смету": {
+        "en": "Show estimate"
+    },
+    "Пользователь": {
+        "en": "User"
+    },
+    "Порог душевой": {
+        "en": "Shower threshold / Water dam"
+    },
+    "Пороги": {
+        "en": "Thresholds / Water dams"
+    },
+    "Профили": {
+        "en": "Profiles"
+    },
+    "Профиль П-образный из алюминия в полимерном покрытии": {
+        "en": "Aluminum U-profile with polymer coating"
+    },
+    "Профиль душевой": {
+        "en": "Shower profile"
+    },
+    "Профиль угловой 90 градусов для стекла, мм": {
+        "en": "Corner 90-degree glass profile, mm"
+    },
+    "Прямоугольная": {
+        "en": "Rectangular"
+    },
+    "Раздвижная система для стеклянных дверей": {
+        "en": "Sliding system for glass doors"
+    },
+    "Распашная с перегородкой": {
+        "en": "Swing door with inline panel"
+    },
+    "Рифление": {
+        "en": "Fluted texture"
+    },
+    "Ролики / Раздвижная система": {
+        "en": "Rollers / Sliding system"
+    },
+    "Российский рубль": {
+        "en": "Russian Ruble"
+    },
+    "Ручка душевая": {
+        "en": "Shower handle"
+    },
+    "Ручка утопленная для раздвижных дверей": {
+        "en": "Recessed flush pull handle for sliding doors"
+    },
+    "Ручка-кноб душевая": {
+        "en": "Shower knob handle"
+    },
+    "Ручка-полотенцедержатель душевая": {
+        "en": "Shower handle with towel bar"
+    },
+    "Ручка-скоба душевая": {
+        "en": "Shower pull handle"
+    },
+    "Ручки": {
+        "en": "Handles"
+    },
+    "Свободный вход": {
+        "en": "Walk-in"
+    },
+    "Система открывания": {
+        "en": "Opening system"
+    },
+    "Совместимые двери": {
+        "en": "Compatible doors"
+    },
+    "Стабилизирующая штанга": {
+        "en": "Stabilization bar"
+    },
+    "Стационарная": {
+        "en": "Stationary"
+    },
+    "Стекла": {
+        "en": "Glass"
+    },
+    "Стекло Триплекс цветное": {
+        "en": "Laminated colored glass (Triplex)"
+    },
+    "Стекло душевое": {
+        "en": "Shower glass"
+    },
+    "Стекло закаленное матовое бронза": {
+        "en": "Tempered frosted bronze glass"
+    },
+    "Стекло закаленное матовое графит": {
+        "en": "Tempered frosted graphite glass"
+    },
+    "Стекло закаленное матовое осветленное": {
+        "en": "Tempered frosted extra-clear glass"
+    },
+    "Стекло закаленное матовое универсальное": {
+        "en": "Tempered frosted universal glass"
+    },
+    "Стекло закаленное прозрачное осветленное": {
+        "en": "Tempered clear extra-clear glass"
+    },
+    "Стекло закаленное прозрачное универсальное": {
+        "en": "Tempered clear universal glass"
+    },
+    "Стекло закаленное рифленое": {
+        "en": "Tempered fluted glass"
+    },
+    "Стекло закаленное тонированное полупрозрачное бронза": {
+        "en": "Tempered tinted translucent bronze glass"
+    },
+    "Стекло закаленное тонированное полупрозрачное графит": {
+        "en": "Tempered tinted translucent graphite glass"
+    },
+    "Тариф за км / этаж": {
+        "en": "Rate per km / floor"
+    },
+    "Тест": {
+        "en": "Test"
+    },
+    "Тип компонента": {
+        "en": "Component type"
+    },
+    "Тип тарифной ставки": {
+        "en": "Tariff rate type"
+    },
+    "Тип штанги": {
+        "en": "Support bar type"
+    },
+    "Толщина стекла": {
+        "en": "Glass thickness"
+    },
+    "Трапецевидная": {
+        "en": "Neo-angle (Trapezoid)"
+    },
+    "Трек": {
+        "en": "Sliding track"
+    },
+    "Трек направляющий": {
+        "en": "Guide track"
+    },
+    "Угловая": {
+        "en": "Corner"
+    },
+    "Угловой профиль": {
+        "en": "Corner profile"
+    },
+    "Угловой стабилизатор": {
+        "en": "Corner stabilizer"
+    },
+    "Уплотнители": {
+        "en": "Seals"
+    },
+    "Уплотнитель для раздвижных дверей, 3м": {
+        "en": "Seal for sliding doors, 3m"
+    },
+    "Уплотнитель для распашных дверей, 3м": {
+        "en": "Seal for swing doors, 3m"
+    },
+    "Уплотнитель душевой": {
+        "en": "Shower seal"
+    },
+    "Услуга душевой": {
+        "en": "Shower service"
+    },
+    "Услуги": {
+        "en": "Services"
+    },
+    "Форма кабины": {
+        "en": "Enclosure layout"
+    },
+    "Хром": {
+        "en": "Chrome"
+    },
+    "Цвет стекла": {
+        "en": "Glass color"
+    },
+    "Цвет фурнитуры": {
+        "en": "Hardware color"
+    },
+    "Цвета фурнитуры": {
+        "en": "Hardware finishes"
+    },
+    "Цена продажи": {
+        "en": "Retail price"
+    },
+    "Цинковый сплав": {
+        "en": "Zinc alloy"
+    },
+    "Черный": {
+        "en": "Black"
+    },
+    "Шероховатость": {
+        "en": "Roughness"
+    },
+    "Штанга стабилизационная": {
+        "en": "Stabilization bar"
+    },
+    "Штанги": {
+        "en": "Support bars"
+    },
+    "Шторка в ванную": {
+        "en": "Bath screen"
+    }
+}
