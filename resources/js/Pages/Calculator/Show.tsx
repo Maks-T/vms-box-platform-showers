@@ -27,7 +27,7 @@ const ROOT_CONTAINER_ID = 'calcAppRoot';
 
 export default function CalculatorShow({ initialData }: Props) {
   const urlLang = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('lang') : null;
-  const activeLang = urlLang || initialData?.lang || 'ru';
+  const activeLang = urlLang || initialData?.lang || 'en';
 
   useEffect(() => {
 
@@ -71,8 +71,8 @@ export default function CalculatorShow({ initialData }: Props) {
       <Head
         title={
           activeLang === 'en'
-            ? 'Online Product Configurator - Transparent Solutions'
-            : 'Онлайн-калькулятор изделий - Прозрачные решения'
+            ? 'Online Product Configurator'
+            : 'Онлайн-калькулятор изделий'
         }
       />
 

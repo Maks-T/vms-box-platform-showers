@@ -1,52 +1,72 @@
 {
     "currencies": [
         {
-            "external_code": "d38c221c-9ba2-4c77-935e-769c29883331",
-            "code": "RUB",
-            "symbol": "₽",
+            "external_code": "e7dc2db5-4b36-4e0d-adbc-c62097f89528",
+            "code": "USD",
+            "symbol": "$",
             "symbol_native": {
-                "ru": "руб."
+                "ru": "$",
+                "en": "$"
             },
             "name": {
-                "ru": "Российский рубль",
-                "en": "Russian Ruble"
+                "ru": "Доллар США",
+                "en": "US Dollar"
             },
             "rate": 1,
             "is_default": true,
             "is_active": true,
-            "sort_order": 0
+            "sort_order": 10
+        },
+        {
+            "external_code": "b5f3a812-7c9d-4e2a-89f1-3d7e5b2a4c61",
+            "code": "EUR",
+            "symbol": "€",
+            "symbol_native": {
+                "ru": "€",
+                "en": "€"
+            },
+            "name": {
+                "ru": "Евро",
+                "en": "Euro"
+            },
+            "rate": 1.08,
+            "is_default": false,
+            "is_active": true,
+            "sort_order": 20
         },
         {
             "external_code": "687f9e52-008e-4590-803a-103d99b62369",
             "code": "BYN",
             "symbol": "Br",
             "symbol_native": {
-                "ru": "руб."
+                "ru": "руб.",
+                "en": "BYN"
             },
             "name": {
                 "ru": "Белорусский рубль",
                 "en": "Belarusian Ruble"
             },
-            "rate": 28,
+            "rate": 0.31,
             "is_default": false,
             "is_active": true,
-            "sort_order": 0
+            "sort_order": 30
         },
         {
-            "external_code": "e7dc2db5-4b36-4e0d-adbc-c62097f89528",
-            "code": "USD",
-            "symbol": "$",
+            "external_code": "d38c221c-9ba2-4c77-935e-769c29883331",
+            "code": "RUB",
+            "symbol": "₽",
             "symbol_native": {
-                "ru": "$"
+                "ru": "руб.",
+                "en": "RUB"
             },
             "name": {
-                "ru": "Доллар США",
-                "en": "US Dollar"
+                "ru": "Российский рубль",
+                "en": "Russian Ruble"
             },
-            "rate": 90,
+            "rate": 0.0111,
             "is_default": false,
             "is_active": true,
-            "sort_order": 0
+            "sort_order": 40
         }
     ],
     "price_types": [
@@ -58,7 +78,7 @@
             },
             "description": null,
             "is_default": true,
-            "currency_code": "RUB",
+            "currency_code": "USD",
             "sort_order": 0
         }
     ],
