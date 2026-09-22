@@ -2045,7 +2045,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_1.jpg",
+            "detail_picture": "products/glass_id_1.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_2",
@@ -2117,7 +2119,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_2.jpg",
+            "detail_picture": "products/glass_id_2.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_3",
@@ -2189,7 +2193,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_3.jpg",
+            "detail_picture": "products/glass_id_3.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_10",
@@ -2261,7 +2267,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_10.jpg",
+            "detail_picture": "products/glass_id_10.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_4",
@@ -2333,7 +2341,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_4.jpg",
+            "detail_picture": "products/glass_id_4.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_5",
@@ -2405,7 +2415,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_5.jpg",
+            "detail_picture": "products/glass_id_5.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_6",
@@ -2477,7 +2489,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_6.jpg",
+            "detail_picture": "products/glass_id_6.jpg"
         },
         {
             "external_code": "prod_shower_service_measure",
@@ -2604,7 +2618,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_7.jpg",
+            "detail_picture": "products/glass_id_7.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_8",
@@ -2676,7 +2692,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_8.jpg",
+            "detail_picture": "products/glass_id_8.jpg"
         },
         {
             "external_code": "prod_shower_glass_id_9",
@@ -2748,7 +2766,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/glass_id_9.jpg",
+            "detail_picture": "products/glass_id_9.jpg"
         },
         {
             "external_code": "prod_shower_service_delivery",
@@ -3331,7 +3351,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/profile_profile.jpg",
+            "detail_picture": "products/profile_profile.jpg"
         },
         {
             "external_code": "prod_shower_service_id_2",
@@ -3972,7 +3994,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/profile_corner.jpg",
+            "detail_picture": "products/profile_corner.jpg"
         },
         {
             "external_code": "prod_shower_service_id_7",
@@ -4657,7 +4681,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/profile_cap.jpg",
+            "detail_picture": "products/profile_cap.jpg"
         },
         {
             "external_code": "prod_shower_handle_knob",
@@ -4680,7 +4706,10 @@
                     "external_code": "var_shower_handle_knob_chrome_id_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-CHROME-ID_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 1800,
                     "currency": "RUB",
                     "is_default": false,
@@ -4693,15 +4722,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_chrome_matte_id_2",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-CHROME_MATTE-ID_2",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 1950,
                     "currency": "RUB",
                     "is_default": false,
@@ -4714,15 +4747,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_black_id_3",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-BLACK-ID_3",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 1950,
                     "currency": "RUB",
                     "is_default": false,
@@ -4735,15 +4772,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_bronze_id_4",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-BRONZE-ID_4",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 2200,
                     "currency": "RUB",
                     "is_default": false,
@@ -4756,15 +4797,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gold_id_5",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GOLD-ID_5",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 2400,
                     "currency": "RUB",
                     "is_default": false,
@@ -4777,15 +4822,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gold_matte_id_6",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GOLD_MATTE-ID_6",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 2400,
                     "currency": "RUB",
                     "is_default": false,
@@ -4798,15 +4847,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_white_id_7",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-WHITE-ID_7",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -4819,15 +4872,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gunmetal_grey_id_8",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GUNMETAL_GREY-ID_8",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 1",
+                        "en": "Knob handle 1"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -4840,15 +4897,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_1.jpg",
+                    "detail_picture": "products/handle_knob_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_chrome_id_1_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-CHROME-ID_1_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2200,
                     "currency": "RUB",
                     "is_default": false,
@@ -4861,15 +4922,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_chrome_matte_id_2_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-CHROME_MATTE-ID_2_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2300,
                     "currency": "RUB",
                     "is_default": false,
@@ -4882,15 +4947,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_black_id_3_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-BLACK-ID_3_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2300,
                     "currency": "RUB",
                     "is_default": false,
@@ -4903,15 +4972,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_bronze_id_4_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-BRONZE-ID_4_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -4924,15 +4997,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gold_id_5_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GOLD-ID_5_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2600,
                     "currency": "RUB",
                     "is_default": false,
@@ -4945,15 +5022,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gold_matte_id_6_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GOLD_MATTE-ID_6_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2600,
                     "currency": "RUB",
                     "is_default": false,
@@ -4966,15 +5047,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_white_id_7_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-WHITE-ID_7_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2700,
                     "currency": "RUB",
                     "is_default": false,
@@ -4987,15 +5072,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_knob_gunmetal_grey_id_8_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-GUNMETAL_GREY-ID_8_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-кноб 2",
+                        "en": "Knob handle 2"
+                    },
                     "cost_price": 2700,
                     "currency": "RUB",
                     "is_default": true,
@@ -5008,11 +5097,14 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-кноб 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_knob_2.jpg",
+                    "detail_picture": "products/handle_knob_2.jpg"
                 }
-            ]
+            ],
+            "preview_picture": "products/handle_knob.jpg",
+            "detail_picture": "products/handle_knob.jpg"
         },
         {
             "external_code": "prod_shower_handle_bracket",
@@ -5035,7 +5127,10 @@
                     "external_code": "var_shower_handle_bracket_chrome_id_8",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-CHROME-ID_8",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 3800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5048,15 +5143,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_chrome_matte_id_9",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-CHROME_MATTE-ID_9",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 3900,
                     "currency": "RUB",
                     "is_default": false,
@@ -5069,15 +5168,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_black_id_10",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-BLACK-ID_10",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4100,
                     "currency": "RUB",
                     "is_default": false,
@@ -5090,15 +5193,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_bronze_id_11",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-BRONZE-ID_11",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4500,
                     "currency": "RUB",
                     "is_default": false,
@@ -5111,15 +5218,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gold_id_12",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GOLD-ID_12",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4500,
                     "currency": "RUB",
                     "is_default": false,
@@ -5132,15 +5243,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gold_matte_id_13",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GOLD_MATTE-ID_13",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4600,
                     "currency": "RUB",
                     "is_default": false,
@@ -5153,15 +5268,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_white_id_14",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-WHITE-ID_14",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4600,
                     "currency": "RUB",
                     "is_default": false,
@@ -5174,15 +5293,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gunmetal_grey_id_14",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GUNMETAL_GREY-ID_14",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 1",
+                        "en": "Pull handle 1"
+                    },
                     "cost_price": 4600,
                     "currency": "RUB",
                     "is_default": false,
@@ -5195,15 +5318,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 1"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_1.jpg",
+                    "detail_picture": "products/handle_bracket_1.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_chrome_id_8_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-CHROME-ID_8_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 4900,
                     "currency": "RUB",
                     "is_default": false,
@@ -5216,15 +5343,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_chrome_matte_id_9_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-CHROME_MATTE-ID_9_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5100,
                     "currency": "RUB",
                     "is_default": false,
@@ -5237,15 +5368,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_black_id_10_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-BLACK-ID_10_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5400,
                     "currency": "RUB",
                     "is_default": false,
@@ -5258,15 +5393,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_bronze_id_11_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-BRONZE-ID_11_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5600,
                     "currency": "RUB",
                     "is_default": false,
@@ -5279,15 +5418,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gold_id_12_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GOLD-ID_12_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5600,
                     "currency": "RUB",
                     "is_default": false,
@@ -5300,15 +5443,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gold_matte_id_13_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GOLD_MATTE-ID_13_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5321,15 +5468,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_white_id_14_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-WHITE-ID_14_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5900,
                     "currency": "RUB",
                     "is_default": false,
@@ -5342,15 +5493,19 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 },
                 {
                     "external_code": "var_shower_handle_bracket_gunmetal_grey_id_14_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-BRACKET-GUNMETAL_GREY-ID_14_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-скоба 2",
+                        "en": "Pull handle 2"
+                    },
                     "cost_price": 5900,
                     "currency": "RUB",
                     "is_default": true,
@@ -5363,11 +5518,14 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-скоба 2"
-                    }
+                        ]
+                    },
+                    "preview_picture": "products/handle_bracket_2.jpg",
+                    "detail_picture": "products/handle_bracket_2.jpg"
                 }
-            ]
+            ],
+            "preview_picture": "products/handle_bracket.jpg",
+            "detail_picture": "products/handle_bracket.jpg"
         },
         {
             "external_code": "prod_shower_handle_holder",
@@ -5390,7 +5548,10 @@
                     "external_code": "var_shower_handle_holder_chrome_id_15",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-CHROME-ID_15",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 4800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5403,15 +5564,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_chrome_matte_id_16",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-CHROME_MATTE-ID_16",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 4900,
                     "currency": "RUB",
                     "is_default": false,
@@ -5424,15 +5587,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_black_id_17",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-BLACK-ID_17",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 5200,
                     "currency": "RUB",
                     "is_default": false,
@@ -5445,15 +5610,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_bronze_id_18",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-BRONZE-ID_18",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 5800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5466,15 +5633,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_gold_id_19",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-GOLD-ID_19",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 5800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5487,15 +5656,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_gold_matte_id_20",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-GOLD_MATTE-ID_20",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 6000,
                     "currency": "RUB",
                     "is_default": false,
@@ -5508,15 +5679,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_white_id_21",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-WHITE-ID_21",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 6000,
                     "currency": "RUB",
                     "is_default": false,
@@ -5529,15 +5702,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_holder_gunmetal_grey_id_21",
                     "price_group_external_code": null,
                     "sku": "HANDLE-HOLDER-GUNMETAL_GREY-ID_21",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-полотенцедержатель",
+                        "en": "Towel bar handle"
+                    },
                     "cost_price": 6000,
                     "currency": "RUB",
                     "is_default": true,
@@ -5550,11 +5725,12 @@
                         "door_type_ids": [
                             "opt_door_type_one_swing",
                             "opt_door_type_two_swing"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/handle_holder.jpg",
+            "detail_picture": "products/handle_holder.jpg"
         },
         {
             "external_code": "prod_shower_handle_sliding",
@@ -5579,7 +5755,10 @@
                     "external_code": "var_shower_handle_sliding_black_id_24_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-BLACK-ID_24_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -5592,15 +5771,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_chrome_matte_id_23_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-CHROME_MATTE-ID_23_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -5613,15 +5794,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_chrome_id_22",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-CHROME-ID_22",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 780,
                     "currency": "RUB",
                     "is_default": false,
@@ -5634,15 +5817,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_black_id_24",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-BLACK-ID_24",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 980,
                     "currency": "RUB",
                     "is_default": false,
@@ -5655,15 +5840,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gold_matte_id_27_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GOLD_MATTE-ID_27_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2650,
                     "currency": "RUB",
                     "is_default": false,
@@ -5676,15 +5863,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_bronze_id_25",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-BRONZE-ID_25",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 1120,
                     "currency": "RUB",
                     "is_default": false,
@@ -5697,15 +5886,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gold_matte_id_27",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GOLD_MATTE-ID_27",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 1260,
                     "currency": "RUB",
                     "is_default": false,
@@ -5718,15 +5909,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gold_id_26",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GOLD-ID_26",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 1120,
                     "currency": "RUB",
                     "is_default": false,
@@ -5739,15 +5932,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_chrome_matte_id_23",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-CHROME_MATTE-ID_23",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 780,
                     "currency": "RUB",
                     "is_default": false,
@@ -5760,15 +5955,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_white_id_28",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-WHITE-ID_28",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 1400,
                     "currency": "RUB",
                     "is_default": false,
@@ -5781,15 +5978,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gunmetal_grey_id_28",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GUNMETAL_GREY-ID_28",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 1",
+                        "en": "Flush pull handle 1"
+                    },
                     "cost_price": 1400,
                     "currency": "RUB",
                     "is_default": false,
@@ -5802,15 +6001,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_chrome_id_22_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-CHROME-ID_22_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2500,
                     "currency": "RUB",
                     "is_default": false,
@@ -5823,15 +6024,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_bronze_id_25_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-BRONZE-ID_25_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2650,
                     "currency": "RUB",
                     "is_default": false,
@@ -5844,15 +6047,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gold_id_26_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GOLD-ID_26_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2650,
                     "currency": "RUB",
                     "is_default": false,
@@ -5865,15 +6070,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_white_id_28_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-WHITE-ID_28_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2800,
                     "currency": "RUB",
                     "is_default": false,
@@ -5886,15 +6093,17 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 },
                 {
                     "external_code": "var_shower_handle_sliding_gunmetal_grey_id_28_1",
                     "price_group_external_code": null,
                     "sku": "HANDLE-SLIDING-GUNMETAL_GREY-ID_28_1",
-                    "name": [],
+                    "name": {
+                        "ru": "Ручка-купе 2",
+                        "en": "Flush pull handle 2"
+                    },
                     "cost_price": 2800,
                     "currency": "RUB",
                     "is_default": true,
@@ -5907,11 +6116,12 @@
                         "door_type_ids": [
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
-                        ],
-                        "interface_name": "Ручка-купе 2"
+                        ]
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/handle_sliding.jpg",
+            "detail_picture": "products/handle_sliding.jpg"
         },
         {
             "external_code": "prod_shower_crossbar_crossbar",
@@ -6340,7 +6550,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/crossbar_crossbar.jpg",
+            "detail_picture": "products/crossbar_crossbar.jpg"
         },
         {
             "external_code": "prod_shower_crossbar_fix",
@@ -6633,7 +6845,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/crossbar_fix.jpg",
+            "detail_picture": "products/crossbar_fix.jpg"
         },
         {
             "external_code": "prod_shower_crossbar_fix_glass",
@@ -6926,7 +7140,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/crossbar_fix_glass.jpg",
+            "detail_picture": "products/crossbar_fix_glass.jpg"
         },
         {
             "external_code": "prod_shower_opensys_hinge",
@@ -7253,7 +7469,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/opensys_hinge.jpg",
+            "detail_picture": "products/opensys_hinge.jpg"
         },
         {
             "external_code": "prod_shower_opensys_track",
@@ -7410,7 +7628,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/opensys_track.jpg",
+            "detail_picture": "products/opensys_track.jpg"
         },
         {
             "external_code": "prod_shower_opensys_slide",
@@ -7567,7 +7787,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/opensys_slide.jpg",
+            "detail_picture": "products/opensys_slide.jpg"
         },
         {
             "external_code": "prod_shower_opensys_connector",
@@ -7724,7 +7946,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/opensys_connector.jpg",
+            "detail_picture": "products/opensys_connector.jpg"
         },
         {
             "external_code": "prod_shower_sealant_slide",
@@ -7793,7 +8017,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/sealant_slide.jpg",
+            "detail_picture": "products/sealant_slide.jpg"
         },
         {
             "external_code": "prod_shower_sealant_hinge",
@@ -7862,7 +8088,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/sealant_hinge.jpg",
+            "detail_picture": "products/sealant_hinge.jpg"
         },
         {
             "external_code": "prod_shower_sealant_magnetic",
@@ -7931,7 +8159,9 @@
                         "glass_thickness": "opt_thickness_10mm"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/sealant_magnetic.jpg",
+            "detail_picture": "products/sealant_magnetic.jpg"
         },
         {
             "external_code": "prod_shower_doorstep_doorsteps",
@@ -8078,7 +8308,9 @@
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
                     }
                 }
-            ]
+            ],
+            "preview_picture": "products/doorsteps.jpg",
+            "detail_picture": "products/doorsteps.jpg"
         }
     ],
     "pipelines": [],
