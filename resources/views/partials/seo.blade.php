@@ -1,8 +1,8 @@
 {{-- resources/views/partials/seo.blade.php --}}
 @php
   $title = $seo['title'] ?? config('app.name', 'Vistegra');
-  $description = $seo['description'] ?? 'Разработка кастомного ПО и автоматизация процессов для B2B.';
-  $keywords = $seo['keywords'] ?? 'автоматизация, разработка по, b2b, vistegra, сложные расчеты';
+  $description = $seo['description'] ?? __('Custom software development and B2B process automation.');
+  $keywords = $seo['keywords'] ?? __('automation, software development, b2b, vistegra, complex calculations');
 
   $image = $seo['og_image'] ?? asset('images/og-default.webp');
   $url = url()->current();
