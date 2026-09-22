@@ -27,6 +27,13 @@ class ShowersCalculatorBridgeController extends Controller
 
   public function loadData(Request $request): JsonResponse
   {
+    $locale = $request->query('lang')
+      ?: ($request->header('Accept-Language') ?: app()->getLocale());
+
+    if (in_array($locale, ['ru', 'en'], true)) {
+      app()->setLocale($locale);
+    }
+
     $version = Cache::get('catalog_version', 1);
     $cacheKey = 'showers_calc_bridge_v' . $version . '_' . app()->getLocale();
 
