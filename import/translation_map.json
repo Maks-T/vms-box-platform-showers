@@ -475,5 +475,26 @@
     },
     "Шторка в ванную": {
         "en": "Bath screen"
+    },
+    "Ручка-кноб 1": {
+        "en": "Knob handle 1"
+    },
+    "Ручка-кноб 2": {
+        "en": "Knob handle 2"
+    },
+    "Ручка-скоба 1": {
+        "en": "Pull handle 1"
+    },
+    "Ручка-скоба 2": {
+        "en": "Pull handle 2"
+    },
+    "Ручка-купе 1": {
+        "en": "Flush pull handle 1"
+    },
+    "Ручка-купе 2": {
+        "en": "Flush pull handle 2"
+    },
+    "Ручка-полотенцедержатель": {
+        "en": "Towel bar handle"
     }
 }
