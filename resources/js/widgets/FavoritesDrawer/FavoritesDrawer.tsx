@@ -6,8 +6,10 @@ import { Sheet, SheetContent } from '@/shared/ui/sheet';
 import { FavoritesHeader } from './FavoritesHeader';
 import { FavoritesEmptyState } from './FavoritesEmptyState';
 import { FavoriteItemRow } from './FavoriteItemRow';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 export const FavoritesDrawer = () => {
+  const { t } = useTranslation();
   const { isOpen, setIsOpen, items, removeItem, clearFavorites } = useFavorites();
   const [bootstrapConfig, setBootstrapConfig] = useState<BootstrapConfig | null>(null);
 
@@ -46,7 +48,7 @@ export const FavoritesDrawer = () => {
         </div>
 
         <div className="p-6 border-t border-white/5 bg-[#0B0F19] shrink-0 text-center text-white/30 text-[11px] tracking-wide">
-          VMS-NC PLATFORM • FAVORITES SYSTEM
+          {t('favorites_footer')}
         </div>
       </SheetContent>
     </Sheet>

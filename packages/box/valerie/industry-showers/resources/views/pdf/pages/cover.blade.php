@@ -1,10 +1,11 @@
 @php
   /** @var \Nicole\Box\Core\Models\Order $order */
 
-  $currencySymbol = match($order->currency) {
-      'RUB' => 'руб.',
+  $currencySymbol = $currencySymbol ?? match($order->currency) {
+      'RUB' => app()->getLocale() === 'en' ? 'RUB' : 'руб.',
       'USD' => '$',
-      'BYN' => 'Br',
+      'EUR' => '€',
+      'BYN' => app()->getLocale() === 'en' ? 'BYN' : 'Br',
       default => $order->currency
   };
 
@@ -32,23 +33,23 @@
 
   <div class="cover-content-container">
     <div class="cover-title-container">
-      <div class="cover-subtitle-showers">Коммерческое предложение</div>
+      <div class="cover-subtitle-showers">{{ __('Commercial Proposal') }}</div>
       <h1 class="cover-title-showers">
-        Душевые перегородки<br>и стеклянные конструкции
+        {{ __('Shower enclosures and glass structures') }}
       </h1>
       <div class="cover-fade-divider"></div>
     </div>
 
     <div class="cover-meta-showers">
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">Номер КП:</span>
+        <span class="cover-meta-label-showers">{{ __('Proposal No:') }}</span>
         <span class="cover-meta-value-showers">
           {{ $order->code }}
         </span>
       </div>
 
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">Дата формирования:</span>
+        <span class="cover-meta-label-showers">{{ __('Date of creation:') }}</span>
         <span class="cover-meta-value-showers">
           {{ $order->created_at ? \Carbon\Carbon::parse($order->created_at)->format('d.m.Y') : date('d.m.Y') }}
         </span>
@@ -56,7 +57,7 @@
 
       @if (!empty($customerFullName))
         <div class="cover-meta-row">
-          <span class="cover-meta-label-showers">Заказчик:</span>
+          <span class="cover-meta-label-showers">{{ __('Customer:') }}</span>
           <span class="cover-meta-value-showers">
             {{ $customerFullName }}
           </span>
@@ -64,7 +65,7 @@
       @endif
 
       <div class="cover-meta-row">
-        <span class="cover-meta-label-showers">Итого к оплате:</span>
+        <span class="cover-meta-label-showers">{{ __('Grand Total:') }}</span>
         <span class="cover-meta-value-showers cover-meta-value-price">
           {{ number_format($order->grand_total, 0, '.', ' ') }} {{ $currencySymbol }}
         </span>

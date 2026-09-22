@@ -2,10 +2,11 @@
   /** @var \Nicole\Box\Core\Models\Order $order */
   use Valerie\Box\IndustryShowers\Support\PdfEstimateRenderer;
 
-  $currencySymbol = match($order->currency) {
-      'RUB' => 'руб.',
+  $currencySymbol = $currencySymbol ?? match($order->currency) {
+      'RUB' => app()->getLocale() === 'en' ? 'RUB' : 'руб.',
       'USD' => '$',
-      'BYN' => 'Br',
+      'EUR' => '€',
+      'BYN' => app()->getLocale() === 'en' ? 'BYN' : 'Br',
       default => $order->currency
   };
 
@@ -25,19 +26,19 @@
     <div class="info-blocks-container">
       {{-- Блок 1: Условия оплаты --}}
       <div class="info-block-card">
-        <div class="info-block-title">Условия оплаты</div>
+          <div class="info-block-title">{{ __('Payment Terms') }}</div>
         <div class="info-block-content">
-          <p><strong>Варианты оплаты:</strong></p>
+            <p><strong>{{ __('Payment options:') }}</strong></p>
           <ul>
-            <li>Наличный расчет — предоплата 50%.</li>
-            <li>ЕРИП — предоплата 50%.</li>
+              <li>{{ __('Cash payment — 50% advance payment.') }}</li>
+              <li>{{ __('ERIP — 50% advance payment.') }}</li>
             <li>
-              <strong>Рассрочка от Альфа-Банка:</strong>
-              <br>— 1% от 2 до 5 месяцев (оформление при проведении замера).
+                <strong>{{ __('Installment plan from Alfa-Bank:') }}</strong>
+                <br>{{ __('1% from 2 to 5 months (registration during measurement).') }}
             </li>
             <li>
-              <strong>Кредит от Альфа-Банка:</strong>
-              <br>— 18,2% до 48 месяцев (оформление при проведении замера).
+                <strong>{{ __('Credit from Alfa-Bank:') }}</strong>
+                <br>{{ __('18.2% up to 48 months (registration during measurement).') }}
             </li>
           </ul>
         </div>
@@ -45,17 +46,17 @@
 
       {{-- Блок 2: Сроки производства --}}
       <div class="info-block-card">
-        <div class="info-block-title">Срок выполнения</div>
+          <div class="info-block-title">{{ __('Production time') }}</div>
         <div class="info-block-content">
-          <p>Срок выполнения работ составляет <strong>15 рабочих дней</strong>.</p>
+            <p>{{ __('The lead time is 15 business days.') }}</p>
         </div>
       </div>
 
       {{-- Блок 3: Гарантийные обязательства --}}
       <div class="info-block-card">
-        <div class="info-block-title">Гарантия</div>
+          <div class="info-block-title">{{ __('Warranty') }}</div>
         <div class="info-block-content">
-          <p>Гарантия на стекло — <strong>36 месяцев</strong>, гарантия на выполненные работы — <strong>12 месяцев</strong>.</p>
+            <p>{{ __('Glass warranty is 36 months, warranty for works performed is 12 months.') }}</p>
         </div>
       </div>
     </div>
@@ -63,25 +64,25 @@
     {{-- Карточка контактов компании / менеджера --}}
     <div class="manager-card-light">
       <div class="manager-info">
-        <div class="manager-post-light">Контакты компании</div>
+          <div class="manager-post-light">{{ __('Company Contacts') }}</div>
         <div class="manager-name-light">{{ $companyName }}</div>
 
         <ul class="manager-contacts-list-light">
           <li>
-            <span>Телефон:</span>
+                <span>{{ __('Phone:') }}</span>
             <a href="tel:{{ $cleanPhone }}">{{ $companyPhone }}</a>
           </li>
           <li>
-            <span>Email:</span>
+                <span>{{ __('Email:') }}</span>
             <a href="mailto:{{ $companyEmail }}">{{ $companyEmail }}</a>
           </li>
           <li>
-            <span>Поддержка:</span>
+                <span>{{ __('Support:') }}</span>
             Telegram · WhatsApp · Viber
           </li>
           <li>
-            <span>График работы:</span>
-            Пн–Пт 10:00–20:00
+                <span>{{ __('Working Hours:') }}</span>
+                {{ __('Mon–Fri 10:00–20:00') }}
           </li>
         </ul>
       </div>
@@ -89,12 +90,12 @@
 
     <div class="closing-meta-light">
       <div class="closing-cell-left">
-        <div class="closing-label-light">Срок действия предложения</div>
-        <div class="closing-value-light">до {{ $validUntil }} года · 30 дней</div>
+          <div class="closing-label-light">{{ __('Proposal Validity') }}</div>
+          <div class="closing-value-light">{{ __('valid until :date · 30 days', ['date' => $validUntil]) }}</div>
       </div>
 
       <div class="closing-cell-right">
-        <div class="closing-label-light">Общая сумма заказа</div>
+          <div class="closing-label-light">{{ __('Total order amount') }}</div>
         <div class="closing-value-light-price">
           {{ PdfEstimateRenderer::formatPrice($order->grand_total, $currencySymbol) }}
         </div>

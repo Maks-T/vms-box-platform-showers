@@ -2,6 +2,7 @@ import React from 'react';
 import { ProductVariant, EavValueOption } from '@/types/catalog';
 import { cn } from '@/shared/lib/utils';
 import { Check } from 'lucide-react';
+import {useTranslation} from '@/shared/i18n/useTranslation';
 
 interface Props {
   variants: ProductVariant[];
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export function ProductVariantSelector({ variants, activeVariant, onSelectVariant }: Props) {
+  const { t } = useTranslation();
   if (!variants || variants.length <= 1) return null;
 
   const variantAttrsMap: Record<string, { name: string; options: { option: EavValueOption; variant: ProductVariant }[] }> = {};
@@ -98,7 +100,7 @@ export function ProductVariantSelector({ variants, activeVariant, onSelectVarian
   return (
     <div className="flex flex-col gap-2 py-4 border-y border-zinc-200 my-4">
       <label className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
-        Вариант исполнения (SKU):
+        {t('product_sku_variant_label')}
       </label>
       <div className="flex flex-wrap gap-2">
         {variants.map((v) => {

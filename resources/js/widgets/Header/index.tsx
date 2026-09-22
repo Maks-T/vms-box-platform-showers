@@ -10,10 +10,11 @@ import TopBar from './ui/TopBar';
 import NavBar from './ui/NavBar';
 import MobileMenu from './ui/MobileMenu';
 import { checkDevMode } from '@/shared/lib/dev';
+import { useTranslation, Locale } from '@/shared/i18n/useTranslation';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [locale, setLocale] = useState(localStorage.getItem('app_locale') || 'ru');
+  const { t, locale, setLocale } = useTranslation();
 
   const { auth } = usePage().props as any;
   const isEmployee = !!auth?.employee;
@@ -26,8 +27,7 @@ export default function Header() {
   }, [locale]);
 
   const handleLanguageChange = (newLocale: string) => {
-    setLocale(newLocale);
-    window.location.reload();
+    setLocale(newLocale as Locale);
   };
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function Header() {
           {(isDev || isEmployee) && (
             <a href="/admin" target="_blank" rel="noreferrer" className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] text-white text-sm font-medium transition-all active:scale-[0.98]">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              Админ-панель
+              {t('admin_panel')}
             </a>
           )}
 
@@ -80,7 +80,7 @@ export default function Header() {
             {isDev && (
               <a href="/docs/api" target="_blank" rel="noreferrer" className="hidden lg:flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 hover:bg-white/[0.08] text-white text-sm font-medium transition-all active:scale-[0.98]">
                 <BookOpen className="w-4 h-4 text-primary" />
-                API Docs
+                {t('api_docs')}
               </a>
             )}
 

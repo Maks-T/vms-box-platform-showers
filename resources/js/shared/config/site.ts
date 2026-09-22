@@ -1,4 +1,5 @@
 import {route} from 'ziggy-js';
+import { t } from '@/shared/i18n/useTranslation';
 
 export interface NavItem {
   label: string;
@@ -15,10 +16,12 @@ export interface SocialItem {
 }
 
 export const siteConfig = {
-  company: {
-    name: "VMS-NC Cloud SaaS",
-    status: "Каталог VMS-NC",
-    copyright: `© ${new Date().getFullYear()} Vistegra. Все права защищены.`,
+  get company() {
+    return {
+      name: "VMS-NC Cloud SaaS",
+      status: t('site_catalog_status'),
+      copyright: `© ${new Date().getFullYear()} Vistegra.`,
+    };
   },
 
   contacts: {
@@ -39,12 +42,14 @@ export const siteConfig = {
     },
   ] as SocialItem[],
 
-  headerNav: [
-    {label: 'Калькулятор', href: route('calculator.show'), disabled: false, forceRefresh: true},
-    {label: 'Конфигурация', href: route('bootstrap'), disabled: false},
-    {label: 'Каталог', href: route('catalog'), disabled: false},
-    {label: 'Услуги (Матрица)', href: route('services'), disabled: false},
-    {label: 'О компании', href: '#', disabled: true},
-  ] as (NavItem & { forceRefresh?: boolean })[],
+  get headerNav(): (NavItem & { forceRefresh?: boolean })[] {
+    return [
+      {label: t('nav_calculator'), href: route('calculator.show'), disabled: false, forceRefresh: true},
+      {label: t('nav_configuration'), href: route('bootstrap'), disabled: false},
+      {label: t('nav_catalog'), href: route('catalog'), disabled: false},
+      {label: t('nav_services'), href: route('services'), disabled: false},
+      {label: t('nav_about'), href: '#', disabled: true},
+    ];
+  },
 
 };

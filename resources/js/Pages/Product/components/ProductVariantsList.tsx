@@ -6,6 +6,7 @@ import StatusBadge from '@/shared/components/ui/StatusBadge';
 import GlassPanel from '@/shared/components/ui/GlassPanel';
 import {ProductVariant, BootstrapConfig} from '@/types/catalog';
 import Badge from "@/shared/components/ui/Badge";
+import {useTranslation} from '@/shared/i18n/useTranslation';
 
 interface Props {
   variants: ProductVariant[];
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export function ProductVariantsList({variants, bootstrapConfig}: Props) {
+  const { t, locale } = useTranslation();
   if (!variants || variants.length === 0) return null;
 
   const defaultPriceType = bootstrapConfig?.price_types?.find((pt: any) => pt.is_default)?.slug || 'retail';
@@ -44,7 +46,7 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
           <Layers className="w-4 h-4"/>
         </IconBox>
         <H3 className="!text-muted-foreground !text-[13px] uppercase tracking-[0.15em] m-0">
-          Торговые предложения (SKU)
+          {t('product_commercial_offers')}
         </H3>
       </div>
 
@@ -75,7 +77,7 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
                   {/* Если вывели красивое имя, то ниже показываем системный код */}
                   {hasFriendlyName && (
                     <div className="text-[11px] font-mono text-muted-foreground/75 mt-0.5 lowercase">
-                      Код: {variant.sku}
+                      {t('product_code_prefix')} {variant.sku}
                     </div>
                   )}
 
@@ -102,7 +104,7 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
                 {(() => {
                   const displayPrice = variant.prices?.[defaultPriceType] || Object.values(variant.prices || {})[0] || 0;
                   const formattedNumber = displayPrice > 0
-                    ? new Intl.NumberFormat('ru-RU', {
+                    ? new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'ru-RU', {
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 2
                     }).format(displayPrice)
@@ -116,13 +118,13 @@ export function ProductVariantsList({variants, bootstrapConfig}: Props) {
                   ) : (
                     <Badge variant="gray"
                            className="!bg-background !border-border !text-muted-foreground !shadow-none !px-2.5 !py-1 text-[11px] uppercase tracking-wider">
-                      По запросу
+                      {t('price_on_request')}
                     </Badge>
                   );
                 })()}
 
                 <StatusBadge variant={variant.stock > 0 ? 'success' : 'warning'} className="px-2.5 py-1">
-                  {variant.stock > 0 ? `Остаток: ${variant.stock} шт` : 'Под заказ'}
+                  {variant.stock > 0 ? t('stock_left_pcs', { count: variant.stock }) : t('stock_on_order')}
                 </StatusBadge>
 
               </div>

@@ -25,6 +25,22 @@ export function useCatalogApi({family, productType, search, page, filters}: UseC
     const fetchData = async () => {
       setIsLoading(true);
 
+      // Если семейство ещё не передано, сначала загружаем только bootstrap-конфиг,
+      // чтобы клиентский код определил первое доступное семейство из БД
+      if (!family) {
+        try {
+          const bootstrapRes = await bootstrapApi.getConfig();
+          if (isMounted) {
+            setBootstrapConfig(bootstrapRes);
+          }
+        } catch (error) {
+          console.error('Ошибка загрузки bootstrap конфигурации:', error);
+        } finally {
+          if (isMounted) setIsLoading(false);
+        }
+        return;
+      }
+
       const queryParams = new URLSearchParams();
       queryParams.set('limit', '12');
       queryParams.set('page', page.toString());

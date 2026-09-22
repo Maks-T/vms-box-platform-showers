@@ -3,6 +3,7 @@ import {Phone, Mail} from 'lucide-react';
 import StatusBadge from '@/shared/components/ui/StatusBadge';
 import {siteConfig} from '@/shared/config/site';
 import {setDevMode} from '@/shared/lib/dev';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 import PillSwitcher, {PillOption} from '@/shared/components/ui/PillSwitcher';
 
@@ -14,6 +15,7 @@ interface TopBarProps {
 }
 
 export default function TopBar({locale, onLanguageChange, isDev, isEmployee}: TopBarProps) {
+  const { t } = useTranslation();
   const {contacts, company} = siteConfig;
 
 
@@ -24,8 +26,8 @@ export default function TopBar({locale, onLanguageChange, isDev, isEmployee}: To
 
 
   const modeOptions: PillOption<boolean>[] = [
-    {value: false, label: 'PROD', title: 'Переключить в обычный пользовательский режим'},
-    {value: true, label: 'DEV', title: 'Переключить в режим разработчика'},
+    {value: false, label: 'PROD', title: t('mode_prod_title')},
+    {value: true, label: 'DEV', title: t('mode_dev_title')},
   ];
 
   return (

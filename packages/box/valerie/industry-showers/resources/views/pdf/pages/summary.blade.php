@@ -2,10 +2,11 @@
     /** @var \Nicole\Box\Core\Models\Order $order */
     use Valerie\Box\IndustryShowers\Support\PdfEstimateRenderer;
 
-    $currencySymbol = match($order->currency) {
-        'RUB' => 'руб.',
+    $currencySymbol = $currencySymbol ?? match($order->currency) {
+        'RUB' => app()->getLocale() === 'en' ? 'RUB' : 'руб.',
         'USD' => '$',
-        'BYN' => 'Br',
+        'EUR' => '€',
+        'BYN' => app()->getLocale() === 'en' ? 'BYN' : 'Br',
         default => $order->currency
     };
 
@@ -18,9 +19,9 @@
     <div class="page-content">
 
         <div class="page-title-container">
-            <h1 class="page-title">Коммерческое предложение</h1>
+                <h1 class="page-title">{{ __('Commercial Proposal') }}</h1>
             <div class="page-subtitle">
-                от {{ $order->created_at ? $order->created_at->format('d.m.Y H:i') : date('d.m.Y H:i') }}
+                    {{ __('dated') }} {{ $order->created_at ? $order->created_at->format('d.m.Y H:i') : date('d.m.Y H:i') }}
                 @if (!empty($customerFullName))
                     &nbsp;·&nbsp; {{ $customerFullName }}
                 @endif
@@ -30,9 +31,9 @@
         <table class="estimate-table">
             <thead>
             <tr class="estimate-table-th">
-                <th class="estimate-th-cell">Наименование</th>
-                <th class="estimate-th-cell-right" style="text-align: center;">Позиций</th>
-                <th class="estimate-th-cell-right">Итого</th>
+                    <th class="estimate-th-cell">{{ __('Item / Description') }}</th>
+                    <th class="estimate-th-cell-right" style="text-align: center;">{{ __('Positions') }}</th>
+                    <th class="estimate-th-cell-right">{{ __('Total') }}</th>
             </tr>
             </thead>
             <tbody>
@@ -60,7 +61,7 @@
             @endforeach
 
             <tr class="estimate-row-total">
-                <td class="estimate-cell-total-bold">Итого по предложению</td>
+                    <td class="estimate-cell-total-bold">{{ __('Total Proposal Amount') }}</td>
                 <td class="estimate-cell-total-medium">{{ $totalPositions }}</td>
                 <td class="estimate-cell-total-right-bold">
                     {{ PdfEstimateRenderer::formatPrice($order->grand_total, $currencySymbol) }}
@@ -114,8 +115,7 @@
                             </table>
                         @else
                             <div class="specs-missing"
-                                 style="padding: 10px; color: var(--text-muted); font-size: 11px;">Характеристики не
-                                указаны
+                                     style="padding: 10px; color: var(--text-muted); font-size: 11px;">{{ __('Specifications not specified') }}
                             </div>
                         @endif
                     </div>

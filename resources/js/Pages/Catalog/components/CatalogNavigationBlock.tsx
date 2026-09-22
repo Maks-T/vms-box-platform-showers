@@ -2,6 +2,7 @@ import React from 'react';
 import { cn } from '@/shared/lib/utils';
 import { CatalogPills } from '@/features/catalog/components/CatalogPills';
 import { ProductFamily } from '@/types/catalog';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface Props {
   familiesList: ProductFamily[];
@@ -15,6 +16,7 @@ interface Props {
 export function CatalogNavigationBlock({
                                          familiesList, activeFamily, setFamily, typesSchema, productType, setProductType
                                        }: Props) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col w-full mb-8 relative z-10 pt-4">
       {}
@@ -36,7 +38,7 @@ export function CatalogNavigationBlock({
                 : "bg-transparent border-transparent text-muted-foreground hover:bg-muted hover:text-foreground"
             )}
           >
-            Все типы
+            {t('catalog_all_types')}
           </button>
           {typesSchema.map((t) => (
             <button

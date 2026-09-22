@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Search, X} from 'lucide-react';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface Props {
   value: string;
@@ -7,7 +8,9 @@ interface Props {
   placeholder?: string;
 }
 
-export function CatalogSearchInput({value, onChange, placeholder = 'Поиск по названию, коду, артикулу...'}: Props) {
+export function CatalogSearchInput({value, onChange, placeholder}: Props) {
+  const { t } = useTranslation();
+  const inputPlaceholder = placeholder || t('catalog_search_placeholder');
   const [searchTerm, setSearchTerm] = useState(value);
 
   useEffect(() => {
@@ -39,7 +42,7 @@ export function CatalogSearchInput({value, onChange, placeholder = 'Поиск �
         type="text"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder={placeholder}
+        placeholder={inputPlaceholder}
         className="w-full h-11 pl-11 pr-10 bg-card border border-border rounded-xl text-sm font-medium text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all shadow-sm"
       />
 

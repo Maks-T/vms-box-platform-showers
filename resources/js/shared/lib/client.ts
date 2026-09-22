@@ -16,7 +16,7 @@ const client: AxiosInstance = axios.create({
 // Интерцептор запросов (Добавляет заголовки динамически)
 client.interceptors.request.use((config: CustomAxiosRequestConfig) => {
   // актуальный язык
-  const locale = localStorage.getItem('app_locale') || 'ru';
+  const locale = localStorage.getItem('app_locale') || 'en';
 
   config.headers['Accept-Language'] = locale;
   config.headers['X-Sales-Channel'] = 'widget'; 

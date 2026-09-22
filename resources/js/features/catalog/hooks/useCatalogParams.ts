@@ -8,7 +8,7 @@ export interface CatalogParams {
   filters: Record<string, string[]>;
 }
 
-export function useCatalogParams(defaultFamily: string = 'stone') {
+export function useCatalogParams(defaultFamily: string = '') {
   const [params, setParams] = useState<CatalogParams>(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const initial: CatalogParams = {
@@ -32,7 +32,9 @@ export function useCatalogParams(defaultFamily: string = 'stone') {
 
   useEffect(() => {
     const searchParams = new URLSearchParams();
-    searchParams.set('family', params.family);
+    if (params.family) {
+      searchParams.set('family', params.family);
+    }
 
     if (params.productType) searchParams.set('product_type', params.productType);
     if (params.search) searchParams.set('search', params.search);

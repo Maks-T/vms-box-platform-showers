@@ -3,6 +3,7 @@ import {H1, Text} from '@/shared/components/ui/Typography';
 import StatusBadge from '@/shared/components/ui/StatusBadge';
 import Badge from "@shared/components/ui/Badge";
 import {checkDevMode} from '@/shared/lib/dev';
+import {useTranslation} from '@/shared/i18n/useTranslation';
 
 interface Props {
   name: string;
@@ -13,11 +14,12 @@ interface Props {
 }
 
 export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescription, description}: Props) {
+  const { t, locale } = useTranslation();
   const isDev = checkDevMode();
   const currencySymbol = bootstrapConfig?.base_currency?.symbol_native || bootstrapConfig?.base_currency?.symbol || 'Br';
 
   const formattedNumber = priceFrom > 0
-    ? new Intl.NumberFormat('ru-RU', {
+    ? new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'ru-RU', {
       minimumFractionDigits: 0,
       maximumFractionDigits: 2
     }).format(priceFrom)
@@ -28,7 +30,7 @@ export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescript
       {isDev && (
         <StatusBadge variant="success" className="mb-6 w-max">
           <div className="flex items-center gap-1.5 whitespace-nowrap">
-            <span>В наличии</span>
+            <span>{t('stock_in_stock')}</span>
           </div>
         </StatusBadge>
       )}
@@ -40,7 +42,7 @@ export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescript
       <div className="flex items-end gap-6 mb-8">
         <div>
           <Text className="text-[11px] !text-muted-foreground font-bold uppercase tracking-widest mb-2">
-            Базовая цена от
+            {t('price_from')}
           </Text>
 
           <div className="text-[32px] font-black text-primary leading-none flex items-baseline gap-1.5">
@@ -54,7 +56,7 @@ export function ProductMainInfo({name, priceFrom, bootstrapConfig, shortDescript
             ) : (
               <Badge variant="gray"
                      className="!bg-muted !border-border !text-muted-foreground !shadow-none !px-3 !py-1 text-xs">
-                Нет в наличии
+                {t('stock_out_of_stock')}
               </Badge>
             )}
           </div>

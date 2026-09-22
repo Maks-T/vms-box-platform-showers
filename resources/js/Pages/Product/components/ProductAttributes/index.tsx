@@ -2,19 +2,22 @@ import React from 'react';
 import {H3} from '@/shared/components/ui/Typography';
 import {EavAttribute} from '@/types/catalog';
 import {AttributeValue} from './AttributeValue';
+import {useTranslation} from '@/shared/i18n/useTranslation';
 
 interface Props {
   attributes: Record<string, EavAttribute>;
 }
 
 export function ProductAttributes({attributes}: Props) {
+  const { t } = useTranslation();
+
   if (!attributes || Object.keys(attributes).length === 0) {
     return (
       <div className="flex-1">
         <H3 className="!text-muted-foreground !text-[13px] uppercase tracking-[0.15em] mb-6">
-          Свойства (EAV)
+          {t('product_attributes_title')}
         </H3>
-        <p className="text-sm text-muted-foreground italic">Свойства не указаны</p>
+        <p className="text-sm text-muted-foreground italic">{t('product_attributes_missing')}</p>
       </div>
     );
   }
@@ -22,7 +25,7 @@ export function ProductAttributes({attributes}: Props) {
   return (
     <div className="flex-1">
       <H3 className="!text-muted-foreground !text-[13px] uppercase tracking-[0.15em] mb-6">
-        Свойства (EAV)
+        {t('product_attributes_title')}
       </H3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-1">

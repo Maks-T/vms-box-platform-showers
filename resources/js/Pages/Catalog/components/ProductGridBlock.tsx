@@ -4,6 +4,7 @@ import { ProductCard } from '@/entities/product/ui/ProductCard';
 import { BasePagination } from '@/shared/components/ui/BasePagination';
 import { StoneProduct, BootstrapConfig } from '@/types/catalog';
 import { cn } from '@/shared/lib/utils';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface Props {
   isLoading: boolean;
@@ -15,12 +16,15 @@ interface Props {
 }
 
 export function ProductGridBlock({ isLoading, products, meta, setPage, clearFilters, bootstrapConfig }: Props) {
+  const { t } = useTranslation();
+  const totalCount = meta?.total !== undefined ? meta.total : products.length;
+
   return (
     <div className="relative min-h-[500px] flex flex-col">
       <div className="flex items-center justify-between mb-6 border-b border-border pb-4">
-        <h2 className="text-2xl font-semibold text-foreground tracking-tight">Результаты</h2>
+        <h2 className="text-2xl font-semibold text-foreground tracking-tight">{t('catalog_results_title')}</h2>
         <span className="text-sm font-medium text-muted-foreground bg-muted px-3 py-1 rounded-full">
-          {meta?.total || products.length} товаров
+          {t('catalog_items_count', { count: totalCount })}
         </span>
       </div>
 
@@ -30,7 +34,7 @@ export function ProductGridBlock({ isLoading, products, meta, setPage, clearFilt
             <div className="flex flex-col items-center gap-4">
               <Loader2 className="w-12 h-12 text-sky-500 animate-spin stroke-[2.5px]" />
               <span className="text-sky-600/60 text-xs font-bold uppercase tracking-[0.2em] animate-pulse">
-                 Загрузка...
+                 {t('catalog_loading')}
                </span>
             </div>
           </div>
@@ -58,9 +62,9 @@ export function ProductGridBlock({ isLoading, products, meta, setPage, clearFilt
               <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mb-4">
                 <Layers className="w-8 h-8 text-muted-foreground" />
               </div>
-              <p className="text-lg text-foreground font-medium mb-2">Ничего не найдено</p>
+              <p className="text-lg text-foreground font-medium mb-2">{t('catalog_not_found')}</p>
               <button onClick={clearFilters} className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors">
-                Сбросить фильтры
+                {t('catalog_reset_filters')}
               </button>
             </div>
           )}

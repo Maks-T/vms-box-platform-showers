@@ -13,6 +13,6 @@
   </div>
 
   <div class="footer-text-center {{ $isDark ? 'footer-text-dark' : '' }}">
-    Коммерческое предложение
+    {{ __('Commercial Proposal') }}
   </div>
 </div>

@@ -4,6 +4,7 @@ import { X, BookOpen } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Logo } from '@/shared/components/ui/Logo';
 import { NavItem } from '@/shared/config/site';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface ExtendedNavItem extends NavItem {
   forceRefresh?: boolean;
@@ -17,6 +18,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose, items, isDev }: MobileMenuProps) {
+  const { t } = useTranslation();
   if (!isOpen) return null;
 
   const { url } = usePage();
@@ -88,7 +90,7 @@ export default function MobileMenu({ isOpen, onClose, items, isDev }: MobileMenu
             className="mt-8 flex items-center justify-center gap-2 w-full py-4 rounded-xl bg-primary text-primary-foreground font-bold tracking-widest uppercase"
           >
             <BookOpen className="w-5 h-5" />
-            Swagger API
+            {t('swagger_api')}
           </a>
         )}
       </nav>

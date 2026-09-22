@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Head } from '@inertiajs/react';
 import MainLayout from '@/layouts/MainLayout';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface Props {
   initialData: {
@@ -26,8 +27,9 @@ declare global {
 const ROOT_CONTAINER_ID = 'calcAppRoot';
 
 export default function CalculatorShow({ initialData }: Props) {
+  const { t, locale } = useTranslation();
   const urlLang = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('lang') : null;
-  const activeLang = urlLang || initialData?.lang || 'en';
+  const activeLang = urlLang || initialData?.lang || locale;
 
   useEffect(() => {
 
@@ -69,11 +71,7 @@ export default function CalculatorShow({ initialData }: Props) {
   return (
     <MainLayout headerOverlaps={false}>
       <Head
-        title={
-          activeLang === 'en'
-            ? 'Online Product Configurator'
-            : 'Онлайн-калькулятор изделий'
-        }
+        title={t('calc_page_title')}
       />
 
       <SectionLayout containerVariant="page" className="!py-0 my-4">

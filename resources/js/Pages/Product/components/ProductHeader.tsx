@@ -3,8 +3,10 @@ import {Link} from '@inertiajs/react';
 import {ArrowLeft} from 'lucide-react';
 import {route} from 'ziggy-js';
 import {IconBox} from '@/shared/components/ui/IconBox';
+import {useTranslation} from '@/shared/i18n/useTranslation';
 
 export function ProductHeader() {
+  const { t } = useTranslation();
   return (
     <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
@@ -15,7 +17,7 @@ export function ProductHeader() {
           </IconBox>
           <span
             className="font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors text-[13px]">
-            Назад в каталог
+            {t('product_back_to_catalog')}
           </span>
         </Link>
       </div>

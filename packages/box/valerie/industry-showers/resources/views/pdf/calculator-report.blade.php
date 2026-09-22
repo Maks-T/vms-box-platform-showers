@@ -1,21 +1,27 @@
 @php
   /** @var \Nicole\Box\Core\Models\Order $order */
+  if (!empty($order->locale)) {
+      app()->setLocale($order->locale);
+  }
+
   $currencySymbol = match($order->currency) {
-      'RUB' => 'руб.',
+      'RUB' => app()->getLocale() === 'en' ? 'RUB' : 'руб.',
       'USD' => '$',
-      'BYN' => 'Br',
+      'EUR' => '€',
+      'BYN' => app()->getLocale() === 'en' ? 'BYN' : 'Br',
       default => $order->currency
   };
 
   $pageCounter = 1;
 
   view()->share('pageCounter', $pageCounter);
+  view()->share('currencySymbol', $currencySymbol);
 @endphp
   <!DOCTYPE html>
-<html lang="{{ $order->locale ?? 'ru' }}">
+<html lang="{{ app()->getLocale() }}">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>{{ $title ?? 'Коммерческое предложение' }}</title>
+  <title>{{ $title ?? __('Commercial Proposal') }}</title>
 
   <style>
     @font-face {

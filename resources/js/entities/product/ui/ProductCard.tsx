@@ -6,6 +6,7 @@ import { route } from "ziggy-js";
 import Badge from '@/shared/components/ui/Badge';
 import { cn } from '@/shared/lib/utils';
 import { FavoriteButton } from '@/shared/components/ui/FavoriteButton';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface ProductCardProps {
   product: StoneProduct;
@@ -13,6 +14,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
+  const { t, locale } = useTranslation();
   const { id, name, slug, price_from, preview_picture, unit, attributes, variants } = product;
 
   const [activeVariant, setActiveVariant] = useState<ProductVariant | null>(null);
@@ -28,7 +30,7 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
   const currencySymbol = bootstrapConfig?.base_currency?.symbol_native || bootstrapConfig?.base_currency?.symbol || 'Br';
 
   const formattedNumber = displayPrice > 0
-    ? new Intl.NumberFormat('ru-RU', {
+    ? new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'ru-RU', {
       minimumFractionDigits: 0,
       maximumFractionDigits: 2
     }).format(displayPrice)
@@ -38,12 +40,12 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
   const brand = attributes?.brand?.value as EavValueOption | undefined;
   const serviceTags = attributes?.service_tags?.value as EavValueOption[] | undefined;
 
-  let subtitle = 'Каталог';
+  let subtitle = t('catalog_default_category');
   if (brand) subtitle = brand.label; // Был brand.name
   else if (collection) subtitle = collection.label; // Был collection.name
   else if (serviceTags && Array.isArray(serviceTags) && serviceTags.length > 0) {
     subtitle = serviceTags.map(t => t.label).join(', '); // Был t.name
-  } else if (unit) subtitle = `Ед. изм: ${unit.name}`;
+  } else if (unit) subtitle = `${t('unit_prefix')} ${unit.name}`;
 
   const parentColor = attributes?.color?.value as EavValueOption | undefined;
   const variantColors: EavValueOption[] = [];
@@ -175,13 +177,13 @@ export const ProductCard = ({ product, bootstrapConfig }: ProductCardProps) => {
               </>
             ) : (
               <Badge variant="gray" className="!bg-muted !border-border !text-muted-foreground !shadow-none !px-3 !py-1 text-xs">
-                Бесплатно / По запросу
+                {t('price_on_request')}
               </Badge>
             )}
           </div>
           <Link href={route('product.show', slug)}
                 className="w-full h-[46px] bg-slate-900 text-white hover:bg-sky-600 active:scale-[0.98] text-[13px] font-bold tracking-[0.1em] uppercase transition-all duration-300 flex items-center justify-center rounded-xl shadow-md">
-            Подробнее
+            {t('catalog_card_details')}
           </Link>
         </div>
       </div>

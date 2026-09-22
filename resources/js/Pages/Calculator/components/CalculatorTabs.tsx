@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface Props {
   currentType: string;
@@ -6,6 +7,7 @@ interface Props {
 }
 
 export default function CalculatorTabs({ currentType, className }: Props) {
+  const { t } = useTranslation();
   return (
     <div className={`tw-flex tw-justify-center ${className || ''}`}>
       <div className="tw-bg-slate-100 tw-border tw-border-slate-200/80 tw-p-1 tw-rounded-[16px] tw-flex tw-gap-1 tw-items-center tw-max-w-md tw-w-full tw-shadow-sm">
@@ -17,7 +19,7 @@ export default function CalculatorTabs({ currentType, className }: Props) {
               : "tw-text-slate-500 hover:tw-text-slate-900"
           }`}
         >
-          Пользовательский
+          {t('calc_mode_user')}
         </a>
         <a
           href="/calculator/manager"
@@ -27,7 +29,7 @@ export default function CalculatorTabs({ currentType, className }: Props) {
               : "tw-text-slate-500 hover:tw-text-slate-900"
           }`}
         >
-          Менеджерский
+          {t('calc_mode_manager')}
         </a>
       </div>
     </div>

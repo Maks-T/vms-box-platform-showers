@@ -3,6 +3,7 @@ import { Trash2, Image as ImageIcon } from 'lucide-react';
 import { Link } from '@inertiajs/react';
 import { route } from 'ziggy-js';
 import { StoneProduct } from '@/types/catalog';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface FavoriteItemRowProps {
   item: StoneProduct;
@@ -12,6 +13,7 @@ interface FavoriteItemRowProps {
 }
 
 export const FavoriteItemRow = ({ item, onRemove, onNavigate, currencySymbol }: FavoriteItemRowProps) => {
+  const { t } = useTranslation();
   const formatPrice = (price: number) => {
     if (price <= 0) return '';
     return new Intl.NumberFormat('ru-RU', {
@@ -57,7 +59,7 @@ export const FavoriteItemRow = ({ item, onRemove, onNavigate, currencySymbol }: 
               </>
             ) : (
               <span className="text-[11px] font-normal text-muted-foreground">
-                По запросу
+                {t('price_on_request')}
               </span>
             )}
           </div>
@@ -65,7 +67,7 @@ export const FavoriteItemRow = ({ item, onRemove, onNavigate, currencySymbol }: 
           <button
             onClick={() => onRemove(item.id)}
             className="text-white/30 hover:text-destructive transition-colors p-1.5 cursor-pointer rounded-lg hover:bg-white/5"
-            title="Удалить"
+            title={t('favorites_remove')}
           >
             <Trash2 size={16} />
           </button>

@@ -15,17 +15,17 @@
 
 <div class="category-header-bar">
   <div class="category-header-text">
-    {{ mb_strtolower($categoryName) }} · {{ $categoryQty }} шт.
+    {{ mb_strtolower(__($categoryName)) }} · {{ $categoryQty }} {{ __('pcs.') }}
   </div>
 </div>
 
 <table class="estimate-table">
   <thead>
   <tr class="estimate-table-th">
-    <th class="estimate-th-cell">НАИМЕНОВАНИЕ</th>
-    <th class="estimate-th-cell-right">КОЛ-ВО</th>
-    <th class="estimate-th-cell-right">ЦЕНА</th>
-    <th class="estimate-th-cell-right">СУММА</th>
+    <th class="estimate-th-cell">{{ __('NAME') }}</th>
+    <th class="estimate-th-cell-right">{{ __('QTY') }}</th>
+    <th class="estimate-th-cell-right">{{ __('PRICE') }}</th>
+    <th class="estimate-th-cell-right">{{ __('TOTAL') }}</th>
   </tr>
   </thead>
   <tbody>
@@ -40,6 +40,12 @@
       $itemPrice = $cells[3];
       $itemSum = $cells[4];
 
+      $unitLabel = match($itemUnit) {
+        'link-id:pcs', 'шт.' => __('pcs.'),
+        'link-id:m', 'м.' => __('m'),
+        default => $itemUnit
+      };
+
       $resolvedPhoto = PdfEstimateRenderer::resolveProductPhoto($itemName, $section);
     @endphp
 
@@ -52,7 +58,7 @@
           <div class="product-name">{{ $itemName }}</div>
         </div>
       </td>
-      <td class="estimate-cell-qty">{{ $itemQty }} {{ $itemUnit === 'link-id:pcs' ? 'шт.' : ($itemUnit === 'link-id:m' ? 'м.' : $itemUnit) }}</td>
+      <td class="estimate-cell-qty">{{ $itemQty }} {{ $unitLabel }}</td>
       <td class="estimate-cell-price">{{ $itemPrice }}</td>
       <td class="estimate-cell-total">{{ $itemSum }}</td>
     </tr>

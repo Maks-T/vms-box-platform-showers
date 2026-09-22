@@ -1,26 +1,28 @@
 import React, {useEffect, useState} from 'react';
-
-const STATIC_STEPS = [
-  'Инициализация ядра платформы VMS-NC...',
-  'Подключение к удаленной базе данных...'
-];
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface ShowCalcLoaderProps {
   isWidgetReady: boolean;
 }
 
 export const ShowCalcLoader: React.FC<ShowCalcLoaderProps> = ({isWidgetReady}) => {
+  const { t } = useTranslation();
   const [inertiaStep, setInertiaStep] = useState(0);
+
+  const steps = [
+    t('calc_loading_step_1'),
+    t('calc_loading_step_2')
+  ];
 
   useEffect(() => {
     if (isWidgetReady) return;
 
     const interval = setInterval(() => {
-      setInertiaStep((prev) => (prev < STATIC_STEPS.length - 1 ? prev + 1 : prev));
+      setInertiaStep((prev) => (prev < steps.length - 1 ? prev + 1 : prev));
     }, 750);
 
     return () => clearInterval(interval);
-  }, [isWidgetReady]);
+  }, [isWidgetReady, steps.length]);
 
   if (isWidgetReady) return null;
 
@@ -47,13 +49,13 @@ export const ShowCalcLoader: React.FC<ShowCalcLoaderProps> = ({isWidgetReady}) =
 
       <div className="text-center max-w-md space-y-2">
         <h3 className="text-[var(--camera-calc-text-dark)] font-semibold text-base tracking-tight">
-          Загрузка модулей
+          {t('calc_loading_modules')}
         </h3>
         <p
           key={inertiaStep}
           className="loader-text-animate text-[var(--camera-calc-gray-700)] text-sm font-medium"
         >
-          {STATIC_STEPS[inertiaStep]}
+          {steps[inertiaStep]}
         </p>
       </div>
 

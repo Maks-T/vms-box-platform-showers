@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Head} from '@inertiajs/react';
 
 import MainLayout from '@/layouts/MainLayout';
@@ -13,20 +13,32 @@ import {CatalogNavigationBlock} from './components/CatalogNavigationBlock';
 import {ProductGridBlock} from './components/ProductGridBlock';
 import {ApiInspector} from '@widgets/ApiInspector';
 import {useDevMode} from '@/shared/hooks/useDevMode';
+import { useTranslation } from '@/shared/i18n/useTranslation';
 
 export default function CatalogIndex() {
+  const { t } = useTranslation();
   const isDev = useDevMode();
 
   const {
     family, productType, search, page, filters: activeFilters,
     setFamily, setProductType, setSearch, setPage, toggleFilter, clearFilters
-  } = useCatalogParams('stone');
+  } = useCatalogParams('');
 
   const {
     products, meta, filtersSchema, bootstrapConfig, isLoading, apiUrl
   } = useCatalogApi({family, productType, search, page, filters: activeFilters});
 
   const familiesList = bootstrapConfig?.families || [];
+
+  // Автоматический выбор первого семейства из БД, если в URL ничего не выбрано или указан невалидный код
+  useEffect(() => {
+    if (familiesList.length > 0) {
+      const isFamilyValid = familiesList.some(f => f.code === family);
+      if (!family || !isFamilyValid) {
+        setFamily(familiesList[0].code);
+      }
+    }
+  }, [familiesList, family, setFamily]);
 
   const activeFamilyData = familiesList.find(f => f.code === family);
   const typesForActiveFamily = activeFamilyData?.types || [];
@@ -54,7 +66,7 @@ export default function CatalogIndex() {
 
   return (
     <MainLayout headerOverlaps={false}>
-      <Head title={`${activeFamilyName || 'Каталог'} - VMS-NC Box`}/>
+      <Head title={`${activeFamilyName || t('catalog_default_category')} - VMS-NC Box`}/>
 
       <CatalogHeroBlock/>
 
@@ -74,7 +86,6 @@ export default function CatalogIndex() {
           <CatalogSearchInput
             value={search}
             onChange={setSearch}
-            placeholder="Поиск по названию, коду, артикулу поставщика..."
           />
         </div>
 
@@ -86,7 +97,7 @@ export default function CatalogIndex() {
                   onClick={clearFilters}
                   className="mb-8 text-[12px] font-bold text-muted-foreground hover:text-primary uppercase tracking-widest border-b border-border hover:border-primary pb-1 transition-colors cursor-pointer"
                 >
-                  Сбросить фильтры
+                  {t('catalog_reset_filters')}
                 </button>
               )}
               <CatalogFilters filters={filtersSchema} activeFilters={activeFilters} onToggle={toggleFilter}/>
@@ -108,7 +119,7 @@ export default function CatalogIndex() {
 
             {!isLoading && isDev && (
               <div className="mt-8 border-t border-border pt-12 pb-8">
-                <h3 className="text-xl font-bold text-foreground mb-6">Инспектор API запросов</h3>
+                <h3 className="text-xl font-bold text-foreground mb-6">{t('api_inspector_title')}</h3>
                 <ApiInspector requests={apiRequests}/>
               </div>
             )}
