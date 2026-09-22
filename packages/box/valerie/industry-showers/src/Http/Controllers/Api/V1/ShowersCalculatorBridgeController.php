@@ -311,8 +311,11 @@ class ShowersCalculatorBridgeController extends Controller
       $color = $this->getEavValue($v, 'furniture_type_id');
       $rawId = (string)$v->id;
 
-      $interfaceName = $this->getEavValue($v, 'interface_name');
       $variantName = $this->resolveVariantName($v, $product);
+      
+      $locale = app()->getLocale();
+      $interfaceName = $v->getTranslation('name', $locale)
+        ?: ($this->getEavValue($v, 'interface_name') ?: $variantName);
 
       $prices['handle'][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),

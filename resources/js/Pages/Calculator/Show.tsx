@@ -12,6 +12,7 @@ interface Props {
     ofertaLink?: string;
     state: any;
     type: string;
+    lang?: string;
   };
 }
 
@@ -25,10 +26,14 @@ declare global {
 const ROOT_CONTAINER_ID = 'calcAppRoot';
 
 export default function CalculatorShow({ initialData }: Props) {
+  const urlLang = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('lang') : null;
+  const activeLang = urlLang || initialData?.lang || 'ru';
+
   useEffect(() => {
-    // 1. Передаем серверные данные в window.initialData
+
     window.initialData = {
       ...initialData,
+      lang: activeLang,
       assetsUrl: window.location.origin + '/widget/',
       apiUrl: window.location.origin + '/api/v1',
       baseUrl: window.location.origin,
@@ -42,6 +47,7 @@ export default function CalculatorShow({ initialData }: Props) {
       script = document.createElement('script');
       script.id = scriptId;
       script.src = '/widget/embed.js';
+      script.dataset.lang = activeLang;
       script.async = true;
       document.body.appendChild(script);
     } else if (typeof window.initCalculator === 'function') {
@@ -58,11 +64,17 @@ export default function CalculatorShow({ initialData }: Props) {
         container.innerHTML = '';
       }
     };
-  }, [initialData]);
+  }, [initialData, activeLang]);
 
   return (
     <MainLayout headerOverlaps={false}>
-      <Head title="Онлайн-калькулятор изделий - Прозрачные решения" />
+      <Head
+        title={
+          activeLang === 'en'
+            ? 'Online Product Configurator - Transparent Solutions'
+            : 'Онлайн-калькулятор изделий - Прозрачные решения'
+        }
+      />
 
       <SectionLayout containerVariant="page" className="!py-0 my-4">
         <div className="w-full relative z-10 py-0">

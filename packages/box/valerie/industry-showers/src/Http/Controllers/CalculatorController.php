@@ -48,6 +48,7 @@ class CalculatorController
       'ofertaLink' => config('nicole.oferta_link', '#'),
       'state'      => $order ? $order->calc_state : null,
       'type'       => $type,
+      'lang'       => app()->getLocale(),
       'auth'       => [
         'client'   => null,
         'employee' => $user ? [
