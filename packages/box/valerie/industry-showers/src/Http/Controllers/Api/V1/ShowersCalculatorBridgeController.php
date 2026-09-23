@@ -27,6 +27,13 @@ class ShowersCalculatorBridgeController extends Controller
 
   public function loadData(Request $request): JsonResponse
   {
+    $locale = $request->query('lang')
+      ?: ($request->header('Accept-Language') ?: app()->getLocale());
+
+    if (in_array($locale, ['ru', 'en'], true)) {
+      app()->setLocale($locale);
+    }
+
     $version = Cache::get('catalog_version', 1);
     $cacheKey = 'showers_calc_bridge_v' . $version . '_' . app()->getLocale();
 
@@ -304,8 +311,11 @@ class ShowersCalculatorBridgeController extends Controller
       $color = $this->getEavValue($v, 'furniture_type_id');
       $rawId = (string)$v->id;
 
-      $interfaceName = $this->getEavValue($v, 'interface_name');
       $variantName = $this->resolveVariantName($v, $product);
+      
+      $locale = app()->getLocale();
+      $interfaceName = $v->getTranslation('name', $locale)
+        ?: ($this->getEavValue($v, 'interface_name') ?: $variantName);
 
       $prices['handle'][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
@@ -405,6 +415,13 @@ class ShowersCalculatorBridgeController extends Controller
 
   private function parseServicePrices(Product $product, string $unitSymbol, array &$prices): void
   {
+    // Загружаем глобальный режим тарификации монтажа один раз вне цикла во избежание N+1 запросов
+    static $cachedGlobalMontageType = null;
+    if ($cachedGlobalMontageType === null) {
+      $interfaceDict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
+      $cachedGlobalMontageType = (string)($interfaceDict?->records?->firstWhere('slug', 'montage_rate_type')?->meta['value_user'] ?? 'fixed');
+    }
+
     foreach ($product->variants as $v) {
       $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
       if (!$type) {
@@ -419,6 +436,8 @@ class ShowersCalculatorBridgeController extends Controller
       // Для монтажных работ выводим каждую разновидность по формам и дверям
       if ($type === 'montage') {
         $rawId = (string)$v->id;
+        $effectiveRateType = $rateType ?: $cachedGlobalMontageType;
+
         $prices['services']['montage'][$rawId] = array_merge(
           $this->buildBaseItemData($v, $product, $unitSymbol),
           [
@@ -426,6 +445,7 @@ class ShowersCalculatorBridgeController extends Controller
             'doorTypeIds'     => $doorTypeIds,
             'price1'          => $retailPrice,
             'price2'          => 0.0,
+            'rate_type'       => $effectiveRateType, // 'fixed' или 'per_unit'
             'base_variant_id' => $v->id,
             'rate_variant_id' => $v->id,
           ]
@@ -473,7 +493,7 @@ class ShowersCalculatorBridgeController extends Controller
   {
     $limits = [];
 
-    $measureDict = ComplexDictionary::where('code', 'shower_measure_limits')->with('records')->first();
+    $measureDict = ComplexDictionary::query()->where('code', 'shower_measure_limits')->with('records')->first();
     if ($measureDict) {
       foreach ($measureDict->records as $record) {
         $limits['measure'][$record->slug] = [
@@ -486,7 +506,7 @@ class ShowersCalculatorBridgeController extends Controller
       }
     }
 
-    $serviceDict = ComplexDictionary::where('code', 'shower_service_limits')->with('records')->first();
+    $serviceDict = ComplexDictionary::query()->where('code', 'shower_service_limits')->with('records')->first();
     if ($serviceDict) {
       foreach ($serviceDict->records as $record) {
         $limits['services'][$record->slug] = [
@@ -497,13 +517,20 @@ class ShowersCalculatorBridgeController extends Controller
       }
     }
 
+    $interfaceDict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
+    $twoSlideMin = (int)($interfaceDict?->records?->firstWhere('slug', 'line_two_slide_min_length')?->meta['value_user'] ?? 1500);
+
+    $limits['special'] = [
+      'line_two_slide' => ['lengthMin' => $twoSlideMin],
+    ];
+
     return $limits;
   }
 
   protected function loadInterfaceSettings(): array
   {
     $settings = [];
-    $dict = ComplexDictionary::where('code', 'shower_interface_settings')->with('records')->first();
+    $dict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
 
     if ($dict) {
       foreach ($dict->records as $record) {
@@ -516,6 +543,16 @@ class ShowersCalculatorBridgeController extends Controller
           'userValue'   => (string)($record->meta['value_user'] ?? ''),
         ];
       }
+
+      // Добавляем типизированные параметры для виджета калькулятора
+      $settings['disabledDoors'] = $dict->records->firstWhere('slug', 'disabled_doors')?->meta['values'] ?? [
+        'line_two_swing',
+        'corner_two_swing',
+        'curtain_accordion',
+      ];
+      $settings['showLift'] = (bool)($dict->records->firstWhere('slug', 'service_lift')?->meta['show_user'] ?? false);
+      $settings['montageRateType'] = (string)($dict->records->firstWhere('slug', 'montage_rate_type')?->meta['value_user'] ?? 'fixed');
+      $settings['hideMaterialSelector'] = (bool)($dict->records->firstWhere('slug', 'hide_material_selector')?->meta['show_user'] ?? true);
     }
 
     return $settings;
