@@ -14,9 +14,17 @@ class AppServiceProvider extends ServiceProvider
 
   public function boot(): void
   {
-    // Регистрируем глобальный перехват прав для роли admin (Super Admin)
+    // Глобальный супер-админ (доступ ко всему)
     Gate::before(function ($user, $ability) {
       return $user->hasRole('admin') ? true : null;
+    });
+
+    // Связываем модели ядра Nicole Core с политиками в App\Policies
+    Gate::guessPolicyNamesUsing(function (string $modelClass) {
+      $classBasename = class_basename($modelClass);
+      $policyClass = "App\\Policies\\{$classBasename}Policy";
+
+      return class_exists($policyClass) ? $policyClass : null;
     });
   }
 
