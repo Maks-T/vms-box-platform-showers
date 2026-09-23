@@ -533,14 +533,20 @@ class ShowersCalculatorBridgeController extends Controller
     $dict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
 
     if ($dict) {
+      $technicalSlugs = ['disabled_doors', 'special_limits'];
+
       foreach ($dict->records as $record) {
+        if (in_array($record->slug, $technicalSlugs, true)) {
+          continue;
+        }
+
         $settings[$record->slug] = [
-          'adminShow'   => (bool)($record->meta['show_admin'] ?? false),
-          'managerShow' => (bool)($record->meta['show_manager'] ?? false),
-          'userShow'    => (bool)($record->meta['show_user'] ?? false),
-          'adminValue'  => (string)($record->meta['value_admin'] ?? ''),
-          'managerValue'=> (string)($record->meta['value_manager'] ?? ''),
-          'userValue'   => (string)($record->meta['value_user'] ?? ''),
+          'adminShow'   => (bool)($record->meta['show_admin'] ?? ($record->meta['adminShow'] ?? true)),
+          'managerShow' => (bool)($record->meta['show_manager'] ?? ($record->meta['managerShow'] ?? true)),
+          'userShow'    => (bool)($record->meta['show_user'] ?? ($record->meta['userShow'] ?? false)),
+          'adminValue'  => (string)($record->meta['value_admin'] ?? ($record->meta['adminValue'] ?? '')),
+          'managerValue'=> (string)($record->meta['value_manager'] ?? ($record->meta['managerValue'] ?? '')),
+          'userValue'   => (string)($record->meta['value_user'] ?? ($record->meta['userValue'] ?? '')),
         ];
       }
 
