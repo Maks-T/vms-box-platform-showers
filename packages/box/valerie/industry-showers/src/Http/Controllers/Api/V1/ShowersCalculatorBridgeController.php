@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Cache;
 use Nicole\Box\Core\Models\Product;
 use Nicole\Box\Core\Models\ProductVariant;
 use Nicole\Box\Core\Models\ComplexDictionary;
+use Nicole\Box\Core\Models\ComplexDictionaryRecord;
 use Nicole\Box\Core\Models\Currency;
 use Nicole\Box\Core\Models\Attribute;
 
@@ -128,6 +129,13 @@ class ShowersCalculatorBridgeController extends Controller
     $config = [];
     $locale = app()->getLocale();
 
+    // Загружаем список неактивных форм из shower_measure_limits
+    $inactiveFormSlugs = ComplexDictionaryRecord::query()
+      ->whereHas('dictionary', fn($q) => $q->where('code', 'shower_measure_limits'))
+      ->where('is_active', false)
+      ->pluck('slug')
+      ->toArray();
+
     $furnitureDict = ComplexDictionary::where('code', 'shower_furniture')->with('records')->first();
     if ($furnitureDict) {
       foreach ($furnitureDict->records as $record) {
@@ -155,6 +163,12 @@ class ShowersCalculatorBridgeController extends Controller
       if ($attribute) {
         foreach ($attribute->options as $option) {
           $slug = $option->slug;
+
+          // Если это форма и она отключена в настройках — пропускаем её
+          if ($frontKey === 'form' && in_array($slug, $inactiveFormSlugs, true)) {
+            continue;
+          }
+
           $config[$frontKey][$slug] = [
             'id'   => $slug,
             'name' => $option->getTranslation('value', $locale) ?? $option->value
@@ -496,6 +510,9 @@ class ShowersCalculatorBridgeController extends Controller
     $measureDict = ComplexDictionary::query()->where('code', 'shower_measure_limits')->with('records')->first();
     if ($measureDict) {
       foreach ($measureDict->records as $record) {
+        if ($record->is_active === false) {
+          continue;
+        }
         $limits['measure'][$record->slug] = [
           'id'        => $record->slug,
           'heightMin' => (int)($record->meta['height_min'] ?? 0),
@@ -518,11 +535,32 @@ class ShowersCalculatorBridgeController extends Controller
     }
 
     $interfaceDict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
-    $twoSlideMin = (int)($interfaceDict?->records?->firstWhere('slug', 'line_two_slide_min_length')?->meta['value_user'] ?? 1500);
+    $specialLimitsItems = $interfaceDict?->records?->firstWhere('slug', 'special_limits')?->meta['items'] ?? [];
 
-    $limits['special'] = [
-      'line_two_slide' => ['lengthMin' => $twoSlideMin],
-    ];
+    $specialLimits = [];
+    foreach ($specialLimitsItems as $item) {
+      $form = $item['form_id'] ?? '';
+      $door = $item['door_id'] ?? '';
+      if (!$form) continue;
+
+      $key = $door ? "{$form}_{$door}" : $form;
+      $rule = [];
+      if (!empty($item['length_min'])) $rule['lengthMin'] = (int)$item['length_min'];
+      if (!empty($item['length_max'])) $rule['lengthMax'] = (int)$item['length_max'];
+      if (!empty($item['height_min'])) $rule['heightMin'] = (int)$item['height_min'];
+      if (!empty($item['height_max'])) $rule['heightMax'] = (int)$item['height_max'];
+
+      if (!empty($rule)) {
+        $specialLimits[$key] = $rule;
+      }
+    }
+
+    if (empty($specialLimits)) {
+      $twoSlideMin = (int)($interfaceDict?->records?->firstWhere('slug', 'line_two_slide_min_length')?->meta['value_user'] ?? 1500);
+      $specialLimits['line_two_slide'] = ['lengthMin' => $twoSlideMin];
+    }
+
+    $limits['special'] = $specialLimits;
 
     return $limits;
   }
@@ -533,7 +571,7 @@ class ShowersCalculatorBridgeController extends Controller
     $dict = ComplexDictionary::query()->where('code', 'shower_interface_settings')->with('records')->first();
 
     if ($dict) {
-      $technicalSlugs = ['disabled_doors', 'special_limits'];
+      $technicalSlugs = ['disabled_doors', 'enabled_doors', 'special_limits'];
 
       foreach ($dict->records as $record) {
         if (in_array($record->slug, $technicalSlugs, true)) {
@@ -548,17 +586,49 @@ class ShowersCalculatorBridgeController extends Controller
           'managerValue'=> (string)($record->meta['value_manager'] ?? ($record->meta['managerValue'] ?? '')),
           'userValue'   => (string)($record->meta['value_user'] ?? ($record->meta['userValue'] ?? '')),
         ];
+        $adminVal = (string)($record->meta['value_admin'] ?? ($record->meta['adminValue'] ?? ''));
+        $managerVal = (string)($record->meta['value_manager'] ?? ($record->meta['managerValue'] ?? ''));
+        $userVal = (string)($record->meta['value_user'] ?? ($record->meta['userValue'] ?? ''));
+
+        $item = [
+          'adminShow'   => (bool)($record->meta['show_admin'] ?? ($record->meta['adminShow'] ?? true)),
+          'managerShow' => (bool)($record->meta['show_manager'] ?? ($record->meta['managerShow'] ?? true)),
+          'userShow'    => (bool)($record->meta['show_user'] ?? ($record->meta['userShow'] ?? false)),
+        ];
+
+        // Добавляем строковые поля значений только если хотя бы одно из них не пустое
+        if ($adminVal !== '' || $managerVal !== '' || $userVal !== '') {
+          $item['adminValue'] = $adminVal;
+          $item['managerValue'] = $managerVal;
+          $item['userValue'] = $userVal;
+        }
+
+        $settings[$record->slug] = $item;
       }
+
+      // Белый список разрешенных открываний для каждой формы
+      $defaultEnabledDoors = [
+        'line'      => ['one_swing', 'one_slide', 'two_slide'],
+        'corner'    => ['one_swing', 'one_slide', 'two_slide'],
+        'free'      => ['static'],
+        'trapezoid' => ['one_swing'],
+        'ushaped'   => ['one_swing', 'one_slide'],
+        'door'      => ['one_swing', 'two_swing'],
+        'curtain'   => ['static', 'one_swing', 'one_swing_with_partition', 'one_slide', 'two_slide'],
+      ];
+      $settings['enabledDoors'] = $dict->records->firstWhere('slug', 'enabled_doors')?->meta['values'] ?? $defaultEnabledDoors;
 
       // Добавляем типизированные параметры для виджета калькулятора
       $settings['disabledDoors'] = $dict->records->firstWhere('slug', 'disabled_doors')?->meta['values'] ?? [
         'line_two_swing',
         'corner_two_swing',
-        'curtain_accordion',
+        'curtain_accordion_2glass',
+        'curtain_accordion_3glass',
       ];
       $settings['showLift'] = (bool)($dict->records->firstWhere('slug', 'service_lift')?->meta['show_user'] ?? false);
       $settings['montageRateType'] = (string)($dict->records->firstWhere('slug', 'montage_rate_type')?->meta['value_user'] ?? 'fixed');
       $settings['hideMaterialSelector'] = (bool)($dict->records->firstWhere('slug', 'hide_material_selector')?->meta['show_user'] ?? true);
+      $settings['showCatalogPrices'] = (bool)($dict->records->firstWhere('slug', 'catalog_prices')?->meta['show_user'] ?? ($dict->records->firstWhere('slug', 'catalog_prices')?->meta['userShow'] ?? false));
     }
 
     return $settings;
