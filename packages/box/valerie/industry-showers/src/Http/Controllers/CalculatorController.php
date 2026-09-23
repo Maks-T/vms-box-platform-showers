@@ -29,8 +29,16 @@ class CalculatorController
     }
 
     $user = auth()->user();
+    $roles = $user && method_exists($user, 'getRoleNames') ? $user->getRoleNames()->toArray() : [];
 
-    $type = $user ? 'manager' : 'user';
+    $type = 'user';
+    if ($user) {
+      if (in_array('super_admin', $roles, true) || in_array('admin', $roles, true)) {
+        $type = 'admin';
+      } else {
+        $type = 'manager';
+      }
+    }
 
     $initialData = [
       'apiUrl'     => url('/api/v1'),
@@ -40,6 +48,7 @@ class CalculatorController
       'ofertaLink' => config('nicole.oferta_link', '#'),
       'state'      => $order ? $order->calc_state : null,
       'type'       => $type,
+      'lang'       => app()->getLocale(),
       'auth'       => [
         'client'   => null,
         'employee' => $user ? [
