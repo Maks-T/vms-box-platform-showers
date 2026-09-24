@@ -40,6 +40,8 @@ class CalculatorController
       }
     }
 
+    $salesChannel = ($type === 'user') ? 'widget' : 'catalog';
+
     $initialData = [
       'apiUrl'     => url('/api/v1'),
       'assetsUrl'  => url('/' . $widgetSlug . '/'),
@@ -48,6 +50,7 @@ class CalculatorController
       'ofertaLink' => config('nicole.oferta_link', '#'),
       'state'      => $order ? $order->calc_state : null,
       'type'       => $type,
+      'channel'    => $salesChannel,
       'lang'       => app()->getLocale(),
       'auth'       => [
         'client'   => null,
