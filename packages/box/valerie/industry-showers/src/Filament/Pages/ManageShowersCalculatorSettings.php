@@ -28,6 +28,7 @@ use Nicole\Box\Core\Models\Attribute;
 use Nicole\Box\Core\Models\ComplexDictionary;
 use Nicole\Box\Core\Models\ComplexDictionaryRecord;
 use Nicole\Box\Core\Support\CatalogCache;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 
 /**
  * Единый оркестратор фабрики душевых кабин: формы, открывания, лимиты и права.
@@ -38,6 +39,7 @@ use Nicole\Box\Core\Support\CatalogCache;
 class ManageShowersCalculatorSettings extends Page implements HasForms
 {
   use InteractsWithForms;
+  use HasPageShield;
 
   protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedAdjustmentsHorizontal;
 
@@ -54,7 +56,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
 
   public static function getNavigationLabel(): string
   {
-    return __('Настройки калькулятора');
+        return __('Calculator Settings');
   }
 
   public ?array $data = [];
