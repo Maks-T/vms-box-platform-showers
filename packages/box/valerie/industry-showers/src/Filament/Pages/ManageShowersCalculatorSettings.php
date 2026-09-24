@@ -54,7 +54,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
 
   public static function getNavigationLabel(): string
   {
-    return __('Настройки калькулятора');
+        return __('Calculator Settings');
   }
 
   public ?array $data = [];

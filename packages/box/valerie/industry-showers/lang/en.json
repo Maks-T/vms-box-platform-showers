@@ -49,5 +49,20 @@
   "Tooltip / Description": "Tooltip / Description",
   "The storage duration dictionary is empty. Please configure options for the storage_time attribute.": "The storage duration dictionary is empty. Please configure options for the storage_time attribute.",
   "Attention required": "Attention required",
-  "Configure": "Configure"
+  "Configure": "Configure",
+  "Calculator Settings": "Calculator Settings",
+  "Cap": "Cap",
+  "Doorstep": "Doorstep",
+  "Glass": "Glass",
+  "Glass Holder": "Glass Holder",
+  "Handle": "Handle",
+  "Open System": "Open System",
+  "Profile": "Profile",
+  "Save changes": "Save changes",
+  "Sealant": "Sealant",
+  "Services": "Services",
+  "Sliding Rollers": "Sliding Rollers",
+  "Stabilizing Rod": "Stabilizing Rod",
+  "Track Connector": "Track Connector",
+  "Wall Mount": "Wall Mount"
 }

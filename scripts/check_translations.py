@@ -26,8 +26,8 @@ MODULES = [
     },
     {
         "name": "Пакет: Valerie Industry Stone",
-        "scan_dirs": ["packages/box/valerie/industry-cctv"],
-        "lang_file": "packages/box/valerie/industry-cctv/lang/en.json"
+        "scan_dirs": ["packages/box/valerie/industry-showers"],
+        "lang_file": "packages/box/valerie/industry-showers/lang/en.json"
     },
     {
         "name": "Основное приложение (App + Resources)",

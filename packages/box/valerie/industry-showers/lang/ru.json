@@ -49,5 +49,20 @@
   "Tooltip / Description": "Подсказка / Описание",
   "The storage duration dictionary is empty. Please configure options for the storage_time attribute.": "Справочник продолжительности хранения пуст. Пожалуйста, настройте параметры для атрибута storage_time.",
   "Attention required": "Обратите внимание",
-  "Configure": "Настроить"
+  "Configure": "Настроить",
+  "Calculator Settings": "Настройки калькулятора",
+  "Cap": "Заглушка",
+  "Doorstep": "Порог",
+  "Glass": "Стекло",
+  "Glass Holder": "Держатель стекла",
+  "Handle": "Ручка",
+  "Open System": "Система открывания",
+  "Profile": "Профиль",
+  "Save changes": "Сохранить изменения",
+  "Sealant": "Уплотнитель",
+  "Services": "Услуги",
+  "Sliding Rollers": "Раздвижная система",
+  "Stabilizing Rod": "Стабилизирующая штанга",
+  "Track Connector": "Коннектор трека",
+  "Wall Mount": "Крепление к стене"
 }
