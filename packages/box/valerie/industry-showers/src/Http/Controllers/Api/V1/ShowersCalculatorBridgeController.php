@@ -35,13 +35,15 @@ class ShowersCalculatorBridgeController extends Controller
       app()->setLocale($locale);
     }
 
+    $channel = config('app.channel', $request->header('X-Sales-Channel', 'widget'));
     $version = Cache::get('catalog_version', 1);
-    $cacheKey = 'showers_calc_bridge_v' . $version . '_' . app()->getLocale();
 
-    $responsePayload = Cache::remember($cacheKey, 86400, function () {
+    $cacheKey = "showers_calc_bridge_v{$version}_{$channel}_{$locale}";
+
+    $responsePayload = Cache::remember($cacheKey, 86400, function () use ($channel) {
       return [
         'config'    => $this->loadConfigurations(),
-        'prices'    => $this->loadPrices(),
+        'prices'    => $this->loadPrices($channel),
         'limits'    => $this->loadLimits(),
         'interface' => $this->loadInterfaceSettings(),
         'rates'     => $this->loadExchangeRates(),
@@ -180,7 +182,7 @@ class ShowersCalculatorBridgeController extends Controller
     return $config;
   }
 
-  protected function loadPrices(): array
+  protected function loadPrices(string $channel = 'widget'): array
   {
     $prices = [
       'crossbar'   => [],
@@ -195,6 +197,7 @@ class ShowersCalculatorBridgeController extends Controller
 
     $allProducts = Product::query()
       ->where('is_active', true)
+      ->publicInChannel($channel)
       ->with([
         'variants' => fn($query) => $query->where('is_active', true)->with([
           'attributeValues.attribute',
