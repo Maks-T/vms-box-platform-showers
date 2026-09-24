@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Providers\Filament;
 
-use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
-use CmsMulti\FilamentClearCache\FilamentClearCachePlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -25,11 +23,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use LaraZeus\SpatieTranslatable\SpatieTranslatablePlugin;
 use Nicole\Box\Core\NicoleCorePlugin;
-use Valerie\Box\IndustryCctv\ValerieCctvPlugin;
 use Valerie\Box\IndustryShowers\ValerieShowersPlugin;
-use Outerweb\FilamentTranslatableFields\TranslatableFieldsPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -76,37 +71,15 @@ class AdminPanelProvider extends PanelProvider
         fn (): string => Blade::render('@vite(["resources/css/app.css", "resources/js/app.tsx"])')
       )
       ->navigationGroups([
-        NavigationGroup::make()
-          ->label(fn (): string => __('Catalog')),
-
-        NavigationGroup::make()
-          ->label(fn (): string => __('Configurations')),
-
-        NavigationGroup::make()
-          ->label(fn (): string => __('Catalog Settings'))
-          ->collapsed(),
-
-        NavigationGroup::make()
-          ->label(fn (): string => __('Inventory')),
-
-        NavigationGroup::make()
-          ->label(fn (): string => __('Access Control'))
-          ->collapsed(),
+        NavigationGroup::make()->label(fn (): string => __('Catalog')),
+        NavigationGroup::make()->label(fn (): string => __('Configurations')),
+        NavigationGroup::make()->label(fn (): string => __('Catalog Settings'))->collapsed(),
+        NavigationGroup::make()->label(fn (): string => __('Inventory')),
+        NavigationGroup::make()->label(fn (): string => __('Access Control'))->collapsed(),
       ])
       ->plugins([
-        FilamentClearCachePlugin::make(),
-
         NicoleCorePlugin::make(),
-
         ValerieShowersPlugin::make(),
-
-        SpatieTranslatablePlugin::make()
-          ->defaultLocales(['ru']),
-
-        TranslatableFieldsPlugin::make()
-          ->supportedLocales(['ru']),
-
-        FilamentShieldPlugin::make()->navigationGroup('Контроль доступа'),
       ]);
   }
 }
