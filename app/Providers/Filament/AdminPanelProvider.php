@@ -36,7 +36,7 @@ class AdminPanelProvider extends PanelProvider
       ->path('admin')
       ->login()
       ->colors([
-        'primary' => Color::Teal,
+        'primary' => Color::Blue,
       ])
       ->maxContentWidth(Width::Full)
       ->brandLogo(asset('images/logo.svg'))
