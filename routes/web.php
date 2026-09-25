@@ -47,7 +47,9 @@ Route::get('/services', function () {
 
 // Переключение языка
 Route::get('/lang/{locale}', function (string $locale) {
-  if (in_array($locale, ['ru', 'en'])) {
+  $allowedLocales = config('nicole.locales', [config('app.locale', 'ru')]);
+
+  if (in_array($locale, $allowedLocales, true)) {
     // Записываем в сессию для нашего API
     session(['locale' => $locale]);
 

@@ -28,12 +28,16 @@ class ShowersCalculatorBridgeController extends Controller
 
   public function loadData(Request $request): JsonResponse
   {
-    $locale = $request->query('lang')
-      ?: ($request->header('Accept-Language') ?: app()->getLocale());
+    $supportedLocales = config('nicole.locales', [config('app.locale', 'ru')]);
+    $fallbackLocale = config('app.locale', 'ru');
 
-    if (in_array($locale, ['ru', 'en'], true)) {
-      app()->setLocale($locale);
+    $locale = $request->query('lang');
+    if (!$locale && $request->hasHeader('Accept-Language')) {
+      $locale = $request->getPreferredLanguage($supportedLocales);
     }
+
+    $locale = ($locale && in_array($locale, $supportedLocales, true)) ? $locale : $fallbackLocale;
+    app()->setLocale($locale);
 
     $channel = config('app.channel', $request->header('X-Sales-Channel', 'widget'));
     $version = Cache::get('catalog_version', 1);
