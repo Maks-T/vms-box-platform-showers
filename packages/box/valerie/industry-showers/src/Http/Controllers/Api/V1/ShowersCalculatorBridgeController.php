@@ -115,7 +115,14 @@ class ShowersCalculatorBridgeController extends Controller
   protected function resolveVariantName(ProductVariant $variant, Product $product): string
   {
     $locale = app()->getLocale();
-    return $variant->getTranslation('name', $locale)
+
+    $variantName = $variant->getTranslation('name', $locale, false);
+
+    if (!empty($variantName)) {
+      return $variantName;
+    }
+
+    return $product->getTranslation('name', $locale, false)
       ?: ($product->getTranslation('name', $locale) ?? '');
   }
 
