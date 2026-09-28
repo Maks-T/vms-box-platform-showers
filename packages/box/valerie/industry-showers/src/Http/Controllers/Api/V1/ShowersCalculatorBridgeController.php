@@ -340,18 +340,15 @@ class ShowersCalculatorBridgeController extends Controller
       $rawId = (string)$v->id;
 
       $variantName = $this->resolveVariantName($v, $product);
-      
-      $locale = app()->getLocale();
-      $interfaceName = $v->getTranslation('name', $locale)
-        ?: ($this->getEavValue($v, 'interface_name') ?: $variantName);
 
       $prices['handle'][$rawId] = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
+          'name'            => $variantName,
           'type'            => $type,
           'furnitureTypeId' => $color,
           'doorTypeIds'     => $this->getEavMultipleValues($v, 'door_type_ids'),
-          'interfaceName'   => $interfaceName ?: $variantName,
+          'interfaceName'   => $variantName,
           'pathImg'         => $this->resolveVariantPreview($v, $product),
         ]
       );
@@ -641,6 +638,7 @@ class ShowersCalculatorBridgeController extends Controller
       ];
       $settings['showLift'] = (bool)($dict->records->firstWhere('slug', 'service_lift')?->meta['show_user'] ?? false);
       $settings['montageRateType'] = (string)($dict->records->firstWhere('slug', 'montage_rate_type')?->meta['value_user'] ?? 'fixed');
+      $settings['doorstepMode'] = (string)($dict->records->firstWhere('slug', 'doorstep_mode')?->meta['value_user'] ?? 'optional');
       $settings['hideMaterialSelector'] = (bool)($dict->records->firstWhere('slug', 'hide_material_selector')?->meta['show_user'] ?? true);
       $settings['showCatalogPrices'] = (bool)($dict->records->firstWhere('slug', 'catalog_prices')?->meta['show_user'] ?? ($dict->records->firstWhere('slug', 'catalog_prices')?->meta['userShow'] ?? false));
     }

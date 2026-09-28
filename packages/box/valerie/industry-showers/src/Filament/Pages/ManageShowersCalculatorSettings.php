@@ -180,6 +180,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
       'forms' => $formsState,
       'ui_matrix' => $uiMatrix,
       'montage_rate_type' => (string) ($interfaceRecords->get('montage_rate_type')?->meta['value_user'] ?? 'fixed'),
+      'doorstep_mode' => (string) ($interfaceRecords->get('doorstep_mode')?->meta['value_user'] ?? 'optional'),
     ];
   }
 
@@ -363,6 +364,19 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
                     ])
                     ->required(),
                 ]),
+              Section::make('Режим расчёта выносного порога')
+                ->schema([
+                  Radio::make('doorstep_mode')
+                    ->label('Поведение выносного порога по умолчанию')
+                    ->helperText('Определяет, должен ли порожек автоматически включаться в смету и расчет цены')
+                    ->options([
+                      'always' => 'Всегда включать в смету (для совместимых форм даже если тумблер скрыт от клиента)',
+                      'optional' => 'По выбору пользователя (по умолчанию выключен, клиент решает сам)',
+                      'never' => 'Никогда не включать в смету (порог отключен)',
+                    ])
+                    ->default('optional')
+                    ->required(),
+                ]),
             ]),
         ]),
       ]);
@@ -470,6 +484,13 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
       'value_user' => (string) $state['montage_rate_type'],
     ]);
 
+    // Режим расчёта выносного порога
+    $this->saveRecord($interfaceDict, 'doorstep_mode', [
+      'value_admin' => (string) ($state['doorstep_mode'] ?? 'optional'),
+      'value_manager' => (string) ($state['doorstep_mode'] ?? 'optional'),
+      'value_user' => (string) ($state['doorstep_mode'] ?? 'optional'),
+    ]);
+
     // Инвалидация кэша каталога
     CatalogCache::invalidate();
 
@@ -558,6 +579,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
       'disabled_doors' => ['ru' => 'Отключенные типы дверей (черный список)', 'en' => 'Disabled door types (blacklist)'],
       'special_limits' => ['ru' => 'Специальные лимиты габаритов связок', 'en' => 'Special dimensional limits'],
       'montage_rate_type' => ['ru' => 'Принцип тарификации монтажа', 'en' => 'Montage rate type'],
+      'doorstep_mode' => ['ru' => 'Режим расчета выносного порога', 'en' => 'Doorstep calculation mode'],
     ];
 
     foreach ($this->getSystemInterfaceZones() as $zones) {
