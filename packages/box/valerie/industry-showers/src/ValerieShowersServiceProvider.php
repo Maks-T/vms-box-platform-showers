@@ -6,6 +6,8 @@ namespace Valerie\Box\IndustryShowers;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Nicole\Box\Core\Support\OrderSectionFormatterResolver;
+use Valerie\Box\IndustryShowers\Support\Formatters\ShowersOrderSectionFormatter;
 
 
 class ValerieShowersServiceProvider extends ServiceProvider
@@ -32,6 +34,13 @@ class ValerieShowersServiceProvider extends ServiceProvider
 
     $this->registerApiRoutes();
     $this->registerWebRoutes();
+
+    if (class_exists(OrderSectionFormatterResolver::class)) {
+      $showerTypes = ['shower', 'custom', 'line', 'corner', 'free', 'trapezoid', 'ushaped', 'door', 'curtain'];
+      foreach ($showerTypes as $type) {
+        OrderSectionFormatterResolver::register($type, ShowersOrderSectionFormatter::class);
+      }
+    }
     // Динамически дописываем наш импортер в конец массива ядра
     /*$modules = config('nicole.import_modules', []);
     $modules[] = ShowersRoomImporter::class;
