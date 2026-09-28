@@ -33,6 +33,7 @@ class AdminPanelProvider extends PanelProvider
     return $panel
       ->default()
       ->id('admin')
+      ->viteTheme('resources/css/filament/admin/theme.css')
       ->path('admin')
       ->login()
       ->colors([
@@ -66,10 +67,10 @@ class AdminPanelProvider extends PanelProvider
       ->pages([
         Dashboard::class,
       ])
-      ->renderHook(
+      /*->renderHook(
         PanelsRenderHook::HEAD_END,
         fn (): string => Blade::render('@vite(["resources/css/app.css", "resources/js/app.tsx"])')
-      )
+      )*/
       ->navigationGroups([
         NavigationGroup::make()->label(fn (): string => __('Catalog')),
         NavigationGroup::make()->label(fn (): string => __('Configurations')),
