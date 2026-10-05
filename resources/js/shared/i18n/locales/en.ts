@@ -2,6 +2,9 @@ import { TranslationKey } from './ru';
 
 export const en: Record<TranslationKey, string> = {
   // Navigation & site
+  nav_main: 'Main',
+  nav_demo: 'Demo',
+  contact_sales: 'Contact Sales',
   nav_calculator: 'Calculator',
   nav_configuration: 'Configuration',
   nav_catalog: 'Catalog',

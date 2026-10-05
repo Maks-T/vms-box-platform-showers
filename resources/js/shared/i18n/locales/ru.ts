@@ -1,5 +1,11 @@
 export const ru = {
   // Навигация и сайт
+  nav_main: 'Главная',
+  nav_demo: 'Демо',
+  contact_sales: 'Contact Sales',
+  nav_main: 'Главная',
+  nav_demo: 'Демо',
+  contact_sales: 'Contact Sales',
   nav_calculator: 'Калькулятор',
   nav_configuration: 'Конфигурация',
   nav_catalog: 'Каталог',

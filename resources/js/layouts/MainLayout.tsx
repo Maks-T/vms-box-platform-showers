@@ -4,6 +4,7 @@ import Footer from '@/widgets/Footer/Footer';
 import { cn } from "@/shared/lib/utils";
 import { Toaster } from "sonner";
 import FavoritesDrawer from '@/widgets/FavoritesDrawer';
+import GlobalLeadModal from '@/widgets/GlobalLeadModal';
 
 interface MainLayoutProps extends PropsWithChildren {
   headerOverlaps?: boolean;
@@ -26,6 +27,7 @@ export default function MainLayout({ children, headerOverlaps = false }: MainLay
 
       <Footer />
 
+      <GlobalLeadModal />
       <FavoritesDrawer />
       <Toaster position="top-right" richColors={false}/>
     </div>

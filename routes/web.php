@@ -5,8 +5,16 @@ use Inertia\Inertia;
 use Nicole\Box\Core\Http\Resources\Api\V1\ProductResource;
 use Nicole\Box\Core\Models\Product;
 
-// 1. Главная страница (Каталог)
+// 1. Главная страница (Промо Showers)
 Route::get('/', function () {
+  return Inertia::render('Products/Showers');
+})->name('home');
+
+// Демо калькулятора
+Route::get('/demo', [\Valerie\Box\IndustryShowers\Http\Controllers\CalculatorController::class, 'show'])->name('demo');
+
+// Каталог товаров
+Route::get('/catalog', function () {
   return Inertia::render('Catalog/Index');
 })->name('catalog');
 

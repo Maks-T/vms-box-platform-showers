@@ -4,6 +4,7 @@ import { X, BookOpen } from 'lucide-react';
 import { cn } from '@/shared/lib/utils';
 import { Logo } from '@/shared/components/ui/Logo';
 import { NavItem } from '@/shared/config/site';
+import LanguageSelect from '@/shared/components/ui/LanguageSelect';
 import { useTranslation } from '@/shared/i18n/useTranslation';
 
 interface ExtendedNavItem extends NavItem {
@@ -18,7 +19,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onClose, items, isDev }: MobileMenuProps) {
-  const { t } = useTranslation();
+  const { t, locale, setLocale } = useTranslation();
   if (!isOpen) return null;
 
   const { url } = usePage();
@@ -80,6 +81,14 @@ export default function MobileMenu({ isOpen, onClose, items, isDev }: MobileMenu
             </Link>
           );
         })}
+
+        <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+          <span className="text-xs text-white/50 uppercase tracking-widest font-bold">Language</span>
+          <LanguageSelect
+            currentLocale={locale}
+            onLocaleChange={(newLoc) => setLocale(newLoc as any)}
+          />
+        </div>
 
         {}
         {isDev && (

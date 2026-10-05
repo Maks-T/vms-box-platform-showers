@@ -18,15 +18,15 @@ export interface SocialItem {
 export const siteConfig = {
   get company() {
     return {
-      name: "VMS-NC Cloud SaaS",
+      name: "showers-cpq.tech",
       status: t('site_catalog_status'),
-      copyright: `© ${new Date().getFullYear()} Vistegra.`,
+      copyright: `© ${new Date().getFullYear()} showers-cpq.tech.`,
     };
   },
 
   contacts: {
-    phone: {label: "+375 29 189-83-22", href: "tel:++375291898322"},
-    email: {label: "info@vistegra.by", href: "mailto:info@vistegra.by"},
+    phone: {label: "", href: ""},
+    email: {label: "info@showers-cpq.tech", href: "mailto:info@showers-cpq.tech"},
   },
 
   socials: [
@@ -44,11 +44,9 @@ export const siteConfig = {
 
   get headerNav(): (NavItem & { forceRefresh?: boolean })[] {
     return [
-      {label: t('nav_calculator'), href: route('calculator.show'), disabled: false, forceRefresh: true},
-      {label: t('nav_configuration'), href: route('bootstrap'), disabled: false},
-      {label: t('nav_catalog'), href: route('catalog'), disabled: false},
-      {label: t('nav_services'), href: route('services'), disabled: false},
-      {label: t('nav_about'), href: '#', disabled: true},
+      {label: t('nav_main'), href: '/', disabled: false},
+      {label: t('nav_catalog'), href: '/catalog', disabled: false},
+      {label: t('nav_demo'), href: '/calculator', disabled: false, forceRefresh: true},
     ];
   },
 
