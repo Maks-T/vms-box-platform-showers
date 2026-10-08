@@ -320,6 +320,24 @@
     }
 }
 
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+@keyframes shimmer-slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+}
+
 .animate-float-3d {
     animation: float 6s ease-in-out infinite;
 }

@@ -6,7 +6,6 @@
     "build": "vite build",
     "dev": "vite",
     "generate-api": "npx openapi-typescript http://localhost/docs/api.json -o resources/js/types/schema.d.ts",
-
     "core-pull": "git submodule update --remote --init",
     "core-push": "cd packages/box/nicole/core && git add . && git commit -m 'update: auto-sync core' && git push origin HEAD:core/main",
     "core-sync": "vms-sync-core --push"
@@ -35,6 +34,7 @@
     "axios": "^1.16.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "motion": "^14.0.0",
     "radix-ui": "^1.4.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
