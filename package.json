@@ -7,9 +7,10 @@
     "dev": "vite",
     "generate-api": "npx openapi-typescript http://localhost/docs/api.json -o resources/js/types/schema.d.ts",
 
-    "core-pull": "git submodule update --remote --init",
-    "core-push": "cd packages/box/nicole/core && git add . && git commit -m 'update: auto-sync core' && git push origin HEAD:core/main",
-    "core-sync": "vms-sync-core --push"
+    "core:status": "cd packages/box/nicole/core && git status && git branch",
+    "core:checkout": "cd packages/box/nicole/core && git checkout core/main && git pull origin core/main",
+    "core:push": "cd packages/box/nicole/core && git checkout core/main && git add . && git commit -m \"update: core\" && git push origin core/main && cd - && vms-sync-core --push",
+    "core:sync": "vms-sync-core --push"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
