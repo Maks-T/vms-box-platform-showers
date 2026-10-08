@@ -7,6 +7,9 @@ import HeroVisual from '@/entities/Visual/HeroVisual';
 import StatsGrid, { StatItem } from '@/entities/StatsGrid';
 import { cn } from '@/shared/lib/utils';
 import { useTranslation } from '@/shared/i18n/useTranslation';
+import { BlurFadeText } from '@/shared/components/ui/BlurFadeText';
+import { BlurText } from '@/shared/components/ui/BlurText';
+import { Magnet } from '@/shared/components/ui/Magnet';
 
 interface Props {
   product: string;
@@ -55,33 +58,42 @@ export const ProductHero: React.FC<Props> = ({
             )}
 
             <H1 className="mb-6 lg:mb-8 leading-[1.1]">
-              {title.start}
-              {title.accent && <Accent variant="light">{title.accent}</Accent>}
-              {title.end}
+              <BlurFadeText text={title.start} delay={50} />{' '}
+              {title.accent && (
+                <Accent variant="light">{title.accent}</Accent>
+              )}{' '}
+              {title.end && <BlurFadeText text={title.end} delay={150} />}
             </H1>
 
             <div className="mb-8 lg:mb-10 flex flex-col gap-3">
               {Array.isArray(description) ? (
                 description.map((text, i) => (
-                  <Text key={i} className="text-base md:text-[18px] text-slate-300 font-normal leading-relaxed">
-                    {text}
-                  </Text>
+                  <BlurText
+                    key={i}
+                    text={text}
+                    delay={250 + i * 150}
+                    className="text-base md:text-[18px] text-slate-300 font-normal leading-relaxed"
+                  />
                 ))
               ) : (
-                <Text className="text-base md:text-[18px] text-slate-300 font-normal leading-relaxed">
-                  {description}
-                </Text>
+                <BlurText
+                  text={description}
+                  delay={250}
+                  className="text-base md:text-[18px] text-slate-300 font-normal leading-relaxed"
+                />
               )}
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <Button
-                variant="default"
-                className="w-full sm:w-auto px-10 h-[56px] rounded-[12px] bg-[#005ECA] hover:bg-[#0EA5E9] text-white font-bold text-sm tracking-wide shadow-lg active:scale-[0.98]"
-                onClick={handleOpenModal}
-              >
-                {btnText}
-              </Button>
+              <Magnet strength={12} className="w-full sm:w-auto">
+                <Button
+                  variant="default"
+                  className="w-full sm:w-auto px-10 h-[56px] rounded-[12px] bg-[#005ECA] hover:bg-[#0EA5E9] text-white font-bold text-sm tracking-wide shadow-lg active:scale-[0.98]"
+                  onClick={handleOpenModal}
+                >
+                  {btnText}
+                </Button>
+              </Magnet>
 
               {demoAppUrl && (
                 <Button

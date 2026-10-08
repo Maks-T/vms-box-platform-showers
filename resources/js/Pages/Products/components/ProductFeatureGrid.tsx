@@ -2,6 +2,7 @@ import React from 'react';
 import SectionLayout from '@/shared/components/layouts/SectionLayout';
 import { H2, Text } from '@/shared/components/ui/Typography';
 import LazyVideo from '@/shared/components/ui/LazyVideo';
+import { motion } from 'motion/react';
 import { cn } from '@/shared/lib/utils';
 
 interface FeatureItem {
@@ -27,7 +28,13 @@ export const ProductFeatureGrid: React.FC<Props> = ({ sectionData }) => {
     <SectionLayout bg="bg-white" className="pt-0 md:pt-0 lg:pt-0">
       <div className="flex flex-col gap-6">
         {hasHeader && (
-          <div className="flex flex-col gap-2.5 lg:max-w-[720px] mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "0px 0px -80px 0px", amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col gap-2.5 lg:max-w-[720px] mb-4"
+          >
             <H2 className="text-slate-900 font-medium text-[28px] md:text-[36px]">
               <span className="text-slate-900">{title?.start}</span>
               <span className="text-primary">{title?.accent}</span>
@@ -35,12 +42,26 @@ export const ProductFeatureGrid: React.FC<Props> = ({ sectionData }) => {
             {description && (
               <Text className="text-slate-600 text-[16px] md:text-[18px]">{description}</Text>
             )}
-          </div>
+          </motion.div>
         )}
 
-        <div className="flex flex-col gap-6">
-          {items.map((item, idx) => (
-            <div key={idx} className="p-4 sm:p-5 md:p-6 bg-slate-50 rounded-[20px] border border-slate-200 flex flex-col items-stretch">
+        <div className="flex flex-col gap-6 overflow-hidden">
+          {items.map((item, idx) => {
+            const isEven = idx % 2 === 0;
+            const xInitial = isEven ? -60 : 60;
+
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: xInitial, y: 24 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                viewport={{ once: true, margin: "0px 0px -130px 0px", amount: 0.25 }}
+                transition={{
+                  duration: 0.75,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="p-4 sm:p-5 md:p-6 bg-slate-50 rounded-[20px] border border-slate-200 flex flex-col items-stretch"
+              >
               <div className={cn('flex flex-col lg:flex-row items-center gap-6 lg:gap-8 w-full', idx % 2 === 1 && 'lg:flex-row-reverse')}>
                 <div className="w-full lg:w-[58%] xl:w-[60%] aspect-video rounded-[16px] overflow-hidden shrink-0 bg-white border border-slate-200/80 shadow-sm">
                   <LazyVideo
@@ -61,8 +82,9 @@ export const ProductFeatureGrid: React.FC<Props> = ({ sectionData }) => {
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </SectionLayout>
