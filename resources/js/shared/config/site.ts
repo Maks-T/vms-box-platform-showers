@@ -45,8 +45,8 @@ export const siteConfig = {
   get headerNav(): (NavItem & { forceRefresh?: boolean })[] {
     return [
       {label: t('nav_main'), href: '/', disabled: false},
-      {label: t('nav_catalog'), href: '/catalog', disabled: false},
       {label: t('nav_demo'), href: '/calculator', disabled: false, forceRefresh: true},
+      {label: t('nav_catalog'), href: '/catalog', disabled: false},
     ];
   },
 

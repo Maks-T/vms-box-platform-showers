@@ -32,7 +32,8 @@ export default function SectionLayout({
         <BaseContainer variant="page" className="relative">
 
           <div className={cn(
-            "relative w-full overflow-hidden rounded-[24px] lg:rounded-[32px] border border-white/5 shadow-2xl",
+            /* Удалена тень shadow-2xl */
+            "relative w-full overflow-hidden rounded-[24px] lg:rounded-[32px] border border-white/5",
             !noPadding && "pt-12 md:pt-20 pb-16 md:pb-24 px-4 md:px-10",
             bg
           )}>

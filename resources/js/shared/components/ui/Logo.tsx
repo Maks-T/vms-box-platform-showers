@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from '@inertiajs/react';
-import { cn } from '@/shared/lib/utils';
+import {Link} from '@inertiajs/react';
+import {cn} from '@/shared/lib/utils';
 
 type LogoVariant = 'dark-outline' | 'light-solid' | 'dark-solid' | 'orange-dark';
 
@@ -31,7 +31,7 @@ export function Logo({
       <img
         src="/images/logo-showers-cpq.svg"
         alt="showers-cpq"
-        className={cn("h-10 md:h-14 w-auto object-contain", imgClassName)}
+        className={cn("h-14 md:h-18 w-auto object-contain", imgClassName)}
       />
     </Link>
   );
