@@ -196,7 +196,12 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadPrices(string $channel = 'widget'): array
   {
     $prices = [
-      'crossbar'   => [],
+      'crossbar'   => [
+        'crossbar'  => [],
+        'fix'       => [],
+        'fix_glass' => [],
+        'items'     => [],
+      ],
       'doorstep'   => [],
       'glasses'    => [],
       'handle'     => [],
@@ -358,20 +363,31 @@ class ShowersCalculatorBridgeController extends Controller
   private function parseCrossbarPrices(Product $product, string $unitSymbol, array &$prices): void
   {
     foreach ($product->variants as $v) {
-      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
+      $type = $this->getEavValue($v, 'type') ?: ($this->getEavValue($product, 'type') ?: 'crossbar');
       if (!$type) {
         continue;
       }
 
       $rawId = (string)$v->id;
+      $crossbarTypeId = $this->getEavValue($v, 'crossbar_type_id');
+      $furnitureTypeId = $this->getEavValue($v, 'furniture_type_id');
+      $previewUrl = $this->resolveVariantPreview($v, $product);
 
-      $prices['crossbar'][$type][$rawId] = array_merge(
+      $itemPayload = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
-          'crossbarTypeId'  => $this->getEavValue($v, 'crossbar_type_id'),
-          'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
+          'crossbarTypeId'  => $crossbarTypeId,
+          'furnitureTypeId' => $furnitureTypeId,
+          'pathImg'         => $previewUrl,
+          'type'            => $crossbarTypeId,
         ]
       );
+
+      $prices['crossbar'][$type][$rawId] = $itemPayload;
+
+      if ($type === 'crossbar') {
+        $prices['crossbar']['items'][$rawId] = $itemPayload;
+      }
     }
   }
 

@@ -175,7 +175,7 @@ class PipelineRuleGeneratorService
       }
 
       foreach ($crossbarProduct?->variants ?? [] as $cbVar) {
-        $cType = $getEav($cbVar, 'crossbar_type_id');
+        $cType = $getEav($cbVar, 'crossbar_type_id') ?: 'rect';
         $fColor = $getEav($cbVar, 'furniture_type_id');
         $key = "{$cType}_{$fColor}";
 
