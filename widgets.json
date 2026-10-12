@@ -1,0 +1,7 @@
+{
+  "widget": {
+    "repo": "git@github.com:kapitulin24/showers.git",
+    "target": "public/widget",
+    "branch": "deploy/build"
+  }
+}
