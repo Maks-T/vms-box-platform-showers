@@ -464,162 +464,6 @@
             ]
         },
         {
-            "external_code": "attr_sh_color",
-            "code": "color",
-            "type": "dictionary",
-            "name": {
-                "ru": "Цвет стекла"
-            },
-            "option_param_type": "string",
-            "is_multiple": false,
-            "settings": {
-                "channels": {
-                    "widget": {
-                        "is_public": true,
-                        "sort_order": 10,
-                        "is_filterable": true
-                    },
-                    "catalog": {
-                        "is_public": true,
-                        "sort_order": 10,
-                        "is_filterable": true
-                    }
-                }
-            },
-            "options": [
-                {
-                    "external_code": "opt_glass_color_id_1",
-                    "slug": "id_1",
-                    "value": {
-                        "en": "Clear glass",
-                        "ru": "Стекло прозрачное"
-                    },
-                    "param": "#edf8f7",
-                    "meta": {
-                        "hex": "#edf8f7",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_2",
-                    "slug": "id_2",
-                    "value": {
-                        "en": "Frosted glass \"Matelux\"",
-                        "ru": "Стекло матовое «Мателюкс»"
-                    },
-                    "param": "#edf8f7",
-                    "meta": {
-                        "hex": "#edf8f7",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_3",
-                    "slug": "id_3",
-                    "value": {
-                        "en": "Extra clear glass",
-                        "ru": "Стекло осветленное"
-                    },
-                    "param": "#edf2f8",
-                    "meta": {
-                        "hex": "#edf2f8",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_4",
-                    "slug": "id_4",
-                    "value": {
-                        "en": "Frosted extra clear glass",
-                        "ru": "Стекло матовое осветленное"
-                    },
-                    "param": "#edf2f8",
-                    "meta": {
-                        "hex": "#edf2f8",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_5",
-                    "slug": "id_5",
-                    "value": {
-                        "en": "Tinted body glass graphite",
-                        "ru": "Стекло тонированное в массе графит"
-                    },
-                    "param": "#787878",
-                    "meta": {
-                        "hex": "#787878",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_6",
-                    "slug": "id_6",
-                    "value": {
-                        "en": "Tinted body glass bronze",
-                        "ru": "Стекло тонированное в массе бронза"
-                    },
-                    "param": "#91765b",
-                    "meta": {
-                        "hex": "#91765b",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_7",
-                    "slug": "id_7",
-                    "value": {
-                        "en": "Frosted glass \"Matelux\" graphite",
-                        "ru": "Стекло матовое «Мателюкс» графит"
-                    },
-                    "param": "#787878",
-                    "meta": {
-                        "hex": "#787878",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_8",
-                    "slug": "id_8",
-                    "value": {
-                        "en": "Frosted glass \"Matelux\" bronze",
-                        "ru": "Стекло матовое «Мателюкс» бронза"
-                    },
-                    "param": "#91765b",
-                    "meta": {
-                        "hex": "#91765b",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_9",
-                    "slug": "id_9",
-                    "value": {
-                        "en": "Fluted glass",
-                        "ru": "Стекло рифленое"
-                    },
-                    "param": "#C0C0C0",
-                    "meta": {
-                        "hex": "#C0C0C0",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_glass_color_id_10",
-                    "slug": "id_10",
-                    "value": {
-                        "en": "Colored Triplex glass",
-                        "ru": "Стекло Триплекс цветное"
-                    },
-                    "param": "#daa520",
-                    "meta": {
-                        "hex": "#daa520",
-                        "image": null
-                    }
-                }
-            ]
-        },
-        {
             "external_code": "attr_sh_auto_img",
             "code": "autoImg",
             "type": "boolean",
@@ -907,128 +751,6 @@
                     "param": "montage",
                     "meta": {
                         "hex": null,
-                        "image": null
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "attr_sh_furniture_type_id",
-            "code": "furniture_type_id",
-            "type": "dictionary",
-            "name": {
-                "ru": "Цвет фурнитуры"
-            },
-            "option_param_type": "string",
-            "is_multiple": false,
-            "settings": {
-                "channels": {
-                    "widget": {
-                        "is_public": true,
-                        "sort_order": 10,
-                        "is_filterable": true
-                    },
-                    "catalog": {
-                        "is_public": true,
-                        "sort_order": 10,
-                        "is_filterable": true
-                    }
-                }
-            },
-            "options": [
-                {
-                    "external_code": "opt_furniture_color_chrome",
-                    "slug": "chrome",
-                    "value": {
-                        "ru": "Хром"
-                    },
-                    "param": "#E4E4E4",
-                    "meta": {
-                        "hex": "#E4E4E4",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_chrome_matte",
-                    "slug": "chrome_matte",
-                    "value": {
-                        "ru": "Матовый хром"
-                    },
-                    "param": "#B3B3B3",
-                    "meta": {
-                        "hex": "#B3B3B3",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_black",
-                    "slug": "black",
-                    "value": {
-                        "ru": "Черный"
-                    },
-                    "param": "#000000",
-                    "meta": {
-                        "hex": "#000000",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_bronze",
-                    "slug": "bronze",
-                    "value": {
-                        "ru": "Бронза"
-                    },
-                    "param": "#CC8E34",
-                    "meta": {
-                        "hex": "#CC8E34",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_gold",
-                    "slug": "gold",
-                    "value": {
-                        "ru": "Золото"
-                    },
-                    "param": "#FFD700",
-                    "meta": {
-                        "hex": "#FFD700",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_gold_matte",
-                    "slug": "gold_matte",
-                    "value": {
-                        "ru": "Матовое золото"
-                    },
-                    "param": "#D4AF37",
-                    "meta": {
-                        "hex": "#D4AF37",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_white",
-                    "slug": "white",
-                    "value": {
-                        "ru": "Белый"
-                    },
-                    "param": "#FFFFFF",
-                    "meta": {
-                        "hex": "#FFFFFF",
-                        "image": null
-                    }
-                },
-                {
-                    "external_code": "opt_furniture_color_gunmetal_grey",
-                    "slug": "gunmetal_grey",
-                    "value": {
-                        "ru": "Оружейная сталь"
-                    },
-                    "param": "#343E43",
-                    "meta": {
-                        "hex": "#343E43",
                         "image": null
                     }
                 }
@@ -1430,11 +1152,297 @@
                     }
                 }
             ]
+        },
+        {
+            "external_code": "attr_sh_furniture_type_id",
+            "code": "furniture_type_id",
+            "type": "dictionary",
+            "name": {
+                "ru": "Цвет фурнитуры"
+            },
+            "option_param_type": "string",
+            "is_multiple": false,
+            "settings": {
+                "channels": {
+                    "widget": {
+                        "is_public": true,
+                        "filter_type": null,
+                        "is_collapsed": false,
+                        "is_filterable": true,
+                        "is_settings_public": false
+                    },
+                    "catalog": {
+                        "is_public": true,
+                        "filter_type": null,
+                        "is_collapsed": false,
+                        "is_filterable": true,
+                        "is_settings_public": false
+                    }
+                }
+            },
+            "options": [
+                {
+                    "external_code": "opt_furniture_color_chrome",
+                    "slug": "chrome",
+                    "value": {
+                        "ru": "Хром"
+                    },
+                    "param": "#E4E4E4",
+                    "meta": {
+                        "hex": "#E4E4E4",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_chrome_matte",
+                    "slug": "chrome_matte",
+                    "value": {
+                        "ru": "Матовый хром"
+                    },
+                    "param": "#B3B3B3",
+                    "meta": {
+                        "hex": "#B3B3B3",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_black",
+                    "slug": "black",
+                    "value": {
+                        "ru": "Черный"
+                    },
+                    "param": "#000000",
+                    "meta": {
+                        "hex": "#000000",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_bronze",
+                    "slug": "bronze",
+                    "value": {
+                        "ru": "Бронза"
+                    },
+                    "param": "#CC8E34",
+                    "meta": {
+                        "hex": "#CC8E34",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_gold",
+                    "slug": "gold",
+                    "value": {
+                        "ru": "Золото"
+                    },
+                    "param": "#FFD700",
+                    "meta": {
+                        "hex": "#FFD700",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_gold_matte",
+                    "slug": "gold_matte",
+                    "value": {
+                        "ru": "Матовое золото"
+                    },
+                    "param": "#D4AF37",
+                    "meta": {
+                        "hex": "#D4AF37",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_white",
+                    "slug": "white",
+                    "value": {
+                        "ru": "Белый"
+                    },
+                    "param": "#FFFFFF",
+                    "meta": {
+                        "hex": "#FFFFFF",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_furniture_color_gunmetal_grey",
+                    "slug": "gunmetal_grey",
+                    "value": {
+                        "ru": "Оружейная сталь"
+                    },
+                    "param": "#343E43",
+                    "meta": {
+                        "hex": "#343E43",
+                        "image": null
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "attr_sh_color",
+            "code": "color",
+            "type": "dictionary",
+            "name": {
+                "ru": "Цвет стекла"
+            },
+            "option_param_type": "string",
+            "is_multiple": false,
+            "settings": {
+                "channels": {
+                    "widget": {
+                        "is_public": true,
+                        "filter_type": null,
+                        "is_collapsed": false,
+                        "is_filterable": true,
+                        "is_settings_public": false
+                    },
+                    "catalog": {
+                        "is_public": true,
+                        "filter_type": null,
+                        "is_collapsed": false,
+                        "is_filterable": true,
+                        "is_settings_public": false
+                    }
+                }
+            },
+            "options": [
+                {
+                    "external_code": "opt_glass_color_id_1",
+                    "slug": "id_1",
+                    "value": {
+                        "en": "Clear glass",
+                        "ru": "Стекло прозрачное"
+                    },
+                    "param": "#edf8f7",
+                    "meta": {
+                        "hex": "#edf8f7",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_2",
+                    "slug": "id_2",
+                    "value": {
+                        "en": "Frosted glass \"Matelux\"",
+                        "ru": "Стекло матовое «Мателюкс»"
+                    },
+                    "param": "#edf8f7",
+                    "meta": {
+                        "hex": "#edf8f7",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_3",
+                    "slug": "id_3",
+                    "value": {
+                        "en": "Extra clear glass",
+                        "ru": "Стекло осветленное"
+                    },
+                    "param": "#edf2f8",
+                    "meta": {
+                        "hex": "#edf2f8",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_4",
+                    "slug": "id_4",
+                    "value": {
+                        "en": "Frosted extra clear glass",
+                        "ru": "Стекло матовое осветленное"
+                    },
+                    "param": "#edf2f8",
+                    "meta": {
+                        "hex": "#edf2f8",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_5",
+                    "slug": "id_5",
+                    "value": {
+                        "en": "Tinted body glass graphite",
+                        "ru": "Стекло тонированное в массе графит"
+                    },
+                    "param": "#787878",
+                    "meta": {
+                        "hex": "#787878",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_6",
+                    "slug": "id_6",
+                    "value": {
+                        "en": "Tinted body glass bronze",
+                        "ru": "Стекло тонированное в массе бронза"
+                    },
+                    "param": "#91765b",
+                    "meta": {
+                        "hex": "#91765b",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_7",
+                    "slug": "id_7",
+                    "value": {
+                        "en": "Frosted glass \"Matelux\" graphite",
+                        "ru": "Стекло матовое «Мателюкс» графит"
+                    },
+                    "param": "#787878",
+                    "meta": {
+                        "hex": "#787878",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_8",
+                    "slug": "id_8",
+                    "value": {
+                        "en": "Frosted glass \"Matelux\" bronze",
+                        "ru": "Стекло матовое «Мателюкс» бронза"
+                    },
+                    "param": "#91765b",
+                    "meta": {
+                        "hex": "#91765b",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_9",
+                    "slug": "id_9",
+                    "value": {
+                        "en": "Fluted glass",
+                        "ru": "Стекло рифленое"
+                    },
+                    "param": "#C0C0C0",
+                    "meta": {
+                        "hex": "#C0C0C0",
+                        "image": null
+                    }
+                },
+                {
+                    "external_code": "opt_glass_color_id_10",
+                    "slug": "id_10",
+                    "value": {
+                        "en": "Colored Triplex glass",
+                        "ru": "Стекло Триплекс цветное"
+                    },
+                    "param": "#daa520",
+                    "meta": {
+                        "hex": "#daa520",
+                        "image": null
+                    }
+                }
+            ]
         }
     ],
     "price_groups": [
         {
-            "external_code": "08b75230-a4c2-479d-a7d5-0a36bd76c9bf",
+            "external_code": "1bb7a971-8e62-4058-a9b7-4d21afb0a8ea",
             "product_family_external_code": "fam_showers",
             "slug": "test",
             "name": {
@@ -1442,9 +1450,24 @@
             },
             "description": [],
             "meta": {
-                "markup_retail": 0,
-                "purchase_cost": 20,
-                "purchase_currency": "RUB"
+                "markup_retail": 65,
+                "purchase_cost": 17,
+                "purchase_currency": "USD"
+            },
+            "sort_order": 0
+        },
+        {
+            "external_code": "b8e0cfa5-bcd0-410b-b2dd-1d879a0a4aff",
+            "product_family_external_code": "fam_showers",
+            "slug": "test2",
+            "name": {
+                "ru": "тест2"
+            },
+            "description": [],
+            "meta": {
+                "markup_retail": 65,
+                "purchase_cost": 100,
+                "purchase_currency": "USD"
             },
             "sort_order": 0
         }
@@ -1632,17 +1655,17 @@
                     }
                 },
                 {
-                    "external_code": "rec_limit_measure_trapezoid",
-                    "slug": "trapezoid",
+                    "external_code": "rec_limit_measure_corner",
+                    "slug": "corner",
                     "name": {
-                        "en": "Measure limits for trapezoid",
-                        "ru": "Лимиты размеров для trapezoid"
+                        "en": "Measure limits for corner",
+                        "ru": "Лимиты размеров для corner"
                     },
                     "meta": {
                         "height_max": 3200,
                         "height_min": 1700,
-                        "length_max": 1000,
-                        "length_min": 300
+                        "length_max": 2000,
+                        "length_min": 750
                     }
                 },
                 {
@@ -1688,20 +1711,6 @@
                     }
                 },
                 {
-                    "external_code": "rec_limit_measure_corner",
-                    "slug": "corner",
-                    "name": {
-                        "en": "Measure limits for corner",
-                        "ru": "Лимиты размеров для corner"
-                    },
-                    "meta": {
-                        "height_max": 3200,
-                        "height_min": 1700,
-                        "length_max": 2000,
-                        "length_min": 750
-                    }
-                },
-                {
                     "external_code": "rec_limit_measure_free",
                     "slug": "free",
                     "name": {
@@ -1713,6 +1722,20 @@
                         "height_min": 1700,
                         "length_max": 2000,
                         "length_min": 500
+                    }
+                },
+                {
+                    "external_code": "rec_limit_measure_trapezoid",
+                    "slug": "trapezoid",
+                    "name": {
+                        "en": "Measure limits for trapezoid",
+                        "ru": "Лимиты размеров для trapezoid"
+                    },
+                    "meta": {
+                        "height_max": 3200,
+                        "height_min": 1700,
+                        "length_max": 1000,
+                        "length_min": 300
                     }
                 }
             ]
@@ -1809,26 +1832,6 @@
             "sort_order": 0,
             "records": [
                 {
-                    "external_code": "afa53457-24f1-49e4-bd06-97df644a512f",
-                    "slug": "special_limits",
-                    "name": {
-                        "en": "Special dimensional limits",
-                        "ru": "Специальные лимиты габаритов связок"
-                    },
-                    "meta": {
-                        "items": [
-                            {
-                                "door_id": "two_slide",
-                                "form_id": "line",
-                                "height_max": 3200,
-                                "height_min": 1700,
-                                "length_max": 2000,
-                                "length_min": 1500
-                            }
-                        ]
-                    }
-                },
-                {
                     "external_code": "b840a0f4-23ad-4fd8-ba50-f821da3d1996",
                     "slug": "enabled_doors",
                     "name": {
@@ -1872,19 +1875,23 @@
                     }
                 },
                 {
-                    "external_code": "rec_interface_priceBlock",
-                    "slug": "priceBlock",
+                    "external_code": "afa53457-24f1-49e4-bd06-97df644a512f",
+                    "slug": "special_limits",
                     "name": {
-                        "en": "Карточка разбивки стоимости (Изделия, Монтаж, Доставка)",
-                        "ru": "Карточка разбивки стоимости (Изделия, Монтаж, Доставка)"
+                        "en": "Special dimensional limits",
+                        "ru": "Специальные лимиты габаритов связок"
                     },
                     "meta": {
-                        "userShow": false,
-                        "adminShow": true,
-                        "show_user": false,
-                        "show_admin": true,
-                        "managerShow": true,
-                        "show_manager": true
+                        "items": [
+                            {
+                                "door_id": "two_slide",
+                                "form_id": "line",
+                                "height_max": 2000,
+                                "height_min": 1700,
+                                "length_max": 2000,
+                                "length_min": 1500
+                            }
+                        ]
                     }
                 },
                 {
@@ -1920,6 +1927,19 @@
                     }
                 },
                 {
+                    "external_code": "4bca627b-7c1b-40bc-a80d-3248fe95a82d",
+                    "slug": "montage_rate_type",
+                    "name": {
+                        "en": "Montage rate type",
+                        "ru": "Принцип тарификации монтажа"
+                    },
+                    "meta": {
+                        "value_user": "fixed",
+                        "value_admin": "fixed",
+                        "value_manager": "fixed"
+                    }
+                },
+                {
                     "external_code": "d116ff39-f4fc-4891-97fa-9a8a912721cd",
                     "slug": "disabled_doors",
                     "name": {
@@ -1938,16 +1958,112 @@
                     }
                 },
                 {
-                    "external_code": "4bca627b-7c1b-40bc-a80d-3248fe95a82d",
-                    "slug": "montage_rate_type",
+                    "external_code": "rec_interface_priceBlock",
+                    "slug": "priceBlock",
                     "name": {
-                        "en": "Montage rate type",
-                        "ru": "Принцип тарификации монтажа"
+                        "en": "Карточка разбивки стоимости (Изделия, Монтаж, Доставка)",
+                        "ru": "Карточка разбивки стоимости (Изделия, Монтаж, Доставка)"
                     },
                     "meta": {
-                        "value_user": "fixed",
-                        "value_admin": "fixed",
-                        "value_manager": "fixed"
+                        "userShow": false,
+                        "adminShow": true,
+                        "show_user": false,
+                        "show_admin": true,
+                        "managerShow": true,
+                        "show_manager": true
+                    }
+                },
+                {
+                    "external_code": "07226ba0-45e6-4888-93f1-b9f919ad12de",
+                    "slug": "doorstep_show",
+                    "name": {
+                        "en": "Опция \"Выносной порог\"",
+                        "ru": "Опция \"Выносной порог\""
+                    },
+                    "meta": {
+                        "userShow": false,
+                        "adminShow": false,
+                        "show_user": false,
+                        "show_admin": false,
+                        "managerShow": false,
+                        "show_manager": false
+                    }
+                },
+                {
+                    "external_code": "a126c6f8-2752-452f-9200-817e9e11c6f9",
+                    "slug": "profile_framing_show",
+                    "name": {
+                        "en": "Опция \"Обрамление П-профилем\"",
+                        "ru": "Опция \"Обрамление П-профилем\""
+                    },
+                    "meta": {
+                        "userShow": true,
+                        "adminShow": true,
+                        "show_user": true,
+                        "show_admin": true,
+                        "managerShow": true,
+                        "show_manager": true
+                    }
+                },
+                {
+                    "external_code": "ea8ae3b2-dc73-4929-8b0b-903113204129",
+                    "slug": "doorstep_mode",
+                    "name": {
+                        "en": "Doorstep calculation mode",
+                        "ru": "Режим расчета выносного порога"
+                    },
+                    "meta": {
+                        "value_user": "always",
+                        "value_admin": "always",
+                        "value_manager": "always"
+                    }
+                },
+                {
+                    "external_code": "7ade62e3-f867-4b0d-8b84-3f0ceb065a0c",
+                    "slug": "service_lift",
+                    "name": {
+                        "en": "Подъем на этаж (Лифт \/ Этажи)",
+                        "ru": "Подъем на этаж (Лифт \/ Этажи)"
+                    },
+                    "meta": {
+                        "userShow": false,
+                        "adminShow": true,
+                        "show_user": false,
+                        "show_admin": true,
+                        "managerShow": true,
+                        "show_manager": true
+                    }
+                },
+                {
+                    "external_code": "c40238af-bd2c-426c-9953-2846b8d22255",
+                    "slug": "service_measure",
+                    "name": {
+                        "en": "Услуга замера (тумблер \"Замер\")",
+                        "ru": "Услуга замера (тумблер \"Замер\")"
+                    },
+                    "meta": {
+                        "userShow": true,
+                        "adminShow": true,
+                        "show_user": true,
+                        "show_admin": true,
+                        "managerShow": true,
+                        "show_manager": true
+                    }
+                },
+                {
+                    "external_code": "1ff16555-a401-40ed-96c2-e20f1e9880a5",
+                    "slug": "service_delivery",
+                    "name": {
+                        "en": "Услуга доставки (тумблер \"Доставка\")",
+                        "ru": "Услуга доставки (тумблер \"Доставка\")"
+                    },
+                    "meta": {
+                        "userShow": true,
+                        "adminShow": true,
+                        "show_user": true,
+                        "show_admin": true,
+                        "managerShow": true,
+                        "show_manager": true
                     }
                 },
                 {
@@ -2015,54 +2131,6 @@
                     }
                 },
                 {
-                    "external_code": "e684b67a-9209-4a1f-8b16-31b0ad5bd11a",
-                    "slug": "hide_material_selector",
-                    "name": {
-                        "en": "Скрытие селектора сплава (Цинк \/ Латунь)",
-                        "ru": "Скрытие селектора сплава (Цинк \/ Латунь)"
-                    },
-                    "meta": {
-                        "userShow": true,
-                        "adminShow": true,
-                        "show_user": true,
-                        "show_admin": true,
-                        "managerShow": true,
-                        "show_manager": true
-                    }
-                },
-                {
-                    "external_code": "07226ba0-45e6-4888-93f1-b9f919ad12de",
-                    "slug": "doorstep_show",
-                    "name": {
-                        "en": "Опция \"Выносной порог\"",
-                        "ru": "Опция \"Выносной порог\""
-                    },
-                    "meta": {
-                        "userShow": false,
-                        "adminShow": false,
-                        "show_user": false,
-                        "show_admin": false,
-                        "managerShow": false,
-                        "show_manager": false
-                    }
-                },
-                {
-                    "external_code": "a126c6f8-2752-452f-9200-817e9e11c6f9",
-                    "slug": "profile_framing_show",
-                    "name": {
-                        "en": "Опция \"Обрамление П-профилем\"",
-                        "ru": "Опция \"Обрамление П-профилем\""
-                    },
-                    "meta": {
-                        "userShow": true,
-                        "adminShow": true,
-                        "show_user": true,
-                        "show_admin": true,
-                        "managerShow": true,
-                        "show_manager": true
-                    }
-                },
-                {
                     "external_code": "fd88afb0-ce82-4a63-b7f1-1a3044cde160",
                     "slug": "catalog_prices",
                     "name": {
@@ -2079,43 +2147,11 @@
                     }
                 },
                 {
-                    "external_code": "7ade62e3-f867-4b0d-8b84-3f0ceb065a0c",
-                    "slug": "service_lift",
+                    "external_code": "e684b67a-9209-4a1f-8b16-31b0ad5bd11a",
+                    "slug": "hide_material_selector",
                     "name": {
-                        "en": "Подъем на этаж (Лифт \/ Этажи)",
-                        "ru": "Подъем на этаж (Лифт \/ Этажи)"
-                    },
-                    "meta": {
-                        "userShow": false,
-                        "adminShow": true,
-                        "show_user": false,
-                        "show_admin": true,
-                        "managerShow": true,
-                        "show_manager": true
-                    }
-                },
-                {
-                    "external_code": "c40238af-bd2c-426c-9953-2846b8d22255",
-                    "slug": "service_measure",
-                    "name": {
-                        "en": "Услуга замера (тумблер \"Замер\")",
-                        "ru": "Услуга замера (тумблер \"Замер\")"
-                    },
-                    "meta": {
-                        "userShow": true,
-                        "adminShow": true,
-                        "show_user": true,
-                        "show_admin": true,
-                        "managerShow": true,
-                        "show_manager": true
-                    }
-                },
-                {
-                    "external_code": "1ff16555-a401-40ed-96c2-e20f1e9880a5",
-                    "slug": "service_delivery",
-                    "name": {
-                        "en": "Услуга доставки (тумблер \"Доставка\")",
-                        "ru": "Услуга доставки (тумблер \"Доставка\")"
+                        "en": "Скрытие селектора сплава (Цинк \/ Латунь)",
+                        "ru": "Скрытие селектора сплава (Цинк \/ Латунь)"
                     },
                     "meta": {
                         "userShow": true,
@@ -2185,7 +2221,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -2241,10 +2277,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-купе 1",
                         "furniture_type_id": "opt_furniture_color_bronze",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -2268,10 +2303,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-купе 1",
                         "furniture_type_id": "opt_furniture_color_black",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -2295,7 +2329,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -2306,8 +2340,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
@@ -2322,7 +2355,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -2348,7 +2381,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -2359,8 +2392,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 },
                 {
@@ -2375,10 +2407,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-купе 1",
                         "furniture_type_id": "opt_furniture_color_white",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -2402,7 +2433,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -2413,8 +2444,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-купе 1"
+                        ]
                     }
                 }
             ]
@@ -2453,7 +2483,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "material_type_id": "opt_material_type_zn",
@@ -2472,7 +2502,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "material_type_id": "opt_material_type_zn",
@@ -2536,7 +2566,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -2592,7 +2622,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -2618,7 +2648,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -2640,7 +2670,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -2657,70 +2687,124 @@
             ]
         },
         {
-            "external_code": "prod_shower_glass_id_3",
-            "product_type_external_code": "type_shower_glass",
-            "category_external_code": "cat_showers_glass",
-            "unit_code": "m2",
+            "external_code": "9a5d7a32-5ac3-4e03-9630-c9d278e03752",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
             "catalog_type": "product",
-            "slug": "steklo-prozracnoe-osvetlennoe",
-            "code": "glass_id_3",
+            "slug": "shower-crossbar-round",
+            "code": "crossbar_round",
             "name": {
-                "ru": "Стекло прозрачное осветленное"
+                "ru": "Стабилизирующая штанга (круглая)"
             },
-            "preview_picture": "products\/steklo-prozracnoe-osvetlennoe\/glass_id_3.jpg",
+            "preview_picture": "products\/shower-crossbar-round\/01M4GCD6S49192BZN49CH714QY.png",
             "detail_picture": null,
             "short_description": {
-                "ru": "Цвет стекла: Стекло прозрачное осветленное, Авто-изображение: Да, Рифление: Нет"
+                "ru": "Круглая стабилизирующая штанга d19 для душевых перегородок"
             },
             "description": [],
             "is_active": true,
-            "eav": {
-                "color": "opt_glass_color_id_3",
-                "autoImg": true,
-                "roughness": 0,
-                "fluted": false
-            },
+            "eav": [],
             "variants": [
                 {
-                    "external_code": "var_shower_glass_id_3_6mm",
+                    "external_code": "var_shower_crossbar_crossbar_round_chrome",
                     "price_group_external_code": null,
-                    "sku": "GLASS-ID_3-6MM",
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_6mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_glass_id_3_8mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_3-8MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 7650,
+                    "cost_price": 960,
                     "currency": "RUB",
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "glass_thickness": "opt_thickness_8mm"
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_round"
                     }
                 },
                 {
-                    "external_code": "var_shower_glass_id_3_10mm",
+                    "external_code": "var_shower_crossbar_crossbar_round_chrome_matte",
                     "price_group_external_code": null,
-                    "sku": "GLASS-ID_3-10MM",
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_black",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-BLACK",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1280,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_bronze",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-BRONZE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1490,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2870,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_gold_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD_MATTE",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -2732,7 +2816,372 @@
                     "markup": 0,
                     "stock": 10,
                     "eav": {
-                        "glass_thickness": "opt_thickness_10mm"
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1730,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_gunmetal_grey",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-GUNMETAL_GREY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "4999f0de-dbdb-4a1b-b15d-c574a92f65e6",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "shower-crossbar-corner",
+            "code": "crossbar_corner",
+            "name": {
+                "ru": "Угловой стабилизатор"
+            },
+            "preview_picture": "products\/shower-crossbar-corner\/01M4GCDYEZMW9MAHWK69077PHJ.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Угловой стабилизатор 45 градусов для душевых ограждений"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": [],
+            "variants": [
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_chrome",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 990,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_chrome_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 990,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_black",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-BLACK",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 990,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_bronze",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-BRONZE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2200,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2200,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_gold_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2160,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2370,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_corner_gunmetal_grey",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-CORNER-GUNMETAL_GREY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
+                        "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "25136d2a-815e-4a99-941b-75564644e0f5",
+            "product_type_external_code": "type_shower_handle",
+            "category_external_code": "cat_showers_handles",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "rucka-kupe-1-cink",
+            "code": null,
+            "name": {
+                "ru": "Ручка-купе 1 (цинк)"
+            },
+            "preview_picture": "products\/rucka-kupe-1-cink\/01M39YSYNH1006NSN180MRV8KV.jpg",
+            "detail_picture": null,
+            "short_description": [],
+            "description": [],
+            "is_active": true,
+            "eav": [],
+            "variants": [
+                {
+                    "external_code": "1f8fac8d-1f65-4b4d-bd18-d219185f0dbc",
+                    "price_group_external_code": "1bb7a971-8e62-4058-a9b7-4d21afb0a8ea",
+                    "sku": "rucka-kupe-1-cink-bronze",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1200,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "9a30edd8-9941-4268-8ed4-ca8f72b2db68",
+                    "price_group_external_code": null,
+                    "sku": "rucka-kupe-1-cink-gold",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1310,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "33872201-0f51-4b0f-b997-2e43eb0e43a9",
+                    "price_group_external_code": null,
+                    "sku": "rucka-kupe-1-cink-white",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1100,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "4c8aa107-1be6-4aaf-b76e-3ddaaa4ba8ba",
+                    "price_group_external_code": null,
+                    "sku": "rucka-kupe-1-cink-chrome",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 630,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "8f8e0f58-309a-48e3-bcd3-3b68c416e869",
+                    "price_group_external_code": null,
+                    "sku": "rucka-kupe-1-cink-matte-chrome",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 870,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "b08f3d02-c963-4746-898f-c80355c8b7e1",
+                    "price_group_external_code": null,
+                    "sku": "rucka-kupe-1-cink-black",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 600,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "door_type_ids": [
+                            "opt_door_type_one_slide",
+                            "opt_door_type_two_slide"
+                        ]
                     }
                 }
             ]
@@ -2792,7 +3241,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -2819,153 +3268,82 @@
             ]
         },
         {
-            "external_code": "25136d2a-815e-4a99-941b-75564644e0f5",
-            "product_type_external_code": "type_shower_handle",
-            "category_external_code": "cat_showers_handles",
-            "unit_code": "pcs",
+            "external_code": "prod_shower_glass_id_3",
+            "product_type_external_code": "type_shower_glass",
+            "category_external_code": "cat_showers_glass",
+            "unit_code": "m2",
             "catalog_type": "product",
-            "slug": "rucka-kupe-1-cink",
-            "code": null,
+            "slug": "steklo-prozracnoe-osvetlennoe",
+            "code": "glass_id_3",
             "name": {
-                "ru": "Ручка-купе 1 (цинк)"
+                "ru": "Стекло прозрачное осветленное"
             },
-            "preview_picture": "products\/rucka-kupe-1-cink\/01M39YSYNH1006NSN180MRV8KV.jpg",
+            "preview_picture": "products\/steklo-prozracnoe-osvetlennoe\/glass_id_3.jpg",
             "detail_picture": null,
-            "short_description": [],
+            "short_description": {
+                "ru": "Цвет стекла: Стекло прозрачное осветленное, Авто-изображение: Да, Рифление: Нет"
+            },
             "description": [],
             "is_active": true,
-            "eav": [],
+            "eav": {
+                "color": "opt_glass_color_id_3",
+                "autoImg": true,
+                "roughness": 0,
+                "fluted": false
+            },
             "variants": [
                 {
-                    "external_code": "1f8fac8d-1f65-4b4d-bd18-d219185f0dbc",
+                    "external_code": "var_shower_glass_id_3_6mm",
                     "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-bronze",
+                    "sku": "GLASS-ID_3-6MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1200,
+                    "cost_price": 0,
                     "currency": "RUB",
                     "is_default": false,
-                    "is_active": true,
+                    "is_active": false,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 0,
                     "stock": 10,
                     "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
+                        "glass_thickness": "opt_thickness_6mm"
                     }
                 },
                 {
-                    "external_code": "9a30edd8-9941-4268-8ed4-ca8f72b2db68",
+                    "external_code": "var_shower_glass_id_3_8mm",
                     "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-gold",
+                    "sku": "GLASS-ID_3-8MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1310,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "33872201-0f51-4b0f-b997-2e43eb0e43a9",
-                    "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-white",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1100,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "4c8aa107-1be6-4aaf-b76e-3ddaaa4ba8ba",
-                    "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-chrome",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 630,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "8f8e0f58-309a-48e3-bcd3-3b68c416e869",
-                    "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-matte-chrome",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 870,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "b08f3d02-c963-4746-898f-c80355c8b7e1",
-                    "price_group_external_code": null,
-                    "sku": "rucka-kupe-1-cink-black",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 600,
+                    "cost_price": 7650,
                     "currency": "RUB",
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "door_type_ids": [
-                            "opt_door_type_one_slide",
-                            "opt_door_type_two_slide"
-                        ]
+                        "glass_thickness": "opt_thickness_8mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_glass_id_3_10mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_3-10MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_10mm"
                     }
                 }
             ]
@@ -3025,7 +3403,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -3081,7 +3459,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -3103,7 +3481,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -3125,7 +3503,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -3147,7 +3525,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -3169,7 +3547,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -3191,7 +3569,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -3199,87 +3577,6 @@
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
                         ]
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_glass_id_6",
-            "product_type_external_code": "type_shower_glass",
-            "category_external_code": "cat_showers_glass",
-            "unit_code": "m2",
-            "catalog_type": "product",
-            "slug": "steklo-tonirovannoe-v-masse-bronza",
-            "code": "glass_id_6",
-            "name": {
-                "ru": "Стекло тонированное в массе бронза"
-            },
-            "preview_picture": "products\/steklo-tonirovannoe-v-masse-bronza\/glass_id_6.jpg",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Цвет стекла: Стекло тонированное полупрозрачное бронза, Авто-изображение: Да, Рифление: Нет"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "color": "opt_glass_color_id_6",
-                "autoImg": true,
-                "roughness": 0,
-                "fluted": false
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_glass_id_6_6mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_6-6MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_6mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_glass_id_6_8mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_6-8MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 7300,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_8mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_glass_id_6_10mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_6-10MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_10mm"
                     }
                 }
             ]
@@ -3339,7 +3636,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -3349,6 +3646,87 @@
                     "external_code": "var_shower_glass_id_7_10mm",
                     "price_group_external_code": null,
                     "sku": "GLASS-ID_7-10MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_10mm"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_glass_id_6",
+            "product_type_external_code": "type_shower_glass",
+            "category_external_code": "cat_showers_glass",
+            "unit_code": "m2",
+            "catalog_type": "product",
+            "slug": "steklo-tonirovannoe-v-masse-bronza",
+            "code": "glass_id_6",
+            "name": {
+                "ru": "Стекло тонированное в массе бронза"
+            },
+            "preview_picture": "products\/steklo-tonirovannoe-v-masse-bronza\/glass_id_6.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Цвет стекла: Стекло тонированное полупрозрачное бронза, Авто-изображение: Да, Рифление: Нет"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "color": "opt_glass_color_id_6",
+                "autoImg": true,
+                "roughness": 0,
+                "fluted": false
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_glass_id_6_6mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_6-6MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_6mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_glass_id_6_8mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_6-8MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7300,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_8mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_glass_id_6_10mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_6-10MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -3420,7 +3798,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -3430,6 +3808,87 @@
                     "external_code": "var_shower_glass_id_8_10mm",
                     "price_group_external_code": null,
                     "sku": "GLASS-ID_8-10MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_10mm"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_glass_id_10",
+            "product_type_external_code": "type_shower_glass",
+            "category_external_code": "cat_showers_glass",
+            "unit_code": "m2",
+            "catalog_type": "product",
+            "slug": "shower-glass-id_10",
+            "code": "glass_id_10",
+            "name": {
+                "ru": "Стекло Триплекс цветное"
+            },
+            "preview_picture": "products\/shower-glass-id_10\/glass_id_10.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Цвет стекла: Стекло Триплекс цветное, Авто-изображение: Да, Шероховатость: 0.2, Рифление: Да"
+            },
+            "description": [],
+            "is_active": false,
+            "eav": {
+                "color": "opt_glass_color_id_10",
+                "autoImg": true,
+                "roughness": 0.2,
+                "fluted": true
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_glass_id_10_6mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_10-6MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_6mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_glass_id_10_8mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_10-8MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_8mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_glass_id_10_10mm",
+                    "price_group_external_code": null,
+                    "sku": "GLASS-ID_10-10MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -3501,7 +3960,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -3511,87 +3970,6 @@
                     "external_code": "var_shower_glass_id_9_10mm",
                     "price_group_external_code": null,
                     "sku": "GLASS-ID_9-10MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_10mm"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_glass_id_10",
-            "product_type_external_code": "type_shower_glass",
-            "category_external_code": "cat_showers_glass",
-            "unit_code": "m2",
-            "catalog_type": "product",
-            "slug": "shower-glass-id_10",
-            "code": "glass_id_10",
-            "name": {
-                "ru": "Стекло Триплекс цветное"
-            },
-            "preview_picture": "products\/shower-glass-id_10\/glass_id_10.jpg",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Цвет стекла: Стекло Триплекс цветное, Авто-изображение: Да, Шероховатость: 0.2, Рифление: Да"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "color": "opt_glass_color_id_10",
-                "autoImg": true,
-                "roughness": 0.2,
-                "fluted": true
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_glass_id_10_6mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_10-6MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_6mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_glass_id_10_8mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_10-8MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_8mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_glass_id_10_10mm",
-                    "price_group_external_code": null,
-                    "sku": "GLASS-ID_10-10MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -3699,7 +4077,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -3756,7 +4134,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -3813,7 +4191,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -3870,7 +4248,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -3927,7 +4305,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -3984,7 +4362,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4122,7 +4500,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4236,7 +4614,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4293,7 +4671,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4350,7 +4728,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4407,7 +4785,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4464,7 +4842,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4602,7 +4980,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4659,7 +5037,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4716,7 +5094,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4773,7 +5151,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4830,7 +5208,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4887,7 +5265,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -4944,7 +5322,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm",
@@ -5067,6 +5445,32 @@
             "eav": [],
             "variants": [
                 {
+                    "external_code": "635a941f-86b2-4fb8-8c6c-1bc603a3a031",
+                    "price_group_external_code": null,
+                    "sku": "HANDLE_KNOB-JSBVH9",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 550,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "door_type_ids": [
+                            "opt_door_type_one_swing",
+                            "opt_door_type_two_swing",
+                            "opt_door_type_accordion_2glass",
+                            "opt_door_type_accordion_3glass",
+                            "opt_door_type_one_swing_with_partition",
+                            "opt_door_type_static"
+                        ]
+                    }
+                },
+                {
                     "external_code": "var_shower_handle_knob_bronze",
                     "price_group_external_code": null,
                     "sku": "HANDLE-KNOB-BRONZE-1",
@@ -5078,10 +5482,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-кноб 1",
                         "furniture_type_id": "opt_furniture_color_bronze",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5105,10 +5508,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-кноб 1",
                         "furniture_type_id": "opt_furniture_color_gold",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5132,10 +5534,9 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-кноб 1",
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5159,10 +5560,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-кноб 1",
                         "furniture_type_id": "opt_furniture_color_chrome",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5186,10 +5586,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-кноб 1",
                         "furniture_type_id": "opt_furniture_color_black",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5233,10 +5632,9 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-скоба 1",
                         "furniture_type_id": "opt_furniture_color_chrome",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5260,10 +5658,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-скоба 1",
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5287,10 +5684,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-скоба 1",
                         "furniture_type_id": "opt_furniture_color_black",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5314,10 +5710,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-скоба 1",
                         "furniture_type_id": "opt_furniture_color_bronze",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5341,10 +5736,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-скоба 1",
                         "furniture_type_id": "opt_furniture_color_gold",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5388,10 +5782,9 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-полотенцедержатель",
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5415,7 +5808,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -5426,8 +5819,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
@@ -5442,7 +5834,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -5453,8 +5845,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
@@ -5469,10 +5860,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-полотенцедержатель",
                         "furniture_type_id": "opt_furniture_color_black",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5496,10 +5886,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-полотенцедержатель",
                         "furniture_type_id": "opt_furniture_color_gold",
                         "door_type_ids": [
                             "opt_door_type_one_swing",
@@ -5523,7 +5912,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -5534,8 +5923,7 @@
                             "opt_door_type_accordion_3glass",
                             "opt_door_type_static",
                             "opt_door_type_one_swing_with_partition"
-                        ],
-                        "interface_name": "Ручка-полотенцедержатель"
+                        ]
                     }
                 },
                 {
@@ -5550,10 +5938,9 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "interface_name": "Ручка-полотенцедержатель",
                         "furniture_type_id": "opt_furniture_color_bronze",
                         "door_type_ids": [
                             "opt_door_type_two_swing",
@@ -5604,7 +5991,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "material_type_id": "opt_material_type_brass",
@@ -5626,7 +6013,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -5648,7 +6035,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -5670,7 +6057,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -5692,7 +6079,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -5714,7 +6101,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -5736,7 +6123,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -5779,7 +6166,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -5798,7 +6185,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -5817,7 +6204,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -5836,7 +6223,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -5855,7 +6242,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -5893,7 +6280,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -5955,7 +6342,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -5974,7 +6361,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -5993,7 +6380,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -6012,7 +6399,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -6031,7 +6418,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -6050,7 +6437,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -6069,7 +6456,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -6131,7 +6518,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -6150,7 +6537,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -6169,7 +6556,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -6188,7 +6575,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -6207,7 +6594,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -6226,7 +6613,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -6245,7 +6632,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -6279,12 +6666,12 @@
             "category_external_code": "cat_showers_crossbars",
             "unit_code": "pcs",
             "catalog_type": "product",
-            "slug": "shower-crossbar-crossbar",
-            "code": "crossbar_crossbar",
+            "slug": "shower-crossbar-rect",
+            "code": "crossbar_rect",
             "name": {
-                "ru": "Стабилизирующая штанга"
+                "ru": "Стабилизирующая штанга (прямоугольная)"
             },
-            "preview_picture": "products\/shower-crossbar-crossbar\/crossbar_crossbar.jpg",
+            "preview_picture": "products\/shower-crossbar-rect\/01M4GCGSB5K1WWZ8DDMCR4M0VR.png",
             "detail_picture": null,
             "short_description": {
                 "ru": "Тип компонента: Стабилизирующая штанга"
@@ -6307,7 +6694,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -6326,7 +6713,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -6345,7 +6732,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -6364,7 +6751,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -6383,7 +6770,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -6402,7 +6789,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -6421,7 +6808,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -6445,310 +6832,6 @@
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey",
                         "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 960,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 960,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1490,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2870,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1730,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 990,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 990,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 990,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2200,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2200,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2160,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2370,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_corner"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_corner_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-CORNER-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_corner"
                     }
                 }
             ]
@@ -6787,7 +6870,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -6806,7 +6889,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -6825,7 +6908,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -6844,7 +6927,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -6863,7 +6946,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -6882,7 +6965,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
@@ -6901,7 +6984,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -6939,7 +7022,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome",
@@ -6958,7 +7041,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte",
@@ -6977,7 +7060,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
@@ -6996,7 +7079,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze",
@@ -7015,7 +7098,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
@@ -7053,7 +7136,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
@@ -7064,334 +7147,6 @@
                     "external_code": "var_shower_crossbar_fix_round_gunmetal_grey",
                     "price_group_external_code": null,
                     "sku": "CROSSBAR-FIX-ROUND-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_crossbar_fix_glass",
-            "product_type_external_code": "type_shower_crossbar",
-            "category_external_code": "cat_showers_crossbars",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "shower-crossbar-fix_glass",
-            "code": "crossbar_fix_glass",
-            "name": {
-                "ru": "Держатель стекла для штанги"
-            },
-            "preview_picture": "products\/shower-crossbar-fix_glass\/crossbar_fix_glass.jpg",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Держатель стекла"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_fix_glass"
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 880,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1250,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 770,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2310,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2310,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 520,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 630,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 560,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 750,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 860,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 900,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GUNMETAL_GREY",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -7443,7 +7198,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -7471,6 +7226,412 @@
                     "external_code": "var_shower_sealant_slide_10mm",
                     "price_group_external_code": null,
                     "sku": "SEALANT-SLIDE-10MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_10mm"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_crossbar_fix_glass",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "shower-crossbar-fix_glass",
+            "code": "crossbar_fix_glass",
+            "name": {
+                "ru": "Держатель стекла для штанги"
+            },
+            "preview_picture": "products\/shower-crossbar-fix_glass\/crossbar_fix_glass.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_chrome",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 880,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_chrome_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1250,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_black",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-BLACK",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 770,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_bronze",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-BRONZE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1280,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1280,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_gold_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-GOLD_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2310,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2310,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_gunmetal_grey",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-GUNMETAL_GREY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_chrome",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 520,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_chrome_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 630,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_black",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BLACK",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 560,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_bronze",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BRONZE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 750,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 860,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_gold_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 900,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_glass_round_gunmetal_grey",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GUNMETAL_GREY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_sealant_magnetic",
+            "product_type_external_code": "type_shower_sealant",
+            "category_external_code": "cat_showers_sealants",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "shower-sealant-magnetic",
+            "code": "sealant_magnetic",
+            "name": {
+                "ru": "Магнитный уплотнитель, 3м"
+            },
+            "preview_picture": "products\/shower-sealant-magnetic\/sealant_magnetic.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Магнитный уплотнитель"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_magnetic"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_sealant_magnetic_8mm",
+                    "price_group_external_code": null,
+                    "sku": "SEALANT-MAGNETIC-8MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1400,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_8mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_sealant_magnetic_6mm",
+                    "price_group_external_code": null,
+                    "sku": "SEALANT-MAGNETIC-6MM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "glass_thickness": "opt_thickness_6mm"
+                    }
+                },
+                {
+                    "external_code": "var_shower_sealant_magnetic_10mm",
+                    "price_group_external_code": null,
+                    "sku": "SEALANT-MAGNETIC-10MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -7521,7 +7682,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_8mm"
@@ -7549,84 +7710,6 @@
                     "external_code": "var_shower_sealant_hinge_10mm",
                     "price_group_external_code": null,
                     "sku": "SEALANT-HINGE-10MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_10mm"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_sealant_magnetic",
-            "product_type_external_code": "type_shower_sealant",
-            "category_external_code": "cat_showers_sealants",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "shower-sealant-magnetic",
-            "code": "sealant_magnetic",
-            "name": {
-                "ru": "Магнитный уплотнитель, 3м"
-            },
-            "preview_picture": "products\/shower-sealant-magnetic\/sealant_magnetic.jpg",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Магнитный уплотнитель"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_magnetic"
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_sealant_magnetic_8mm",
-                    "price_group_external_code": null,
-                    "sku": "SEALANT-MAGNETIC-8MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1400,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 50,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_8mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_sealant_magnetic_6mm",
-                    "price_group_external_code": null,
-                    "sku": "SEALANT-MAGNETIC-6MM",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "glass_thickness": "opt_thickness_6mm"
-                    }
-                },
-                {
-                    "external_code": "var_shower_sealant_magnetic_10mm",
-                    "price_group_external_code": null,
-                    "sku": "SEALANT-MAGNETIC-10MM",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
@@ -7673,7 +7756,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome"
@@ -7691,7 +7774,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_chrome_matte"
@@ -7709,7 +7792,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black"
@@ -7727,7 +7810,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_bronze"
@@ -7745,7 +7828,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold"
@@ -7763,7 +7846,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte"
@@ -7781,7 +7864,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 50,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white"
@@ -7843,7 +7926,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 20,
+                    "markup": 65,
                     "stock": 10,
                     "eav": []
                 },
@@ -7861,7 +7944,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 20,
+                    "markup": 65,
                     "stock": 10,
                     "eav": []
                 }
@@ -7921,7 +8004,7 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 0,
+                    "markup": 65,
                     "stock": 10,
                     "eav": []
                 }
@@ -7981,22 +8064,22 @@
                     "is_default": false,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": []
                 }
             ]
         },
         {
-            "external_code": "prod_shower_service_id_1",
+            "external_code": "prod_shower_service_id_3",
             "product_type_external_code": "type_shower_service",
             "category_external_code": "cat_showers_services",
             "unit_code": "pcs",
             "catalog_type": "service",
-            "slug": "shower-service-id_1",
-            "code": "service_id_1",
+            "slug": "shower-service-id_3",
+            "code": "service_id_3",
             "name": {
-                "ru": "Монтаж линейная распашная"
+                "ru": "Монтаж угловая распашная"
             },
             "preview_picture": null,
             "detail_picture": null,
@@ -8010,11 +8093,11 @@
             },
             "variants": [
                 {
-                    "external_code": "var_shower_service_id_1",
+                    "external_code": "var_shower_service_id_3",
                     "price_group_external_code": null,
-                    "sku": "SERVICE-ID_1",
+                    "sku": "SERVICE-ID_3",
                     "name": {
-                        "ru": "Монтаж линейная распашная"
+                        "ru": "Монтаж угловая распашная"
                     },
                     "preview_picture": null,
                     "detail_picture": null,
@@ -8023,14 +8106,14 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "door_type_ids": [
-                            "opt_door_type_one_swing",
-                            "opt_door_type_two_swing"
+                            "opt_door_type_two_swing",
+                            "opt_door_type_one_swing"
                         ],
-                        "form_type": "opt_form_type_line"
+                        "form_type": "opt_form_type_corner"
                     }
                 }
             ]
@@ -8071,7 +8154,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "door_type_ids": [
@@ -8084,15 +8167,15 @@
             ]
         },
         {
-            "external_code": "prod_shower_service_id_3",
+            "external_code": "prod_shower_service_id_1",
             "product_type_external_code": "type_shower_service",
             "category_external_code": "cat_showers_services",
             "unit_code": "pcs",
             "catalog_type": "service",
-            "slug": "shower-service-id_3",
-            "code": "service_id_3",
+            "slug": "shower-service-id_1",
+            "code": "service_id_1",
             "name": {
-                "ru": "Монтаж угловая распашная"
+                "ru": "Монтаж линейная распашная"
             },
             "preview_picture": null,
             "detail_picture": null,
@@ -8106,11 +8189,11 @@
             },
             "variants": [
                 {
-                    "external_code": "var_shower_service_id_3",
+                    "external_code": "var_shower_service_id_1",
                     "price_group_external_code": null,
-                    "sku": "SERVICE-ID_3",
+                    "sku": "SERVICE-ID_1",
                     "name": {
-                        "ru": "Монтаж угловая распашная"
+                        "ru": "Монтаж линейная распашная"
                     },
                     "preview_picture": null,
                     "detail_picture": null,
@@ -8119,150 +8202,14 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "door_type_ids": [
-                            "opt_door_type_two_swing",
-                            "opt_door_type_one_swing"
+                            "opt_door_type_one_swing",
+                            "opt_door_type_two_swing"
                         ],
-                        "form_type": "opt_form_type_corner"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_service_id_4",
-            "product_type_external_code": "type_shower_service",
-            "category_external_code": "cat_showers_services",
-            "unit_code": "pcs",
-            "catalog_type": "service",
-            "slug": "shower-service-id_4",
-            "code": "service_id_4",
-            "name": {
-                "ru": "Монтаж угловая раздвижная"
-            },
-            "preview_picture": null,
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Монтаж"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_montage"
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_service_id_4",
-                    "price_group_external_code": null,
-                    "sku": "SERVICE-ID_4",
-                    "name": {
-                        "ru": "Монтаж угловая раздвижная"
-                    },
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 12000,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 40,
-                    "stock": 10,
-                    "eav": {
-                        "door_type_ids": [
-                            "opt_door_type_two_slide",
-                            "opt_door_type_one_slide"
-                        ],
-                        "form_type": "opt_form_type_corner"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_service_id_5",
-            "product_type_external_code": "type_shower_service",
-            "category_external_code": "cat_showers_services",
-            "unit_code": "pcs",
-            "catalog_type": "service",
-            "slug": "shower-service-id_5",
-            "code": "service_id_5",
-            "name": {
-                "ru": "Монтаж свободный вход"
-            },
-            "preview_picture": null,
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Монтаж"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_montage"
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_service_id_5",
-                    "price_group_external_code": null,
-                    "sku": "SERVICE-ID_5",
-                    "name": {
-                        "ru": "Монтаж свободный вход"
-                    },
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 12000,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 40,
-                    "stock": 10,
-                    "eav": {
-                        "form_type": "opt_form_type_free"
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_service_id_6",
-            "product_type_external_code": "type_shower_service",
-            "category_external_code": "cat_showers_services",
-            "unit_code": "pcs",
-            "catalog_type": "service",
-            "slug": "shower-service-id_6",
-            "code": "service_id_6",
-            "name": {
-                "ru": "Монтаж трапециевидная"
-            },
-            "preview_picture": null,
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Монтаж"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_montage"
-            },
-            "variants": [
-                {
-                    "external_code": "var_shower_service_id_6",
-                    "price_group_external_code": null,
-                    "sku": "SERVICE-ID_6",
-                    "name": {
-                        "ru": "Монтаж трапециевидная"
-                    },
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 14000,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 40,
-                    "stock": 10,
-                    "eav": {
-                        "form_type": "opt_form_type_trapezoid"
+                        "form_type": "opt_form_type_line"
                     }
                 }
             ]
@@ -8303,10 +8250,146 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "form_type": "opt_form_type_ushaped"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_service_id_6",
+            "product_type_external_code": "type_shower_service",
+            "category_external_code": "cat_showers_services",
+            "unit_code": "pcs",
+            "catalog_type": "service",
+            "slug": "shower-service-id_6",
+            "code": "service_id_6",
+            "name": {
+                "ru": "Монтаж трапециевидная"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Монтаж"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_montage"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_service_id_6",
+                    "price_group_external_code": null,
+                    "sku": "SERVICE-ID_6",
+                    "name": {
+                        "ru": "Монтаж трапециевидная"
+                    },
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 14000,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "form_type": "opt_form_type_trapezoid"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_service_id_5",
+            "product_type_external_code": "type_shower_service",
+            "category_external_code": "cat_showers_services",
+            "unit_code": "pcs",
+            "catalog_type": "service",
+            "slug": "shower-service-id_5",
+            "code": "service_id_5",
+            "name": {
+                "ru": "Монтаж свободный вход"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Монтаж"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_montage"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_service_id_5",
+                    "price_group_external_code": null,
+                    "sku": "SERVICE-ID_5",
+                    "name": {
+                        "ru": "Монтаж свободный вход"
+                    },
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 12000,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "form_type": "opt_form_type_free"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_service_id_4",
+            "product_type_external_code": "type_shower_service",
+            "category_external_code": "cat_showers_services",
+            "unit_code": "pcs",
+            "catalog_type": "service",
+            "slug": "shower-service-id_4",
+            "code": "service_id_4",
+            "name": {
+                "ru": "Монтаж угловая раздвижная"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Монтаж"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_montage"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_service_id_4",
+                    "price_group_external_code": null,
+                    "sku": "SERVICE-ID_4",
+                    "name": {
+                        "ru": "Монтаж угловая раздвижная"
+                    },
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 12000,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "door_type_ids": [
+                            "opt_door_type_two_slide",
+                            "opt_door_type_one_slide"
+                        ],
+                        "form_type": "opt_form_type_corner"
                     }
                 }
             ]
@@ -8347,7 +8430,7 @@
                     "is_default": true,
                     "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 40,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
                         "form_type": "opt_form_type_door"
