@@ -28,12 +28,16 @@ class ShowersCalculatorBridgeController extends Controller
 
   public function loadData(Request $request): JsonResponse
   {
-    $locale = $request->query('lang')
-      ?: ($request->header('Accept-Language') ?: app()->getLocale());
+    $supportedLocales = config('nicole.locales', [config('app.locale', 'ru')]);
+    $fallbackLocale = config('app.locale', 'ru');
 
-    if (in_array($locale, ['ru', 'en'], true)) {
-      app()->setLocale($locale);
+    $locale = $request->query('lang');
+    if (!$locale && $request->hasHeader('Accept-Language')) {
+      $locale = $request->getPreferredLanguage($supportedLocales);
     }
+
+    $locale = ($locale && in_array($locale, $supportedLocales, true)) ? $locale : $fallbackLocale;
+    app()->setLocale($locale);
 
     $channel = config('app.channel', $request->header('X-Sales-Channel', 'widget'));
     $version = Cache::get('catalog_version', 1);
@@ -111,7 +115,14 @@ class ShowersCalculatorBridgeController extends Controller
   protected function resolveVariantName(ProductVariant $variant, Product $product): string
   {
     $locale = app()->getLocale();
-    return $variant->getTranslation('name', $locale)
+
+    $variantName = $variant->getTranslation('name', $locale, false);
+
+    if (!empty($variantName)) {
+      return $variantName;
+    }
+
+    return $product->getTranslation('name', $locale, false)
       ?: ($product->getTranslation('name', $locale) ?? '');
   }
 
@@ -185,7 +196,15 @@ class ShowersCalculatorBridgeController extends Controller
   protected function loadPrices(string $channel = 'widget'): array
   {
     $prices = [
-      'crossbar'   => [],
+      'crossbar'   => [
+        'connector_t'     => [],
+        'connector_glass' => [],
+        'connector_45'    => [],
+        'crossbar'  => [],
+        'fix'       => [],
+        'fix_glass' => [],
+        'items'     => [],
+      ],
       'doorstep'   => [],
       'glasses'    => [],
       'handle'     => [],
@@ -346,21 +365,61 @@ class ShowersCalculatorBridgeController extends Controller
 
   private function parseCrossbarPrices(Product $product, string $unitSymbol, array &$prices): void
   {
+    $productSlug = (string)($product->slug ?? '');
+    $productCode = (string)($product->code ?? '');
+
     foreach ($product->variants as $v) {
-      $type = $this->getEavValue($v, 'type') ?: $this->getEavValue($product, 'type');
-      if (!$type) {
-        continue;
+      $rawId = (string)$v->id;
+      $furnitureTypeId = $this->getEavValue($v, 'furniture_type_id');
+      $previewUrl = $this->resolveVariantPreview($v, $product);
+      $rawType = $this->getEavValue($v, 'type') ?: ($this->getEavValue($product, 'type') ?: 'crossbar');
+      $eavCrossbarType = $this->getEavValue($v, 'crossbar_type_id');
+
+      // Определение сечения трубы (rect, round, square)
+      $crossbarTypeId = 'rect';
+      if (str_contains($productSlug, 'krugloi') || str_contains($productSlug, 'kruglyi') || $productCode === 'crossbar_round' || $eavCrossbarType === 'opt_cb_type_round' || $eavCrossbarType === 'round') {
+        $crossbarTypeId = 'round';
+      } elseif (str_contains($productSlug, 'kvadratnoi') || str_contains($productSlug, 'kvadratnaia') || str_contains((string)$v->sku, 'KVADRAT') || $eavCrossbarType === 'opt_cb_type_square' || $eavCrossbarType === 'square') {
+        $crossbarTypeId = 'square';
+      } elseif ($eavCrossbarType === 'opt_cb_type_corner' || $eavCrossbarType === 'corner' || $productCode === 'crossbar_corner') {
+        $crossbarTypeId = 'corner';
       }
 
-      $rawId = (string)$v->id;
+      // Определение точной роли компонента штанги
+      $targetGroup = 'crossbar';
+      if (str_contains($productSlug, 'pod-45') || str_contains($productSlug, '45-gradus')) {
+        $targetGroup = 'connector_45';
+      } elseif (str_contains($productSlug, 'soedinitel-t-obraznyi') || str_contains($productSlug, 't-obrazn')) {
+        $targetGroup = 'connector_t';
+      } elseif (str_contains($productSlug, 'soedinitel-truba-steklo')) {
+        $targetGroup = 'connector_glass';
+      } elseif (str_contains($productSlug, 'kreplenie') || str_contains($productSlug, 'k-stene') || $rawType === 'opt_sh_type_fix' || $rawType === 'fix') {
+        $targetGroup = 'fix';
+      } elseif (str_contains($productSlug, 'derzatel-stekla') || $rawType === 'opt_sh_type_fix_glass' || $rawType === 'fix_glass') {
+        $targetGroup = 'fix_glass';
+      } elseif ($rawType === 'opt_sh_type_crossbar' || $rawType === 'crossbar') {
+        $targetGroup = 'crossbar';
+      }
 
-      $prices['crossbar'][$type][$rawId] = array_merge(
+      $itemPayload = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
         [
-          'crossbarTypeId'  => $this->getEavValue($v, 'crossbar_type_id'),
-          'furnitureTypeId' => $this->getEavValue($v, 'furniture_type_id'),
+          'crossbarTypeId'  => $crossbarTypeId,
+          'furnitureTypeId' => $furnitureTypeId,
+          'pathImg'         => $previewUrl,
+          'type'            => $crossbarTypeId,
+          'group'           => $targetGroup,
         ]
       );
+
+      if (!isset($prices['crossbar'][$targetGroup])) {
+        $prices['crossbar'][$targetGroup] = [];
+      }
+      $prices['crossbar'][$targetGroup][$rawId] = $itemPayload;
+
+      if ($targetGroup === 'crossbar') {
+        $prices['crossbar']['items'][$rawId] = $itemPayload;
+      }
     }
   }
 
