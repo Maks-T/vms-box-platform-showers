@@ -1105,9 +1105,9 @@
                 },
                 {
                     "external_code": "opt_form_type_trapezoid",
-                    "slug": "trapezoid",
+                    "slug": "trapecievidnaia",
                     "value": {
-                        "ru": "Трапецевидная"
+                        "ru": "Трапециевидная"
                     },
                     "param": "trapezoid",
                     "meta": {
@@ -3882,163 +3882,6 @@
             ]
         },
         {
-            "external_code": "d2d6b929-e58c-4ae5-be33-cc42182d0dd1",
-            "product_type_external_code": "type_shower_crossbar",
-            "category_external_code": "cat_showers_crossbars",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "derzatel-stekla-dlia-krugloi-stangi",
-            "code": null,
-            "name": {
-                "ru": "Держатель стекла для круглой штанги"
-            },
-            "preview_picture": null,
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Держатель стекла"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_fix_glass"
-            },
-            "variants": [
-                {
-                    "external_code": "85fa513b-f86a-46cf-8bd5-f490f13d026f",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--JCRLXT",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "090cf578-0215-4e7d-aae8-186586232ecc",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--V1NQ7Y",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 3,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "01fe1688-5b44-47c8-b63b-f7d20c5646fc",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--AMVALP",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "d78e71ea-e9ca-4a01-bbeb-fe69b2dc61e8",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--BNRU50",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 5,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "6418fd7c-2291-4809-9693-1aaa17da8cde",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--05G7HY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 4,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "800dce99-0439-420e-be81-c62c24addf20",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--XXHZB1",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 7,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "89c7a948-41a4-4b30-ac81-db0911b80238",
-                    "price_group_external_code": null,
-                    "sku": "DERZATEL-STEKLA--R2QULZ",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 6,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                }
-            ]
-        },
-        {
             "external_code": "0e765e60-15f7-4f74-857e-e3741165c4df",
             "product_type_external_code": "type_shower_handle",
             "category_external_code": "cat_showers_handles",
@@ -4186,6 +4029,163 @@
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
                         ]
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "d2d6b929-e58c-4ae5-be33-cc42182d0dd1",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "derzatel-stekla-dlia-krugloi-stangi",
+            "code": null,
+            "name": {
+                "ru": "Держатель стекла для круглой штанги"
+            },
+            "preview_picture": "products\/derzatel-stekla-dlia-krugloi-stangi\/01M4X3VAMTGZXH7NEM73WBSA2G.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "85fa513b-f86a-46cf-8bd5-f490f13d026f",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--JCRLXT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 350,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "800dce99-0439-420e-be81-c62c24addf20",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--XXHZB1",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "090cf578-0215-4e7d-aae8-186586232ecc",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--V1NQ7Y",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 370,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "01fe1688-5b44-47c8-b63b-f7d20c5646fc",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--AMVALP",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 350,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "d78e71ea-e9ca-4a01-bbeb-fe69b2dc61e8",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--BNRU50",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 420,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "6418fd7c-2291-4809-9693-1aaa17da8cde",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--05G7HY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 420,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "89c7a948-41a4-4b30-ac81-db0911b80238",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--R2QULZ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 860,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
                     }
                 }
             ]
@@ -5077,7 +5077,7 @@
             "name": {
                 "ru": "Держатель стекла для квадратной штанги"
             },
-            "preview_picture": null,
+            "preview_picture": "products\/derzatel-stekla-dlia-kvadratnoi-stangi\/01M4X3QBXYRNB7CC7Q6YXZR37Z.png",
             "detail_picture": null,
             "short_description": {
                 "ru": "Тип компонента: Держатель стекла"
@@ -5089,89 +5089,13 @@
             },
             "variants": [
                 {
-                    "external_code": "74e24832-4156-4c02-ade8-7ca120fd8be7",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR_FIX_GLA-VGEC7D",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "4b89c1d8-b572-4303-9e24-d6a591e7e0c9",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR_FIX_GLA-Q8WSTW",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 4,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "32dcac9e-39f2-4f57-bc88-0399be71e817",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR_FIX_GLA-P2YXI1",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 5,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "2d50c345-2250-40b0-be8c-c1807c8c9bbc",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR_FIX_GLA-5UZMZT",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
                     "external_code": "f621b3fd-b438-4b65-b984-7e6dc889ea22",
                     "price_group_external_code": null,
                     "sku": "CROSSBAR_FIX_GLA-RDXETF",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 3,
+                    "cost_price": 1320,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5184,13 +5108,70 @@
                     }
                 },
                 {
+                    "external_code": "2d50c345-2250-40b0-be8c-c1807c8c9bbc",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-5UZMZT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 800,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "32dcac9e-39f2-4f57-bc88-0399be71e817",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-P2YXI1",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "4b89c1d8-b572-4303-9e24-d6a591e7e0c9",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-Q8WSTW",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
                     "external_code": "673cd47b-9c5f-4316-8a6d-020345941e27",
                     "price_group_external_code": null,
                     "sku": "CROSSBAR_FIX_GLA-N7DQGE",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 6,
+                    "cost_price": 2310,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5199,6 +5180,25 @@
                     "stock": 0,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "74e24832-4156-4c02-ade8-7ca120fd8be7",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-VGEC7D",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 900,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
                         "crossbar_type_id": "opt_cb_type_rect"
                     }
                 },
@@ -5229,12 +5229,12 @@
             "category_external_code": "cat_showers_crossbars",
             "unit_code": "pcs",
             "catalog_type": "product",
-            "slug": "soedinitel-pod-45-gradusov-kruglyi-truba-truba",
+            "slug": "soedinitel-pod-proizvolnyi-ugol-kruglyi-truba-truba",
             "code": null,
             "name": {
-                "ru": "Соединитель под 45 градусов круглый труба - труба"
+                "ru": "Соединитель под произвольный угол круглый труба - труба"
             },
-            "preview_picture": null,
+            "preview_picture": "products\/soedinitel-pod-proizvolnyi-ugol-kruglyi-truba-truba\/01M4X40CJ7Q8RYXYVV9N4FH523.png",
             "detail_picture": null,
             "short_description": {
                 "ru": "Тип компонента: Держатель стекла"
@@ -5246,32 +5246,13 @@
             },
             "variants": [
                 {
-                    "external_code": "2318c4a1-a888-4122-b53a-9f2d0b1b8b89",
-                    "price_group_external_code": null,
-                    "sku": "SOEDINITEL-T-OBR-BGPYQA",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 7,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 0,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
                     "external_code": "848d2e97-1fa5-40ae-bc69-783693fd635c",
                     "price_group_external_code": null,
                     "sku": "SOEDINITEL-T-OBR-IR0I48",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 6,
+                    "cost_price": 450,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5290,7 +5271,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 5,
+                    "cost_price": 460,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5309,7 +5290,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 2,
+                    "cost_price": 500,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5328,7 +5309,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 3,
+                    "cost_price": 500,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5337,6 +5318,25 @@
                     "stock": 0,
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2318c4a1-a888-4122-b53a-9f2d0b1b8b89",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-BGPYQA",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 450,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
                         "crossbar_type_id": "opt_cb_type_rect"
                     }
                 },
@@ -5366,7 +5366,164 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "f853344f-2526-4766-abf8-352c4fe282da",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-pod-proizvolnyi-ugol-priamougolnyi-truba-truba",
+            "code": null,
+            "name": {
+                "ru": "Соединитель под произвольный угол прямоугольный труба - труба"
+            },
+            "preview_picture": "products\/soedinitel-pod-proizvolnyi-ugol-priamougolnyi-truba-truba\/01M4X448ENAY8XYJQ4YYJZFX1Q.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "d10fefbf-7aba-4cd0-a3fb-b708bc8dcab1",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-88GF6B",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1100,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "d702d621-bd23-4f47-84a3-3220400e03fc",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-AH1XBO",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1150,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "1ba40caf-4d72-42cc-a552-ac561a1c8ace",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-KE4WIH",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1100,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2153336d-84db-48c5-b3ef-eaeef024b0ec",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-WEUDZM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1950,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2be5f530-3b80-4a73-8e42-4ae82ae59479",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-EUVW4I",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1950,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "3fce7beb-7a3b-4328-90f8-6a2c29048e6a",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-7EW9DV",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "dba005bc-b6f5-410e-bd66-cd6af9ae99bc",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-AHNONI",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 800,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -5856,6 +6013,163 @@
                     "eav": {
                         "glass_thickness": "opt_thickness_10mm",
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "fd02b2b3-6f99-4124-a285-d7a64c8ac224",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-pod-proizvolnyi-ugol-kvadratnyi-truba-truba",
+            "code": null,
+            "name": {
+                "ru": "Соединитель под произвольный угол квадратный труба - труба"
+            },
+            "preview_picture": "products\/soedinitel-pod-proizvolnyi-ugol-kvadratnyi-truba-truba\/01M4X484AM5V12A5EV07SFETHC.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "5541db83-ab53-4b62-91fd-035036f22d61",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-HTNNYQ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "1f970957-4965-4784-a9e8-e0efb602fcbc",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-ZALCTQ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "c02ddc1f-fc91-4827-8dad-7d9d323ffd2b",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-NOIR5V",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1600,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "c3f35d11-4360-4d73-99fc-4691c5e708ef",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-UF6HNW",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "c018685f-4e4a-450f-8db9-d06c3da9c5bb",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-KLRVIT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1600,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2d121f2f-8500-4378-93d7-f063f42cbcd6",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-OA8GEV",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1600,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "f95ea7d4-ccf0-4b1c-8eeb-1e14273a4011",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-POD-P-GWX32Z",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2350,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
                     }
                 }
             ]
@@ -8259,7 +8573,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 548,
+                    "cost_price": 550,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
