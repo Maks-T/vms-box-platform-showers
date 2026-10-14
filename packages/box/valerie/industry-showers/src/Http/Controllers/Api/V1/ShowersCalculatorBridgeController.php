@@ -197,6 +197,9 @@ class ShowersCalculatorBridgeController extends Controller
   {
     $prices = [
       'crossbar'   => [
+        'connector_t'     => [],
+        'connector_glass' => [],
+        'connector_45'    => [],
         'crossbar'  => [],
         'fix'       => [],
         'fix_glass' => [],
@@ -362,16 +365,41 @@ class ShowersCalculatorBridgeController extends Controller
 
   private function parseCrossbarPrices(Product $product, string $unitSymbol, array &$prices): void
   {
-    foreach ($product->variants as $v) {
-      $type = $this->getEavValue($v, 'type') ?: ($this->getEavValue($product, 'type') ?: 'crossbar');
-      if (!$type) {
-        continue;
-      }
+    $productSlug = (string)($product->slug ?? '');
+    $productCode = (string)($product->code ?? '');
 
+    foreach ($product->variants as $v) {
       $rawId = (string)$v->id;
-      $crossbarTypeId = $this->getEavValue($v, 'crossbar_type_id');
       $furnitureTypeId = $this->getEavValue($v, 'furniture_type_id');
       $previewUrl = $this->resolveVariantPreview($v, $product);
+      $rawType = $this->getEavValue($v, 'type') ?: ($this->getEavValue($product, 'type') ?: 'crossbar');
+      $eavCrossbarType = $this->getEavValue($v, 'crossbar_type_id');
+
+      // Определение сечения трубы (rect, round, square)
+      $crossbarTypeId = 'rect';
+      if (str_contains($productSlug, 'krugloi') || str_contains($productSlug, 'kruglyi') || $productCode === 'crossbar_round' || $eavCrossbarType === 'opt_cb_type_round' || $eavCrossbarType === 'round') {
+        $crossbarTypeId = 'round';
+      } elseif (str_contains($productSlug, 'kvadratnoi') || str_contains($productSlug, 'kvadratnaia') || str_contains((string)$v->sku, 'KVADRAT') || $eavCrossbarType === 'opt_cb_type_square' || $eavCrossbarType === 'square') {
+        $crossbarTypeId = 'square';
+      } elseif ($eavCrossbarType === 'opt_cb_type_corner' || $eavCrossbarType === 'corner' || $productCode === 'crossbar_corner') {
+        $crossbarTypeId = 'corner';
+      }
+
+      // Определение точной роли компонента штанги
+      $targetGroup = 'crossbar';
+      if (str_contains($productSlug, 'pod-45') || str_contains($productSlug, '45-gradus')) {
+        $targetGroup = 'connector_45';
+      } elseif (str_contains($productSlug, 'soedinitel-t-obraznyi') || str_contains($productSlug, 't-obrazn')) {
+        $targetGroup = 'connector_t';
+      } elseif (str_contains($productSlug, 'soedinitel-truba-steklo')) {
+        $targetGroup = 'connector_glass';
+      } elseif (str_contains($productSlug, 'kreplenie') || str_contains($productSlug, 'k-stene') || $rawType === 'opt_sh_type_fix' || $rawType === 'fix') {
+        $targetGroup = 'fix';
+      } elseif (str_contains($productSlug, 'derzatel-stekla') || $rawType === 'opt_sh_type_fix_glass' || $rawType === 'fix_glass') {
+        $targetGroup = 'fix_glass';
+      } elseif ($rawType === 'opt_sh_type_crossbar' || $rawType === 'crossbar') {
+        $targetGroup = 'crossbar';
+      }
 
       $itemPayload = array_merge(
         $this->buildBaseItemData($v, $product, $unitSymbol),
@@ -380,12 +408,16 @@ class ShowersCalculatorBridgeController extends Controller
           'furnitureTypeId' => $furnitureTypeId,
           'pathImg'         => $previewUrl,
           'type'            => $crossbarTypeId,
+          'group'           => $targetGroup,
         ]
       );
 
-      $prices['crossbar'][$type][$rawId] = $itemPayload;
+      if (!isset($prices['crossbar'][$targetGroup])) {
+        $prices['crossbar'][$targetGroup] = [];
+      }
+      $prices['crossbar'][$targetGroup][$rawId] = $itemPayload;
 
-      if ($type === 'crossbar') {
+      if ($targetGroup === 'crossbar') {
         $prices['crossbar']['items'][$rawId] = $itemPayload;
       }
     }
