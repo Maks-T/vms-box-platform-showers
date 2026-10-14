@@ -2593,274 +2593,6 @@
             ]
         },
         {
-            "external_code": "6844ef97-cc98-4ebf-a0bc-dd08891726bf",
-            "product_type_external_code": "type_shower_handle",
-            "category_external_code": "cat_showers_handles",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "rucka-knob-3-latun",
-            "code": null,
-            "name": {
-                "ru": "Ручка кноб 3 (латунь)"
-            },
-            "preview_picture": "products\/rucka-knob-3-latun\/01M39YM2KWZCX32P91N4BK9B5D.jpg",
-            "detail_picture": null,
-            "short_description": [],
-            "description": [],
-            "is_active": true,
-            "eav": [],
-            "variants": [
-                {
-                    "external_code": "6e4124ed-881d-4e4c-8409-36cf906c7b87",
-                    "price_group_external_code": null,
-                    "sku": "rucka-knob-3-black",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 4690,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "door_type_ids": [
-                            "opt_door_type_one_swing",
-                            "opt_door_type_two_swing",
-                            "opt_door_type_accordion_2glass",
-                            "opt_door_type_accordion_3glass",
-                            "opt_door_type_static",
-                            "opt_door_type_one_swing_with_partition"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "1eb5fd72-d6ec-4e6c-ae2e-dda4ea9c899f",
-                    "price_group_external_code": null,
-                    "sku": "rucka-knob-3-white",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 4690,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "door_type_ids": [
-                            "opt_door_type_one_swing",
-                            "opt_door_type_two_swing"
-                        ]
-                    }
-                },
-                {
-                    "external_code": "c39ed858-6995-4139-840b-0092c6c3e05f",
-                    "price_group_external_code": null,
-                    "sku": "rucka-knob-3-chrome",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 3800,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "door_type_ids": [
-                            "opt_door_type_one_swing",
-                            "opt_door_type_two_swing",
-                            "opt_door_type_one_swing_with_partition",
-                            "opt_door_type_accordion_2glass",
-                            "opt_door_type_accordion_3glass",
-                            "opt_door_type_static"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "external_code": "9a5d7a32-5ac3-4e03-9630-c9d278e03752",
-            "product_type_external_code": "type_shower_crossbar",
-            "category_external_code": "cat_showers_crossbars",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "shower-crossbar-round",
-            "code": "crossbar_round",
-            "name": {
-                "ru": "Стабилизирующая штанга (круглая)"
-            },
-            "preview_picture": "products\/shower-crossbar-round\/01M4GCD6S49192BZN49CH714QY.png",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Круглая стабилизирующая штанга d19 для душевых перегородок"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": [],
-            "variants": [
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 960,
-                    "currency": "RUB",
-                    "is_default": true,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 960,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1490,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2870,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1730,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_crossbar_round_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-ROUND-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                }
-            ]
-        },
-        {
             "external_code": "4999f0de-dbdb-4a1b-b15d-c574a92f65e6",
             "product_type_external_code": "type_shower_crossbar",
             "category_external_code": "cat_showers_crossbars",
@@ -2877,7 +2609,7 @@
                 "ru": "Угловой стабилизатор 45 градусов для душевых ограждений"
             },
             "description": [],
-            "is_active": true,
+            "is_active": false,
             "eav": [],
             "variants": [
                 {
@@ -3030,6 +2762,569 @@
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gunmetal_grey",
                         "crossbar_type_id": "opt_cb_type_corner"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "9a5d7a32-5ac3-4e03-9630-c9d278e03752",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "shower-crossbar-round",
+            "code": "crossbar_round",
+            "name": {
+                "ru": "Стабилизирующая штанга (круглая)"
+            },
+            "preview_picture": "products\/shower-crossbar-round\/01M4TVP9K74657H96WS0043KBR.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Круглая стабилизирующая штанга d19 для душевых перегородок"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": [],
+            "variants": [
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_chrome",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_chrome_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-CHROME_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_black",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-BLACK",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1280,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_bronze",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-BRONZE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1490,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2870,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_gold_matte",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-GOLD_MATTE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 0,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": false,
+                    "is_manual_pricing": true,
+                    "markup": 0,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_crossbar_round_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-CROSSBAR-ROUND-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1730,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_round"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "6844ef97-cc98-4ebf-a0bc-dd08891726bf",
+            "product_type_external_code": "type_shower_handle",
+            "category_external_code": "cat_showers_handles",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "rucka-knob-3-latun",
+            "code": null,
+            "name": {
+                "ru": "Ручка кноб 3 (латунь)"
+            },
+            "preview_picture": "products\/rucka-knob-3-latun\/01M39YM2KWZCX32P91N4BK9B5D.jpg",
+            "detail_picture": null,
+            "short_description": [],
+            "description": [],
+            "is_active": true,
+            "eav": [],
+            "variants": [
+                {
+                    "external_code": "6e4124ed-881d-4e4c-8409-36cf906c7b87",
+                    "price_group_external_code": null,
+                    "sku": "rucka-knob-3-black",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4690,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "door_type_ids": [
+                            "opt_door_type_one_swing",
+                            "opt_door_type_two_swing",
+                            "opt_door_type_accordion_2glass",
+                            "opt_door_type_accordion_3glass",
+                            "opt_door_type_static",
+                            "opt_door_type_one_swing_with_partition"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "1eb5fd72-d6ec-4e6c-ae2e-dda4ea9c899f",
+                    "price_group_external_code": null,
+                    "sku": "rucka-knob-3-white",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4690,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "door_type_ids": [
+                            "opt_door_type_one_swing",
+                            "opt_door_type_two_swing"
+                        ]
+                    }
+                },
+                {
+                    "external_code": "c39ed858-6995-4139-840b-0092c6c3e05f",
+                    "price_group_external_code": null,
+                    "sku": "rucka-knob-3-chrome",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 3800,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "door_type_ids": [
+                            "opt_door_type_one_swing",
+                            "opt_door_type_two_swing",
+                            "opt_door_type_one_swing_with_partition",
+                            "opt_door_type_accordion_2glass",
+                            "opt_door_type_accordion_3glass",
+                            "opt_door_type_static"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "ed54e72d-8f5b-4ab7-b211-761b8f4fb5c5",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-truba-steklo-dlia-priamougolnoi-stangi",
+            "code": null,
+            "name": {
+                "ru": "Соединитель труба-стекло для  прямоугольной штанги"
+            },
+            "preview_picture": "products\/soedinitel-truba-steklo-dlia-priamougolnoi-stangi\/01M4TWEMR2VWBPM6RED3RV8TP0.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "69aed984-826b-4cdb-b856-352680c12d97",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-DUK9H2",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "4bad2fb5-dd66-4f4f-8c1a-1080cc37c98e",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-RYWBIT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1450,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "81b73490-fe17-4d29-911c-9f7c7a98ec26",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-XMEMKA",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1000,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "727e334d-2a4c-40db-a078-18b61594f4bf",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-XTTYV8",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "5b2cb417-287e-48f8-a1b3-62617dfd4782",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-MZWQRL",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "d22f8793-ab55-4791-8f85-4672bcff9bd0",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-WBLHCT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1250,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "e4fc5ad6-c9fd-46bc-b815-8cc2669fc4f8",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-ZTYHPS",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1250,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "5a317dd7-1cf0-4c8d-ace9-dd63211ab4f8",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "kreplenie-dlia-krugloi-stangi-k-stene",
+            "code": null,
+            "name": {
+                "ru": "Крепление для круглой штанги к стене"
+            },
+            "preview_picture": "products\/kreplenie-dlia-krugloi-stangi-k-stene\/01M4TXET8ASFPDY5Z6R3TGQPQN.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Крепление к стене"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix"
+            },
+            "variants": [
+                {
+                    "external_code": "42f4666a-b683-4156-a11e-b9615de7e53b",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-Y6FXDN",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 930,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "431ff7d7-06f0-43f9-81dc-2805b4f0ec91",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-52BTGR",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1250,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "4d4916bf-efff-4e4b-8a64-4cfea6ff437f",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-FMEG5O",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 930,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "88f20ad5-9f4c-4ed1-aff2-6d33c916372c",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-BUK7XA",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 930,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "3f59227e-ff5f-42f3-88bd-23b19af802f4",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-C65P3O",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1100,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "701ba2da-2753-4fd7-9e82-53991ec5f16c",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-TIYZ0D",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1100,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "1588086b-4e6f-4ec7-b915-0fbb20f3a1a6",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-T6ALKM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1150,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
                     }
                 }
             ]
@@ -3430,6 +3725,320 @@
             ]
         },
         {
+            "external_code": "40887fa2-e852-45ed-a022-0522d32ca070",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "stabiliziruiushhaia-stanga-kvadratnaia",
+            "code": null,
+            "name": {
+                "ru": "Стабилизирующая штанга (квадратная)"
+            },
+            "preview_picture": "products\/stabiliziruiushhaia-stanga-kvadratnaia\/01M4TVSY8791MS8ZH9J61ST11E.jpg",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Стабилизирующая штанга"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_crossbar"
+            },
+            "variants": [
+                {
+                    "external_code": "278a5130-e5c3-46b5-b0cd-349712cf5d21",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-FPZLV6",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4320,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "1d6175ef-ec3c-4318-be99-b352d152b6c3",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-I4X4BL",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4320,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "ea7e9ea8-40bd-43b5-8759-0de11aa20f12",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-MUSE7K",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7160,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "a3b47511-f396-4089-92e4-e9c7284afaf5",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-KTOGAM",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 3800,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "9a2df0a3-9a76-419a-8f12-a6dbc3d1ec3b",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-YECSG6",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1480,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "bd1db97f-2d6f-45d0-80ab-27f33187e8c6",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-Q5DTJD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1280,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "ddb9a2ae-5990-42db-80e7-c2d259d242a1",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_RECT-ORNWIU",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1480,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "d2d6b929-e58c-4ae5-be33-cc42182d0dd1",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "derzatel-stekla-dlia-krugloi-stangi",
+            "code": null,
+            "name": {
+                "ru": "Держатель стекла для круглой штанги"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "85fa513b-f86a-46cf-8bd5-f490f13d026f",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--JCRLXT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "090cf578-0215-4e7d-aae8-186586232ecc",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--V1NQ7Y",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 3,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "01fe1688-5b44-47c8-b63b-f7d20c5646fc",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--AMVALP",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "d78e71ea-e9ca-4a01-bbeb-fe69b2dc61e8",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--BNRU50",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 5,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "6418fd7c-2291-4809-9693-1aaa17da8cde",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--05G7HY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "800dce99-0439-420e-be81-c62c24addf20",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--XXHZB1",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "89c7a948-41a4-4b30-ac81-db0911b80238",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--R2QULZ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 6,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
             "external_code": "0e765e60-15f7-4f74-857e-e3741165c4df",
             "product_type_external_code": "type_shower_handle",
             "category_external_code": "cat_showers_handles",
@@ -3577,6 +4186,163 @@
                             "opt_door_type_one_slide",
                             "opt_door_type_two_slide"
                         ]
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "3177c9f3-f6a1-4350-b579-4cc17fc6f5aa",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-truba-steklo-dlia-kvadratnoi-stangi",
+            "code": null,
+            "name": {
+                "ru": "Соединитель труба-стекло для квадратной штанги"
+            },
+            "preview_picture": "products\/soedinitel-truba-steklo-dlia-kvadratnoi-stangi\/01M4TWQZQVGEQWZ99F4G6609YG.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "b3b23c63-4764-43e9-961f-0b3eafc1e892",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-8KRFGN",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1000,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "eef3e74c-f298-4206-bcd7-d1e512e97bb9",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-HTTKDY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2370,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "abca8e6e-c532-4647-9e57-f0a34b41f452",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-K8QP92",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1000,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "aaee3931-0db1-486c-b482-61faa0049a43",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-L0G3VY",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1450,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "acd010b3-3c9d-4e30-a6f8-c9c6a7f1d233",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-KCVZ84",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1000,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "38548f5a-e0ba-45a0-88e8-970c480a443d",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-XC5WI2",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1500,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "1eff52d9-0970-4cbc-b80a-365ba2ecb0e3",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-TRUBA-GZXR7N",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1500,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
                     }
                 }
             ]
@@ -3825,6 +4591,320 @@
             ]
         },
         {
+            "external_code": "7422f267-f0aa-47fd-8f1a-d9ee8dd903ee",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "kreplenie-dlia-kvadratnoi-stangi-k-stene",
+            "code": null,
+            "name": {
+                "ru": "Крепление для квадратной штанги к стене"
+            },
+            "preview_picture": "products\/kreplenie-dlia-kvadratnoi-stangi-k-stene\/01M4TX0PNA5PV601GG20EMKHTB.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Крепление к стене"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix"
+            },
+            "variants": [
+                {
+                    "external_code": "3e77d7f4-d924-4df0-b7be-43bfa34fac5c",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-W4T0QT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 900,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "321de1b0-6923-4ae6-9ec5-e267c6ea105f",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-6BOHKH",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 960,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "28bc6e92-c819-408c-87d9-dda2367e6750",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-3YWVUO",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 900,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2a685113-2d3e-4dad-acd8-4556ed808746",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-H08EUO",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1250,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "74deee6e-38b3-48c6-b933-8c5cc0a28dd5",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-DVITP6",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1150,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "b1556b76-f9a6-41d3-b294-1bde58dd6574",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-RJAYJJ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1150,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "e9dc65f0-591b-45c4-9a2b-195c298c2da4",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX-N7Q7WC",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2100,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "281bf315-3772-45c5-be47-f00dfc5866be",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-t-obraznyi-kruglyi-truba-truba",
+            "code": null,
+            "name": {
+                "ru": "Соединитель т-образный круглый труба - труба"
+            },
+            "preview_picture": "products\/soedinitel-t-obraznyi-kruglyi-truba-truba\/01M4TXQ3EX6GWZ6M1EZSCEYWEQ.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "c29224e3-bc17-4b73-9e03-f9a989ed9115",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--ON3BNP",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 800,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "f355dfd2-b864-449a-bc2f-513ec0f251aa",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--APWPDA",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "a5f10f6f-c84a-4dbb-b68c-aa951915883b",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--P1DROQ",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 800,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "accdf225-4eda-4856-871e-40958141de52",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--ZXQK3G",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 800,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "c29cca74-8c58-4f92-b63d-e49d8b82e357",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--VY8HQH",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1050,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "314cb4cd-c569-4b34-9ca0-f7baa6eb86a0",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--XGFIPH",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1050,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "36cc151f-0b97-467a-b5f4-2e7e5900df72",
+                    "price_group_external_code": null,
+                    "sku": "DERZATEL-STEKLA--GF8FRC",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1300,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
             "external_code": "prod_shower_glass_id_10",
             "product_type_external_code": "type_shower_glass",
             "category_external_code": "cat_showers_glass",
@@ -3982,6 +5062,320 @@
                     "stock": 10,
                     "eav": {
                         "glass_thickness": "opt_thickness_10mm"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "45a9a035-dc6e-4de1-8844-89ee8e108a6f",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "derzatel-stekla-dlia-kvadratnoi-stangi",
+            "code": null,
+            "name": {
+                "ru": "Держатель стекла для квадратной штанги"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "74e24832-4156-4c02-ade8-7ca120fd8be7",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-VGEC7D",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "4b89c1d8-b572-4303-9e24-d6a591e7e0c9",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-Q8WSTW",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "32dcac9e-39f2-4f57-bc88-0399be71e817",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-P2YXI1",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 5,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "2d50c345-2250-40b0-be8c-c1807c8c9bbc",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-5UZMZT",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "f621b3fd-b438-4b65-b984-7e6dc889ea22",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-RDXETF",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 3,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "673cd47b-9c5f-4316-8a6d-020345941e27",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-N7DQGE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 6,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "70724328-cdcc-4a00-978f-823ead4c3d93",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR_FIX_GLA-JOSHY8",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "e6777ab8-6a43-4872-ae1c-5d1eeada5a42",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "soedinitel-pod-45-gradusov-kruglyi-truba-truba",
+            "code": null,
+            "name": {
+                "ru": "Соединитель под 45 градусов круглый труба - труба"
+            },
+            "preview_picture": null,
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Держатель стекла"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix_glass"
+            },
+            "variants": [
+                {
+                    "external_code": "2318c4a1-a888-4122-b53a-9f2d0b1b8b89",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-BGPYQA",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 7,
+                    "currency": "RUB",
+                    "is_default": true,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "848d2e97-1fa5-40ae-bc69-783693fd635c",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-IR0I48",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 6,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_chrome_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "64dc3193-dd5b-4777-b5c6-d63484203229",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-S3NNBW",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 5,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_black",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "22c6d4bc-d5af-4872-a4e1-2151b22ba8a8",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-BVTISV",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 2,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_bronze",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "dbe28a43-bfb4-450b-b4bb-676cf978fa4a",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-XYF8GO",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 3,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "8aa5cc95-5c73-4a35-ac1d-f98152db6e1f",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-CMRQWR",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 4,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "dbbae82a-21b7-428f-afbe-4339788fe5dc",
+                    "price_group_external_code": null,
+                    "sku": "SOEDINITEL-T-OBR-BXWMZ4",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 1,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 0,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
                     }
                 }
             ]
@@ -6671,7 +8065,7 @@
             "name": {
                 "ru": "Стабилизирующая штанга (прямоугольная)"
             },
-            "preview_picture": "products\/shower-crossbar-rect\/01M4GCGSB5K1WWZ8DDMCR4M0VR.png",
+            "preview_picture": "products\/shower-crossbar-rect\/01M4TVDAHEZXEGTJFHGKYSCQ2E.jpg",
             "detail_picture": null,
             "short_description": {
                 "ru": "Тип компонента: Стабилизирующая штанга"
@@ -6689,7 +8083,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1600,
+                    "cost_price": 1480,
                     "currency": "RUB",
                     "is_default": true,
                     "is_active": true,
@@ -6708,7 +8102,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1400,
+                    "cost_price": 1280,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6727,7 +8121,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1400,
+                    "cost_price": 1480,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6746,7 +8140,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 6570,
+                    "cost_price": 4320,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6765,7 +8159,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 6570,
+                    "cost_price": 4320,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6784,7 +8178,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 6850,
+                    "cost_price": 7160,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6803,7 +8197,69 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 7455,
+                    "cost_price": 3800,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                }
+            ]
+        },
+        {
+            "external_code": "prod_shower_crossbar_fix",
+            "product_type_external_code": "type_shower_crossbar",
+            "category_external_code": "cat_showers_crossbars",
+            "unit_code": "pcs",
+            "catalog_type": "product",
+            "slug": "kreplenie-dlia-priamougolnoi-stangi-k-stene",
+            "code": "crossbar_fix",
+            "name": {
+                "ru": "Крепление для прямоугольной штанги к стене"
+            },
+            "preview_picture": "products\/kreplenie-dlia-priamougolnoi-stangi-k-stene\/01M4TVYW4QPGV2MRJADJBRV6P2.png",
+            "detail_picture": null,
+            "short_description": {
+                "ru": "Тип компонента: Крепление к стене"
+            },
+            "description": [],
+            "is_active": true,
+            "eav": {
+                "type": "opt_sh_type_fix"
+            },
+            "variants": [
+                {
+                    "external_code": "var_shower_crossbar_fix_rect_gold",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX-RECT-GOLD",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 700,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_gold",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
+                    "external_code": "var_shower_crossbar_fix_rect_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX-RECT-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 548,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6816,48 +8272,24 @@
                     }
                 },
                 {
-                    "external_code": "var_shower_crossbar_crossbar_rect_gunmetal_grey",
+                    "external_code": "var_shower_crossbar_fix_rect_gold_matte",
                     "price_group_external_code": null,
-                    "sku": "CROSSBAR-CROSSBAR-RECT-GUNMETAL_GREY",
+                    "sku": "CROSSBAR-FIX-RECT-GOLD_MATTE",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 0,
+                    "cost_price": 1250,
                     "currency": "RUB",
                     "is_default": false,
-                    "is_active": false,
+                    "is_active": true,
                     "is_manual_pricing": true,
-                    "markup": 0,
+                    "markup": 65,
                     "stock": 10,
                     "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
+                        "furniture_type_id": "opt_furniture_color_gold_matte",
                         "crossbar_type_id": "opt_cb_type_rect"
                     }
-                }
-            ]
-        },
-        {
-            "external_code": "prod_shower_crossbar_fix",
-            "product_type_external_code": "type_shower_crossbar",
-            "category_external_code": "cat_showers_crossbars",
-            "unit_code": "pcs",
-            "catalog_type": "product",
-            "slug": "shower-crossbar-fix",
-            "code": "crossbar_fix",
-            "name": {
-                "ru": "Крепление штанги к стене"
-            },
-            "preview_picture": "products\/shower-crossbar-fix\/crossbar_fix.jpg",
-            "detail_picture": null,
-            "short_description": {
-                "ru": "Тип компонента: Крепление к стене"
-            },
-            "description": [],
-            "is_active": true,
-            "eav": {
-                "type": "opt_sh_type_fix"
-            },
-            "variants": [
+                },
                 {
                     "external_code": "var_shower_crossbar_fix_rect_bronze",
                     "price_group_external_code": null,
@@ -6865,7 +8297,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 830,
+                    "cost_price": 720,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6884,7 +8316,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 490,
+                    "cost_price": 500,
                     "currency": "RUB",
                     "is_default": true,
                     "is_active": true,
@@ -6903,7 +8335,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 720,
+                    "cost_price": 450,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6922,7 +8354,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 530,
+                    "cost_price": 500,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -6932,234 +8364,6 @@
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_black",
                         "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_rect_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-RECT-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 830,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_rect_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-RECT-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1220,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_rect_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-RECT-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 1050,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_rect_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-RECT-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 230,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 280,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 300,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 300,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 670,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_round_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX-ROUND-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_round"
                     }
                 }
             ]
@@ -7248,12 +8452,12 @@
             "category_external_code": "cat_showers_crossbars",
             "unit_code": "pcs",
             "catalog_type": "product",
-            "slug": "shower-crossbar-fix_glass",
+            "slug": "derzatel-stekla-dlia-priamougolnoi-stangi",
             "code": "crossbar_fix_glass",
             "name": {
-                "ru": "Держатель стекла для штанги"
+                "ru": "Держатель стекла для прямоугольной штанги"
             },
-            "preview_picture": "products\/shower-crossbar-fix_glass\/crossbar_fix_glass.jpg",
+            "preview_picture": "products\/derzatel-stekla-dlia-priamougolnoi-stangi\/01M4TW9J5D93A1NPS2NSDJCQK6.png",
             "detail_picture": null,
             "short_description": {
                 "ru": "Тип компонента: Держатель стекла"
@@ -7271,7 +8475,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 880,
+                    "cost_price": 770,
                     "currency": "RUB",
                     "is_default": true,
                     "is_active": true,
@@ -7284,13 +8488,32 @@
                     }
                 },
                 {
+                    "external_code": "var_shower_crossbar_fix_glass_rect_white",
+                    "price_group_external_code": null,
+                    "sku": "CROSSBAR-FIX_GLASS-RECT-WHITE",
+                    "name": [],
+                    "preview_picture": null,
+                    "detail_picture": null,
+                    "cost_price": 910,
+                    "currency": "RUB",
+                    "is_default": false,
+                    "is_active": true,
+                    "is_manual_pricing": true,
+                    "markup": 65,
+                    "stock": 10,
+                    "eav": {
+                        "furniture_type_id": "opt_furniture_color_white",
+                        "crossbar_type_id": "opt_cb_type_rect"
+                    }
+                },
+                {
                     "external_code": "var_shower_crossbar_fix_glass_rect_chrome_matte",
                     "price_group_external_code": null,
                     "sku": "CROSSBAR-FIX_GLASS-RECT-CHROME_MATTE",
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1250,
+                    "cost_price": 660,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -7328,7 +8551,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1280,
+                    "cost_price": 960,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -7347,7 +8570,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 1280,
+                    "cost_price": 930,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -7366,7 +8589,7 @@
                     "name": [],
                     "preview_picture": null,
                     "detail_picture": null,
-                    "cost_price": 2310,
+                    "cost_price": 1450,
                     "currency": "RUB",
                     "is_default": false,
                     "is_active": true,
@@ -7376,196 +8599,6 @@
                     "eav": {
                         "furniture_type_id": "opt_furniture_color_gold_matte",
                         "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 2310,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_rect_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-RECT-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_rect"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_chrome",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 520,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_chrome_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-CHROME_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 630,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_chrome_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_black",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BLACK",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 560,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_black",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_bronze",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-BRONZE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 750,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_bronze",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gold",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 860,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gold_matte",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GOLD_MATTE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gold_matte",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_white",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-WHITE",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 900,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": true,
-                    "is_manual_pricing": true,
-                    "markup": 65,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_white",
-                        "crossbar_type_id": "opt_cb_type_round"
-                    }
-                },
-                {
-                    "external_code": "var_shower_crossbar_fix_glass_round_gunmetal_grey",
-                    "price_group_external_code": null,
-                    "sku": "CROSSBAR-FIX_GLASS-ROUND-GUNMETAL_GREY",
-                    "name": [],
-                    "preview_picture": null,
-                    "detail_picture": null,
-                    "cost_price": 0,
-                    "currency": "RUB",
-                    "is_default": false,
-                    "is_active": false,
-                    "is_manual_pricing": true,
-                    "markup": 0,
-                    "stock": 10,
-                    "eav": {
-                        "furniture_type_id": "opt_furniture_color_gunmetal_grey",
-                        "crossbar_type_id": "opt_cb_type_round"
                     }
                 }
             ]
