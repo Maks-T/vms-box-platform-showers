@@ -387,7 +387,7 @@ class ShowersCalculatorBridgeController extends Controller
 
       // Определение точной роли компонента штанги
       $targetGroup = 'crossbar';
-      if (str_contains($productSlug, 'pod-45') || str_contains($productSlug, '45-gradus')) {
+      if (str_contains($productSlug, 'pod-45') || str_contains($productSlug, '45-gradus') || str_contains($productSlug, 'proizvolnyi-ugol')) {
         $targetGroup = 'connector_45';
       } elseif (str_contains($productSlug, 'soedinitel-t-obraznyi') || str_contains($productSlug, 't-obrazn')) {
         $targetGroup = 'connector_t';
