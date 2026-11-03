@@ -1,7 +1,14 @@
 {
-  "Access Control": "Контроль доступа",
-  "Catalog": "Каталог",
-  "Catalog Settings": "Настройки каталога",
-  "Inventory": "Склад",
-  "Configurations": "Конфигурации"
+  ", so that they can promptly start analysing the project.": ", для того чтобы он оперативно смог приступить к анализу проекта.",
+  "3 weeks": "3 недели",
+  "About the estimate and measurement": "О расчёте и замере",
+  "Company Contacts": "Контакты для обратной связи",
+  "Contact us and we will take :free, select the optimal hardware and help with all technical questions. You will receive a fixed exact project price.": "Свяжитесь с нами — мы сделаем для вас :free, подберем оптимальную фурнитуру, поможем решить все технические вопросы. И вы получите фиксированную точную стоимость проекта.",
+  "Email:": "Электронная почта:",
+  "Next step": "Следующий шаг",
+  "Production time": "Срок производства",
+  "Tell our manager your estimate number": "Сообщите нашему менеджеру номер вашего расчета",
+  "The cost of the product is approximate. The price may change slightly depending on the availability of certain hardware.": "Стоимость изделия представлена примерно. Цена может незначительно измениться из-за наличия той или иной фурнитуры.",
+  "The production time is :period.": "Срок изготовления составляет :period.",
+  "measurements free of charge": "бесплатно замеры"
 }

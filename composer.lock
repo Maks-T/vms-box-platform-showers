@@ -4992,7 +4992,7 @@
         },
         {
             "name": "nicole/box-core",
-            "version": "dev-main",
+            "version": "dev-main-english",
             "dist": {
                 "type": "path",
                 "url": "packages/box/nicole/core",
@@ -10268,7 +10268,7 @@
         },
         {
             "name": "valerie/box-industry-showers",
-            "version": "dev-main",
+            "version": "dev-valerie/industry-showers/main",
             "dist": {
                 "type": "path",
                 "url": "packages/box/valerie/industry-showers",
