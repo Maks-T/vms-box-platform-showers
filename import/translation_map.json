@@ -1,500 +1,1794 @@
 {
     "10 мм": {
-        "en": "10 mm"
+        "en": "10 mm",
+        "es": "10 mm",
+        "de": "10 mm",
+        "it": "10 mm",
+        "pl": "10 mm",
+        "tr": "10 mm"
     },
     "6 мм": {
-        "en": "6 mm"
+        "en": "6 mm",
+        "es": "6 mm",
+        "de": "6 mm",
+        "it": "6 mm",
+        "pl": "6 mm",
+        "tr": "6 mm"
     },
     "8 мм": {
-        "en": "8 mm"
+        "en": "8 mm",
+        "es": "8 mm",
+        "de": "8 mm",
+        "it": "8 mm",
+        "pl": "8 mm",
+        "tr": "8 mm"
     },
     "HEX Цвет": {
-        "en": "HEX Color"
+        "en": "HEX color",
+        "es": "Color HEX",
+        "de": "HEX-Farbe",
+        "it": "Colore HEX",
+        "pl": "Kolor HEX",
+        "tr": "HEX rengi"
     },
     "Авто-изображение": {
-        "en": "Auto image"
+        "en": "Auto image",
+        "es": "Imagen automática",
+        "de": "Automatisches Bild",
+        "it": "Immagine automatica",
+        "pl": "Automatyczny obraz",
+        "tr": "Otomatik görsel"
     },
     "Админ": {
-        "en": "Admin"
+        "en": "Admin",
+        "es": "Administrador",
+        "de": "Administrator",
+        "it": "Amministratore",
+        "pl": "Administrator",
+        "tr": "Yönetici"
+    },
+    "Базовая розничная цена в системе": {
+        "en": "Base retail price in the system",
+        "es": "Precio base de venta al público en el sistema",
+        "de": "Basis-Verkaufspreis im System",
+        "it": "Prezzo base al dettaglio nel sistema",
+        "pl": "Podstawowa cena detaliczna w systemie",
+        "tr": "Sistemdeki temel perakende fiyat"
     },
     "Базовый выезд": {
-        "en": "Base callout"
+        "en": "Base call-out",
+        "es": "Desplazamiento base",
+        "de": "Basis-Anfahrt",
+        "it": "Uscita base",
+        "pl": "Dojazd podstawowy",
+        "tr": "Temel ziyaret"
     },
     "Без штанги (при креплении к потолку)": {
-        "en": "Without rod (ceiling mounted)"
+        "en": "No rod (ceiling mounting)",
+        "es": "Sin barra (fijación al techo)",
+        "de": "Ohne Stange (bei Deckenbefestigung)",
+        "it": "Senza barra (con fissaggio a soffitto)",
+        "pl": "Bez drążka (przy mocowaniu do sufitu)",
+        "tr": "Çubuksuz (tavana montajda)"
     },
     "Белорусский рубль": {
-        "en": "Belarusian Ruble"
+        "en": "Belarusian ruble",
+        "es": "Rublo bielorruso",
+        "de": "Belarussischer Rubel",
+        "it": "Rublo bielorusso",
+        "pl": "Rubel białoruski",
+        "tr": "Belarus rublesi"
     },
     "Белый": {
-        "en": "White"
+        "en": "White",
+        "es": "Blanco",
+        "de": "Weiß",
+        "it": "Bianco",
+        "pl": "Biały",
+        "tr": "Beyaz"
     },
     "Бронза": {
-        "en": "Bronze"
-    },
-    "Валюта для сметы и кто может ее менять": {
-        "en": "Estimate currency and edit permissions"
+        "en": "Bronze",
+        "es": "Bronce",
+        "de": "Bronze",
+        "it": "Bronzo",
+        "pl": "Brąz",
+        "tr": "Bronz"
     },
     "Гармошка, 2 стекла": {
-        "en": "Bi-fold, 2 glass panels"
+        "en": "Folding, 2 panels",
+        "es": "Plegable, 2 vidrios",
+        "de": "Falttür, 2 Glasflügel",
+        "it": "A soffietto, 2 vetri",
+        "pl": "Składane, 2 szyby",
+        "tr": "Katlanır, 2 cam"
     },
     "Гармошка, 3 стекла": {
-        "en": "Bi-fold, 3 glass panels"
+        "en": "Folding, 3 panels",
+        "es": "Plegable, 3 vidrios",
+        "de": "Falttür, 3 Glasflügel",
+        "it": "A soffietto, 3 vetri",
+        "pl": "Składane, 3 szyby",
+        "tr": "Katlanır, 3 cam"
     },
     "Две раздвижные двери": {
-        "en": "Double sliding doors"
+        "en": "Two sliding doors",
+        "es": "Dos puertas correderas",
+        "de": "Zwei Schiebetüren",
+        "it": "Due porte scorrevoli",
+        "pl": "Dwoje drzwi przesuwnych",
+        "tr": "İki sürme kapı"
     },
     "Две распашные двери": {
-        "en": "Double swing doors"
+        "en": "Two hinged doors",
+        "es": "Dos puertas abatibles",
+        "de": "Zwei Pendeltüren",
+        "it": "Due porte a battente",
+        "pl": "Dwoje drzwi uchylnych",
+        "tr": "İki menteşeli kapı"
     },
     "Дверь в нишу": {
-        "en": "Niche door"
+        "en": "Niche door",
+        "es": "Puerta para hueco",
+        "de": "Nischentür",
+        "it": "Porta per nicchia",
+        "pl": "Drzwi do wnęki",
+        "tr": "Niş kapısı"
     },
     "Держатель стекла": {
-        "en": "Glass clamp"
+        "en": "Glass Holder",
+        "es": "Soporte de vidrio",
+        "de": "Glashalter",
+        "it": "Morsetto per vetro",
+        "pl": "Uchwyt do szkła",
+        "tr": "Cam Tutucu"
     },
-    "Держатель стекла для штанги": {
-        "en": "Glass holder for support bar"
+    "Держатель стекла для квадратной штанги": {
+        "en": "Glass holder for square rod",
+        "es": "Soporte de vidrio para barra cuadrada",
+        "de": "Glashalter für quadratische Stange",
+        "it": "Morsetto per vetro per barra quadrata",
+        "pl": "Uchwyt do szkła do drążka kwadratowego",
+        "tr": "Kare çubuk için cam tutucu"
+    },
+    "Держатель стекла для круглой штанги": {
+        "en": "Glass holder for round rod",
+        "es": "Soporte de vidrio para barra redonda",
+        "de": "Glashalter für runde Stange",
+        "it": "Morsetto per vetro per barra tonda",
+        "pl": "Uchwyt do szkła do drążka okrągłego",
+        "tr": "Yuvarlak çubuk için cam tutucu"
+    },
+    "Держатель стекла для прямоугольной штанги": {
+        "en": "Glass holder for rectangular rod",
+        "es": "Soporte de vidrio para barra rectangular",
+        "de": "Glashalter für rechteckige Stange",
+        "it": "Morsetto per vetro per barra rettangolare",
+        "pl": "Uchwyt do szkła do drążka prostokątnego",
+        "tr": "Dikdörtgen çubuk için cam tutucu"
     },
     "Доллар США": {
-        "en": "US Dollar"
+        "en": "US dollar",
+        "es": "Dólar estadounidense",
+        "de": "US-Dollar",
+        "it": "Dollaro statunitense",
+        "pl": "Dolar amerykański",
+        "tr": "ABD doları"
     },
     "Доставка": {
-        "en": "Delivery"
+        "en": "Delivery",
+        "es": "Entrega",
+        "de": "Lieferung",
+        "it": "Consegna",
+        "pl": "Dostawa",
+        "tr": "Teslimat"
     },
     "Доставка (Тариф за 1 км за МКАД)": {
-        "en": "Delivery (Rate per km outside MKAD)"
+        "en": "Delivery (rate per 1 km outside MKAD)",
+        "es": "Entrega (tarifa por 1 km fuera del MKAD)",
+        "de": "Lieferung (Tarif je 1 km außerhalb des MKAD)",
+        "it": "Consegna (tariffa per 1 km oltre il MKAD)",
+        "pl": "Dostawa (stawka za 1 km poza MKAD)",
+        "tr": "Teslimat (MKAD dışında 1 km ücreti)"
     },
     "Доставка (в пределах МКАД)": {
-        "en": "Delivery (within MKAD)"
+        "en": "Delivery (within MKAD)",
+        "es": "Entrega (dentro del MKAD)",
+        "de": "Lieferung (innerhalb des MKAD)",
+        "it": "Consegna (entro il MKAD)",
+        "pl": "Dostawa (w granicach MKAD)",
+        "tr": "Teslimat (MKAD içinde)"
     },
     "Душевые ограждения": {
-        "en": "Shower enclosures"
+        "en": "Shower enclosures",
+        "es": "Mamparas de ducha",
+        "de": "Duschabtrennungen",
+        "it": "Box doccia",
+        "pl": "Kabiny prysznicowe",
+        "tr": "Duşakabinler"
     },
     "Заглушка": {
-        "en": "End cap"
+        "en": "Cap",
+        "es": "Tapa terminal",
+        "de": "Endkappe",
+        "it": "Terminale di chiusura",
+        "pl": "Zaślepka",
+        "tr": "Uç Kapağı"
     },
     "Заглушка П-профиля": {
-        "en": "U-profile end cap"
+        "en": "U-profile cap",
+        "es": "Tapa terminal de perfil en U",
+        "de": "Endkappe für U-Profil",
+        "it": "Terminale per profilo a U",
+        "pl": "Zaślepka profilu U",
+        "tr": "U profil uç kapağı"
     },
     "Замер": {
-        "en": "Measurement"
+        "en": "Measurement",
+        "es": "Medición",
+        "de": "Aufmaß",
+        "it": "Rilievo misure",
+        "pl": "Pomiar",
+        "tr": "Ölçüm"
     },
     "Замер (Выезд в пределах МКАД)": {
-        "en": "Measurement (Within MKAD)"
+        "en": "Measurement (visit within MKAD)",
+        "es": "Medición (desplazamiento dentro del MKAD)",
+        "de": "Aufmaß (Anfahrt innerhalb des MKAD)",
+        "it": "Rilievo misure (uscita entro il MKAD)",
+        "pl": "Pomiar (dojazd w granicach MKAD)",
+        "tr": "Ölçüm (MKAD içinde ziyaret)"
     },
     "Замер (Тариф за 1 км за МКАД)": {
-        "en": "Measurement (Rate per km outside MKAD)"
+        "en": "Measurement (rate per 1 km outside MKAD)",
+        "es": "Medición (tarifa por 1 km fuera del MKAD)",
+        "de": "Aufmaß (Tarif je 1 km außerhalb des MKAD)",
+        "it": "Rilievo misure (tariffa per 1 km oltre il MKAD)",
+        "pl": "Pomiar (stawka za 1 km poza MKAD)",
+        "tr": "Ölçüm (MKAD dışında 1 km ücreti)"
     },
     "Значение админа": {
-        "en": "Admin value"
+        "en": "Admin value",
+        "es": "Valor del administrador",
+        "de": "Administratorwert",
+        "it": "Valore amministratore",
+        "pl": "Wartość administratora",
+        "tr": "Yönetici değeri"
     },
     "Значение менеджера": {
-        "en": "Manager value"
+        "en": "Manager value",
+        "es": "Valor del gestor",
+        "de": "Managerwert",
+        "it": "Valore responsabile",
+        "pl": "Wartość menedżera",
+        "tr": "Satış temsilcisi değeri"
     },
     "Значение пользователя": {
-        "en": "User value"
+        "en": "User value",
+        "es": "Valor del usuario",
+        "de": "Benutzerwert",
+        "it": "Valore utente",
+        "pl": "Wartość użytkownika",
+        "tr": "Kullanıcı değeri"
     },
     "Золото": {
-        "en": "Gold"
+        "en": "Gold",
+        "es": "Oro",
+        "de": "Gold",
+        "it": "Oro",
+        "pl": "Złoty",
+        "tr": "Altın"
     },
     "Имя интерфейса": {
-        "en": "Interface name"
+        "en": "Interface name",
+        "es": "Nombre de la interfaz",
+        "de": "Oberflächenname",
+        "it": "Nome dell'interfaccia",
+        "pl": "Nazwa interfejsu",
+        "tr": "Arayüz adı"
+    },
+    "Карточка разбивки стоимости (Изделия, Монтаж, Доставка)": {
+        "en": "Price breakdown card (Products, Installation, Delivery)",
+        "es": "Tarjeta de desglose del precio (Productos, Instalación, Entrega)",
+        "de": "Preisaufschlüsselung (Produkte, Montage, Lieferung)",
+        "it": "Scheda di ripartizione del prezzo (Prodotti, Installazione, Consegna)",
+        "pl": "Karta rozbicia kosztów (Wyroby, Montaż, Dostawa)",
+        "tr": "Fiyat dökümü kartı (Ürünler, Montaj, Teslimat)"
+    },
+    "Кнопка \"Поделиться ссылкой\"": {
+        "en": "\"Share link\" button",
+        "es": "Botón «Compartir enlace»",
+        "de": "Schaltfläche „Link teilen“",
+        "it": "Pulsante «Condividi link»",
+        "pl": "Przycisk „Udostępnij link”",
+        "tr": "\"Bağlantıyı paylaş\" düğmesi"
+    },
+    "Кнопка \"Распечатать\"": {
+        "en": "\"Print\" button",
+        "es": "Botón «Imprimir»",
+        "de": "Schaltfläche „Drucken“",
+        "it": "Pulsante «Stampa»",
+        "pl": "Przycisk „Drukuj”",
+        "tr": "\"Yazdır\" düğmesi"
+    },
+    "Кнопка \"Скачать КП\" (PDF)": {
+        "en": "\"Download proposal\" button (PDF)",
+        "es": "Botón «Descargar presupuesto» (PDF)",
+        "de": "Schaltfläche „Angebot herunterladen“ (PDF)",
+        "it": "Pulsante «Scarica offerta» (PDF)",
+        "pl": "Przycisk „Pobierz ofertę” (PDF)",
+        "tr": "\"Teklifi indir\" düğmesi (PDF)"
     },
     "Коннектор": {
-        "en": "Connector"
+        "en": "Connector",
+        "es": "Conector",
+        "de": "Verbinder",
+        "it": "Raccordo",
+        "pl": "Łącznik",
+        "tr": "Konnektör"
     },
     "Коннектор трека угловой": {
-        "en": "Corner track connector"
+        "en": "Corner track connector",
+        "es": "Conector de carril angular",
+        "de": "Eck-Schienenverbinder",
+        "it": "Raccordo angolare per binario",
+        "pl": "Łącznik narożny bieżni",
+        "tr": "Köşe ray konnektörü"
+    },
+    "Крепление для квадратной штанги к стене": {
+        "en": "Wall mount for square rod",
+        "es": "Soporte a pared para barra cuadrada",
+        "de": "Wandbefestigung für quadratische Stange",
+        "it": "Fissaggio a parete per barra quadrata",
+        "pl": "Mocowanie ścienne drążka kwadratowego",
+        "tr": "Kare çubuk için duvar bağlantısı"
+    },
+    "Крепление для круглой штанги к стене": {
+        "en": "Wall mount for round rod",
+        "es": "Soporte a pared para barra redonda",
+        "de": "Wandbefestigung für runde Stange",
+        "it": "Fissaggio a parete per barra tonda",
+        "pl": "Mocowanie ścienne drążka okrągłego",
+        "tr": "Yuvarlak çubuk için duvar bağlantısı"
+    },
+    "Крепление для прямоугольной штанги к стене": {
+        "en": "Wall mount for rectangular rod",
+        "es": "Soporte a pared para barra rectangular",
+        "de": "Wandbefestigung für rechteckige Stange",
+        "it": "Fissaggio a parete per barra rettangolare",
+        "pl": "Mocowanie ścienne drążka prostokątnego",
+        "tr": "Dikdörtgen çubuk için duvar bağlantısı"
     },
     "Крепление к стене": {
-        "en": "Wall mount bracket"
-    },
-    "Крепление штанги к стене": {
-        "en": "Support bar wall mount"
+        "en": "Wall Mount",
+        "es": "Soporte a pared",
+        "de": "Wandbefestigung",
+        "it": "Fissaggio a parete",
+        "pl": "Mocowanie ścienne",
+        "tr": "Duvar Bağlantı Parçası"
     },
     "Круглая": {
-        "en": "Round"
+        "en": "Round",
+        "es": "Redonda",
+        "de": "Rund",
+        "it": "Tonda",
+        "pl": "Okrągły",
+        "tr": "Yuvarlak"
+    },
+    "Круглая стабилизирующая штанга d19 для душевых перегородок": {
+        "en": "Round stabilizing rod d19 for shower partitions",
+        "es": "Barra estabilizadora redonda d19 para mamparas de ducha",
+        "de": "Runde Stabilisationsstange d19 für Duschabtrennungen",
+        "it": "Barra stabilizzatrice tonda d19 per pareti doccia",
+        "pl": "Okrągły drążek stabilizujący d19 do ścianek prysznicowych",
+        "tr": "Duşakabinler için yuvarlak denge çubuğu d19"
     },
     "Латунь": {
-        "en": "Brass"
+        "en": "Brass",
+        "es": "Latón",
+        "de": "Messing",
+        "it": "Ottone",
+        "pl": "Mosiądz",
+        "tr": "Pirinç"
     },
     "Лимит параметров distance": {
-        "en": "Distance limit"
+        "en": "Parameter limit: distance",
+        "es": "Límite de parámetros: distance",
+        "de": "Parametergrenze: distance",
+        "it": "Limite parametri: distance",
+        "pl": "Limit parametrów: distance",
+        "tr": "Parametre limiti: distance"
     },
     "Лимит параметров level": {
-        "en": "Floor limit"
+        "en": "Parameter limit: level",
+        "es": "Límite de parámetros: level",
+        "de": "Parametergrenze: level",
+        "it": "Limite parametri: level",
+        "pl": "Limit parametrów: level",
+        "tr": "Parametre limiti: level"
     },
     "Лимиты параметров услуг": {
-        "en": "Service parameter limits"
+        "en": "Service parameter limits",
+        "es": "Límites de parámetros de servicios",
+        "de": "Grenzwerte der Leistungsparameter",
+        "it": "Limiti dei parametri dei servizi",
+        "pl": "Limity parametrów usług",
+        "tr": "Hizmet parametre limitleri"
     },
     "Лимиты размеров для corner": {
-        "en": "Size limits for corner"
+        "en": "Measure limits for corner",
+        "es": "Límites de medidas para corner",
+        "de": "Maßgrenzen für corner",
+        "it": "Limiti di misura per corner",
+        "pl": "Limity wymiarów dla corner",
+        "tr": "corner için ölçü limitleri"
     },
     "Лимиты размеров для curtain": {
-        "en": "Size limits for bath screen"
+        "en": "Measure limits for curtain",
+        "es": "Límites de medidas para curtain",
+        "de": "Maßgrenzen für curtain",
+        "it": "Limiti di misura per curtain",
+        "pl": "Limity wymiarów dla curtain",
+        "tr": "curtain için ölçü limitleri"
     },
     "Лимиты размеров для door": {
-        "en": "Size limits for door"
+        "en": "Measure limits for door",
+        "es": "Límites de medidas para door",
+        "de": "Maßgrenzen für door",
+        "it": "Limiti di misura per door",
+        "pl": "Limity wymiarów dla door",
+        "tr": "door için ölçü limitleri"
     },
     "Лимиты размеров для free": {
-        "en": "Size limits for walk-in"
+        "en": "Measure limits for free",
+        "es": "Límites de medidas para free",
+        "de": "Maßgrenzen für free",
+        "it": "Limiti di misura per free",
+        "pl": "Limity wymiarów dla free",
+        "tr": "free için ölçü limitleri"
     },
     "Лимиты размеров для line": {
-        "en": "Size limits for inline"
+        "en": "Measure limits for line",
+        "es": "Límites de medidas para line",
+        "de": "Maßgrenzen für line",
+        "it": "Limiti di misura per line",
+        "pl": "Limity wymiarów dla line",
+        "tr": "line için ölçü limitleri"
     },
     "Лимиты размеров для trapezoid": {
-        "en": "Size limits for trapezoid (neo-angle)"
+        "en": "Measure limits for trapezoid",
+        "es": "Límites de medidas para trapezoid",
+        "de": "Maßgrenzen für trapezoid",
+        "it": "Limiti di misura per trapezoid",
+        "pl": "Limity wymiarów dla trapezoid",
+        "tr": "trapezoid için ölçü limitleri"
     },
     "Лимиты размеров для ushaped": {
-        "en": "Size limits for U-shaped"
+        "en": "Measure limits for ushaped",
+        "es": "Límites de medidas para ushaped",
+        "de": "Maßgrenzen für ushaped",
+        "it": "Limiti di misura per ushaped",
+        "pl": "Limity wymiarów dla ushaped",
+        "tr": "ushaped için ölçü limitleri"
     },
     "Лимиты размеров душевых": {
-        "en": "Shower enclosure size limits"
+        "en": "Shower Measure Limits",
+        "es": "Límites de medidas de duchas",
+        "de": "Maßgrenzen für Duschen",
+        "it": "Limiti di misura delle docce",
+        "pl": "Limity wymiarów kabin",
+        "tr": "Duş ölçü limitleri"
     },
     "Линейная": {
-        "en": "Inline"
+        "en": "Straight",
+        "es": "Recta",
+        "de": "Gerade",
+        "it": "Lineare",
+        "pl": "Prosta",
+        "tr": "Düz"
     },
     "Магнитный уплотнитель": {
-        "en": "Magnetic seal"
+        "en": "Magnetic seal",
+        "es": "Perfil magnético de estanqueidad",
+        "de": "Magnetdichtung",
+        "it": "Guarnizione magnetica",
+        "pl": "Uszczelka magnetyczna",
+        "tr": "Manyetik fitil"
     },
     "Магнитный уплотнитель, 3м": {
-        "en": "Magnetic seal, 3m"
+        "en": "Magnetic seal, 3 m",
+        "es": "Perfil magnético de estanqueidad, 3 m",
+        "de": "Magnetdichtung, 3 m",
+        "it": "Guarnizione magnetica, 3 m",
+        "pl": "Uszczelka magnetyczna, 3 m",
+        "tr": "Manyetik fitil, 3 m"
     },
     "Макс. высота": {
-        "en": "Max. height"
+        "en": "Max. height",
+        "es": "Altura máx.",
+        "de": "Max. Höhe",
+        "it": "Altezza max",
+        "pl": "Maks. wysokość",
+        "tr": "Maks. yükseklik"
     },
     "Макс. длина": {
-        "en": "Max. length"
+        "en": "Max. length",
+        "es": "Longitud máx.",
+        "de": "Max. Länge",
+        "it": "Lunghezza max",
+        "pl": "Maks. długość",
+        "tr": "Maks. uzunluk"
     },
     "Макс. значение": {
-        "en": "Max. value"
+        "en": "Max. value",
+        "es": "Valor máx.",
+        "de": "Max. Wert",
+        "it": "Valore max",
+        "pl": "Maks. wartość",
+        "tr": "Maks. değer"
     },
     "Материал": {
-        "en": "Material"
+        "en": "Material",
+        "es": "Material",
+        "de": "Material",
+        "it": "Materiale",
+        "pl": "Materiał",
+        "tr": "Malzeme"
     },
     "Матовое золото": {
-        "en": "Matte gold"
+        "en": "Matte gold",
+        "es": "Oro mate",
+        "de": "Gold matt",
+        "it": "Oro satinato",
+        "pl": "Złoto matowe",
+        "tr": "Mat altın"
     },
     "Матовый хром": {
-        "en": "Matte chrome"
+        "en": "Matte chrome",
+        "es": "Cromo mate",
+        "de": "Chrom matt",
+        "it": "Cromo satinato",
+        "pl": "Chrom matowy",
+        "tr": "Mat krom"
     },
     "Менеджер": {
-        "en": "Manager"
+        "en": "Manager",
+        "es": "Gestor",
+        "de": "Manager",
+        "it": "Responsabile",
+        "pl": "Menedżer",
+        "tr": "Satış temsilcisi"
     },
     "Металличность": {
-        "en": "Metallic"
+        "en": "Metalness",
+        "es": "Metalicidad",
+        "de": "Metallizität",
+        "it": "Metallicità",
+        "pl": "Metaliczność",
+        "tr": "Metaliklik"
     },
     "Мин. высота": {
-        "en": "Min. height"
+        "en": "Min. height",
+        "es": "Altura mín.",
+        "de": "Min. Höhe",
+        "it": "Altezza min",
+        "pl": "Min. wysokość",
+        "tr": "Min. yükseklik"
     },
     "Мин. длина": {
-        "en": "Min. length"
+        "en": "Min. length",
+        "es": "Longitud mín.",
+        "de": "Min. Länge",
+        "it": "Lunghezza min",
+        "pl": "Min. długość",
+        "tr": "Min. uzunluk"
     },
     "Монтаж": {
-        "en": "Installation"
+        "en": "Installation",
+        "es": "Instalación",
+        "de": "Montage",
+        "it": "Installazione",
+        "pl": "Montaż",
+        "tr": "Montaj"
     },
     "Монтаж дверь в нишу": {
-        "en": "Installation: niche door"
+        "en": "Installation: niche door",
+        "es": "Instalación: puerta para hueco",
+        "de": "Montage: Nischentür",
+        "it": "Installazione: porta per nicchia",
+        "pl": "Montaż: drzwi do wnęki",
+        "tr": "Montaj: niş kapısı"
     },
     "Монтаж линейная раздвижная": {
-        "en": "Installation: inline sliding"
+        "en": "Installation: straight sliding",
+        "es": "Instalación: recta corredera",
+        "de": "Montage: gerade Schiebetür",
+        "it": "Installazione: lineare scorrevole",
+        "pl": "Montaż: prosta przesuwna",
+        "tr": "Montaj: düz sürme"
     },
     "Монтаж линейная распашная": {
-        "en": "Installation: inline swing"
+        "en": "Installation: straight hinged",
+        "es": "Instalación: recta abatible",
+        "de": "Montage: gerade Pendeltür",
+        "it": "Installazione: lineare a battente",
+        "pl": "Montaż: prosta uchylna",
+        "tr": "Montaj: düz menteşeli"
     },
     "Монтаж п-образная": {
-        "en": "Installation: U-shaped enclosure"
+        "en": "Installation: U-shaped",
+        "es": "Instalación: en U",
+        "de": "Montage: U-förmig",
+        "it": "Installazione: a U",
+        "pl": "Montaż: w kształcie U",
+        "tr": "Montaj: U şeklinde"
     },
     "Монтаж свободный вход": {
-        "en": "Installation: walk-in screen"
+        "en": "Installation: walk-in",
+        "es": "Instalación: entrada libre (walk-in)",
+        "de": "Montage: Walk-in",
+        "it": "Installazione: walk-in",
+        "pl": "Montaż: walk-in",
+        "tr": "Montaj: walk-in"
     },
     "Монтаж трапециевидная": {
-        "en": "Installation: neo-angle enclosure"
+        "en": "Installation: trapezoid",
+        "es": "Instalación: trapezoidal",
+        "de": "Montage: trapezförmig",
+        "it": "Installazione: trapezoidale",
+        "pl": "Montaż: trapezowa",
+        "tr": "Montaj: trapez"
     },
     "Монтаж угловая раздвижная": {
-        "en": "Installation: corner sliding"
+        "en": "Installation: corner sliding",
+        "es": "Instalación: angular corredera",
+        "de": "Montage: Eck-Schiebetür",
+        "it": "Installazione: angolare scorrevole",
+        "pl": "Montaż: narożna przesuwna",
+        "tr": "Montaj: köşe sürme"
     },
     "Монтаж угловая распашная": {
-        "en": "Installation: corner swing"
+        "en": "Installation: corner hinged",
+        "es": "Instalación: angular abatible",
+        "de": "Montage: Eck-Pendeltür",
+        "it": "Installazione: angolare a battente",
+        "pl": "Montaż: narożna uchylna",
+        "tr": "Montaj: köşe menteşeli"
     },
     "Монтаж шторка гармошка": {
-        "en": "Installation: bi-fold bath screen"
+        "en": "Installation: folding bath screen",
+        "es": "Instalación: mampara de bañera plegable",
+        "de": "Montage: Badewannenaufsatz Falttür",
+        "it": "Installazione: parete vasca a soffietto",
+        "pl": "Montaż: parawan nawannowy składany",
+        "tr": "Montaj: katlanır küvet paravanı"
     },
     "Монтаж шторка раздвижная": {
-        "en": "Installation: sliding bath screen"
+        "en": "Installation: sliding bath screen",
+        "es": "Instalación: mampara de bañera corredera",
+        "de": "Montage: Badewannenaufsatz Schiebetür",
+        "it": "Installazione: parete vasca scorrevole",
+        "pl": "Montaż: parawan nawannowy przesuwny",
+        "tr": "Montaj: sürme küvet paravanı"
     },
     "Монтаж шторка с распашной дверью": {
-        "en": "Installation: swing bath screen"
+        "en": "Installation: bath screen with hinged door",
+        "es": "Instalación: mampara de bañera con puerta abatible",
+        "de": "Montage: Badewannenaufsatz mit Pendeltür",
+        "it": "Installazione: parete vasca con porta a battente",
+        "pl": "Montaż: parawan nawannowy z drzwiami uchylnymi",
+        "tr": "Montaj: menteşeli kapılı küvet paravanı"
     },
     "Монтаж шторка стационарная": {
-        "en": "Installation: fixed bath screen"
+        "en": "Installation: fixed bath screen",
+        "es": "Instalación: mampara de bañera fija",
+        "de": "Montage: fester Badewannenaufsatz",
+        "it": "Installazione: parete vasca fissa",
+        "pl": "Montaż: parawan nawannowy stały",
+        "tr": "Montaj: sabit küvet paravanı"
     },
     "Нержавеющая сталь": {
-        "en": "Stainless steel"
+        "en": "Stainless steel",
+        "es": "Acero inoxidable",
+        "de": "Edelstahl",
+        "it": "Acciaio inox",
+        "pl": "Stal nierdzewna",
+        "tr": "Paslanmaz çelik"
+    },
+    "Нижняя плашка итоговой суммы и статуса заказа": {
+        "en": "Bottom bar with order total and status",
+        "es": "Barra inferior con el total y el estado del pedido",
+        "de": "Untere Leiste mit Gesamtsumme und Bestellstatus",
+        "it": "Barra inferiore con totale e stato dell'ordine",
+        "pl": "Dolny pasek z sumą i statusem zamówienia",
+        "tr": "Sipariş toplamı ve durumu içeren alt çubuk"
     },
     "Одна раздвижная дверь": {
-        "en": "Single sliding door"
+        "en": "One sliding door",
+        "es": "Una puerta corredera",
+        "de": "Eine Schiebetür",
+        "it": "Una porta scorrevole",
+        "pl": "Jedne drzwi przesuwne",
+        "tr": "Tek sürme kapı"
     },
     "Одна распашная дверь": {
-        "en": "Single swing door"
+        "en": "One hinged door",
+        "es": "Una puerta abatible",
+        "de": "Eine Pendeltür",
+        "it": "Una porta a battente",
+        "pl": "Jedne drzwi uchylne",
+        "tr": "Tek menteşeli kapı"
+    },
+    "Опция \"Выносной порог\"": {
+        "en": "\"Separate doorstep\" option",
+        "es": "Opción «Umbral independiente»",
+        "de": "Option „Separate Schwelle“",
+        "it": "Opzione «Soglia separata»",
+        "pl": "Opcja „Osobny próg”",
+        "tr": "\"Ayrı eşik\" seçeneği"
+    },
+    "Опция \"Обрамление П-профилем\"": {
+        "en": "\"U-profile framing\" option",
+        "es": "Opción «Marco con perfil en U»",
+        "de": "Option „Einfassung mit U-Profil“",
+        "it": "Opzione «Cornice con profilo a U»",
+        "pl": "Opcja „Obramowanie profilem U”",
+        "tr": "\"U profil çerçeve\" seçeneği"
     },
     "Оружейная сталь": {
-        "en": "Gunmetal"
+        "en": "Gunmetal",
+        "es": "Gunmetal",
+        "de": "Gunmetal",
+        "it": "Canna di fucile",
+        "pl": "Gunmetal",
+        "tr": "Gunmetal"
+    },
+    "Отключенные типы дверей (черный список)": {
+        "en": "Disabled door types (blacklist)",
+        "es": "Tipos de puerta desactivados (lista negra)",
+        "de": "Deaktivierte Türtypen (Blacklist)",
+        "it": "Tipi di porta disattivati (blacklist)",
+        "pl": "Wyłączone typy drzwi (czarna lista)",
+        "tr": "Devre dışı kapı tipleri (kara liste)"
+    },
+    "Отображение цен в карточках каталогов (ручки, петли, стекло)": {
+        "en": "Prices in catalog cards (handles, hinges, glass)",
+        "es": "Precios en las fichas del catálogo (tiradores, bisagras, vidrio)",
+        "de": "Preise in Katalogkarten (Griffe, Scharniere, Glas)",
+        "it": "Prezzi nelle schede del catalogo (maniglie, cerniere, vetro)",
+        "pl": "Ceny w kartach katalogu (uchwyty, zawiasy, szkło)",
+        "tr": "Katalog kartlarında fiyatlar (kulplar, menteşeler, cam)"
     },
     "П-образная": {
-        "en": "U-shaped"
+        "en": "U-shaped",
+        "es": "En U",
+        "de": "U-förmig",
+        "it": "A U",
+        "pl": "W kształcie U",
+        "tr": "U şeklinde"
     },
     "П-профиль": {
-        "en": "U-profile"
+        "en": "U-profile",
+        "es": "Perfil en U",
+        "de": "U-Profil",
+        "it": "Profilo a U",
+        "pl": "Profil U",
+        "tr": "U profil"
     },
     "Параметры интерфейса калькулятора": {
-        "en": "Calculator interface settings"
+        "en": "Calculator interface parameters",
+        "es": "Parámetros de la interfaz de la calculadora",
+        "de": "Parameter der Kalkulator-Oberfläche",
+        "it": "Parametri dell'interfaccia del calcolatore",
+        "pl": "Parametry interfejsu kalkulatora",
+        "tr": "Hesaplayıcı arayüz parametreleri"
     },
-    "Петли душевые": {
-        "en": "Shower hinges"
+    "Петли душевые (Латунь)": {
+        "en": "Shower hinges (Brass)",
+        "es": "Bisagras de ducha (Latón)",
+        "de": "Duschscharniere (Messing)",
+        "it": "Cerniere per doccia (Ottone)",
+        "pl": "Zawiasy prysznicowe (Mosiądz)",
+        "tr": "Duş menteşeleri (Pirinç)"
     },
     "Петли и треки": {
-        "en": "Hinges & tracks"
+        "en": "Hinges and tracks",
+        "es": "Bisagras y carriles",
+        "de": "Scharniere und Laufschienen",
+        "it": "Cerniere e binari",
+        "pl": "Zawiasy i bieżnie",
+        "tr": "Menteşeler ve raylar"
     },
     "Петля": {
-        "en": "Hinge"
+        "en": "Hinge",
+        "es": "Bisagra",
+        "de": "Scharnier",
+        "it": "Cerniera",
+        "pl": "Zawias",
+        "tr": "Menteşe"
+    },
+    "Петля душевая (латунь)": {
+        "en": "Shower hinge (brass)",
+        "es": "Bisagra de ducha (latón)",
+        "de": "Duschscharnier (Messing)",
+        "it": "Cerniera per doccia (ottone)",
+        "pl": "Zawias prysznicowy (mosiądz)",
+        "tr": "Duş menteşesi (pirinç)"
+    },
+    "Петля душевая (цинк)": {
+        "en": "Shower hinge (zinc)",
+        "es": "Bisagra de ducha (zinc)",
+        "de": "Duschscharnier (Zink)",
+        "it": "Cerniera per doccia (zinco)",
+        "pl": "Zawias prysznicowy (cynk)",
+        "tr": "Duş menteşesi (çinko)"
     },
     "Подъем": {
-        "en": "Lifting to floor"
+        "en": "Lifting",
+        "es": "Subida",
+        "de": "Etagentransport",
+        "it": "Consegna al piano",
+        "pl": "Wniesienie",
+        "tr": "Kata taşıma"
     },
     "Подъем без лифта (за 1 этаж / 1 стекло)": {
-        "en": "Lifting without elevator (per 1 floor / 1 glass)"
+        "en": "Lifting without elevator (per 1 floor / 1 glass panel)",
+        "es": "Subida sin ascensor (por 1 planta / 1 vidrio)",
+        "de": "Etagentransport ohne Aufzug (je 1 Etage / 1 Glasscheibe)",
+        "it": "Consegna al piano senza ascensore (per 1 piano / 1 vetro)",
+        "pl": "Wniesienie bez windy (za 1 piętro / 1 szybę)",
+        "tr": "Asansörsüz kata taşıma (1 kat / 1 cam başına)"
     },
     "Подъем на грузовом лифте": {
-        "en": "Lifting by freight elevator"
+        "en": "Lifting by freight elevator",
+        "es": "Subida en montacargas",
+        "de": "Transport mit Lastenaufzug",
+        "it": "Consegna al piano con montacarichi",
+        "pl": "Wniesienie windą towarową",
+        "tr": "Yük asansörüyle kata taşıma"
     },
     "Подъем на этаж": {
-        "en": "Lifting to floor"
+        "en": "Lifting to the floor",
+        "es": "Subida a la planta",
+        "de": "Transport ins Stockwerk",
+        "it": "Consegna al piano",
+        "pl": "Wniesienie na piętro",
+        "tr": "Kata taşıma"
     },
-    "Показать блок \"стоимость\"": {
-        "en": "Show \"Cost\" block"
-    },
-    "Показать смету": {
-        "en": "Show estimate"
+    "Подъем на этаж (Лифт / Этажи)": {
+        "en": "Lifting to the floor (Elevator / Floors)",
+        "es": "Subida a la planta (Ascensor / Plantas)",
+        "de": "Transport ins Stockwerk (Aufzug / Etagen)",
+        "it": "Consegna al piano (Ascensore / Piani)",
+        "pl": "Wniesienie na piętro (Winda / Piętra)",
+        "tr": "Kata taşıma (Asansör / Katlar)"
     },
     "Пользователь": {
-        "en": "User"
+        "en": "User",
+        "es": "Usuario",
+        "de": "Benutzer",
+        "it": "Utente",
+        "pl": "Użytkownik",
+        "tr": "Kullanıcı"
     },
     "Порог душевой": {
-        "en": "Shower threshold / Water dam"
+        "en": "Shower doorstep",
+        "es": "Umbral de ducha",
+        "de": "Duschschwelle",
+        "it": "Soglia per doccia",
+        "pl": "Próg prysznicowy",
+        "tr": "Duş eşiği"
     },
     "Пороги": {
-        "en": "Thresholds / Water dams"
+        "en": "Doorsteps",
+        "es": "Umbrales",
+        "de": "Schwellen",
+        "it": "Soglie",
+        "pl": "Progi",
+        "tr": "Eşikler"
+    },
+    "Принцип тарификации монтажа": {
+        "en": "Installation rate type",
+        "es": "Tipo de tarifa de instalación",
+        "de": "Art der Montageberechnung",
+        "it": "Tipo di tariffa di installazione",
+        "pl": "Sposób naliczania montażu",
+        "tr": "Montaj ücret tipi"
     },
     "Профили": {
-        "en": "Profiles"
+        "en": "Profiles",
+        "es": "Perfiles",
+        "de": "Profile",
+        "it": "Profili",
+        "pl": "Profile",
+        "tr": "Profiller"
     },
     "Профиль П-образный из алюминия в полимерном покрытии": {
-        "en": "Aluminum U-profile with polymer coating"
+        "en": "Powder-coated aluminum U-profile",
+        "es": "Perfil en U de aluminio con recubrimiento en polvo",
+        "de": "Pulverbeschichtetes U-Profil aus Aluminium",
+        "it": "Profilo a U in alluminio verniciato a polvere",
+        "pl": "Profil U z aluminium malowanego proszkowo",
+        "tr": "Toz boyalı alüminyum U profil"
     },
     "Профиль душевой": {
-        "en": "Shower profile"
+        "en": "Shower profile",
+        "es": "Perfil de ducha",
+        "de": "Duschprofil",
+        "it": "Profilo per doccia",
+        "pl": "Profil prysznicowy",
+        "tr": "Duş profili"
     },
     "Профиль угловой 90 градусов для стекла, мм": {
-        "en": "Corner 90-degree glass profile, mm"
+        "en": "90° corner profile for glass, mm",
+        "es": "Perfil angular de 90° para vidrio, mm",
+        "de": "Eckprofil 90° für Glas, mm",
+        "it": "Profilo angolare 90° per vetro, mm",
+        "pl": "Profil narożny 90° do szkła, mm",
+        "tr": "Cam için 90° köşe profili, mm"
     },
     "Прямоугольная": {
-        "en": "Rectangular"
+        "en": "Rectangular",
+        "es": "Rectangular",
+        "de": "Rechteckig",
+        "it": "Rettangolare",
+        "pl": "Prostokątny",
+        "tr": "Dikdörtgen"
     },
     "Раздвижная система для стеклянных дверей": {
-        "en": "Sliding system for glass doors"
+        "en": "Sliding system for glass doors",
+        "es": "Sistema corredero para puertas de vidrio",
+        "de": "Schiebesystem für Glastüren",
+        "it": "Sistema scorrevole per porte in vetro",
+        "pl": "System przesuwny do drzwi szklanych",
+        "tr": "Cam kapılar için sürme sistem"
+    },
+    "Разрешенные типы дверей (белый список)": {
+        "en": "Enabled door types (whitelist)",
+        "es": "Tipos de puerta permitidos (lista blanca)",
+        "de": "Erlaubte Türtypen (Whitelist)",
+        "it": "Tipi di porta consentiti (whitelist)",
+        "pl": "Dozwolone typy drzwi (biała lista)",
+        "tr": "İzin verilen kapı tipleri (beyaz liste)"
     },
     "Распашная с перегородкой": {
-        "en": "Swing door with inline panel"
+        "en": "Hinged door with fixed panel",
+        "es": "Abatible con panel fijo",
+        "de": "Pendeltür mit Seitenteil",
+        "it": "A battente con parete fissa",
+        "pl": "Uchylne ze ścianką stałą",
+        "tr": "Sabit panelli menteşeli kapı"
+    },
+    "Режим расчета выносного порога": {
+        "en": "Doorstep calculation mode",
+        "es": "Modo de cálculo del umbral",
+        "de": "Berechnungsmodus der Schwelle",
+        "it": "Modalità di calcolo della soglia",
+        "pl": "Tryb kalkulacji progu",
+        "tr": "Eşik hesaplama modu"
     },
     "Рифление": {
-        "en": "Fluted texture"
+        "en": "Fluting",
+        "es": "Acanalado",
+        "de": "Riffelung",
+        "it": "Cannettatura",
+        "pl": "Ryflowanie",
+        "tr": "Yivli desen"
     },
     "Ролики / Раздвижная система": {
-        "en": "Rollers / Sliding system"
+        "en": "Rollers / Sliding system",
+        "es": "Rodamientos / Sistema corredero",
+        "de": "Rollen / Schiebesystem",
+        "it": "Carrelli / Sistema scorrevole",
+        "pl": "Rolki / System przesuwny",
+        "tr": "Makaralar / Sürme sistem"
     },
     "Российский рубль": {
-        "en": "Russian Ruble"
+        "en": "Russian ruble",
+        "es": "Rublo ruso",
+        "de": "Russischer Rubel",
+        "it": "Rublo russo",
+        "pl": "Rubel rosyjski",
+        "tr": "Rus rublesi"
     },
     "Ручка душевая": {
-        "en": "Shower handle"
+        "en": "Shower handle",
+        "es": "Tirador de ducha",
+        "de": "Duschtürgriff",
+        "it": "Maniglia per doccia",
+        "pl": "Uchwyt prysznicowy",
+        "tr": "Duş kapı kulpu"
     },
-    "Ручка утопленная для раздвижных дверей": {
-        "en": "Recessed flush pull handle for sliding doors"
+    "Ручка кноб 1 (цинк)": {
+        "en": "Knob handle 1 (zinc)",
+        "es": "Pomo 1 (zinc)",
+        "de": "Knauf 1 (Zink)",
+        "it": "Pomolo 1 (zinco)",
+        "pl": "Gałka 1 (cynk)",
+        "tr": "Topuz kulp 1 (çinko)"
     },
-    "Ручка-кноб душевая": {
-        "en": "Shower knob handle"
+    "Ручка кноб 2 (латунь)": {
+        "en": "Knob handle 2 (brass)",
+        "es": "Pomo 2 (latón)",
+        "de": "Knauf 2 (Messing)",
+        "it": "Pomolo 2 (ottone)",
+        "pl": "Gałka 2 (mosiądz)",
+        "tr": "Topuz kulp 2 (pirinç)"
     },
-    "Ручка-полотенцедержатель душевая": {
-        "en": "Shower handle with towel bar"
+    "Ручка кноб 3 (латунь)": {
+        "en": "Knob handle 3 (brass)",
+        "es": "Pomo 3 (latón)",
+        "de": "Knauf 3 (Messing)",
+        "it": "Pomolo 3 (ottone)",
+        "pl": "Gałka 3 (mosiądz)",
+        "tr": "Topuz kulp 3 (pirinç)"
     },
-    "Ручка-скоба душевая": {
-        "en": "Shower pull handle"
+    "Ручка полотенцедержатель (латунь)": {
+        "en": "Towel bar handle (brass)",
+        "es": "Tirador toallero (latón)",
+        "de": "Griff mit Handtuchhalter (Messing)",
+        "it": "Maniglia portasciugamani (ottone)",
+        "pl": "Uchwyt z wieszakiem na ręcznik (mosiądz)",
+        "tr": "Havluluklu kulp (pirinç)"
+    },
+    "Ручка скоба (нержавейка)": {
+        "en": "Bar handle (stainless steel)",
+        "es": "Tirador de barra (acero inoxidable)",
+        "de": "Bügelgriff (Edelstahl)",
+        "it": "Maniglia ad arco (acciaio inox)",
+        "pl": "Uchwyt pałąkowy (stal nierdzewna)",
+        "tr": "Kulp (paslanmaz çelik)"
+    },
+    "Ручка-купе 1 (цинк)": {
+        "en": "Sliding door handle 1 (zinc)",
+        "es": "Tirador para puerta corredera 1 (zinc)",
+        "de": "Schiebetürgriff 1 (Zink)",
+        "it": "Maniglia per porta scorrevole 1 (zinco)",
+        "pl": "Uchwyt do drzwi przesuwnych 1 (cynk)",
+        "tr": "Sürme kapı kulpu 1 (çinko)"
+    },
+    "Ручка-купе 2 (латунь)": {
+        "en": "Sliding door handle 2 (brass)",
+        "es": "Tirador para puerta corredera 2 (latón)",
+        "de": "Schiebetürgriff 2 (Messing)",
+        "it": "Maniglia per porta scorrevole 2 (ottone)",
+        "pl": "Uchwyt do drzwi przesuwnych 2 (mosiądz)",
+        "tr": "Sürme kapı kulpu 2 (pirinç)"
     },
     "Ручки": {
-        "en": "Handles"
+        "en": "Handles",
+        "es": "Tiradores",
+        "de": "Griffe",
+        "it": "Maniglie",
+        "pl": "Uchwyty",
+        "tr": "Kulplar"
     },
     "Свободный вход": {
-        "en": "Walk-in"
+        "en": "Walk-in",
+        "es": "Entrada libre (walk-in)",
+        "de": "Walk-in",
+        "it": "Walk-in",
+        "pl": "Walk-in",
+        "tr": "Walk-in"
     },
     "Система открывания": {
-        "en": "Opening system"
+        "en": "Open System",
+        "es": "Sistema de apertura",
+        "de": "Öffnungssystem",
+        "it": "Sistema di apertura",
+        "pl": "System otwierania",
+        "tr": "Açılış Mekanizması"
+    },
+    "Скрытие селектора сплава (Цинк / Латунь)": {
+        "en": "Hide alloy selector (Zinc / Brass)",
+        "es": "Ocultar selector de aleación (Zinc / Latón)",
+        "de": "Legierungsauswahl ausblenden (Zink / Messing)",
+        "it": "Nascondi selettore lega (Zinco / Ottone)",
+        "pl": "Ukryj wybór stopu (Cynk / Mosiądz)",
+        "tr": "Alaşım seçiciyi gizle (Çinko / Pirinç)"
     },
     "Совместимые двери": {
-        "en": "Compatible doors"
+        "en": "Compatible doors",
+        "es": "Puertas compatibles",
+        "de": "Kompatible Türen",
+        "it": "Porte compatibili",
+        "pl": "Kompatybilne drzwi",
+        "tr": "Uyumlu kapılar"
+    },
+    "Соединитель под произвольный угол квадратный труба - труба": {
+        "en": "Adjustable-angle square tube-to-tube connector",
+        "es": "Conector cuadrado tubo-tubo de ángulo variable",
+        "de": "Rohr-Rohr-Verbinder quadratisch, variabler Winkel",
+        "it": "Raccordo tubo-tubo quadrato ad angolo variabile",
+        "pl": "Łącznik rura-rura kwadratowy pod dowolnym kątem",
+        "tr": "Ayarlanabilir açılı kare boru-boru bağlantısı"
+    },
+    "Соединитель под произвольный угол круглый труба - труба": {
+        "en": "Adjustable-angle round tube-to-tube connector",
+        "es": "Conector redondo tubo-tubo de ángulo variable",
+        "de": "Rohr-Rohr-Verbinder rund, variabler Winkel",
+        "it": "Raccordo tubo-tubo tondo ad angolo variabile",
+        "pl": "Łącznik rura-rura okrągły pod dowolnym kątem",
+        "tr": "Ayarlanabilir açılı yuvarlak boru-boru bağlantısı"
+    },
+    "Соединитель под произвольный угол прямоугольный труба - труба": {
+        "en": "Adjustable-angle rectangular tube-to-tube connector",
+        "es": "Conector rectangular tubo-tubo de ángulo variable",
+        "de": "Rohr-Rohr-Verbinder rechteckig, variabler Winkel",
+        "it": "Raccordo tubo-tubo rettangolare ad angolo variabile",
+        "pl": "Łącznik rura-rura prostokątny pod dowolnym kątem",
+        "tr": "Ayarlanabilir açılı dikdörtgen boru-boru bağlantısı"
+    },
+    "Соединитель т-образный круглый труба - труба": {
+        "en": "Round T-shaped tube-to-tube connector",
+        "es": "Conector en T redondo tubo-tubo",
+        "de": "Runder T-Rohr-Rohr-Verbinder",
+        "it": "Raccordo tubo-tubo a T tondo",
+        "pl": "Łącznik rura-rura okrągły w kształcie T",
+        "tr": "Yuvarlak T tipi boru-boru bağlantısı"
+    },
+    "Соединитель труба-стекло для  прямоугольной штанги": {
+        "en": "Tube-to-glass connector for rectangular rod",
+        "es": "Conector tubo-vidrio para barra rectangular",
+        "de": "Rohr-Glas-Verbinder für rechteckige Stange",
+        "it": "Raccordo tubo-vetro per barra rettangolare",
+        "pl": "Łącznik rura-szkło do drążka prostokątnego",
+        "tr": "Dikdörtgen çubuk için boru-cam bağlantısı"
+    },
+    "Соединитель труба-стекло для квадратной штанги": {
+        "en": "Tube-to-glass connector for square rod",
+        "es": "Conector tubo-vidrio para barra cuadrada",
+        "de": "Rohr-Glas-Verbinder für quadratische Stange",
+        "it": "Raccordo tubo-vetro per barra quadrata",
+        "pl": "Łącznik rura-szkło do drążka kwadratowego",
+        "tr": "Kare çubuk için boru-cam bağlantısı"
+    },
+    "Специальные лимиты габаритов связок": {
+        "en": "Special dimensional limits",
+        "es": "Límites dimensionales especiales",
+        "de": "Sondermaßgrenzen",
+        "it": "Limiti dimensionali speciali",
+        "pl": "Specjalne limity wymiarów",
+        "tr": "Özel boyut limitleri"
     },
     "Стабилизирующая штанга": {
-        "en": "Stabilization bar"
+        "en": "Stabilizing Rod",
+        "es": "Barra estabilizadora",
+        "de": "Stabilisationsstange",
+        "it": "Barra stabilizzatrice",
+        "pl": "Drążek stabilizujący",
+        "tr": "Denge Çubuğu"
+    },
+    "Стабилизирующая штанга (квадратная)": {
+        "en": "Stabilizing rod (square)",
+        "es": "Barra estabilizadora (cuadrada)",
+        "de": "Stabilisationsstange (quadratisch)",
+        "it": "Barra stabilizzatrice (quadrata)",
+        "pl": "Drążek stabilizujący (kwadratowy)",
+        "tr": "Denge çubuğu (kare)"
+    },
+    "Стабилизирующая штанга (круглая)": {
+        "en": "Stabilizing rod (round)",
+        "es": "Barra estabilizadora (redonda)",
+        "de": "Stabilisationsstange (rund)",
+        "it": "Barra stabilizzatrice (tonda)",
+        "pl": "Drążek stabilizujący (okrągły)",
+        "tr": "Denge çubuğu (yuvarlak)"
+    },
+    "Стабилизирующая штанга (прямоугольная)": {
+        "en": "Stabilizing rod (rectangular)",
+        "es": "Barra estabilizadora (rectangular)",
+        "de": "Stabilisationsstange (rechteckig)",
+        "it": "Barra stabilizzatrice (rettangolare)",
+        "pl": "Drążek stabilizujący (prostokątny)",
+        "tr": "Denge çubuğu (dikdörtgen)"
     },
     "Стационарная": {
-        "en": "Stationary"
+        "en": "Fixed",
+        "es": "Fija",
+        "de": "Feststehend",
+        "it": "Fissa",
+        "pl": "Stała",
+        "tr": "Sabit"
     },
     "Стекла": {
-        "en": "Glass"
+        "en": "Glass",
+        "es": "Vidrios",
+        "de": "Gläser",
+        "it": "Vetri",
+        "pl": "Szkła",
+        "tr": "Camlar"
     },
     "Стекло Триплекс цветное": {
-        "en": "Laminated colored glass (Triplex)"
+        "en": "Colored laminated glass (Triplex)",
+        "es": "Vidrio laminado de color (Triplex)",
+        "de": "Farbiges Verbundglas (Triplex)",
+        "it": "Vetro stratificato colorato (Triplex)",
+        "pl": "Szkło laminowane kolorowe (Triplex)",
+        "tr": "Renkli lamine cam (Triplex)"
     },
     "Стекло душевое": {
-        "en": "Shower glass"
+        "en": "Shower glass",
+        "es": "Vidrio de ducha",
+        "de": "Duschglas",
+        "it": "Vetro per doccia",
+        "pl": "Szkło prysznicowe",
+        "tr": "Duş camı"
     },
-    "Стекло закаленное матовое бронза": {
-        "en": "Tempered frosted bronze glass"
+    "Стекло матовое «Мателюкс»": {
+        "en": "Frosted glass «Matelux»",
+        "es": "Vidrio mate «Matelux»",
+        "de": "Satiniertes Glas „Matelux“",
+        "it": "Vetro satinato «Matelux»",
+        "pl": "Szkło matowe „Matelux”",
+        "tr": "Buzlu cam «Matelux»"
     },
-    "Стекло закаленное матовое графит": {
-        "en": "Tempered frosted graphite glass"
+    "Стекло матовое «Мателюкс» бронза": {
+        "en": "Frosted glass «Matelux» bronze",
+        "es": "Vidrio mate «Matelux» bronce",
+        "de": "Satiniertes Glas „Matelux“ Bronze",
+        "it": "Vetro satinato «Matelux» bronzo",
+        "pl": "Szkło matowe „Matelux” brąz",
+        "tr": "Buzlu cam «Matelux» bronz"
     },
-    "Стекло закаленное матовое осветленное": {
-        "en": "Tempered frosted extra-clear glass"
+    "Стекло матовое «Мателюкс» графит": {
+        "en": "Frosted glass «Matelux» graphite",
+        "es": "Vidrio mate «Matelux» grafito",
+        "de": "Satiniertes Glas „Matelux“ Graphit",
+        "it": "Vetro satinato «Matelux» grafite",
+        "pl": "Szkło matowe „Matelux” grafit",
+        "tr": "Buzlu cam «Matelux» füme"
     },
-    "Стекло закаленное матовое универсальное": {
-        "en": "Tempered frosted universal glass"
+    "Стекло матовое осветленное": {
+        "en": "Frosted low-iron glass",
+        "es": "Vidrio mate extraclaro",
+        "de": "Satiniertes Weißglas",
+        "it": "Vetro satinato extrachiaro",
+        "pl": "Szkło matowe niskożelazowe",
+        "tr": "Buzlu ekstra berrak cam"
     },
-    "Стекло закаленное прозрачное осветленное": {
-        "en": "Tempered clear extra-clear glass"
+    "Стекло осветленное": {
+        "en": "Low-iron glass",
+        "es": "Vidrio extraclaro",
+        "de": "Weißglas",
+        "it": "Vetro extrachiaro",
+        "pl": "Szkło niskożelazowe",
+        "tr": "Ekstra berrak cam"
     },
-    "Стекло закаленное прозрачное универсальное": {
-        "en": "Tempered clear universal glass"
+    "Стекло прозрачное": {
+        "en": "Clear glass",
+        "es": "Vidrio transparente",
+        "de": "Klarglas",
+        "it": "Vetro trasparente",
+        "pl": "Szkło przezroczyste",
+        "tr": "Şeffaf cam"
     },
-    "Стекло закаленное рифленое": {
-        "en": "Tempered fluted glass"
+    "Стекло прозрачное осветленное": {
+        "en": "Clear low-iron glass",
+        "es": "Vidrio transparente extraclaro",
+        "de": "Klares Weißglas",
+        "it": "Vetro trasparente extrachiaro",
+        "pl": "Szkło przezroczyste niskożelazowe",
+        "tr": "Şeffaf ekstra berrak cam"
     },
-    "Стекло закаленное тонированное полупрозрачное бронза": {
-        "en": "Tempered tinted translucent bronze glass"
+    "Стекло рифленое": {
+        "en": "Fluted glass",
+        "es": "Vidrio acanalado",
+        "de": "Riffelglas",
+        "it": "Vetro cannettato",
+        "pl": "Szkło ryflowane",
+        "tr": "Yivli cam"
     },
-    "Стекло закаленное тонированное полупрозрачное графит": {
-        "en": "Tempered tinted translucent graphite glass"
+    "Стекло тонированное в массе бронза": {
+        "en": "Body-tinted glass, bronze",
+        "es": "Vidrio tintado en masa, bronce",
+        "de": "Durchgefärbtes Glas, Bronze",
+        "it": "Vetro colorato in pasta, bronzo",
+        "pl": "Szkło barwione w masie, brąz",
+        "tr": "Kütle renkli cam, bronz"
+    },
+    "Стекло тонированное в массе графит": {
+        "en": "Body-tinted glass, graphite",
+        "es": "Vidrio tintado en masa, grafito",
+        "de": "Durchgefärbtes Glas, Graphit",
+        "it": "Vetro colorato in pasta, grafite",
+        "pl": "Szkło barwione w masie, grafit",
+        "tr": "Kütle renkli cam, füme"
+    },
+    "Таблица детализированной сметы / спецификации": {
+        "en": "Detailed estimate / specification table",
+        "es": "Tabla del presupuesto detallado / especificación",
+        "de": "Tabelle der detaillierten Kalkulation / Spezifikation",
+        "it": "Tabella del preventivo dettagliato / specifica",
+        "pl": "Tabela szczegółowej wyceny / specyfikacji",
+        "tr": "Ayrıntılı hesaplama / spesifikasyon tablosu"
     },
     "Тариф за км / этаж": {
-        "en": "Rate per km / floor"
+        "en": "Rate per km / floor",
+        "es": "Tarifa por km / planta",
+        "de": "Tarif je km / Etage",
+        "it": "Tariffa per km / piano",
+        "pl": "Stawka za km / piętro",
+        "tr": "Km / kat başına ücret"
     },
     "Тест": {
-        "en": "Test"
+        "en": "Test",
+        "es": "Prueba",
+        "de": "Test",
+        "it": "Test",
+        "pl": "Test",
+        "tr": "Test"
     },
     "Тип компонента": {
-        "en": "Component type"
+        "en": "Component type",
+        "es": "Tipo de componente",
+        "de": "Komponententyp",
+        "it": "Tipo di componente",
+        "pl": "Typ komponentu",
+        "tr": "Bileşen tipi"
+    },
+    "Тип компонента: Держатель стекла": {
+        "en": "Component type: Glass Holder",
+        "es": "Tipo de componente: Soporte de vidrio",
+        "de": "Komponententyp: Glashalter",
+        "it": "Tipo di componente: Morsetto per vetro",
+        "pl": "Typ komponentu: Uchwyt do szkła",
+        "tr": "Bileşen tipi: Cam Tutucu"
+    },
+    "Тип компонента: Доставка": {
+        "en": "Component type: Delivery",
+        "es": "Tipo de componente: Entrega",
+        "de": "Komponententyp: Lieferung",
+        "it": "Tipo di componente: Consegna",
+        "pl": "Typ komponentu: Dostawa",
+        "tr": "Bileşen tipi: Teslimat"
+    },
+    "Тип компонента: Заглушка": {
+        "en": "Component type: Cap",
+        "es": "Tipo de componente: Tapa terminal",
+        "de": "Komponententyp: Endkappe",
+        "it": "Tipo di componente: Terminale di chiusura",
+        "pl": "Typ komponentu: Zaślepka",
+        "tr": "Bileşen tipi: Uç Kapağı"
+    },
+    "Тип компонента: Замер": {
+        "en": "Component type: Measurement",
+        "es": "Tipo de componente: Medición",
+        "de": "Komponententyp: Aufmaß",
+        "it": "Tipo di componente: Rilievo misure",
+        "pl": "Typ komponentu: Pomiar",
+        "tr": "Bileşen tipi: Ölçüm"
+    },
+    "Тип компонента: Коннектор": {
+        "en": "Component type: Connector",
+        "es": "Tipo de componente: Conector",
+        "de": "Komponententyp: Verbinder",
+        "it": "Tipo di componente: Raccordo",
+        "pl": "Typ komponentu: Łącznik",
+        "tr": "Bileşen tipi: Konnektör"
+    },
+    "Тип компонента: Крепление к стене": {
+        "en": "Component type: Wall Mount",
+        "es": "Tipo de componente: Soporte a pared",
+        "de": "Komponententyp: Wandbefestigung",
+        "it": "Tipo di componente: Fissaggio a parete",
+        "pl": "Typ komponentu: Mocowanie ścienne",
+        "tr": "Bileşen tipi: Duvar Bağlantı Parçası"
+    },
+    "Тип компонента: Магнитный уплотнитель": {
+        "en": "Component type: Magnetic seal",
+        "es": "Tipo de componente: Perfil magnético de estanqueidad",
+        "de": "Komponententyp: Magnetdichtung",
+        "it": "Tipo di componente: Guarnizione magnetica",
+        "pl": "Typ komponentu: Uszczelka magnetyczna",
+        "tr": "Bileşen tipi: Manyetik fitil"
+    },
+    "Тип компонента: Монтаж": {
+        "en": "Component type: Installation",
+        "es": "Tipo de componente: Instalación",
+        "de": "Komponententyp: Montage",
+        "it": "Tipo di componente: Installazione",
+        "pl": "Typ komponentu: Montaż",
+        "tr": "Bileşen tipi: Montaj"
+    },
+    "Тип компонента: П-профиль": {
+        "en": "Component type: U-profile",
+        "es": "Tipo de componente: Perfil en U",
+        "de": "Komponententyp: U-Profil",
+        "it": "Tipo di componente: Profilo a U",
+        "pl": "Typ komponentu: Profil U",
+        "tr": "Bileşen tipi: U profil"
+    },
+    "Тип компонента: Петля": {
+        "en": "Component type: Hinge",
+        "es": "Tipo de componente: Bisagra",
+        "de": "Komponententyp: Scharnier",
+        "it": "Tipo di componente: Cerniera",
+        "pl": "Typ komponentu: Zawias",
+        "tr": "Bileşen tipi: Menteşe"
+    },
+    "Тип компонента: Петля душевая (цинк)": {
+        "en": "Component type: Shower hinge (zinc)",
+        "es": "Tipo de componente: Bisagra de ducha (zinc)",
+        "de": "Komponententyp: Duschscharnier (Zink)",
+        "it": "Tipo di componente: Cerniera per doccia (zinco)",
+        "pl": "Typ komponentu: Zawias prysznicowy (cynk)",
+        "tr": "Bileşen tipi: Duş menteşesi (çinko)"
+    },
+    "Тип компонента: Подъем": {
+        "en": "Component type: Lifting",
+        "es": "Tipo de componente: Subida",
+        "de": "Komponententyp: Etagentransport",
+        "it": "Tipo di componente: Consegna al piano",
+        "pl": "Typ komponentu: Wniesienie",
+        "tr": "Bileşen tipi: Kata taşıma"
+    },
+    "Тип компонента: Ролики / Раздвижная система": {
+        "en": "Component type: Rollers / Sliding system",
+        "es": "Tipo de componente: Rodamientos / Sistema corredero",
+        "de": "Komponententyp: Rollen / Schiebesystem",
+        "it": "Tipo di componente: Carrelli / Sistema scorrevole",
+        "pl": "Typ komponentu: Rolki / System przesuwny",
+        "tr": "Bileşen tipi: Makaralar / Sürme sistem"
+    },
+    "Тип компонента: Стабилизирующая штанга": {
+        "en": "Component type: Stabilizing Rod",
+        "es": "Tipo de componente: Barra estabilizadora",
+        "de": "Komponententyp: Stabilisationsstange",
+        "it": "Tipo di componente: Barra stabilizzatrice",
+        "pl": "Typ komponentu: Drążek stabilizujący",
+        "tr": "Bileşen tipi: Denge Çubuğu"
+    },
+    "Тип компонента: Трек": {
+        "en": "Component type: Track",
+        "es": "Tipo de componente: Carril",
+        "de": "Komponententyp: Laufschiene",
+        "it": "Tipo di componente: Binario",
+        "pl": "Typ komponentu: Bieżnia",
+        "tr": "Bileşen tipi: Ray"
+    },
+    "Тип компонента: Угловой профиль": {
+        "en": "Component type: Corner profile",
+        "es": "Tipo de componente: Perfil angular",
+        "de": "Komponententyp: Eckprofil",
+        "it": "Tipo di componente: Profilo angolare",
+        "pl": "Typ komponentu: Profil narożny",
+        "tr": "Bileşen tipi: Köşe profili"
     },
     "Тип тарифной ставки": {
-        "en": "Tariff rate type"
+        "en": "Rate type",
+        "es": "Tipo de tarifa",
+        "de": "Tarifart",
+        "it": "Tipo di tariffa",
+        "pl": "Rodzaj stawki",
+        "tr": "Ücret tipi"
     },
     "Тип штанги": {
-        "en": "Support bar type"
+        "en": "Rod type",
+        "es": "Tipo de barra",
+        "de": "Stangentyp",
+        "it": "Tipo di barra",
+        "pl": "Typ drążka",
+        "tr": "Çubuk tipi"
     },
     "Толщина стекла": {
-        "en": "Glass thickness"
+        "en": "Glass thickness",
+        "es": "Espesor del vidrio",
+        "de": "Glasstärke",
+        "it": "Spessore del vetro",
+        "pl": "Grubość szkła",
+        "tr": "Cam kalınlığı"
     },
-    "Трапецевидная": {
-        "en": "Neo-angle (Trapezoid)"
+    "Трапециевидная": {
+        "en": "Trapezoid",
+        "es": "Trapezoidal",
+        "de": "Trapezförmig",
+        "it": "Trapezoidale",
+        "pl": "Trapezowa",
+        "tr": "Trapez"
     },
     "Трек": {
-        "en": "Sliding track"
+        "en": "Track",
+        "es": "Carril",
+        "de": "Laufschiene",
+        "it": "Binario",
+        "pl": "Bieżnia",
+        "tr": "Ray"
     },
     "Трек направляющий": {
-        "en": "Guide track"
+        "en": "Guide track",
+        "es": "Carril guía",
+        "de": "Führungsschiene",
+        "it": "Binario di guida",
+        "pl": "Bieżnia prowadząca",
+        "tr": "Kılavuz ray"
     },
     "Угловая": {
-        "en": "Corner"
+        "en": "Corner",
+        "es": "Angular",
+        "de": "Eckig",
+        "it": "Angolare",
+        "pl": "Narożna",
+        "tr": "Köşe"
     },
     "Угловой профиль": {
-        "en": "Corner profile"
+        "en": "Corner profile",
+        "es": "Perfil angular",
+        "de": "Eckprofil",
+        "it": "Profilo angolare",
+        "pl": "Profil narożny",
+        "tr": "Köşe profili"
     },
     "Угловой стабилизатор": {
-        "en": "Corner stabilizer"
+        "en": "Corner stabilizer",
+        "es": "Estabilizador angular",
+        "de": "Eckstabilisator",
+        "it": "Stabilizzatore angolare",
+        "pl": "Stabilizator narożny",
+        "tr": "Köşe dengeleyici"
+    },
+    "Угловой стабилизатор 45 градусов для душевых ограждений": {
+        "en": "45° corner stabilizer for shower enclosures",
+        "es": "Estabilizador angular de 45° para mamparas de ducha",
+        "de": "Eckstabilisator 45° für Duschabtrennungen",
+        "it": "Stabilizzatore angolare 45° per box doccia",
+        "pl": "Stabilizator narożny 45° do kabin prysznicowych",
+        "tr": "Duşakabinler için 45° köşe dengeleyici"
     },
     "Уплотнители": {
-        "en": "Seals"
+        "en": "Seals",
+        "es": "Perfiles de estanqueidad",
+        "de": "Dichtungen",
+        "it": "Guarnizioni",
+        "pl": "Uszczelki",
+        "tr": "Fitiller"
     },
     "Уплотнитель для раздвижных дверей, 3м": {
-        "en": "Seal for sliding doors, 3m"
+        "en": "Seal for sliding doors, 3 m",
+        "es": "Perfil de estanqueidad para puertas correderas, 3 m",
+        "de": "Dichtung für Schiebetüren, 3 m",
+        "it": "Guarnizione per porte scorrevoli, 3 m",
+        "pl": "Uszczelka do drzwi przesuwnych, 3 m",
+        "tr": "Sürme kapılar için fitil, 3 m"
     },
     "Уплотнитель для распашных дверей, 3м": {
-        "en": "Seal for swing doors, 3m"
+        "en": "Seal for hinged doors, 3 m",
+        "es": "Perfil de estanqueidad para puertas abatibles, 3 m",
+        "de": "Dichtung für Pendeltüren, 3 m",
+        "it": "Guarnizione per porte a battente, 3 m",
+        "pl": "Uszczelka do drzwi uchylnych, 3 m",
+        "tr": "Menteşeli kapılar için fitil, 3 m"
     },
     "Уплотнитель душевой": {
-        "en": "Shower seal"
+        "en": "Shower seal",
+        "es": "Perfil de estanqueidad para ducha",
+        "de": "Duschdichtung",
+        "it": "Guarnizione per doccia",
+        "pl": "Uszczelka prysznicowa",
+        "tr": "Duş fitili"
+    },
+    "Услуга доставки (тумблер \"Доставка\")": {
+        "en": "Delivery service (\"Delivery\" toggle)",
+        "es": "Servicio de entrega (interruptor «Entrega»)",
+        "de": "Lieferservice (Schalter „Lieferung“)",
+        "it": "Servizio di consegna (interruttore «Consegna»)",
+        "pl": "Usługa dostawy (przełącznik „Dostawa”)",
+        "tr": "Teslimat hizmeti (\"Teslimat\" anahtarı)"
     },
     "Услуга душевой": {
-        "en": "Shower service"
+        "en": "Shower service",
+        "es": "Servicio de ducha",
+        "de": "Dusch-Dienstleistung",
+        "it": "Servizio doccia",
+        "pl": "Usługa kabiny",
+        "tr": "Duşakabin hizmeti"
+    },
+    "Услуга замера (тумблер \"Замер\")": {
+        "en": "Measurement service (\"Measurement\" toggle)",
+        "es": "Servicio de medición (interruptor «Medición»)",
+        "de": "Aufmaß-Service (Schalter „Aufmaß“)",
+        "it": "Servizio di rilievo misure (interruttore «Rilievo»)",
+        "pl": "Usługa pomiaru (przełącznik „Pomiar”)",
+        "tr": "Ölçüm hizmeti (\"Ölçüm\" anahtarı)"
+    },
+    "Услуга монтажа (тумблер \"Монтаж\")": {
+        "en": "Installation service (\"Installation\" toggle)",
+        "es": "Servicio de instalación (interruptor «Instalación»)",
+        "de": "Montageservice (Schalter „Montage“)",
+        "it": "Servizio di installazione (interruttore «Installazione»)",
+        "pl": "Usługa montażu (przełącznik „Montaż”)",
+        "tr": "Montaj hizmeti (\"Montaj\" anahtarı)"
     },
     "Услуги": {
-        "en": "Services"
+        "en": "Services",
+        "es": "Servicios",
+        "de": "Dienstleistungen",
+        "it": "Servizi",
+        "pl": "Usługi",
+        "tr": "Hizmetler"
     },
     "Форма кабины": {
-        "en": "Enclosure layout"
+        "en": "Enclosure shape",
+        "es": "Forma de la mampara",
+        "de": "Form der Duschkabine",
+        "it": "Forma del box",
+        "pl": "Kształt kabiny",
+        "tr": "Kabin şekli"
     },
     "Хром": {
-        "en": "Chrome"
+        "en": "Chrome",
+        "es": "Cromo",
+        "de": "Chrom",
+        "it": "Cromo",
+        "pl": "Chrom",
+        "tr": "Krom"
     },
     "Цвет стекла": {
-        "en": "Glass color"
+        "en": "Glass color",
+        "es": "Color del vidrio",
+        "de": "Glasfarbe",
+        "it": "Colore del vetro",
+        "pl": "Kolor szkła",
+        "tr": "Cam rengi"
+    },
+    "Цвет стекла: Стекло Триплекс цветное, Авто-изображение: Да, Шероховатость: 0.2, Рифление: Да": {
+        "en": "Glass color: Colored laminated glass (Triplex), Auto image: Yes, Roughness: 0.2, Fluting: Yes",
+        "es": "Color del vidrio: Vidrio laminado de color (Triplex), Imagen automática: Sí, Rugosidad: 0.2, Acanalado: Sí",
+        "de": "Glasfarbe: Farbiges Verbundglas (Triplex), Automatisches Bild: Ja, Rauheit: 0.2, Riffelung: Ja",
+        "it": "Colore del vetro: Vetro stratificato colorato (Triplex), Immagine automatica: Sì, Rugosità: 0.2, Cannettatura: Sì",
+        "pl": "Kolor szkła: Szkło laminowane kolorowe (Triplex), Automatyczny obraz: Tak, Chropowatość: 0.2, Ryflowanie: Tak",
+        "tr": "Cam rengi: Renkli lamine cam (Triplex), Otomatik görsel: Evet, Pürüzlülük: 0.2, Yivli desen: Evet"
+    },
+    "Цвет стекла: Стекло матовое «Мателюкс» бронза, Авто-изображение: Да, Шероховатость: 0.5, Рифление: Нет": {
+        "en": "Glass color: Frosted glass «Matelux» bronze, Auto image: Yes, Roughness: 0.5, Fluting: No",
+        "es": "Color del vidrio: Vidrio mate «Matelux» bronce, Imagen automática: Sí, Rugosidad: 0.5, Acanalado: No",
+        "de": "Glasfarbe: Satiniertes Glas „Matelux“ Bronze, Automatisches Bild: Ja, Rauheit: 0.5, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro satinato «Matelux» bronzo, Immagine automatica: Sì, Rugosità: 0.5, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło matowe „Matelux” brąz, Automatyczny obraz: Tak, Chropowatość: 0.5, Ryflowanie: Nie",
+        "tr": "Cam rengi: Buzlu cam «Matelux» bronz, Otomatik görsel: Evet, Pürüzlülük: 0.5, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло матовое «Мателюкс» графит, Авто-изображение: Да, Шероховатость: 0.5, Рифление: Нет": {
+        "en": "Glass color: Frosted glass «Matelux» graphite, Auto image: Yes, Roughness: 0.5, Fluting: No",
+        "es": "Color del vidrio: Vidrio mate «Matelux» grafito, Imagen automática: Sí, Rugosidad: 0.5, Acanalado: No",
+        "de": "Glasfarbe: Satiniertes Glas „Matelux“ Graphit, Automatisches Bild: Ja, Rauheit: 0.5, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro satinato «Matelux» grafite, Immagine automatica: Sì, Rugosità: 0.5, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło matowe „Matelux” grafit, Automatyczny obraz: Tak, Chropowatość: 0.5, Ryflowanie: Nie",
+        "tr": "Cam rengi: Buzlu cam «Matelux» füme, Otomatik görsel: Evet, Pürüzlülük: 0.5, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло матовое «Мателюкс», Авто-изображение: Да, Шероховатость: 0.5, Рифление: Нет": {
+        "en": "Glass color: Frosted glass «Matelux», Auto image: Yes, Roughness: 0.5, Fluting: No",
+        "es": "Color del vidrio: Vidrio mate «Matelux», Imagen automática: Sí, Rugosidad: 0.5, Acanalado: No",
+        "de": "Glasfarbe: Satiniertes Glas „Matelux“, Automatisches Bild: Ja, Rauheit: 0.5, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro satinato «Matelux», Immagine automatica: Sì, Rugosità: 0.5, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło matowe „Matelux”, Automatyczny obraz: Tak, Chropowatość: 0.5, Ryflowanie: Nie",
+        "tr": "Cam rengi: Buzlu cam «Matelux», Otomatik görsel: Evet, Pürüzlülük: 0.5, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло матовое осветленное, Авто-изображение: Да, Шероховатость: 0.5, Рифление: Нет": {
+        "en": "Glass color: Frosted low-iron glass, Auto image: Yes, Roughness: 0.5, Fluting: No",
+        "es": "Color del vidrio: Vidrio mate extraclaro, Imagen automática: Sí, Rugosidad: 0.5, Acanalado: No",
+        "de": "Glasfarbe: Satiniertes Weißglas, Automatisches Bild: Ja, Rauheit: 0.5, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro satinato extrachiaro, Immagine automatica: Sì, Rugosità: 0.5, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło matowe niskożelazowe, Automatyczny obraz: Tak, Chropowatość: 0.5, Ryflowanie: Nie",
+        "tr": "Cam rengi: Buzlu ekstra berrak cam, Otomatik görsel: Evet, Pürüzlülük: 0.5, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло прозрачное осветленное, Авто-изображение: Да, Рифление: Нет": {
+        "en": "Glass color: Clear low-iron glass, Auto image: Yes, Fluting: No",
+        "es": "Color del vidrio: Vidrio transparente extraclaro, Imagen automática: Sí, Acanalado: No",
+        "de": "Glasfarbe: Klares Weißglas, Automatisches Bild: Ja, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro trasparente extrachiaro, Immagine automatica: Sì, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło przezroczyste niskożelazowe, Automatyczny obraz: Tak, Ryflowanie: Nie",
+        "tr": "Cam rengi: Şeffaf ekstra berrak cam, Otomatik görsel: Evet, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло прозрачное, Авто-изображение: Да, Рифление: Нет": {
+        "en": "Glass color: Clear glass, Auto image: Yes, Fluting: No",
+        "es": "Color del vidrio: Vidrio transparente, Imagen automática: Sí, Acanalado: No",
+        "de": "Glasfarbe: Klarglas, Automatisches Bild: Ja, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro trasparente, Immagine automatica: Sì, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło przezroczyste, Automatyczny obraz: Tak, Ryflowanie: Nie",
+        "tr": "Cam rengi: Şeffaf cam, Otomatik görsel: Evet, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло рифленое, Авто-изображение: Да, Шероховатость: 0.3, Рифление: Да": {
+        "en": "Glass color: Fluted glass, Auto image: Yes, Roughness: 0.3, Fluting: Yes",
+        "es": "Color del vidrio: Vidrio acanalado, Imagen automática: Sí, Rugosidad: 0.3, Acanalado: Sí",
+        "de": "Glasfarbe: Riffelglas, Automatisches Bild: Ja, Rauheit: 0.3, Riffelung: Ja",
+        "it": "Colore del vetro: Vetro cannettato, Immagine automatica: Sì, Rugosità: 0.3, Cannettatura: Sì",
+        "pl": "Kolor szkła: Szkło ryflowane, Automatyczny obraz: Tak, Chropowatość: 0.3, Ryflowanie: Tak",
+        "tr": "Cam rengi: Yivli cam, Otomatik görsel: Evet, Pürüzlülük: 0.3, Yivli desen: Evet"
+    },
+    "Цвет стекла: Стекло тонированное в массе графит, Авто-изображение: Да, Рифление: Нет": {
+        "en": "Glass color: Body-tinted glass, graphite, Auto image: Yes, Fluting: No",
+        "es": "Color del vidrio: Vidrio tintado en masa, grafito, Imagen automática: Sí, Acanalado: No",
+        "de": "Glasfarbe: Durchgefärbtes Glas, Graphit, Automatisches Bild: Ja, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro colorato in pasta, grafite, Immagine automatica: Sì, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło barwione w masie, grafit, Automatyczny obraz: Tak, Ryflowanie: Nie",
+        "tr": "Cam rengi: Kütle renkli cam, füme, Otomatik görsel: Evet, Yivli desen: Hayır"
+    },
+    "Цвет стекла: Стекло тонированное полупрозрачное бронза, Авто-изображение: Да, Рифление: Нет": {
+        "en": "Glass color: Semi-transparent tinted glass, bronze, Auto image: Yes, Fluting: No",
+        "es": "Color del vidrio: Vidrio tintado semitransparente, bronce, Imagen automática: Sí, Acanalado: No",
+        "de": "Glasfarbe: Halbtransparentes getöntes Glas, Bronze, Automatisches Bild: Ja, Riffelung: Nein",
+        "it": "Colore del vetro: Vetro colorato semitrasparente, bronzo, Immagine automatica: Sì, Cannettatura: No",
+        "pl": "Kolor szkła: Szkło barwione półprzezroczyste, brąz, Automatyczny obraz: Tak, Ryflowanie: Nie",
+        "tr": "Cam rengi: Yarı saydam renkli cam, bronz, Otomatik görsel: Evet, Yivli desen: Hayır"
     },
     "Цвет фурнитуры": {
-        "en": "Hardware color"
+        "en": "Hardware color",
+        "es": "Color de los herrajes",
+        "de": "Beschlagfarbe",
+        "it": "Colore della ferramenta",
+        "pl": "Kolor okuć",
+        "tr": "Aksesuar rengi"
     },
     "Цвета фурнитуры": {
-        "en": "Hardware finishes"
+        "en": "Hardware colors",
+        "es": "Colores de los herrajes",
+        "de": "Beschlagfarben",
+        "it": "Colori della ferramenta",
+        "pl": "Kolory okuć",
+        "tr": "Aksesuar renkleri"
     },
     "Цена продажи": {
-        "en": "Retail price"
+        "en": "Sale price",
+        "es": "Precio de venta",
+        "de": "Verkaufspreis",
+        "it": "Prezzo di vendita",
+        "pl": "Cena sprzedaży",
+        "tr": "Satış fiyatı"
     },
     "Цинковый сплав": {
-        "en": "Zinc alloy"
+        "en": "Zinc alloy",
+        "es": "Aleación de zinc",
+        "de": "Zinklegierung",
+        "it": "Lega di zinco",
+        "pl": "Stop cynku",
+        "tr": "Çinko alaşım"
     },
     "Черный": {
-        "en": "Black"
+        "en": "Black",
+        "es": "Negro",
+        "de": "Schwarz",
+        "it": "Nero",
+        "pl": "Czarny",
+        "tr": "Siyah"
     },
     "Шероховатость": {
-        "en": "Roughness"
+        "en": "Roughness",
+        "es": "Rugosidad",
+        "de": "Rauheit",
+        "it": "Rugosità",
+        "pl": "Chropowatość",
+        "tr": "Pürüzlülük"
     },
     "Штанга стабилизационная": {
-        "en": "Stabilization bar"
+        "en": "Stabilizing rod",
+        "es": "Barra estabilizadora",
+        "de": "Stabilisationsstange",
+        "it": "Barra stabilizzatrice",
+        "pl": "Drążek stabilizujący",
+        "tr": "Denge çubuğu"
     },
     "Штанги": {
-        "en": "Support bars"
+        "en": "Rods",
+        "es": "Barras",
+        "de": "Stangen",
+        "it": "Barre",
+        "pl": "Drążki",
+        "tr": "Çubuklar"
     },
     "Шторка в ванную": {
-        "en": "Bath screen"
+        "en": "Bath screen",
+        "es": "Mampara de bañera",
+        "de": "Badewannenaufsatz",
+        "it": "Parete per vasca",
+        "pl": "Parawan nawannowy",
+        "tr": "Küvet paravanı"
     },
-    "Ручка-кноб 1": {
-        "en": "Knob handle 1"
-    },
-    "Ручка-кноб 2": {
-        "en": "Knob handle 2"
-    },
-    "Ручка-скоба 1": {
-        "en": "Pull handle 1"
-    },
-    "Ручка-скоба 2": {
-        "en": "Pull handle 2"
-    },
-    "Ручка-купе 1": {
-        "en": "Flush pull handle 1"
-    },
-    "Ручка-купе 2": {
-        "en": "Flush pull handle 2"
-    },
-    "Ручка-полотенцедержатель": {
-        "en": "Towel bar handle"
+    "тест2": {
+        "en": "test2",
+        "es": "prueba2",
+        "de": "test2",
+        "it": "test2",
+        "pl": "test2",
+        "tr": "test2"
     }
 }
