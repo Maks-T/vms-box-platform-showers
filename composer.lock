@@ -4992,11 +4992,11 @@
         },
         {
             "name": "nicole/box-core",
-            "version": "dev-main",
+            "version": "dev-main-english",
             "dist": {
                 "type": "path",
                 "url": "packages/box/nicole/core",
-                "reference": "ecd67375e55f4ddd211fdebb992bfc84f5af89cd"
+                "reference": "2cb7224cc9e9f44863b5207ec7858256949db7a6"
             },
             "require": {
                 "laravel/framework": "^13.0",
@@ -10268,11 +10268,11 @@
         },
         {
             "name": "valerie/box-industry-showers",
-            "version": "dev-main",
+            "version": "dev-valerie/industry-showers/main",
             "dist": {
                 "type": "path",
                 "url": "packages/box/valerie/industry-showers",
-                "reference": "51242bfd9c9f3987b5f1cd43c0a4baa351da6ab2"
+                "reference": "c2ed3ac72e4a73caf91d5be8e145458ab6ebe22b"
             },
             "require": {
                 "nicole/box-core": "@dev",
