@@ -31,12 +31,12 @@
 
           <div class="page-title-container">
             <div class="category-header-text" style="color: var(--brand-blue); margin-bottom: 4px;">
-              Спецификация компонентов · Расчёт №{{ $sectionIndex + 1 }}
+              {{ __('Component specification · Estimate No. :num', ['num' => $sectionIndex + 1]) }}
               @if(count($productChunks) > 1)
-                (Часть {{ $chunkIndex + 1 }} из {{ count($productChunks) }})
+                ({{ __('Part :part of :total', ['part' => $chunkIndex + 1, 'total' => count($productChunks)]) }})
               @endif
             </div>
-            <h1 class="page-title">Материалы и комплектующие проекта</h1>
+            <h1 class="page-title">{{ __('Project materials and components') }}</h1>
           </div>
 
           <div class="materials-grid">
@@ -72,7 +72,7 @@
 
                   <div class="material-info-cell">
                     <div class="material-title">{{ $prodName }}</div>
-                    <div class="material-sku">Артикул: {{ $variant->sku }}</div>
+                    <div class="material-sku">{{ __('SKU:') }} {{ $variant->sku }}</div>
                     @if (!empty($prodDesc))
                       <div class="material-desc">{!! $prodDesc !!}</div>
                     @endif
@@ -84,7 +84,7 @@
 
         </div>
 
-        @include('valerie-showers::pdf.partials.footer')
+        @include('valerie-showers::pdf.partials.footer', ['theme' => 'light'])
       </div>
     @endforeach
   @endforeach

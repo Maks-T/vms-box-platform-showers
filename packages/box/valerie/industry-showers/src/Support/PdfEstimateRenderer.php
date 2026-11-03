@@ -66,12 +66,12 @@ class PdfEstimateRenderer
 
         if ($match && $product) {
           return $product->getTranslation('description', app()->getLocale())
-            ?? 'Технические характеристики уточняются.';
+            ?: __('Technical specifications are being clarified.');
         }
       }
     }
 
-    return 'Описание технических характеристик уточняется.';
+    return __('Technical specifications are being clarified.');
   }
 
   /**
@@ -84,7 +84,8 @@ class PdfEstimateRenderer
     $search = function(array $items) use (&$search, &$techPrice) {
       foreach ($items as $item) {
         $val = $item['value'] ?? [];
-        if (count($val) >= 5 && (str_contains(strtolower($val[0]), 'технический надзор') || str_contains(strtolower($val[0]), 'тех. надзор'))) {
+        $label = mb_strtolower((string)($val[0] ?? ''));
+        if (count($val) >= 5 && (str_contains($label, 'технический надзор') || str_contains($label, 'тех. надзор') || str_contains($label, mb_strtolower(__('Technical supervision'))))) {
           $techPrice = (float) preg_replace('/[^0-9]/', '', $val[4]);
           return;
         }
@@ -116,17 +117,19 @@ class PdfEstimateRenderer
   /**
    * Универсальное форматирование стоимости с разделителями тысяч и символом валюты
    */
-  public static function formatPrice(float $amount, string $currencySymbol = 'руб.'): string
+  public static function formatPrice(float|int|string|null $amount, ?string $currencySymbol = null): string
   {
-    return number_format($amount, 0, '.', ' ') . ' ' . $currencySymbol;
+    $currencySymbol ??= PdfReport::currencySymbol(config('nicole.default_currency', 'RUB'));
+
+    return number_format((float)$amount, 0, '.', ' ') . ' ' . $currencySymbol;
   }
 
   /**
-   * Расчет срока действия коммерческого предложения (по умолчанию +30 дней)
+   * Срок действия КП (valerie-showers.pdf.validity_days, по умолчанию 30 дней).
+   * Раньше addDays() мутировал $order->created_at.
    */
   public static function getValidUntil(?Carbon $createdAt): string
   {
-    $date = $createdAt ? $createdAt->addDays(30) : Carbon::now()->addDays(30);
-    return $date->format('d.m.Y');
+    return PdfReport::validUntil($createdAt);
   }
 }

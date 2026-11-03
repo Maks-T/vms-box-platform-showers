@@ -1,13 +1,7 @@
 @php
   /** @var \Nicole\Box\Core\Models\Order $order */
   use Valerie\Box\IndustryShowers\Support\PdfEstimateRenderer;
-
-  $currencySymbol = match($order->currency) {
-      'RUB' => 'руб.',
-      'USD' => '$',
-      'BYN' => 'Br',
-      default => $order->currency
-  };
+  $currencySymbol = $currencySymbol ?? \Valerie\Box\IndustryShowers\Support\PdfReport::currencySymbol($order->currency);
 @endphp
 
 @foreach ($order->sections as $sectionIndex => $section)
@@ -27,7 +21,7 @@
 
       <div class="page-content">
         <div class="section-summary-title-bar">
-          <div class="section-summary-title-text">Детальный расчёт · {{ $section->title }}</div>
+          <div class="section-summary-title-text">{{ __('Detailed estimate') }} · {{ $section->title }}</div>
         </div>
 
         @foreach($validCategories as $categoryNode)
@@ -35,12 +29,12 @@
         @endforeach
 
         <div class="section-summary-title-bar">
-          <div class="section-summary-title-text">Итоговая стоимость</div>
+          <div class="section-summary-title-text">{{ __('Total cost') }}</div>
         </div>
 
         <div class="total-breakdown-card">
           <div class="breakdown-row breakdown-row-grand">
-            <span class="breakdown-label-grand">Итого к оплате</span>
+            <span class="breakdown-label-grand">{{ __('Grand Total') }}</span>
             <span class="breakdown-value-grand">
               {{ PdfEstimateRenderer::formatPrice($section->price_grand_total, $currencySymbol) }}
             </span>
@@ -49,7 +43,7 @@
 
       </div>
 
-      @include('valerie-showers::pdf.partials.footer')
+      @include('valerie-showers::pdf.partials.footer', ['theme' => 'light'])
     </div>
   @endif
 @endforeach
