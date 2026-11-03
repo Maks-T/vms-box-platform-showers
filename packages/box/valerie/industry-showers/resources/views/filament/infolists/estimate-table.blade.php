@@ -34,10 +34,10 @@
             <td class="px-4 py-2.5 text-gray-900 dark:text-white {{ $cIndex > 0 ? 'text-right' : 'text-left' }}">
               @if($cIndex === 0)
                 <span class="inline-flex items-center gap-2">
-                    <span class="font-semibold text-gray-950 dark:text-gray-100">{{ $cellValue }}</span>
+                    <span class="font-semibold text-gray-950 dark:text-gray-100">{{ __($cellValue) }}</span>
                     @if($hasChildren)
                     <span class="text-xs font-normal px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
-                        {{ count($children) }} поз.
+                        {{ trans_choice(':count item|:count items', count($children), ['count' => count($children)]) }}
                       </span>
                   @endif
                   </span>

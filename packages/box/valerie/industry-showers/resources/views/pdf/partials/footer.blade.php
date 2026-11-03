@@ -1,18 +1,24 @@
 @php
-  $isDark = isset($theme) && $theme === 'dark';
+  use Valerie\Box\IndustryShowers\Support\PdfReport;
 
-  $companyEmail = config('nicole.company.email', 'steklovdome.sales@gmail.com');
-  $companyWebsite = config('nicole.company.website', 'proreshenia.by');
+  $isDark = isset($theme) && $theme === 'dark';
+  $company = $company ?? PdfReport::company();
 @endphp
 
 <div class="pdf-footer {{ $isDark ? 'pdf-footer-dark' : '' }}">
   <div class="footer-text {{ $isDark ? 'footer-text-dark' : '' }}">
-    <a href="https://{{ $companyWebsite }}" target="_blank">{{ $companyWebsite }}</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:{{ $companyEmail }}">{{ $companyEmail }}</a>
+    @if ($company['website'])
+      <a href="https://{{ $company['website'] }}" target="_blank">{{ $company['website'] }}</a>
+    @endif
+    @if ($company['website'] && $company['email'])
+      &nbsp;·&nbsp;
+    @endif
+    @if ($company['email'])
+      <a href="mailto:{{ $company['email'] }}">{{ $company['email'] }}</a>
+    @endif
   </div>
 
   <div class="footer-text-center {{ $isDark ? 'footer-text-dark' : '' }}">
-    Коммерческое предложение
+    {{ __('Commercial Proposal') }}
   </div>
 </div>

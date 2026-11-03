@@ -56,7 +56,12 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
 
   public static function getNavigationLabel(): string
   {
-        return __('Calculator Settings');
+    return __('Calculator Settings');
+  }
+
+  public function getTitle(): string
+  {
+    return __('Calculator Settings');
   }
 
   public ?array $data = [];
@@ -187,27 +192,28 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
   protected function getSystemInterfaceZones(): array
   {
     return [
-      'Цены и сметы' => [
-        'priceBlock' => ['label' => 'Карточка разбивки стоимости (Изделия, Монтаж, Доставка)', 'default_user' => false],
-        'estimateBlock' => ['label' => 'Таблица детализированной сметы / спецификации', 'default_user' => false],
-        'totalBlock' => ['label' => 'Нижняя плашка итоговой суммы и статуса заказа', 'default_user' => true],
-        'catalog_prices' => ['label' => 'Отображение цен в карточках каталогов (ручки, петли, стекло)', 'default_user' => false],
+      // Ключи групп и label — ключи перевода (lang/*.json пакета), переводятся при выводе
+      'Prices and estimates' => [
+        'priceBlock' => ['label' => 'Price breakdown card (Products, Installation, Delivery)', 'default_user' => false],
+        'estimateBlock' => ['label' => 'Detailed estimate / specification table', 'default_user' => false],
+        'totalBlock' => ['label' => 'Bottom bar with order total and status', 'default_user' => true],
+        'catalog_prices' => ['label' => 'Prices in catalog cards (handles, hinges, glass)', 'default_user' => false],
       ],
-      'Дополнительные услуги (Сервис)' => [
-        'service_lift' => ['label' => 'Подъем на этаж (Лифт / Этажи)', 'default_user' => false],
-        'service_measure' => ['label' => 'Услуга замера (тумблер "Замер")', 'default_user' => true],
-        'service_delivery' => ['label' => 'Услуга доставки (тумблер "Доставка")', 'default_user' => true],
-        'service_montage' => ['label' => 'Услуга монтажа (тумблер "Монтаж")', 'default_user' => true],
+      'Additional services' => [
+        'service_lift' => ['label' => 'Lifting to the floor (Elevator / Floors)', 'default_user' => false],
+        'service_measure' => ['label' => 'Measurement service ("Measurement" toggle)', 'default_user' => true],
+        'service_delivery' => ['label' => 'Delivery service ("Delivery" toggle)', 'default_user' => true],
+        'service_montage' => ['label' => 'Installation service ("Installation" toggle)', 'default_user' => true],
       ],
-      'Кнопки действий (Подвал под формой)' => [
-        'btn_download_pdf' => ['label' => 'Кнопка "Скачать КП" (PDF)', 'default_user' => false],
-        'btn_print' => ['label' => 'Кнопка "Распечатать"', 'default_user' => false],
-        'btn_share' => ['label' => 'Кнопка "Поделиться ссылкой"', 'default_user' => true],
+      'Action buttons (below the form)' => [
+        'btn_download_pdf' => ['label' => '"Download proposal" button (PDF)', 'default_user' => false],
+        'btn_print' => ['label' => '"Print" button', 'default_user' => false],
+        'btn_share' => ['label' => '"Share link" button', 'default_user' => true],
       ],
-      'Конструкторские опции' => [
-        'hide_material_selector' => ['label' => 'Скрытие селектора сплава (Цинк / Латунь)', 'default_user' => true],
-        'doorstep_show' => ['label' => 'Опция "Выносной порог"', 'default_user' => true],
-        'profile_framing_show' => ['label' => 'Опция "Обрамление П-профилем"', 'default_user' => true],
+      'Design options' => [
+        'hide_material_selector' => ['label' => 'Hide alloy selector (Zinc / Brass)', 'default_user' => true],
+        'doorstep_show' => ['label' => '"Separate doorstep" option', 'default_user' => true],
+        'profile_framing_show' => ['label' => '"U-profile framing" option', 'default_user' => true],
       ],
     ];
   }
@@ -256,50 +262,50 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
                   ->columnSpan(['default' => 12, 'lg' => 6])
                   ->schema([
                     Toggle::make("forms.{$formSlug}.is_active")
-                      ->label('Конструкция активна в калькуляторе')
-                      ->helperText('Если отключить, форма полностью исчезнет из выбора на сайте')
+                      ->label(__('Structure is active in the calculator'))
+                      ->helperText(__('If disabled, the shape disappears completely from the selection on the website'))
                       ->default(true),
 
                     // Whitelist дверей
                     Select::make("forms.{$formSlug}.enabled_doors")
-                      ->label('Доступные типы дверей для этой формы')
-                      ->helperText('Выберите разрешенные типы открывания на сайте (выводятся только совместимые двери).')
+                      ->label(__('Available door types for this shape'))
+                      ->helperText(__('Select the opening types allowed on the website (only compatible doors are listed).'))
                       ->multiple()
                       ->options($formSpecificDoorOptions)
-                      ->placeholder('Выберите разрешенные открывания')
+                      ->placeholder(__('Select allowed openings'))
                       ->searchable()
                       ->preload(),
                   ]),
               ]),
             ]),
 
-          Section::make('Базовые габаритные лимиты формы')
-            ->description('Ограничивают допустимые размеры в калькуляторе для данной конструкции')
+          Section::make(__('Base dimension limits of the shape'))
+            ->description(__('Limit the allowed dimensions in the calculator for this structure'))
             ->schema([
               Grid::make(4)->schema([
-                TextInput::make("forms.{$formSlug}.length_min")->label('Мин. длина (мм)')->numeric()->required(),
-                TextInput::make("forms.{$formSlug}.length_max")->label('Макс. длина (мм)')->numeric()->required(),
-                TextInput::make("forms.{$formSlug}.height_min")->label('Мин. высота (мм)')->numeric()->required(),
-                TextInput::make("forms.{$formSlug}.height_max")->label('Макс. высота (мм)')->numeric()->required(),
+                TextInput::make("forms.{$formSlug}.length_min")->label(__('Min. length (mm)'))->numeric()->required(),
+                TextInput::make("forms.{$formSlug}.length_max")->label(__('Max. length (mm)'))->numeric()->required(),
+                TextInput::make("forms.{$formSlug}.height_min")->label(__('Min. height (mm)'))->numeric()->required(),
+                TextInput::make("forms.{$formSlug}.height_max")->label(__('Max. height (mm)'))->numeric()->required(),
               ]),
             ]),
 
-          Section::make('Специальные лимиты под конкретные открывания')
-            ->description('Переопределяют габариты (например, мин. 1500 мм для 2-х сдвижных дверей)')
+          Section::make(__('Special limits for specific openings'))
+            ->description(__('Override dimensions (e.g. min. 1500 mm for 2 sliding doors)'))
             ->schema([
               Repeater::make("forms.{$formSlug}.special_limits")
                 ->hiddenLabel()
-                ->addActionLabel('Добавить спец-лимит для двери')
+                ->addActionLabel(__('Add special limit for a door'))
                 ->schema([
                   Select::make('door_id')
-                    ->label('Тип двери')
+                    ->label(__('Door type'))
                     ->options($formSpecificDoorOptions)
                     ->required(),
 
-                  TextInput::make('length_min')->label('Мин. длина (мм)')->numeric()->placeholder('300'),
-                  TextInput::make('length_max')->label('Макс. длина (мм)')->numeric()->placeholder('2000'),
-                  TextInput::make('height_min')->label('Мин. высота (мм)')->numeric()->placeholder('1700'),
-                  TextInput::make('height_max')->label('Макс. высота (мм)')->numeric()->placeholder('3200'),
+                  TextInput::make('length_min')->label(__('Min. length (mm)'))->numeric()->placeholder('300'),
+                  TextInput::make('length_max')->label(__('Max. length (mm)'))->numeric()->placeholder('2000'),
+                  TextInput::make('height_min')->label(__('Min. height (mm)'))->numeric()->placeholder('1700'),
+                  TextInput::make('height_max')->label(__('Max. height (mm)'))->numeric()->placeholder('3200'),
                 ])
                 ->columns(5),
             ]),
@@ -312,7 +318,8 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
         Tabs::make('MasterSettingsTabs')->tabs([
 
           // ВКЛАДКА 1: Конструкции со вложенными подвкладками по формам
-          Tab::make('Конструкции и лимиты')
+          Tab::make('structures')
+            ->label(__('Structures and limits'))
             ->icon('heroicon-o-cube-transparent')
             ->schema([
               Tabs::make('FormsInnerTabs')
@@ -320,28 +327,29 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
             ]),
 
           // Ролевая матрица видимости интерфейса
-          Tab::make('Видимость интерфейса (Права)')
+          Tab::make('visibility')
+            ->label(__('Interface visibility (Permissions)'))
             ->icon('heroicon-o-eye')
             ->schema(
               collect($this->getSystemInterfaceZones())->map(function (array $zones, string $groupName) {
-                return Section::make($groupName)
+                return Section::make(__($groupName))
                   ->compact()
                   ->schema(
                     collect($zones)->map(function (array $info, string $key) {
                       return Grid::make(4)->schema([
-                        Section::make($info['label'])
+                        Section::make(__($info['label']))
                           ->columnSpan(1)
                           ->compact(),
                         Checkbox::make("ui_matrix.{$key}.userShow")
-                          ->label('Клиент на сайте (User)')
+                          ->label(__('Website customer (User)'))
                           ->inline(false)
                           ->columnSpan(1),
                         Checkbox::make("ui_matrix.{$key}.managerShow")
-                          ->label('Менеджер (CRM)')
+                          ->label(__('Manager (CRM)'))
                           ->inline(false)
                           ->columnSpan(1),
                         Checkbox::make("ui_matrix.{$key}.adminShow")
-                          ->label('Администратор')
+                          ->label(__('Administrator'))
                           ->inline(false)
                           ->columnSpan(1),
                       ]);
@@ -351,28 +359,29 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
             ),
 
           // Тарификация услуг
-          Tab::make('Услуги и монтаж')
+          Tab::make('services')
+            ->label(__('Services and installation'))
             ->icon('heroicon-o-wrench-screwdriver')
             ->schema([
-              Section::make('Тарификация монтажа')
+              Section::make(__('Installation pricing'))
                 ->schema([
                   Radio::make('montage_rate_type')
-                    ->label('Принцип начисления стоимости монтажных работ')
+                    ->label(__('How installation cost is charged'))
                     ->options([
-                      'fixed' => 'Фиксированная цена за всю конструкцию целиком (базовая цена услуги)',
-                      'per_unit' => 'Умножать цену монтажа на фактическое количество створок/стекол',
+                      'fixed' => __('Fixed price for the entire structure (base service price)'),
+                      'per_unit' => __('Multiply the installation price by the actual number of panels/glasses'),
                     ])
                     ->required(),
                 ]),
-              Section::make('Режим расчёта выносного порога')
+              Section::make(__('Separate doorstep calculation mode'))
                 ->schema([
                   Radio::make('doorstep_mode')
-                    ->label('Поведение выносного порога по умолчанию')
-                    ->helperText('Определяет, должен ли порожек автоматически включаться в смету и расчет цены')
+                    ->label(__('Default behaviour of the separate doorstep'))
+                    ->helperText(__('Defines whether the doorstep is automatically included in the estimate and price calculation'))
                     ->options([
-                      'always' => 'Всегда включать в смету (для совместимых форм даже если тумблер скрыт от клиента)',
-                      'optional' => 'По выбору пользователя (по умолчанию выключен, клиент решает сам)',
-                      'never' => 'Никогда не включать в смету (порог отключен)',
+                      'always' => __('Always include in the estimate (for compatible shapes, even if the toggle is hidden from the customer)'),
+                      'optional' => __('At the user\'s choice (off by default, the customer decides)'),
+                      'never' => __('Never include in the estimate (doorstep disabled)'),
                     ])
                     ->default('optional')
                     ->required(),
@@ -399,14 +408,14 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
     /** @var ComplexDictionary $measureDict */
     $measureDict = ComplexDictionary::query()->firstOrCreate(
       ['code' => 'shower_measure_limits'],
-      ['name' => ['ru' => 'Лимиты размеров душевых', 'en' => 'Shower Measure Limits'], 'is_active' => true]
+      ['name' => $this->localizedName('Shower Measure Limits'), 'is_active' => true]
     );
 
     foreach ($state['forms'] ?? [] as $formSlug => $formData) {
       ComplexDictionaryRecord::query()->updateOrCreate(
         ['dictionary_id' => $measureDict->id, 'slug' => $formSlug],
         [
-          'name' => ['ru' => "Лимиты размеров для {$formSlug}", 'en' => "Measure limits for {$formSlug}"],
+          'name' => $this->localizedName('Measure limits for :form', ['form' => $formSlug]),
           'is_active' => (bool) ($formData['is_active'] ?? true),
           'meta' => [
             'height_min' => (int) ($formData['height_min'] ?? 1700),
@@ -422,7 +431,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
     /** @var ComplexDictionary $interfaceDict */
     $interfaceDict = ComplexDictionary::query()->firstOrCreate(
       ['code' => 'shower_interface_settings'],
-      ['name' => ['ru' => 'Настройки интерфейса калькулятора', 'en' => 'Calculator Interface Settings'], 'is_active' => true]
+      ['name' => $this->localizedName('Calculator Interface Settings'), 'is_active' => true]
     );
 
     // Обработка белого списка (enabled_doors) и автоматический расчет disabled_doors для обратной совместимости
@@ -495,7 +504,7 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
     CatalogCache::invalidate();
 
     Notification::make()
-      ->title('Все настройки фабрики и открываний успешно сохранены')
+      ->title(__('All shape and opening settings have been saved'))
       ->success()
       ->send();
   }
@@ -511,37 +520,37 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
       'line' => [
         'render' => asset('filament/showerTypes/type1.webp'),
         'blueprint' => asset('filament/showerTypes/03-odna-stvorka.svg'),
-        'desc' => 'Линейная перегородка в проем или на прямой участок',
+        'desc' => __('Straight partition for an opening or a straight wall section'),
       ],
       'corner' => [
         'render' => asset('filament/showerTypes/type2.webp'),
         'blueprint' => asset('filament/showerTypes/02-uglovoy-stvorka-bokovaya.svg'),
-        'desc' => 'Угловое душевое ограждение 90° (Г-образное)',
+        'desc' => __('Corner shower enclosure 90° (L-shaped)'),
       ],
       'free' => [
         'render' => asset('filament/showerTypes/type3.webp'),
         'blueprint' => null,
-        'desc' => 'Свободный вход без дверей (Walk-in)',
+        'desc' => __('Open entry without doors (Walk-in)'),
       ],
       'trapezoid' => [
         'render' => asset('filament/showerTypes/type4.webp'),
         'blueprint' => asset('filament/showerTypes/04-pyatiugolnyy.svg'),
-        'desc' => 'Пятиугольная трапециевидная кабина с углами 135°',
+        'desc' => __('Pentagonal trapezoid enclosure with 135° angles'),
       ],
       'ushaped' => [
         'render' => asset('filament/showerTypes/type5.webp'),
         'blueprint' => asset('filament/showerTypes/05-p-obraznyy.svg'),
-        'desc' => 'П-образное ограждение с примыканием к одной стене',
+        'desc' => __('U-shaped enclosure adjoining one wall'),
       ],
       'door' => [
         'render' => asset('filament/showerTypes/type6.webp'),
         'blueprint' => asset('filament/showerTypes/06-nisha-1-stvorka.svg'),
-        'desc' => 'Душевая дверь для установки в существующую нишу',
+        'desc' => __('Shower door for installation into an existing niche'),
       ],
       'curtain' => [
         'render' => asset('filament/showerTypes/type7.webp'),
         'blueprint' => asset('filament/showerTypes/07-shtorka-dlya-vanny.svg'),
-        'desc' => 'Защитная стеклянная шторка на борт ванны',
+        'desc' => __('Protective glass screen for the bathtub edge'),
       ],
     ];
 
@@ -551,8 +560,13 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
       'desc' => $formName,
     ];
 
+    $altScheme = e(__('Scheme'));
+    $codeLabel = e(__('code'));
+    $formNameSafe = e($formName);
+    $descSafe = e((string)$data['desc']);
+
     $blueprintHtml = $data['blueprint']
-      ? "<div class=\"w-24 h-28 bg-white dark:bg-gray-900 rounded-lg p-1.5 border border-gray-200 dark:border-gray-700 flex items-center justify-center shrink-0 shadow-sm\"><img src=\"{$data['blueprint']}\" class=\"max-h-full max-w-full object-contain dark:invert\" alt=\"Схема\" /></div>"
+      ? "<div class=\"w-24 h-28 bg-white dark:bg-gray-900 rounded-lg p-1.5 border border-gray-200 dark:border-gray-700 flex items-center justify-center shrink-0 shadow-sm\"><img src=\"{$data['blueprint']}\" class=\"max-h-full max-w-full object-contain dark:invert\" alt=\"{$altScheme}\" /></div>"
       : "";
 
     $html = "
@@ -562,9 +576,9 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
             </div>
             {$blueprintHtml}
             <div class=\"flex flex-col gap-0.5 min-w-0 flex-1 pl-1\">
-                <span class=\"text-[11px] uppercase font-bold tracking-wider text-primary-600 dark:text-primary-400 font-mono\">код: {$formSlug}</span>
-                <h4 class=\"text-sm font-bold text-gray-900 dark:text-white leading-snug truncate\">{$formName}</h4>
-                <p class=\"text-xs text-gray-500 dark:text-gray-400 leading-tight mt-0.5 line-clamp-2\">{$data['desc']}</p>
+                <span class=\"text-[11px] uppercase font-bold tracking-wider text-primary-600 dark:text-primary-400 font-mono\">{$codeLabel}: {$formSlug}</span>
+                <h4 class=\"text-sm font-bold text-gray-900 dark:text-white leading-snug truncate\">{$formNameSafe}</h4>
+                <p class=\"text-xs text-gray-500 dark:text-gray-400 leading-tight mt-0.5 line-clamp-2\">{$descSafe}</p>
             </div>
         </div>";
 
@@ -575,29 +589,43 @@ class ManageShowersCalculatorSettings extends Page implements HasForms
   protected function getRecordHumanNames(): array
   {
     $names = [
-      'enabled_doors' => ['ru' => 'Разрешенные типы дверей (белый список)', 'en' => 'Enabled door types (whitelist)'],
-      'disabled_doors' => ['ru' => 'Отключенные типы дверей (черный список)', 'en' => 'Disabled door types (blacklist)'],
-      'special_limits' => ['ru' => 'Специальные лимиты габаритов связок', 'en' => 'Special dimensional limits'],
-      'montage_rate_type' => ['ru' => 'Принцип тарификации монтажа', 'en' => 'Montage rate type'],
-      'doorstep_mode' => ['ru' => 'Режим расчета выносного порога', 'en' => 'Doorstep calculation mode'],
+      'enabled_doors' => $this->localizedName('Enabled door types (whitelist)'),
+      'disabled_doors' => $this->localizedName('Disabled door types (blacklist)'),
+      'special_limits' => $this->localizedName('Special dimensional limits'),
+      'montage_rate_type' => $this->localizedName('Installation rate type'),
+      'doorstep_mode' => $this->localizedName('Doorstep calculation mode'),
     ];
 
     foreach ($this->getSystemInterfaceZones() as $zones) {
       foreach ($zones as $key => $info) {
-        $names[$key] = [
-          'ru' => $info['label'],
-          'en' => $info['label'],
-        ];
+        $names[$key] = $this->localizedName($info['label']);
       }
     }
 
     return $names;
   }
 
+  /**
+   * Название записи справочника на всех языках из VMS_LOCALES (spatie/translatable JSON).
+   *
+   * @return array<string, string>
+   */
+  protected function localizedName(string $key, array $replace = []): array
+  {
+    $locales = (array)config('nicole.locales', ['ru', 'en']);
+    $name = [];
+
+    foreach (array_unique(array_merge($locales, ['ru', 'en'])) as $locale) {
+      $name[$locale] = __($key, $replace, $locale);
+    }
+
+    return $name;
+  }
+
   protected function saveRecord(ComplexDictionary $dict, string $slug, array $meta): void
   {
     $humanNames = $this->getRecordHumanNames();
-    $name = $humanNames[$slug] ?? ['ru' => $slug, 'en' => $slug];
+    $name = $humanNames[$slug] ?? $this->localizedName($slug);
 
     ComplexDictionaryRecord::query()->updateOrCreate(
       ['dictionary_id' => $dict->id, 'slug' => $slug],

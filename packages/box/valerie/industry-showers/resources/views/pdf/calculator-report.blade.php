@@ -1,79 +1,41 @@
 @php
-  /** @var \Nicole\Box\Core\Models\Order $order */
-  $currencySymbol = match($order->currency) {
-      'RUB' => 'руб.',
-      'USD' => '$',
-      'BYN' => 'Br',
-      default => $order->currency
-  };
+  /**
+   * Стандартное КП индустрии `Душевые перегородки`.
+   *
+   * Клиентская вёрстка не правится здесь: приложение переопределяет нужные файлы в
+   * resources/views/vendor/valerie-showers/pdf/** (см. README пакета).
+   *
+   * @var \Nicole\Box\Core\Models\Order $order
+   */
+  use Valerie\Box\IndustryShowers\Support\PdfReport;
 
+  $reportLocale = PdfReport::applyOrderLocale($order->locale ?? null);
+  $currencySymbol = PdfReport::currencySymbol($order->currency, $reportLocale);
+  $company = PdfReport::company();
+  $customerFullName = $order->customer ? trim((string)$order->customer->full_name) : '';
   $pageCounter = 1;
 
-  view()->share('pageCounter', $pageCounter);
+  view()->share(compact('currencySymbol', 'company', 'customerFullName', 'pageCounter', 'reportLocale'));
 @endphp
-  <!DOCTYPE html>
-<html lang="{{ $order->locale ?? 'ru' }}">
+<!DOCTYPE html>
+<html lang="{{ $reportLocale }}">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>{{ $title ?? 'Коммерческое предложение' }}</title>
+  {{-- $title из ядра всегда на русском, поэтому собираем свой --}}
+  <title>{{ __('Commercial Proposal') }} № {{ $order->code }}</title>
 
   <style>
-    @font-face {
-      font-family: 'DM Sans';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/DMSans/DMSans-Regular.ttf'))) }}") format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'DM Sans';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/DMSans/DMSans-Medium.ttf'))) }}") format('truetype');
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'DM Sans';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/DMSans/DMSans-Bold.ttf'))) }}") format('truetype');
-      font-weight: 700;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/Inter/Inter_18pt-Regular.ttf'))) }}") format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/Inter/Inter_18pt-SemiBold.ttf'))) }}") format('truetype');
-      font-weight: 600;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Inter';
-      src: url("data:font/truetype;charset=utf-8;base64,{{ base64_encode(file_get_contents(base_path('packages/box/valerie/industry-showers/resources/fonts/Inter/Inter_24pt-Bold.ttf'))) }}") format('truetype');
-      font-weight: 700;
-      font-style: normal;
-    }
-
-    {!! file_get_contents(base_path('packages/box/valerie/industry-showers/resources/views/pdf/pdf-report.css')) !!}
+    {!! PdfReport::fontFacesCss() !!}
+    {!! PdfReport::stylesCss() !!}
   </style>
+
+  @includeIf('valerie-showers::pdf.partials.head-extra')
 </head>
 <body>
 
-@include('valerie-showers::pdf.pages.cover')
-
-@include('valerie-showers::pdf.pages.summary')
-
-@include('valerie-showers::pdf.pages.estimate')
-
-{{-- @include('valerie-showers::pdf.pages.materials') --}}
-
-@include('valerie-showers::pdf.pages.contacts')
+@foreach (PdfReport::pages() as $pdfPage)
+  @include('valerie-showers::pdf.pages.' . $pdfPage)
+@endforeach
 
 </body>
 </html>

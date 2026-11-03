@@ -74,7 +74,7 @@ class ShowersOrderSectionFormatter implements OrderSectionFormatterInterface
       $sidesList = [];
       foreach ($section->meta['properties']['sides'] as $idx => $sideVal) {
         $lbl = $labels[$idx] ?? (string)($idx + 1);
-        $sidesList[] = "{$lbl}: {$sideVal} мм";
+        $sidesList[] = "{$lbl}: {$sideVal} " . __('mm');
       }
       $sidesVal = implode(', ', $sidesList);
         } elseif ($sidesVal && !str_contains($sidesVal, ':')) {
@@ -88,7 +88,10 @@ class ShowersOrderSectionFormatter implements OrderSectionFormatterInterface
     // 3. Высота
     $heightVal = $this->findValue($descMap, ['высота', 'height']);
     if ($heightVal) {
-      $formattedHeight = str_ends_with($heightVal, 'мм') ? $heightVal : "{$heightVal} мм";
+      $mm = __('mm');
+      $formattedHeight = (str_ends_with($heightVal, 'мм') || str_ends_with($heightVal, 'mm') || str_ends_with($heightVal, $mm))
+        ? $heightVal
+        : "{$heightVal} {$mm}";
       $lines[] = "• " . __('Height, mm') . ": <strong>{$formattedHeight}</strong>";
     }
 

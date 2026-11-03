@@ -16,7 +16,18 @@ class CalculatorController
    */
   public function show(Request $request): Response
   {
-    $widgetSlug = 'widget';
+    $supportedLocales = config('nicole.locales', [config('app.locale', 'ru')]);
+    $fallbackLocale = config('app.locale', 'ru');
+
+    $locale = $request->query('lang');
+    if (!$locale && $request->hasHeader('Accept-Language')) {
+      $locale = $request->getPreferredLanguage($supportedLocales);
+    }
+
+    $locale = ($locale && in_array($locale, $supportedLocales, true)) ? $locale : $fallbackLocale;
+    app()->setLocale($locale);
+
+    $widgetSlug = config('nicole.active_widget', 'widget');
     $order = null;
 
     $orderCode = $request->input('order') ?? $request->input('code');

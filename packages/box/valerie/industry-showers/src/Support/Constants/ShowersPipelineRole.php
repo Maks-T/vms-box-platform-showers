@@ -8,6 +8,7 @@ use Nicole\Box\Core\Support\Contracts\ChoiceConstantInterface;
 
 class ShowersPipelineRole implements ChoiceConstantInterface
 {
+  public const string GLASS = 'glass';
   public const string PROFILE = 'profile';
   public const string CAP = 'cap';
   public const string HANDLE = 'handle';
@@ -24,6 +25,7 @@ class ShowersPipelineRole implements ChoiceConstantInterface
   public static function label(string $value): string
   {
     return match ($value) {
+      self::GLASS => __('Glass'),
       self::PROFILE => __('Profile'),
       self::CAP => __('Cap'),
       self::HANDLE => __('Handle'),
@@ -43,6 +45,7 @@ class ShowersPipelineRole implements ChoiceConstantInterface
   public static function defaultProductType(string $value): ?string
   {
     return match ($value) {
+      self::GLASS => 'shower_glass',
       self::PROFILE, self::CAP => 'shower_profile',
       self::HANDLE => 'shower_handle',
       self::OPEN_SYSTEM, self::CONNECTOR, self::SLIDE => 'shower_open_system',
@@ -66,6 +69,7 @@ class ShowersPipelineRole implements ChoiceConstantInterface
   public static function cases(): array
   {
     return [
+      self::GLASS,
       self::PROFILE,
       self::CAP,
       self::HANDLE,

@@ -22,6 +22,7 @@ class ValerieShowersServiceProvider extends ServiceProvider
 
   public function register(): void
   {
+    $this->mergeConfigFrom($this->getPluginBasePath() . '/config/valerie-showers.php', 'valerie-showers');
     $this->loadJsonTranslationsFrom($this->getPluginBasePath() . '/lang');
   }
 
@@ -30,7 +31,19 @@ class ValerieShowersServiceProvider extends ServiceProvider
     $basePath = $this->getPluginBasePath();
 
     $this->loadMigrationsFrom($basePath . '/database/migrations');
+    // Laravel сам ищет оверрайды в resources/views/vendor/valerie-showers/** приложения
     $this->loadViewsFrom($basePath . '/resources/views', 'valerie-showers');
+
+    if ($this->app->runningInConsole()) {
+      $this->publishes([
+        $basePath . '/config/valerie-showers.php' => config_path('valerie-showers.php'),
+      ], 'valerie-showers-config');
+
+      // Скопировать КП в приложение целиком для кастомизации под клиента
+      $this->publishes([
+        $basePath . '/resources/views/pdf' => resource_path('views/vendor/valerie-showers/pdf'),
+      ], 'valerie-showers-pdf');
+    }
 
     $this->registerApiRoutes();
     $this->registerWebRoutes();
