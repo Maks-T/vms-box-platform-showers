@@ -16,8 +16,8 @@
     <testsuite name="NicoleCore">
       <directory>packages/box/nicole/core/tests</directory>
     </testsuite>
-    <testsuite name="ValerieStone">
-      <directory>packages/box/valerie/industry-stone/tests</directory>
+    <testsuite name="ValerieShowers">
+      <directory>packages/box/valerie/industry-showers/tests</directory>
     </testsuite>
   </testsuites>
 
@@ -25,7 +25,7 @@
     <include>
       <directory>app</directory>
       <directory>packages/box/nicole/core/src</directory>
-      <directory>packages/box/valerie/industry-stone/src</directory>
+      <directory>packages/box/valerie/industry-showers/src</directory>
     </include>
   </source>
 

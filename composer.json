@@ -77,7 +77,7 @@
       "XDEBUG_MODE=coverage php artisan test --testsuite=NicoleCore --coverage-html=public/coverage"
     ],
     "test-valerie": [
-      "XDEBUG_MODE=coverage php artisan test --testsuite=ValerieCctv --coverage-html=public/coverage"
+      "XDEBUG_MODE=coverage php artisan test --testsuite=ValerieShowers --coverage-html=public/coverage"
     ],
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",

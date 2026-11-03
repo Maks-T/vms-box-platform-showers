@@ -109,12 +109,12 @@ test:
 test-nicole:
 	$(COMPOSE) exec app env XDEBUG_MODE=coverage $(ARTISAN) test --testsuite=NicoleCore --coverage-html=public/coverage
 
-# Запуск тестов плагина камня ValerieStone с генерацией отчета покрытия
+# Запуск тестов плагина камня ValerieShowers с генерацией отчета покрытия
 test-valerie:
-	$(COMPOSE) exec app env XDEBUG_MODE=coverage $(ARTISAN) test --testsuite=ValerieStone --coverage-html=public/coverage
+	$(COMPOSE) exec app env XDEBUG_MODE=coverage $(ARTISAN) test --testsuite=ValerieShowers --coverage-html=public/coverage
 
 package-update:
-	$(COMPOSE) exec app composer update nicole/box-core valerie/box-industry-stone
+	$(COMPOSE) exec app composer update nicole/box-core valerie/box-industry-showers
 
 
 dw:
@@ -144,7 +144,7 @@ help:
 	@echo "  make bash         - Enter the app container"
 	@echo "  make test         - Run all tests with coverage report"
 	@echo "  make test-nicole  - Run NicoleCore tests with coverage"
-	@echo "  make test-valerie - Run ValerieStone tests with coverage"
+	@echo "  make test-valerie - Run ValerieShowers tests with coverage"
 	@echo "  make migrate      - Run migrations"
 	@echo "  make mfs          - Rebuild DB (fresh + seed)"
 	@echo "  make ci           - Run composer install"
