@@ -35,3 +35,5 @@ root
 etc
 *_combine*.txt
 */**/*_combine*.txt
+
+/.env
