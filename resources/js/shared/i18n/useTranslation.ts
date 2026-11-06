@@ -167,14 +167,47 @@ const multiLangOverrides: Record<Locale, Partial<Record<TranslationKey, string>>
   },
 };
 
+export const LOCALE_COOKIE = 'vms_locale';
+
+const isLocale = (value: unknown): value is Locale =>
+  typeof value === 'string' && SUPPORTED_LOCALES.includes(value as Locale);
+
+const readCookie = (name: string): string | null => {
+  const row = document.cookie.split('; ').find((item) => item.startsWith(`${name}=`));
+  return row ? decodeURIComponent(row.slice(name.length + 1)) : null;
+};
+
+export function writeLocaleCookie(locale: Locale): void {
+  const secure = window.location.protocol === 'https:' ? '; Secure' : '';
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=31536000; SameSite=Lax${secure}`;
+}
+
 export function getActiveLocale(): Locale {
   if (typeof window === 'undefined') {
     return 'en';
   }
-  const saved = localStorage.getItem('app_locale') as Locale | null;
-  if (saved && SUPPORTED_LOCALES.includes(saved)) {
-    return saved;
+
+  const fromCookie = readCookie(LOCALE_COOKIE);
+  if (isLocale(fromCookie)) {
+    return fromCookie;
   }
+
+  try {
+    const legacy = localStorage.getItem('app_locale');
+    if (isLocale(legacy)) {
+      writeLocaleCookie(legacy);
+      localStorage.removeItem('app_locale');
+      return legacy;
+    }
+  } catch {
+    // ignore
+  }
+
+  const htmlLang = document.documentElement.lang.slice(0, 2).toLowerCase();
+  if (isLocale(htmlLang)) {
+    return htmlLang;
+  }
+
   return 'en';
 }
 
@@ -203,7 +236,7 @@ export function useTranslation() {
   }, []);
 
   const changeLocale = (newLocale: Locale) => {
-    localStorage.setItem('app_locale', newLocale);
+    writeLocaleCookie(newLocale);
     setLocaleState(newLocale);
     window.location.reload();
   };

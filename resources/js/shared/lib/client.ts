@@ -1,6 +1,6 @@
 import axios, {AxiosInstance, InternalAxiosRequestConfig, AxiosError, AxiosResponse} from 'axios';
 import {toast} from 'sonner';
-import {t} from '@/shared/i18n/useTranslation';
+import {t, getActiveLocale} from '@/shared/i18n/useTranslation';
 
 export interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   skipErrorHandler?: boolean;
@@ -17,7 +17,7 @@ const client: AxiosInstance = axios.create({
 // Интерцептор запросов (Добавляет заголовки динамически)
 client.interceptors.request.use((config: CustomAxiosRequestConfig) => {
   // актуальный язык
-  const locale = localStorage.getItem('app_locale') || 'en';
+  const locale = getActiveLocale();
 
   config.headers['Accept-Language'] = locale;
   config.headers['X-Sales-Channel'] = 'widget'; 

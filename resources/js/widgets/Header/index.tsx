@@ -17,10 +17,6 @@ export default function Header() {
   const isEmployee = !!auth?.employee;
   const isDev = checkDevMode();
 
-  useEffect(() => {
-    localStorage.setItem('app_locale', locale);
-  }, [locale]);
-
   const handleLanguageChange = (newLocale: string) => {
     setLocale(newLocale as Locale);
   };

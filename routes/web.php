@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Nicole\Box\Core\Http\Resources\Api\V1\ProductResource;
 use Nicole\Box\Core\Models\Product;
+use Nicole\Box\Core\Http\Middleware\ResolveLocale;
+
+Route::middleware(ResolveLocale::class)->group(function () {
 
 // 1. Главная страница (Промо Showers)
 Route::get('/', function () {
@@ -55,13 +58,10 @@ Route::get('/services', function () {
 
 // Переключение языка
 Route::get('/lang/{locale}', function (string $locale) {
-  if (in_array($locale, ['ru', 'en'])) {
-    // Записываем в сессию для нашего API
-    session(['locale' => $locale]);
+  $code = ResolveLocale::normalize($locale, ResolveLocale::supported());
+  $response = back();
 
-    // Записываем в куку, чтобы Filament Language Switch не сбрасывал язык
-    cookie()->queue(cookie()->forever('filament_language_switch_locale', $locale));
-  }
-
-  return back();
+  return $code !== null ? $response->withCookie(ResolveLocale::makeCookie($code)) : $response;
 })->name('lang.switch');
+
+});

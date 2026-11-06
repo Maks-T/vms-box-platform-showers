@@ -29,7 +29,7 @@ const ROOT_CONTAINER_ID = 'calcAppRoot';
 export default function CalculatorShow({ initialData }: Props) {
   const { t, locale } = useTranslation();
   const urlLang = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('lang') : null;
-  const activeLang = urlLang || initialData?.lang || locale;
+  const activeLang = urlLang || locale;
 
   useEffect(() => {
 
