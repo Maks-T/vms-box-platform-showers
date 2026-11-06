@@ -2,6 +2,7 @@ import React from 'react';
 import {EavAttribute, EavValueOption} from '@/types/catalog';
 import {ValueMultiple} from './ValueMultiple';
 import {ValueSingleOption} from './ValueSingleOption';
+import {t} from '@/shared/i18n/useTranslation';
 
 interface Props {
   attribute: EavAttribute;
@@ -24,7 +25,7 @@ export function AttributeValue({attribute}: Props) {
   }
 
   if (typeof val === 'boolean') {
-    return <span className="font-semibold text-foreground">{val ? 'Да' : 'Нет'}</span>;
+    return <span className="font-semibold text-foreground">{val ? t('common_yes') : t('common_no')}</span>;
   }
 
   return <span className="font-semibold text-foreground">{String(val)}</span>;

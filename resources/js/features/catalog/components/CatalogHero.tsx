@@ -3,6 +3,7 @@ import SectionLayout from '@/shared/components/layouts/SectionLayout';
 import WaveBackground from '@/shared/components/ui/WaveBackground';
 import {H1, Text, Accent} from '@/shared/components/ui/Typography';
 import StatusBadge from '@/shared/components/ui/StatusBadge';
+import { t } from '@/shared/i18n/useTranslation';
 
 export function CatalogHero() {
   return (
@@ -18,12 +19,11 @@ export function CatalogHero() {
         </StatusBadge>
 
         <H1 className="mb-6">
-          Тестовый каталог <Accent variant="light">материалов</Accent>
+          {t('sandbox_hero_title_1')} <Accent variant="light">{t('sandbox_hero_title_accent')}</Accent>
         </H1>
 
         <Text variant="leadDark" className="text-slate-400 leading-relaxed">
-          Используйте этот раздел для тестирования выдачи API, проверки работы EAV-фильтров
-          и инспектирования структуры данных перед интеграцией калькулятора в сторонние системы.
+          {t('sandbox_hero_desc')}
         </Text>
       </div>
     </SectionLayout>

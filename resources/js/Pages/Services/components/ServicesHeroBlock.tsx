@@ -1,13 +1,14 @@
 import React from 'react';
 import {Accent} from '@/shared/components/ui/Typography';
 import {PageHero} from "@shared/components/ui/PageHero";
+import { t } from '@/shared/i18n/useTranslation';
 
 export function ServicesHeroBlock() {
   return (
     <PageHero
-      badge="Матрица цен"
-      title={<>Услуги <Accent variant="light">обработки</Accent></>}
-      description="Полный прайс-лист и расчётная матрица цен на услуги обработки, вырезов, замера и монтажа в разрезе материалов."
+      badge={t('services_hero_badge')}
+      title={<>{t('services_hero_title')} <Accent variant="light">{t('services_hero_accent')}</Accent></>}
+      description={t('services_hero_desc')}
     />
   );
 }

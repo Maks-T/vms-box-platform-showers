@@ -33,7 +33,7 @@ export const siteConfig = {
     {id: 'telegram', src: "/images/icons/telegram.svg", href: "https://t.me/Andrey_Uglikov", label: "Telegram"},
     {id: 'viber', src: "/images/icons/viber.svg", href: "viber://chat?number=+375291898322", label: "Viber"},
     {id: 'whatsapp', src: "/images/icons/whatsapp.svg", href: "https://wa.me/375291898322", label: "WhatsApp"},
-    {id: 'chanel', src: "/images/icons/chanel.svg", href: "https://t.me/margin_sense", label: "Канал основателя"},
+    {id: 'chanel', src: "/images/icons/chanel.svg", href: "https://t.me/margin_sense", label: t('social_founder_channel')},
     {
       id: 'linkedin',
       src: "/images/icons/linkedin.svg",

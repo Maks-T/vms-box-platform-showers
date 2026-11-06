@@ -48,17 +48,17 @@ export default function CatalogIndex() {
 
   const apiRequests = [
     {
-      label: 'Данные Каталога (Товары / Услуги)',
+      label: t('catalog_api_products'),
       endpoint: apiUrl,
       data: {data: products, meta: meta}
     },
     {
-      label: 'Схема Фильтров Каталога',
+      label: t('catalog_api_filters'),
       endpoint: `/api/v1/${family}/filters`,
       data: filtersSchema
     },
     {
-      label: 'Глобальная Конфигурация (Bootstrap)',
+      label: t('catalog_api_bootstrap'),
       endpoint: '/api/v1/bootstrap',
       data: bootstrapConfig
     }

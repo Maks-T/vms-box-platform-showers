@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { cn } from '@/shared/lib/utils';
+import { t } from '@/shared/i18n/useTranslation';
 
 interface LazyVideoProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
   src?: string;
@@ -54,7 +55,7 @@ export default function LazyVideo({
       {poster && !isLoaded && (
         <img
           src={poster}
-          alt="Превью"
+          alt={t('video_preview_alt')}
           className="absolute inset-0 w-full h-full object-cover blur-sm scale-105 opacity-60 z-0"
         />
       )}

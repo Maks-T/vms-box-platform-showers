@@ -1,5 +1,6 @@
 import React from 'react';
 import {cn} from '@/shared/lib/utils';
+import {t} from '@/shared/i18n/useTranslation';
 
 interface PaginationLink {
   url: string | null;
@@ -25,8 +26,8 @@ interface BasePaginationProps {
 export function BasePagination({
                                  meta,
                                  onPageChange,
-                                 prevLabel = '‹ Назад',
-                                 nextLabel = 'Вперед ›',
+                                 prevLabel = t('pagination_prev'),
+                                 nextLabel = t('pagination_next'),
                                  className = ''
                                }: BasePaginationProps) {
   if (!meta || !meta.last_page || meta.last_page <= 1) {

@@ -2,6 +2,7 @@ import React from 'react';
 import {FolderTree} from 'lucide-react';
 import GlassPanel from '@/shared/components/ui/GlassPanel';
 import Badge from '@/shared/components/ui/Badge';
+import { t } from '@/shared/i18n/useTranslation';
 import {BootstrapFamily} from '@/types/catalog';
 import ProductTypeRow from "@/Pages/Bootstrap/components/BootstrapVisualizer/ProductTypeRow";
 
@@ -17,7 +18,7 @@ export function FamiliesTree({ families }: Props) {
     <div>
       <h3 className="text-sm font-bold text-foreground uppercase tracking-widest mb-4 flex items-center gap-2">
         <FolderTree className="w-4 h-4 text-primary" />
-        Структура каталога (Families & Types)
+        {t('boot_catalog_structure')}
       </h3>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {families.map((family) => (

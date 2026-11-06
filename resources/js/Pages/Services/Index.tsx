@@ -11,6 +11,7 @@ import { useServicesMatrix } from './hooks/useServicesMatrix';
 
 import { bootstrapApi } from '@/shared/api/bootstrap.api';
 import { BootstrapConfig } from '@/types/catalog';
+import { t } from '@/shared/i18n/useTranslation';
 
 export default function ServicesIndex() {
   const { services, isLoading, endpoint } = useServicesMatrix();
@@ -23,7 +24,7 @@ export default function ServicesIndex() {
   }, []);
 
   const apiRequests = [{
-    label: 'Матрица услуг',
+    label: t('services_api_label'),
     method: 'GET',
     endpoint: endpoint,
     data: services
@@ -31,15 +32,15 @@ export default function ServicesIndex() {
 
   return (
     <MainLayout headerOverlaps={false}>
-      <Head title="Прайс-лист на услуги - VMS-NC Box" />
+      <Head title={t('services_page_title')} />
       <ServicesHeroBlock />
 
       <SectionLayout containerVariant="content" className="pt-8 md:pt-12 pb-24">
         <div className="w-full relative z-10">
           <div className="flex items-center justify-between mb-8 border-b border-border pb-6">
-            <h2 className="text-2xl font-bold text-foreground tracking-tight">Ответ от API</h2>
+            <h2 className="text-2xl font-bold text-foreground tracking-tight">{t('services_api_response')}</h2>
             <span className="text-sm font-medium text-muted-foreground bg-muted px-3 py-1 rounded-full">
-              {services.length} позиций
+              {t('services_positions_count', {count: services.length})}
             </span>
           </div>
 

@@ -27,7 +27,7 @@ export const FavoritesHeader = ({ count, onClear }: FavoritesHeaderProps) => {
         </button>
       )}
       <SheetDescription className="sr-only">
-        Выбранные материалы и товары каменных изделий
+        {t('favorites_sr_desc')}
       </SheetDescription>
     </SheetHeader>
   );

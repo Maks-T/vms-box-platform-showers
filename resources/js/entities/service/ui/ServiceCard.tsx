@@ -6,15 +6,21 @@ import StatusBadge from '@/shared/components/ui/StatusBadge';
 import GlassPanel from '@/shared/components/ui/GlassPanel';
 import { ServiceMatrixItem, EavValueOption, BootstrapConfig } from '@/types/catalog';
 import { cn } from '@/shared/lib/utils';
+import { t } from '@/shared/i18n/useTranslation';
 
 interface ServiceCardProps {
   service: ServiceMatrixItem;
   bootstrapConfig?: BootstrapConfig | null;
 }
 
-const MATERIAL_NAMES: Record<string, string> = {
-  acrylic_stone: 'Акриловый камень',
-  quartz_stone: 'Кварцевый агломерат',
+const MATERIAL_NAME_KEYS = {
+  acrylic_stone: 'material_acrylic_stone',
+  quartz_stone: 'material_quartz_stone',
+} as const;
+
+const getMaterialName = (slug: string): string => {
+  const key = MATERIAL_NAME_KEYS[slug as keyof typeof MATERIAL_NAME_KEYS];
+  return key ? t(key) : slug;
 };
 
 export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
@@ -22,10 +28,10 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
     e.preventDefault();
     e.stopPropagation();
     navigator.clipboard.writeText(service.slug);
-    toast.success(`Код ${service.slug} скопирован`);
+    toast.success(t('services_copied', {slug: service.slug}));
   };
 
-  const unitName = service.unit?.symbol || service.unit?.name || 'шт.';
+  const unitName = service.unit?.symbol || service.unit?.name || t('unit_pcs');
 
   const tagsAttr = service.attributes?.service_tags?.value;
 
@@ -55,7 +61,7 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
           <button
             onClick={handleCopy}
             className="group/copy flex items-center gap-2 px-2.5 py-1 bg-white/5 hover:bg-white/10 rounded-md border border-white/10 transition-colors cursor-pointer"
-            title="Копировать код"
+            title={t('services_copy_code')}
           >
             <span className="text-white/50 group-hover/copy:text-white/90 text-[11px] font-mono lowercase tracking-wider transition-colors">
               {service.slug}
@@ -71,7 +77,7 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
 
       <div className="p-6 md:p-8 flex-1 bg-white/[0.01]">
         <div className="text-[11px] font-bold uppercase tracking-widest text-white/30 mb-5">
-          Базовая стоимость ({unitName})
+          {t('services_base_cost_prefix', {unit: unitName})}
         </div>
 
         <div className="flex flex-col gap-3">
@@ -84,7 +90,7 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
               return (
                 <div key={materialSlug} className="flex items-center justify-between border-b border-white/5 pb-3 last:border-0 last:pb-0">
                   <span className="text-[14px] font-medium text-white/60">
-                    {MATERIAL_NAMES[materialSlug] || materialSlug}
+                    {getMaterialName(materialSlug)}
                   </span>
 
                   {}
@@ -95,14 +101,14 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
                         <span className="text-[11px] font-normal opacity-70 text-slate-400 lowercase">{currencySymbol}</span>
                       </>
                     ) : (
-                      'Бесплатно'
+                      t('price_free')
                     )}
                   </span>
                 </div>
               );
             })
           ) : (
-            <div className="text-sm text-white/30 italic">Цены не заданы</div>
+            <div className="text-sm text-white/30 italic">{t('price_not_specified')}</div>
           )}
         </div>
       </div>
@@ -118,7 +124,7 @@ export function ServiceCard({ service, bootstrapConfig }: ServiceCardProps) {
                   "uppercase tracking-widest text-[9px] font-bold",
                   isAddon ? "text-amber-400" : "text-emerald-400"
                 )}>
-                  {tag.label} // Был name
+                  {tag.label}
                 </span>
               </StatusBadge>
             );

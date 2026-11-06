@@ -34,7 +34,7 @@ export const ProductHero: React.FC<Props> = ({
                                                btnText = 'Contact Sales',
                                                demoAppUrl = '/calculator',
                                              }) => {
-  const { locale } = useTranslation();
+  const { t } = useTranslation();
 
   const handleOpenModal = () => {
     if (typeof window !== 'undefined' && (window as any).AppBridge?.leads?.openModal) {
@@ -101,7 +101,7 @@ export const ProductHero: React.FC<Props> = ({
                   href={demoAppUrl}
                   className="w-full sm:w-auto px-8 h-[56px] rounded-[12px] font-semibold text-white border-white/10 hover:bg-white/[0.08]"
                 >
-                  {locale === 'en' ? 'Live 3D Demo' : 'Смотреть 3D Демо'}
+                  {t('product_live_demo')}
                 </Button>
               )}
             </div>

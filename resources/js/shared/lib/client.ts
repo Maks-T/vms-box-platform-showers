@@ -1,5 +1,6 @@
 import axios, {AxiosInstance, InternalAxiosRequestConfig, AxiosError, AxiosResponse} from 'axios';
 import {toast} from 'sonner';
+import {t} from '@/shared/i18n/useTranslation';
 
 export interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   skipErrorHandler?: boolean;
@@ -43,18 +44,18 @@ client.interceptors.response.use(
       const data = error.response.data as any;
 
       if (status === 404) {
-        toast.error('Данные не найдены (404)');
+        toast.error(t('error_not_found'));
       } else if (status === 422) {
-        toast.error(data.message || 'Ошибка проверки данных');
+        toast.error(data.message || t('error_validation'));
       } else if (status >= 500) {
-        toast.error('Внутренняя ошибка сервера. Попробуйте позже.');
+        toast.error(t('error_server'));
       } else {
-        toast.error(data.message || 'Произошла ошибка при запросе');
+        toast.error(data.message || t('error_request'));
       }
     } else if (error.request) {
-      toast.error('Нет ответа от сервера. Проверьте подключение к сети.');
+      toast.error(t('error_no_response'));
     } else {
-      toast.error('Произошла ошибка при отправке запроса');
+      toast.error(t('error_send'));
     }
 
     return Promise.reject(error);

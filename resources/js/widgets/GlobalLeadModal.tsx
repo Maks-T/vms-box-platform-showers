@@ -48,9 +48,7 @@ export default function GlobalLeadModal() {
     e.preventDefault();
     if (!formData.name.trim() || (!formData.phone.trim() && !formData.email.trim())) {
       toast.error(
-        locale === 'en'
-          ? 'Please fill in your name and contact details'
-          : 'Пожалуйста, заполните имя и контактные данные'
+        t('lead_fill_required')
       );
       return;
     }
@@ -70,9 +68,7 @@ export default function GlobalLeadModal() {
 
       setIsSuccess(true);
       toast.success(
-        locale === 'en'
-          ? 'Thank you! Your request has been received.'
-          : 'Спасибо! Ваша заявка успешно принята.'
+        t('lead_received')
       );
 
       if (modalProps.onSuccess) {
@@ -88,8 +84,6 @@ export default function GlobalLeadModal() {
       setLoading(false);
     }
   };
-
-  const isEn = locale === 'en';
 
   return (
     <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
@@ -114,12 +108,10 @@ export default function GlobalLeadModal() {
               <CheckCircle2 className="w-8 h-8"/>
             </div>
             <h3 className="text-2xl font-bold text-white">
-              {isEn ? 'Thank you!' : 'Спасибо!'}
+              {t('lead_thank_you')}
             </h3>
             <p className="text-white/60 text-sm max-w-sm">
-              {isEn
-                ? 'Your request has been received. Our team will contact you shortly.'
-                : 'Ваша заявка принята. Наш специалист свяжется с вами в ближайшее время.'}
+              {t('lead_received_team')}
             </p>
           </div>
         ) : (
@@ -129,23 +121,21 @@ export default function GlobalLeadModal() {
                 {modalProps.title || t('contact_sales')}
               </h3>
               <p className="text-white/60 text-sm mt-1.5 leading-relaxed">
-                {modalProps.description || (isEn
-                  ? 'Get a live demo with your product catalog and personalized pricing.'
-                  : 'Покажем живое демо на ваших данных и подробно расскажем об условиях подключения.')}
+                {modalProps.description || t('lead_modal_desc')}
               </p>
             </div>
 
             <div className="flex flex-col gap-3.5">
               <div>
                 <label className="text-xs font-semibold text-white/70 uppercase tracking-wider block mb-1.5">
-                  {isEn ? 'Your Name *' : 'Ваше имя *'}
+                  {t('lead_name_placeholder')}
                 </label>
                 <input
                   type="text"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  placeholder={isEn ? 'Alexander' : 'Александр'}
+                  placeholder={t('lead_name_example')}
                   className="w-full h-12 px-4 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-[#3D98FF] transition-all"
                 />
               </div>
@@ -153,7 +143,7 @@ export default function GlobalLeadModal() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
                   <label className="text-xs font-semibold text-white/70 uppercase tracking-wider block mb-1.5">
-                    {isEn ? 'Phone / WhatsApp *' : 'Телефон / WhatsApp *'}
+                    {t('lead_phone_placeholder')}
                   </label>
                   <input
                     type="text"
@@ -181,13 +171,13 @@ export default function GlobalLeadModal() {
 
               <div>
                 <label className="text-xs font-semibold text-white/70 uppercase tracking-wider block mb-1.5">
-                  {isEn ? 'Message / Requirements' : 'Сообщение / Пожелания'}
+                  {t('lead_message_label')}
                 </label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  placeholder={isEn ? 'Tell us about your project...' : 'Расскажите о вашем проекте...'}
+                  placeholder={t('lead_message_placeholder')}
                   className="w-full p-4 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder:text-white/30 text-sm focus:outline-none focus:border-[#3D98FF] transition-all resize-none"
                 />
               </div>
@@ -199,7 +189,7 @@ export default function GlobalLeadModal() {
               className="mt-2 w-full h-12 rounded-xl bg-[#005ECA] hover:bg-[#0EA5E9] text-white font-bold text-sm tracking-wide transition-all shadow-lg active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
             >
               <Send className="w-4 h-4"/>
-              <span>{loading ? (isEn ? 'Sending...' : 'Отправка...') : (modalProps.buttonLabel || t('contact_sales'))}</span>
+              <span>{loading ? t('lead_sending') : (modalProps.buttonLabel || t('contact_sales'))}</span>
             </button>
           </form>
         )}

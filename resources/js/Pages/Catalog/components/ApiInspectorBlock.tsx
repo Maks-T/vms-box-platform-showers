@@ -1,11 +1,12 @@
 import React from 'react';
 import { Code2, Copy } from 'lucide-react';
 import { toast } from 'sonner';
+import { t } from '@/shared/i18n/useTranslation';
 
 export function ApiInspectorBlock({ apiUrl }: { apiUrl: string }) {
   const copyApiUrl = () => {
     navigator.clipboard.writeText(window.location.origin + apiUrl);
-    toast.success('URL API запроса скопирован!');
+    toast.success(t('api_request_copied'));
   };
 
   return (
@@ -29,7 +30,7 @@ export function ApiInspectorBlock({ apiUrl }: { apiUrl: string }) {
         onClick={copyApiUrl}
         className="shrink-0 ml-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-4 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-2"
       >
-        <Copy className="w-3.5 h-3.5" /> Копировать
+        <Copy className="w-3.5 h-3.5" /> {t('api_copy')}
       </button>
     </div>
   );

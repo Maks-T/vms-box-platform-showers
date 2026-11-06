@@ -8,7 +8,7 @@ import {useTranslation} from '@/shared/i18n/useTranslation';
 export function ProductHeader() {
   const { t } = useTranslation();
   return (
-    <header className="bg-background border-b border-border sticky top-0 z-50 shadow-sm">
+    <header className="bg-background border-b border-border sticky top-0 z-40 shadow-sm">
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
         <Link href={route('catalog')} className="flex items-center gap-4 group">
           <IconBox variant="light" size="default"

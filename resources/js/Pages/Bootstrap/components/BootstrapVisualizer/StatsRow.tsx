@@ -3,6 +3,7 @@ import {Coins, FolderTree, BookOpen} from 'lucide-react';
 import GlassPanel from '@/shared/components/ui/GlassPanel';
 import {IconBox} from '@/shared/components/ui/IconBox';
 import {BootstrapConfig} from '@/types/catalog';
+import { t } from '@/shared/i18n/useTranslation';
 
 interface Props {
   config: BootstrapConfig;
@@ -16,7 +17,7 @@ export function StatsRow({config}: Props) {
           <Coins className="w-5 h-5"/>
         </IconBox>
         <div>
-          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">Базовая валюта
+          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">{t('boot_base_currency')}
           </div>
           <div
             className="text-lg font-black text-foreground">{config.base_currency?.code} ({config.base_currency?.symbol})
@@ -29,10 +30,9 @@ export function StatsRow({config}: Props) {
           <FolderTree className="w-5 h-5"/>
         </IconBox>
         <div>
-          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">Дерево
-            каталога
+          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">{t('boot_catalog_tree')}
           </div>
-          <div className="text-lg font-black text-foreground">{config.families?.length || 0} Семейств</div>
+          <div className="text-lg font-black text-foreground">{t('boot_families_count', {count: config.families?.length || 0})}</div>
         </div>
       </GlassPanel>
 
@@ -41,10 +41,9 @@ export function StatsRow({config}: Props) {
           <BookOpen className="w-5 h-5"/>
         </IconBox>
         <div>
-          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">Умные
-            справочники
+          <div className="text-[11px] text-muted-foreground uppercase tracking-widest font-bold mb-0.5">{t('boot_smart_dictionaries')}
           </div>
-          <div className="text-lg font-black text-foreground">{config.dictionaries?.length || 0} Матриц</div>
+          <div className="text-lg font-black text-foreground">{t('boot_matrices_count', {count: config.dictionaries?.length || 0})}</div>
         </div>
       </GlassPanel>
     </div>

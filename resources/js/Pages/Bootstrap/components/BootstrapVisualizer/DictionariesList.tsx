@@ -2,6 +2,7 @@ import React from 'react';
 import {BookOpen, Settings2} from 'lucide-react';
 import GlassPanel from '@/shared/components/ui/GlassPanel';
 import Badge from '@/shared/components/ui/Badge';
+import { t } from '@/shared/i18n/useTranslation';
 
 interface Props {
   dictionaries: any[];
@@ -14,7 +15,7 @@ export function DictionariesList({dictionaries}: Props) {
     <div>
       <h3 className="text-sm font-bold text-foreground uppercase tracking-widest mb-4 flex items-center gap-2">
         <BookOpen className="w-4 h-4 text-amber-500"/>
-        Умные справочники
+        {t('boot_smart_dictionaries')}
       </h3>
       <div className="flex flex-wrap gap-4">
         {dictionaries.map(dict => (
@@ -27,7 +28,7 @@ export function DictionariesList({dictionaries}: Props) {
             <div
               className="text-[12px] text-muted-foreground flex justify-between items-center border-t border-border pt-2 mt-2">
               <span className="font-mono">{dict.code}</span>
-              <Badge variant="gray" className="!text-[10px] !py-0 !px-1.5">{dict.records?.length || 0} записей</Badge>
+              <Badge variant="gray" className="!text-[10px] !py-0 !px-1.5">{t('boot_records_count', {count: dict.records?.length || 0})}</Badge>
             </div>
           </GlassPanel>
         ))}

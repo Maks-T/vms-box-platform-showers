@@ -1,6 +1,7 @@
 import React from 'react';
 import {Code2, ChevronDown, ChevronUp, FileJson, Link2} from 'lucide-react';
 import {ApiRequestInfo} from '../types';
+import {t} from '@/shared/i18n/useTranslation';
 
 interface Props {
   request: ApiRequestInfo;
@@ -46,14 +47,14 @@ export default function InspectorHeader({request, isOpen, onToggle, onCopyUrl, o
         <button
           onClick={(e) => onCopyJson(e, request.data)}
           className="flex-1 sm:flex-none justify-center shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-2"
-          title="Копировать JSON"
+          title={t('api_copy_json_title')}
         >
           <FileJson className="w-3.5 h-3.5 text-emerald-400"/> JSON
         </button>
         <button
           onClick={(e) => onCopyUrl(e, request.endpoint)}
           className="flex-1 sm:flex-none justify-center shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-3 py-2 rounded-lg text-xs font-medium transition-colors flex items-center gap-2"
-          title="Копировать URL"
+          title={t('api_copy_url_title')}
         >
           <Link2 className="w-3.5 h-3.5 text-primary-light"/> URL
         </button>

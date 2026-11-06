@@ -5,6 +5,7 @@ import {ApiRequestInfo} from './types';
 import InspectorHeader from './ui/InspectorHeader';
 import InspectorBody from './ui/InspectorBody';
 import {useDevMode} from '@/shared/hooks/useDevMode';
+import {t, getActiveLocale} from '@/shared/i18n/useTranslation';
 
 interface Props {
   requests: ApiRequestInfo[];
@@ -22,19 +23,19 @@ export function ApiInspector({requests}: Props) {
   const copyApiUrl = (e: React.MouseEvent, endpoint: string) => {
     e.stopPropagation();
     navigator.clipboard.writeText(window.location.origin + endpoint);
-    toast.success('URL API запроса скопирован!');
+    toast.success(t('api_request_copied'));
   };
 
   const copyJson = (e: React.MouseEvent, data: any) => {
     e.stopPropagation();
     navigator.clipboard.writeText(JSON.stringify(data, null, 2));
-    toast.success('Тело JSON-ответа скопировано!');
+    toast.success(t('api_json_copied'));
   };
 
   const getDefaultHeaders = () => ({
     'Accept': 'application/json',
     'X-Sales-Channel': 'widget',
-    'Accept-Language': localStorage.getItem('app_locale') || 'ru',
+    'Accept-Language': getActiveLocale(),
   });
 
   return (

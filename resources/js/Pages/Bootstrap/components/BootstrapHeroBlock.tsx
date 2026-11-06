@@ -1,13 +1,14 @@
 import React from 'react';
 import { Accent } from '@/shared/components/ui/Typography';
 import {PageHero} from "@shared/components/ui/PageHero";
+import { t } from '@/shared/i18n/useTranslation';
 
 export function BootstrapHeroBlock() {
   return (
     <PageHero
-      badge="Инициализация виджета"
+      badge={t('boot_hero_badge')}
       title={<>Bootstrap <Accent variant="light">API</Accent></>}
-      description="Единая точка входа. Этот эндпоинт возвращает все базовые настройки, глобальные справочники и плоское дерево семейств товаров для построения интерфейса калькулятора."
+      description={t('boot_hero_desc')}
     />
   );
 }

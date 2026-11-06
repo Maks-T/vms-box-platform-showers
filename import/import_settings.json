@@ -13,8 +13,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -24,8 +29,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -35,8 +45,13 @@
                 "key": "is_filterable",
                 "type": "boolean",
                 "label": {
+                    "ru": "Использовать как фильтр",
                     "en": "Use as filter",
-                    "ru": "Использовать как фильтр"
+                    "es": "Usar como filtro",
+                    "de": "Als Filter verwenden",
+                    "it": "Usa come filtro",
+                    "pl": "Używaj jako filtra",
+                    "tr": "Filtre olarak kullan"
                 },
                 "width": 1,
                 "default": true,
@@ -46,8 +61,13 @@
                 "key": "is_collapsed",
                 "type": "boolean",
                 "label": {
+                    "ru": "Свернуть по умолчанию",
                     "en": "Collapsed by default",
-                    "ru": "Свернуть по умолчанию"
+                    "es": "Contraído por defecto",
+                    "de": "Standardmäßig eingeklappt",
+                    "it": "Compresso per impostazione predefinita",
+                    "pl": "Domyślnie zwinięte",
+                    "tr": "Varsayılan olarak daraltılmış"
                 },
                 "width": 1,
                 "default": false,
@@ -57,27 +77,52 @@
                 "key": "filter_type",
                 "type": "select",
                 "label": {
+                    "ru": "Вид фильтра",
                     "en": "Filter UI type",
-                    "ru": "Вид фильтра"
+                    "es": "Tipo de filtro",
+                    "de": "Filtertyp",
+                    "it": "Tipo di filtro",
+                    "pl": "Typ filtra",
+                    "tr": "Filtre türü"
                 },
                 "width": 2,
                 "default": "checkbox",
                 "options": {
                     "color": {
+                        "ru": "Цветовые кружки",
                         "en": "Color swatches",
-                        "ru": "Цветовые кружки"
+                        "es": "Muestras de color",
+                        "de": "Farbfelder",
+                        "it": "Campioni di colore",
+                        "pl": "Próbki kolorów",
+                        "tr": "Renk örnekleri"
                     },
                     "range": {
+                        "ru": "Диапазон (слайдер)",
                         "en": "Range slider",
-                        "ru": "Диапазон (слайдер)"
+                        "es": "Control deslizante de rango",
+                        "de": "Bereichsschieberegler",
+                        "it": "Cursore di intervallo",
+                        "pl": "Suwak zakresu",
+                        "tr": "Aralık kaydırıcısı"
                     },
                     "select": {
+                        "ru": "Выпадающий список (Select)",
                         "en": "Dropdown select",
-                        "ru": "Выпадающий список (Select)"
+                        "es": "Lista desplegable",
+                        "de": "Dropdown-Liste",
+                        "it": "Menu a tendina",
+                        "pl": "Lista rozwijana",
+                        "tr": "Açılır liste"
                     },
                     "checkbox": {
+                        "ru": "Список чекбоксов",
                         "en": "Checkboxes",
-                        "ru": "Список чекбоксов"
+                        "es": "Casillas de verificación",
+                        "de": "Checkboxen",
+                        "it": "Caselle di controllo",
+                        "pl": "Pola wyboru",
+                        "tr": "Onay kutuları"
                     }
                 },
                 "is_system": true
@@ -88,8 +133,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -99,8 +149,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -112,8 +167,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -123,8 +183,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -136,8 +201,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -147,8 +217,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -158,8 +233,13 @@
                 "key": "show_in_menu",
                 "type": "boolean",
                 "label": {
+                    "ru": "Показывать в меню",
                     "en": "Show in menu",
-                    "ru": "Показывать в меню"
+                    "es": "Mostrar en el menú",
+                    "de": "Im Menü anzeigen",
+                    "it": "Mostra nel menu",
+                    "pl": "Pokaż w menu",
+                    "tr": "Menüde göster"
                 },
                 "width": 2,
                 "default": true,
@@ -171,8 +251,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -182,8 +267,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -193,8 +283,13 @@
                 "key": "show_in_menu",
                 "type": "boolean",
                 "label": {
+                    "ru": "Показывать в меню",
                     "en": "Show in menu",
-                    "ru": "Показывать в меню"
+                    "es": "Mostrar en el menú",
+                    "de": "Im Menü anzeigen",
+                    "it": "Mostra nel menu",
+                    "pl": "Pokaż w menu",
+                    "tr": "Menüde göster"
                 },
                 "width": 1,
                 "default": true,
@@ -206,8 +301,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -217,8 +317,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -230,8 +335,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -241,8 +351,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -254,8 +369,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -265,8 +385,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -278,8 +403,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -289,8 +419,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -302,8 +437,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -313,8 +453,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -326,8 +471,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -337,8 +487,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,
@@ -350,8 +505,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -361,8 +521,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": false,
@@ -374,8 +539,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": false,
@@ -387,8 +557,13 @@
                 "key": "is_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Опубликовано",
                     "en": "Published",
-                    "ru": "Опубликовано"
+                    "es": "Publicado",
+                    "de": "Veröffentlicht",
+                    "it": "Pubblicato",
+                    "pl": "Opublikowano",
+                    "tr": "Yayınlandı"
                 },
                 "width": 1,
                 "default": true,
@@ -398,8 +573,13 @@
                 "key": "is_settings_public",
                 "type": "boolean",
                 "label": {
+                    "ru": "Настройки публичны",
                     "en": "Settings are public",
-                    "ru": "Настройки публичны"
+                    "es": "Configuración pública",
+                    "de": "Einstellungen öffentlich",
+                    "it": "Impostazioni pubbliche",
+                    "pl": "Ustawienia publiczne",
+                    "tr": "Ayarlar herkese açık"
                 },
                 "width": 1,
                 "default": true,

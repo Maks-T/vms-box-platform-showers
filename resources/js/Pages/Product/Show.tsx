@@ -13,6 +13,7 @@ import MainLayout from '@/layouts/MainLayout';
 
 import {checkDevMode} from '@/shared/lib/dev';
 import {bootstrapApi} from '@/shared/api/bootstrap.api';
+import {t} from '@/shared/i18n/useTranslation';
 
 interface Props {
   product: StoneProduct;
@@ -31,7 +32,7 @@ export default function ProductShow({product, familyCode}: Props) {
 
   const apiRequests = [
     {
-      label: 'Карточка товара',
+      label: t('product_api_card'),
       method: 'GET',
       endpoint: apiEndpoint,
       data: product
