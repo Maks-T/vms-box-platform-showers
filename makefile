@@ -31,6 +31,23 @@ mfsi:
 	$(COMPOSE) exec app $(ARTISAN) migrate:fresh --seed
   $(COMPOSE) exec app $(ARTISAN) vms:import
 
+# --- Performance ---
+
+# Прогреть все кэши Laravel + Filament (конфиг, роуты, события, вьюхи, компоненты, иконки).
+# Запускать после git pull / изменения ресурсов Filament. Сброс: make unopt
+opt:
+	$(COMPOSE) exec app $(ARTISAN) optimize
+	$(COMPOSE) exec app $(ARTISAN) filament:optimize
+
+unopt:
+	$(COMPOSE) exec app $(ARTISAN) optimize:clear
+	$(COMPOSE) exec app $(ARTISAN) filament:optimize-clear
+
+# Проверка: Xdebug должен быть "off", OPcache — "enabled"
+perf-check:
+	$(COMPOSE) exec app php -r 'echo "xdebug.mode=", (extension_loaded("xdebug") ? ini_get("xdebug.mode") : "not loaded"), PHP_EOL;'
+	$(COMPOSE) exec app php-fpm -i | grep -E "^opcache.enable =>|^Opcode Caching"
+
 # Clear all Laravel cache
 pacc:
 	$(COMPOSE) exec app $(ARTISAN) cache:clear
