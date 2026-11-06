@@ -5,4 +5,4 @@
 [submodule "packages/box/valerie/industry-showers"]
 	path = packages/box/valerie/industry-showers
 	url = git@github.com:Maks-T/vms-box-valerie-showers.git
-	branch = valerie/industry-showers/client/proreshenia
+	branch = valerie/industry-showers/main
