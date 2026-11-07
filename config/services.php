@@ -39,4 +39,9 @@ return [
     'webhook_secret' => env('CALCULATOR_WEBHOOK_SECRET'),
   ],
 
+  // @since 2026-11-07: тег Google (GA4 / GTM) задаётся в .env проекта; пусто - тег не выводится
+  'google_tag' => [
+    'id' => env('GOOGLE_TAG_ID'),
+  ],
+
 ];

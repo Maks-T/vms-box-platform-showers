@@ -1,8 +1,41 @@
 import '../css/app.css';
-import { createInertiaApp } from '@inertiajs/react';
+import { createInertiaApp, router } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
 
 const appName = import.meta.env.VITE_APP_NAME || 'VMS';
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+/**
+ * Просмотры страниц для тега Google в SPA.
+ * Первую загрузку тег учитывает сам; при переходах Inertia меняет адрес без перезагрузки,
+ * поэтому page_view отправляем вручную — после отрисовки, когда обновлён document.title.
+ * @since 2026-11-07
+ */
+let isFirstNavigation = true;
+
+router.on('navigate', () => {
+  if (isFirstNavigation) {
+    isFirstNavigation = false;
+    return;
+  }
+
+  if (typeof window.gtag !== 'function') {
+    return;
+  }
+
+  window.setTimeout(() => {
+    window.gtag?.('event', 'page_view', {
+      page_location: window.location.href,
+      page_path: window.location.pathname + window.location.search,
+      page_title: document.title,
+    });
+  }, 0);
+});
 
 createInertiaApp({
   title: (title: string) => `${title} - ${appName}`,

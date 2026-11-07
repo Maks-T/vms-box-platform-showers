@@ -5,6 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
+  {{-- @since 2026-11-07: тег Google; ID из GOOGLE_TAG_ID, просмотры SPA-переходов отправляет app.tsx --}}
+  @if (config('services.google_tag.id'))
+    <script async src="https://www.googletagmanager.com/gtm.js?id={{ urlencode(config('services.google_tag.id')) }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+  @endif
+
   @include('partials.seo', ['seo' => $seo ?? []])
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
